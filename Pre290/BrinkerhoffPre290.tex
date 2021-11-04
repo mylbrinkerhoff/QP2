@@ -13,7 +13,7 @@
 		maxbibnames=99,
 		natbib,
 		url=false]{biblatex}
-\addbibresource{link_desktop.bib}
+\addbibresource{link_laptop.bib}
 \setcounter{biburlnumpenalty}{100}  % allow URL breaks at numbers
 %\setcounter{biburlucpenalty}{100}   % allow URL breaks at uppercase letters
 %\setcounter{biburllcpenalty}{100}   % allow URL breaks at lowercase letters
@@ -50,6 +50,7 @@
 % \def\UrlBreaks{\do\/\do-} %allows for urls to be broken up
 \usepackage[normalem]{ulem} %strike out text. Handy for syntax
 \usepackage{tcolorbox}
+\usepackage{datetime2}
 
 
 %%FONTS
@@ -214,9 +215,9 @@ Questions
 
 	\item This is accomplished through the addition of three different laryngeally-complex phonations, which are all contrastive as seen in the the near-minimal triple (\ref{ex:triple})
 		\begin{itemize}
-			\item Breathy: [ a̤ ] \textit{ah} 
-			\item Checked: [ aˀ ] \textit{a'}
-			\item Laryngealized: [ aˀa ] \textit{a'a}\footnote{Previous descriptions of the the vowel system of closely related languages have used various different terms for this vowel including broken, rearticulated, interrupted, and creaky \citep{longDiccionarioZapotecoSan2005,avelinoAcousticElectroglottographicAnalyses2010,avelinobecerraTopicsYalalagZapotec2004,sonnenscheinDescriptiveGrammarSan2005,adlerAcousticsPhonationTypes2016}. In order to avoid confusion, I will use the term laryngealized following \citet{avelinoAcousticElectroglottographicAnalyses2010}.}
+			\item Breathy: [ a̤ ] <\textit{ah}> 
+			\item Checked: [ aˀ ] <\textit{a'}>
+			\item Laryngealized: [ aˀa ] <\textit{a'a}>\footnote{Previous descriptions of the the vowel system of closely related languages have used various different terms for this vowel including broken, rearticulated, interrupted, and creaky \citep{longDiccionarioZapotecoSan2005,avelinoAcousticElectroglottographicAnalyses2010,avelinobecerraTopicsYalalagZapotec2004,sonnenscheinDescriptiveGrammarSan2005,adlerAcousticsPhonationTypes2016}. In order to avoid confusion, I will use the term laryngealized following \citet{avelinoAcousticElectroglottographicAnalyses2010}.}
 		\end{itemize}
 \end{itemize}
 
@@ -234,13 +235,13 @@ Questions
 	\item Breathy phonation is produced with an open supraglottic tube during the production of the vowel
 	\item Checked phonation consists of modal phonation which is abruptly stopped which is associated with a glottal stop.\footnote{There are two ways in which this vowel can be analyzed. One is the traditional way where the glottal stop is considered inseparable from the vowel. The other is to treat this as a consonant which is restricted to only reside in codas (similar to how the sound /ŋ/ is restricted to codas in English). This second approach is the one taken by \citet{avelinobecerraTopicsYalalagZapotec2004}. I will follow the traditional way of analyzing these vowels through this paper.}
 	\item Laryngealized vowels in SLZ and other closely related varieties (Yalálag Zapotec) show a variable pronunciation ranging from a vowel that has a glottal stop interrupting the vowel to the use of creaky voice throughout the vowel or a portion.  
-	\item Table \ref{tab:laryngeal} shows the variable pronunciation of laryngealized vowels in Yalálag Zapotec, taken from \citet{avelinobecerraTopicsYalalagZapotec2004,avelinoAcousticElectroglottographicAnalyses2010}. 
+	\item Table \ref{tab:laryngeal} shows the variable pronunciation of laryngealized vowels in Yalálag Zapotec, taken from \citet{avelinoAcousticElectroglottographicAnalyses2010}. 
 	\end{itemize}
 
 \begin{table}[!h]
 \centering
 \caption{Layngealized Vowels in Yalálag Zapotec}
-\label{tab:larngeal}
+\label{tab:laryngeal}
  \begin{tabular}{lc}
   \lsptoprule
 	/VˀV/ &  [VʔV]  \\
@@ -252,13 +253,7 @@ Questions
 \end{table}
 
 \begin{itemize}
-	\item In order to explain and define this vowels, I will be taking acoustic measurements. 
-				\begin{itemize}
-					\item Data from \citet{adlerAcousticsPhonationTypes2016} and preliminary data from myself shows that H1-H2 and CPP are both measures that correspond to the phonation types. 
-				\end{itemize}
-			\item Answer questions regarding the moraic status of the different phonations.
-			\item Answer questions about the interaction of tone and phonation.  
-		\end{itemize}
+	\item In order to explain and define these vowels, I elicited tokens in carrier sentences and will conduct acoustic measurements on them. See §\ref{sec:Methodology} for more information. 
 \end{itemize}
 
 
@@ -267,13 +262,12 @@ Questions
 %------------------------------------
 
 \begin{itemize}
-	\item Tonal analysis was done following \citet{pikeToneLanguagesTechnique1948} and \citet{sniderToneAnalysisField2018}
-
-	\item SLZ exhibits five different tonal patterns as shown in Table \ref{tab:tones}
+	\item SLZ exhibits five different surface tonal patterns as shown in Table \ref{tab:tones}
 		\begin{itemize}
-			\item Three level tones: H, M, and L (represented using Pike's numbers)
+			\item Three level tones: H, M, and L (represented using Pike's numbers with 1 being the highest tone)
 			\item Two contours: MH and HL
 		\end{itemize}
+	\item The number of tones were discovered doing a tonal analysis following the methods laid out in \citet{pikeToneLanguagesTechnique1948} and \citet{sniderToneAnalysisField2018} by Maya Wax Cavallaro, Jack Duff, and myself from 2020-2021.
 \end{itemize}
 
 \begin{table}[!h]
@@ -283,22 +277,18 @@ Questions
  \begin{tabular}{lllll}
   \lsptoprule
   				% &	 Diacritic  & Example & Transcription \\
-  high   	&  a¹  &  \textit{xha}   &  [ ʐa¹ ] & `clothing.\textsc{poss}'\\
-	mid    	&  a²  &  \textit{nu'ulhe} 	& [ ɾiʒ² ] & `house.\textsc{poss}' \\
-	low   	&  a³  &  \textit{yu'} 	&	 [ çuˀ³ ] & `earth'\\
-	rising	&  a²¹  &  \textit{yu'u} 	&	[ juˀu²¹ ] & `quicklime (sp. cal)' \\
-	falling &  a¹³  &  \textit{yu'u}  &	[juˀu¹³] &	`house' \\
+  High   	&  a¹  &  \textit{xha}   &  [ ʐa¹ ] & `clothing.\textsc{poss}'\\
+	Mid    	&  a²  &  \textit{lhill} 	& [ ɾiʒ² ] & `house.\textsc{poss}' \\
+	Low   	&  a³  &  \textit{yu'} 	&	 [ çuˀ³ ] & `earth'\\
+	Rising	&  a²¹  &  \textit{yu'u} 	&	[ juˀu²¹ ] & `quicklime (sp. cal)' \\
+	Falling &  a¹³  &  \textit{yu'u}  &	[juˀu¹³] &	`house' \\
   \lspbottomrule
  \end{tabular}
 \end{table}
 
 \begin{itemize}
-	\item We believe that the mora is the tone bearing unit in SLZ. 
-	\item This also in keeping with other analyses of tone in Zapotecan languages \citep[e.g.,][]{chavez-peonInteractionMetricalStructure2010}.
-	\item With the mora being the TBU in SLZ and only one tone per mora the contour tones must be born on syllables containing two morae or split across the multiple syllables. 
-	\item However, if fortis consonants are moraic in nature then the question arises as to how tone interacts with these moraic consonants. 
-	\item It is a well established fact that tone can appear on sonorant consonants but less likely on obstruents \citep[e.g.,][]{yipTone2002,hymanHowStudyTone2014,sniderEstablishingUnderlyingTonal2014,sniderToneAnalysisField2018}. 
-	\item This has been well-established for other Zapotec varieties but with one exception. Only vowels and fortis sonorants are able to bear tone in Quiaviní Zapotec \citep[Ch. 5]{chavez-peonInteractionMetricalStructure2010}. 
+	\item The exact nature of these tones will be one of the focuses of this paper.
+	\item Additionally, I will be focusing on what the tone bearing unit is in SLZ.
 \end{itemize}
 
 %------------------------------------
@@ -308,6 +298,9 @@ Questions
 \begin{itemize}
 	\item The interaction of tone and phonation is a well-established fact and has been heavily studied in Asian tonal languages \citep[see references in][]{yipTone2002,michaudComplexTonesEast2012,brunelleTonePhonationSoutheast2016}.
 	\item In these languages it is common for certain phonation types to co-occur with certain tones.
+		\begin{itemize}
+			\item Mandarian Tone 3 always co-occur with creaky voice \citep{duanmuPhonologyStandardChinese2007}.
+		\end{itemize}
 	\item The interaction between tone and phonation in the languages of the America's has been studied but to a lesser extant than Asian languages \citep{adlerAcousticsPhonationTypes2016,chavez-peonInteractionMetricalStructure2010,dicanioCoarticulationToneGlottal2012}. 
 	\item \citet{chavez-peonInteractionMetricalStructure2010} showed that the similar restrictions in tone and phonation co-occurrence appear in Quiaviní Zapotec but are at the same time much more free, see Table \ref{tab:slqz}.
 \end{itemize}
@@ -328,8 +321,16 @@ Questions
 \end{table}
 
 \begin{itemize}
-	\item One previous studied attempted to explore this question in SLZ, but was ultimately flawed (Morimoto 2017). 
-	\item I am currently trying to determine to what extent tone and phonation interact in SLZ. 
+	\item One of the unique aspects found here is the co-occurrance of creaky voice with a H-tone. 
+		\begin{itemize}
+			\item Creaky voice is frequently a by-product of low pitch but according to \citet{eslingVoiceQualityLaryngeal2019} can also sometimes co-occur with high pitch. 
+		\end{itemize}
+	\item I am trying to determine to what extent tone and phonation interact in SLZ and based on that distribution make a hypothesis as to why certain tones and phonation types are allowed or disallowed from co-occurring.
+	\item I will also hope to test \posscitet{silvermanLaryngealComplexityOtomanguean1997} claim that tone and phonation are ordered during the production of the vowels.
+	\begin{itemize}
+		\item Tone is found on the modal portion of the vowel.
+		\item Phonation occurs only in a portion of the vowel.
+	\end{itemize}
 \end{itemize}
 
 %------------------------------------
@@ -342,29 +343,34 @@ Questions
 		\item A narrative elicitation
 	\end{enumerate}
 
-	\item Word list elicitation consisted of approximately 200 words repeated three times each in a carrier sentence. 
-	\item Consultants where recorded using a Zoom H4n audio recorder (44.1kHz and 16bit) and Zencastr, a professional podcasting service that records in high quality audio. 
+	\item Word list elicitation consisted of approximately 200 words repeated three times each in a carrier sentence, \ref{ex:carrier}. 
+	\item Consultants where recorded using a Zoom H4n audio recorder (44.1kHz and 16bit) and Zencastr, a professional podcasting service website.
 \end{itemize}
 
 \ea Carrier Sentence \label{ex:carrier}\\
 \gll sh-ni=a'¹³ \rule{10mm}{1pt} cho²ne² las²\\ 
-\textsc{cont}-speak=1\textsc{sg} {} three times\\
+\textsc{cont}-speak=1\textsc{sg} \rule{10mm}{1pt} three times\\
 \trans `I say \rule{10mm}{1pt} three times'	
 \z 
 
 \begin{itemize}
 	\item Because carrier sentence elicitation is rather artificial an additional task was chosen to produce a more natural context. 
-	\item This was done in order to test the claims made by \citet{garellekPhoneticsWhiteHmong2021} that in narrative contexts the only acoustic measure that indicates different phonation types is CPP.
-	\item This was done by having consultants tell the story presented in a picture book called ``Where are you, Frog?''
+	\item This was done by having consultants tell the story presented in a picture book called ``Where are you, Frog?'' \citep{mayerFrogWhereAre1969}. 
+	\begin{itemize}
+		\item Consultants were asked to tell the story in a textless picture book. 
+		\item This allowed for a somewhat controlled vocabulary which will aid in analyzing the vowels for both tone and phonation. 
+	\end{itemize}
+	\item This task was also chosen in order to test the claims made by \citet{garellekPhoneticsWhiteHmong2021} that in narrative contexts the only acoustic measures that indicates different phonation types is CPP, a type of sound-to-noise ratio.
+	
 \end{itemize}
 %------------------------------------
 \section{Next Steps} \label{sec:Methodology}
 %------------------------------------
 \begin{itemize}
 	\item Finish extracting tokens from word list elicitations
-	\item Process audio for ``Where are you, Frog?'' from speaker f1
+	\item Process audio for ``Where are you, Frog?'' from speaker f1 and m1
 	\item Continue reading \citet{eslingVoiceQualityLaryngeal2019} on Voice Quality
-	\item Due readings on the phonetic-phonology interface \citep{keatingPhonologyphoneticsInterface1996,kingstonPhoneticsPhonologyInterface2007,zsigaPhonologyPhoneticsInterface2020}
+	\item Do more readings on the phonetic-phonology interface \citep{keatingPhonologyphoneticsInterface1996,zsigaPhonologyPhoneticsInterface2020}
 \end{itemize}
 
 %------------------------------------
@@ -380,7 +386,7 @@ Questions
 \section*{Appendix} 
 %------------------------------------
 %------------------------------------
-\subsection*{Consonants} \label{sec:Consonants}
+\subsection*{Consonant Inventory} \label{sec:Consonants}
 %------------------------------------
 
 \begin{itemize}
@@ -388,11 +394,11 @@ Questions
 
 	\item Like other Zapotecan languages consonants are divided between fortis and lenis \citep{nellisFortisLenisCajonos1980,jaegerInitialConsonantClusters1982,uchiharaFortisLenisGlides2016}.
 
-	\item Following \citet{jaegerInitialConsonantClusters1982} there are four reasons that we distinguish fortis/lenis instead of voiceless/voiced in Zapotecan languages.
+	\item Following \citet{jaegerInitialConsonantClusters1982} there are four reasons that we use fortis/lenis instead of voiceless/voiced in Zapotecan languages.
 	\begin{enumerate}
 		\item Fortis obstruents are always voiceless, while lenis can be voiced, partially devoiced, or voiceless.
 		\item Fortis stops and affricates aalways retain their stop closure, whereas lenis stops and affricates are often realized as fricatives.
-		\item Fortis obstruents are usually of longer duration than lenis obstruents
+		\item Fortis obstruents are usually of longer duration than lenis obstruents.
 		\item Fortis and lenis sonorants are primarily distinguished by length, with fortis having a longer duration than lenis. 
 	\end{enumerate}
 	\item The behavior that \citet{jaegerInitialConsonantClusters1982} described is illustrated in Table \ref{tab:yatee}. 
