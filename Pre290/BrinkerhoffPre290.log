@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.8.25)  3 NOV 2021 18:47
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.8.25)  3 NOV 2021 23:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1921,18 +1921,226 @@ h as Articulatory Phonology ([][][]Brow-
 [1
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 194
+LaTeX Font Info:    Trying to load font information for U+msa on input line 201
 .
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 194
+LaTeX Font Info:    Trying to load font information for U+msb on input line 201
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2] [3]
-Overfull \hbox (6.985pt too wide) in paragraph at lines 306--307
+) [2]
+
+LaTeX Warning: Reference `tab:laryngeal' on page 3 undefined on input line 237.
+
+
+[3]
+! Undefined control sequence.
+\enit@enditemize ->\enit@after 
+                               \endlist \ifx \enit@series \relax \else \ifnu...
+l.262 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@enditemize ...x \else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.262 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.262 \end{itemize}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.262 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.262 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.262 \end{itemize}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> enit@resume@series@\enit@series 
+                                           
+l.262 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
+                                                  \endcsname \the \csname c@...
+l.262 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...e \the \csname c@\@listctr 
+                                                  \endcsname }\fi }
+l.262 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.262 \end{itemize}
+                   
+I'm forgetting what you said and using zero instead.
+
+! Undefined control sequence.
+\enit@enditemize ...ist \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.262 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.262 \end{itemize}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.262 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.262 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.262 \end{itemize}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
+                                                  \endcsname \the \csname c@...
+l.262 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...e \the \csname c@\@listctr 
+                                                  \endcsname }\fi }
+l.262 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.262 \end{itemize}
+                   
+I'm forgetting what you said and using zero instead.
+
+
+! LaTeX Error: \begin{document} ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.262 \end{itemize}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.262 \end{itemize}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+[4]
+Overfull \hbox (6.985pt too wide) in paragraph at lines 312--313
 [][][][]\TU/LibertinusSerif(0)/m/n/12 Chávez-Peón (2010)[][] showed that the si
 milar restrictions in tone and phonation co-occurrence
  []
@@ -1961,23 +2169,32 @@ Missing character: There is no ︎ (U+FE0E) in font Libertinus Serif Regular/OT:
 cript=latn;language=dflt;mapping=tex-text;!
 Missing character: There is no ︎ (U+FE0E) in font Libertinus Serif Regular/OT:s
 cript=latn;language=dflt;mapping=tex-text;!
-[4]
+[5]
 LaTeX Font Info:    Font shape `TU/LibertinusMono(0)/m/n' will be
-(Font)              scaled to size 10.40002pt on input line 370.
- [5]
-Overfull \hbox (3.43195pt too wide) in paragraph at lines 370--370
+(Font)              scaled to size 10.40002pt on input line 376.
+ [6]
+Overfull \hbox (3.43195pt too wide) in paragraph at lines 376--376
 [][]\TU/LibertinusSerif(0)/m/n/12 DiCanio, Christian T. 2012. Coarticulation be
 tween tone and glottal consonants in Itunyoso Trique.
  []
 
-[6]
-Overfull \hbox (2.79988pt too wide) in paragraph at lines 370--370
+[7]
+Overfull \hbox (2.79988pt too wide) in paragraph at lines 376--376
 [][]\TU/LibertinusSerif(0)/m/n/12 Zsiga, Elizabeth C. 2020. \TU/LibertinusSerif
 (0)/m/it/12 The phonology/phonetics interface\TU/LibertinusSerif(0)/m/n/12 . Ca
 mbridge, MA: The MIT Press. 312 pp. 
  []
 
-[7] [8] [9] (./BrinkerhoffPre290.aux)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8] [9] (./BrinkerhoffPre290.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1988,12 +2205,12 @@ Package logreq Info: Writing requests to 'BrinkerhoffPre290.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53001 strings out of 476476
- 1140786 string characters out of 5814301
- 2023878 words of memory out of 5000000
- 72659 multiletter control sequences out of 15000+600000
- 408829 words of font info for 83 fonts, out of 8000000 for 9000
+ 53035 strings out of 476476
+ 1141548 string characters out of 5814301
+ 2023003 words of memory out of 5000000
+ 72688 multiletter control sequences out of 15000+600000
+ 410552 words of font info for 94 fonts, out of 8000000 for 9000
  1350 hyphenation exceptions out of 8191
- 108i,11n,119p,2638b,5166s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,11n,119p,2638b,5323s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on BrinkerhoffPre290.xdv (9 pages, 188640 bytes).
+Output written on BrinkerhoffPre290.xdv (9 pages, 211236 bytes).
