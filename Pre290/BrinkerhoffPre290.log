@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.8.25)  3 NOV 2021 17:54
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.8.25)  3 NOV 2021 18:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1714,7 +1714,11 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'american'.
 
-(./BrinkerhoffPre290.aux)
+(./BrinkerhoffPre290.aux
+
+LaTeX Warning: Label `sec:Methodology' multiply defined.
+
+)
 \openout1 = `BrinkerhoffPre290.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
@@ -1728,8 +1732,7 @@ LaTeX Font Info:    ... okay on input line 90.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 9
 0.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 90.
@@ -1782,11 +1785,12 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 \openout3 = `BrinkerhoffPre290.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'BrinkerhoffPre290.bbl' not found.
+Package biblatex Info: ... file 'BrinkerhoffPre290.bbl' found.
 
-No file BrinkerhoffPre290.bbl.
+(./BrinkerhoffPre290.bbl)
 Package biblatex Info: Reference section=0 on input line 90.
 Package biblatex Info: Reference segment=0 on input line 90.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1861,4 +1865,135 @@ LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/LibertinusSerif(0)/m/n on input lin
 e 90.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `norm
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/LibertinusSerif(0)/m/n --> TU/LibertinusSerif(0)/m/n
+ on input line 90.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/LibertinusSerif(0)/m/it on input li
+ne 90.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/LibertinusSerif(0)/b/n on input lin
+e 90.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/LibertinusSans(0)/m/n on input line
+ 90.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/LibertinusMono(0)/m/n on input line
+ 90.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/LibertinusSerif(0)/m/n --> TU/LibertinusSerif(0)/b/n
+ on input line 90.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/LibertinusSerif(0)/b/it on input l
+ine 90.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/LibertinusSans(0)/b/n on input lin
+e 90.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/LibertinusMono(0)/b/n on input line
+ 90.
+Package hyperref Info: Link coloring ON on input line 90.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count546
+)
+LaTeX Info: Redefining \ref on input line 90.
+LaTeX Info: Redefining \pageref on input line 90.
+LaTeX Info: Redefining \nameref on input line 90.
+ (./BrinkerhoffPre290.out) (./BrinkerhoffPre290.out)
+\@outlinefile=\write6
+\openout6 = `BrinkerhoffPre290.out'.
+
+
+Overfull \hbox (1.98495pt too wide) in paragraph at lines 160--161
+[]\TU/LibertinusSerif(0)/m/n/12 This can be accomplished through frameworks suc
+h as Articulatory Phonology ([][][]Brow-
+ []
+
+[1
+
+]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 194
+.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 194
+.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [2] [3]
+Overfull \hbox (6.985pt too wide) in paragraph at lines 306--307
+[][][][]\TU/LibertinusSerif(0)/m/n/12 Chávez-Peón (2010)[][] showed that the si
+milar restrictions in tone and phonation co-occurrence
+ []
+
+Missing character: There is no ︎ (U+FE0E) in font Libertinus Serif Regular/OT:s
+cript=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ︎ (U+FE0E) in font Libertinus Serif Regular/OT:s
+cript=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ︎ (U+FE0E) in font Libertinus Serif Regular/OT:s
+cript=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ︎ (U+FE0E) in font Libertinus Serif Regular/OT:s
+cript=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ︎ (U+FE0E) in font Libertinus Serif Regular/OT:s
+cript=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ︎ (U+FE0E) in font Libertinus Serif Regular/OT:s
+cript=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ︎ (U+FE0E) in font Libertinus Serif Regular/OT:s
+cript=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ︎ (U+FE0E) in font Libertinus Serif Regular/OT:s
+cript=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ︎ (U+FE0E) in font Libertinus Serif Regular/OT:s
+cript=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ︎ (U+FE0E) in font Libertinus Serif Regular/OT:s
+cript=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ︎ (U+FE0E) in font Libertinus Serif Regular/OT:s
+cript=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ︎ (U+FE0E) in font Libertinus Serif Regular/OT:s
+cript=latn;language=dflt;mapping=tex-text;!
+[4]
+LaTeX Font Info:    Font shape `TU/LibertinusMono(0)/m/n' will be
+(Font)              scaled to size 10.40002pt on input line 370.
+ [5]
+Overfull \hbox (3.43195pt too wide) in paragraph at lines 370--370
+[][]\TU/LibertinusSerif(0)/m/n/12 DiCanio, Christian T. 2012. Coarticulation be
+tween tone and glottal consonants in Itunyoso Trique.
+ []
+
+[6]
+Overfull \hbox (2.79988pt too wide) in paragraph at lines 370--370
+[][]\TU/LibertinusSerif(0)/m/n/12 Zsiga, Elizabeth C. 2020. \TU/LibertinusSerif
+(0)/m/it/12 The phonology/phonetics interface\TU/LibertinusSerif(0)/m/n/12 . Ca
+mbridge, MA: The MIT Press. 312 pp. 
+ []
+
+[7] [8] [9] (./BrinkerhoffPre290.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `BrinkerhoffPre290.out' has not changed.
+(rerunfilecheck)             Checksum: 4E7A19FD80259AD8237A23B5865E7166;1102.
+Package logreq Info: Writing requests to 'BrinkerhoffPre290.run.xml'.
+\openout1 = `BrinkerhoffPre290.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 53001 strings out of 476476
+ 1140786 string characters out of 5814301
+ 2023878 words of memory out of 5000000
+ 72659 multiletter control sequences out of 15000+600000
+ 408829 words of font info for 83 fonts, out of 8000000 for 9000
+ 1350 hyphenation exceptions out of 8191
+ 108i,11n,119p,2638b,5166s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on BrinkerhoffPre290.xdv (9 pages, 188640 bytes).
