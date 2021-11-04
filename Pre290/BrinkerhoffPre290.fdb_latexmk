@@ -1,0 +1,11 @@
+# Fdb version 3
+["xdvipdfmx"] 0 "BrinkerhoffPre290.xdv" "BrinkerhoffPre290.pdf" "BrinkerhoffPre290" 0
+  "BrinkerhoffPre290.xdv" 0 -1 0 "xelatex"
+  (generated)
+  "BrinkerhoffPre290.pdf"
+["xelatex"] 0 "BrinkerhoffPre290.tex" "BrinkerhoffPre290.xdv" "BrinkerhoffPre290" 0
+  "BrinkerhoffPre290.aux" 1635987247 32 3985256e7290058c681f74d7a3565a19 ""
+  "BrinkerhoffPre290.tex" 0 -1 0 ""
+  (generated)
+  "BrinkerhoffPre290.xdv"
+  "BrinkerhoffPre290.log"

@@ -1,0 +1,20 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is '20211021_SLZTonePhonation.blg'
+[202] biber-darwin:340> INFO - === Thu Oct 21, 2021, 10:04:01
+[498] Biber.pm:415> INFO - Reading '20211021_SLZTonePhonation.bcf'
+[651] Biber.pm:952> INFO - Found 29 citekeys in bib section 0
+[675] Biber.pm:4340> INFO - Processing section 0
+[729] Biber.pm:4531> INFO - Looking for bibtex format file 'link_desktop.bib' for section 0
+[905] bibtex.pm:1689> INFO - LaTeX decoding ...
+[7785] bibtex.pm:1494> INFO - Found BibTeX data source 'link_desktop.bib'
+[7908] Utils.pm:395> WARN - Entry alias 'ComplementSelectionLexicona' already has an alias 'ComplementSelectionLexicon', skipping ...
+[7946] Utils.pm:395> WARN - Entry alias 'katzRoutledgeHandbookPhonetics2019a' already has an alias 'garellekPhoneticsVoice2019', skipping ...
+[8701] Utils.pm:395> WARN - ISBN '978-0-521-77314-0 978-0-521-77445-1' in entry 'yipTone2002' is invalid - run biber with '--validate_datamodel' for details.
+[8754] Utils.pm:395> WARN - ISBN '978-1-108-69655-5 978-1-108-49842-5 978-1-108-73603-9' in entry 'eslingVoiceQualityLaryngeal2019' is invalid - run biber with '--validate_datamodel' for details.
+[8898] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[8898] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[8898] Biber.pm:4168> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[8898] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[9103] bbl.pm:654> INFO - Writing '20211021_SLZTonePhonation.bbl' with encoding 'UTF-8'
+[9164] bbl.pm:757> INFO - Output to 20211021_SLZTonePhonation.bbl
+[9165] Biber.pm:128> INFO - WARNINGS: 4

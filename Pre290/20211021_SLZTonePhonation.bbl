@@ -1,0 +1,1382 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{adlerDerivationVerbInitiality2018}{incollection}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=b8a825085fb4c29a3e2681a9b7f9b547}{%
+           family={Adler},
+           familyi={A\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f65343c91f8edab85e5ace61d9bcf726}{%
+           family={Foley},
+           familyi={F\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd824eb4a332315b04505f4e2cd302ee}{%
+           family={Pizarro-Guevara},
+           familyi={P\bibinithyphendelim G\bibinitperiod},
+           given={Jed},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6b620df88381ebbe83868052630fc235}{%
+           family={Sasaki},
+           familyi={S\bibinitperiod},
+           given={Kelsey},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8a22e2a4c21ee7f72240fab9a029de4c}{%
+           family={Toosarvandani},
+           familyi={T\bibinitperiod},
+           given={Maziar},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=d56a547af17f0bf1c121c3c12c57db7e}{%
+           family={Merchant},
+           familyi={M\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+        {{hash=efb0e79a59bd1877fa8137b7fc664a6d}{%
+           family={Mikkelsen},
+           familyi={M\bibinitperiod},
+           given={Line},
+           giveni={L\bibinitperiod}}}%
+        {{hash=56cacfaa432e0ed44dbd9cdf5d3a661a}{%
+           family={Rudin},
+           familyi={R\bibinitperiod},
+           given={Deniz},
+           giveni={D\bibinitperiod}}}%
+        {{hash=6b620df88381ebbe83868052630fc235}{%
+           family={Sasaki},
+           familyi={S\bibinitperiod},
+           given={Kelsey},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Santa Cruz, Berkeley, Chicago}%
+      }
+      \list{publisher}{1}{%
+        {University of California}%
+      }
+      \strng{namehash}{9848522be910d14557e613e2708234ad}
+      \strng{fullhash}{7aa1dc557a8bc79ba3f75b696025ce70}
+      \strng{bibnamehash}{7aa1dc557a8bc79ba3f75b696025ce70}
+      \strng{authorbibnamehash}{7aa1dc557a8bc79ba3f75b696025ce70}
+      \strng{authornamehash}{9848522be910d14557e613e2708234ad}
+      \strng{authorfullhash}{7aa1dc557a8bc79ba3f75b696025ce70}
+      \strng{editorbibnamehash}{d321fbf1e2d94c10216f5f0a086b464f}
+      \strng{editornamehash}{2827a578d2ca37ad22401c1959ea91f0}
+      \strng{editorfullhash}{d321fbf1e2d94c10216f5f0a086b464f}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{A Reasonable Way to Proceed: Essays in Honor of {{Jim McCloskey}}}
+      \field{langid}{english}
+      \field{title}{The Derivation of Verb Initiality in {{Santiago Laxopa Zapotec}}}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{31\bibrangedash 49}
+      \range{pages}{19}
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/IQL63IPN/adlerDerivationVerbInitiality2018.pdf
+      \endverb
+    \endentry
+    \entry{adlerAcousticsPhonationTypes2016}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=352d13910de8656da950768305afb09b}{%
+           family={Adler},
+           familyi={A\bibinitperiod},
+           given={Jeffrey\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de19c726f6bf734ee7914c7b68fd4146}{%
+           family={Morimoto},
+           familyi={M\bibinitperiod},
+           given={Maho},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b88989aeca40c2d7a549ef7283e6e4b8}
+      \strng{fullhash}{b88989aeca40c2d7a549ef7283e6e4b8}
+      \strng{bibnamehash}{b88989aeca40c2d7a549ef7283e6e4b8}
+      \strng{authorbibnamehash}{b88989aeca40c2d7a549ef7283e6e4b8}
+      \strng{authornamehash}{b88989aeca40c2d7a549ef7283e6e4b8}
+      \strng{authorfullhash}{b88989aeca40c2d7a549ef7283e6e4b8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Zapotec languages are known for their complex tonal and phonation systems. Fieldwork in Santiago Laxopa Zapotec (SLZ), an undocumented language spoken in Oaxaca, Mexico, suggests the implementation of six tones (high, mid, low, high-falling, mid-falling and rising) and four phonation types (modal, creaky, checked and breathy). We report on the reliability of acoustic measures such as (H1-H2) and (H1-A1), which have previously been reported to characterize phonation types. Spectral measurements including H1, H2 (first and second harmonics), A1 (amplitude of F1) and A2 (amplitude of F2) are taken from vowels in near minimal pairs controlled for tones and quality. We also report on the relative implementation of tone and phonation. Silverman (1997) argues that languages with contrastive tone and phonation optimize the realization of laryngeal events such that non-modal vowels have a modal portion where the tonal event is implemented. We discuss if Silverman’s predictions are borne out in SLZ.}
+      \field{issn}{0001-4966}
+      \field{journaltitle}{The Journal of the Acoustical Society of America}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{4}
+      \field{shortjournal}{The Journal of the Acoustical Society of America}
+      \field{title}{Acoustics of Phonation Types and Tones in {{Santiago Laxopa Zapotec}}}
+      \field{urlday}{16}
+      \field{urlmonth}{6}
+      \field{urlyear}{2020}
+      \field{volume}{140}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{3109\bibrangedash 3109}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1121/1.4969713
+      \endverb
+      \verb{urlraw}
+      \verb http://asa.scitation.org/doi/10.1121/1.4969713
+      \endverb
+      \verb{url}
+      \verb http://asa.scitation.org/doi/10.1121/1.4969713
+      \endverb
+      \keyw{\#nosource}
+    \endentry
+    \entry{arellanesSistemaFonologicoPropiedades2009}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b20723d3f18025b2251b4979bf06b480}{%
+           family={Arellanes},
+           familyi={A\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {El Colegio de México}%
+      }
+      \strng{namehash}{b20723d3f18025b2251b4979bf06b480}
+      \strng{fullhash}{b20723d3f18025b2251b4979bf06b480}
+      \strng{bibnamehash}{b20723d3f18025b2251b4979bf06b480}
+      \strng{authorbibnamehash}{b20723d3f18025b2251b4979bf06b480}
+      \strng{authornamehash}{b20723d3f18025b2251b4979bf06b480}
+      \strng{authorfullhash}{b20723d3f18025b2251b4979bf06b480}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{El Sistema Fonológico y Las Propiedades Fonéticas Del Zapoteco de {{San Pablo Güilá}}: Descripción y Análisis Formal}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \keyw{\#nosource}
+    \endentry
+    \entry{avelinoAcousticElectroglottographicAnalyses2010}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a403cc674047e052e549a14d8b541b7b}{%
+           family={Avelino},
+           familyi={A\bibinitperiod},
+           given={Heriberto},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a403cc674047e052e549a14d8b541b7b}
+      \strng{fullhash}{a403cc674047e052e549a14d8b541b7b}
+      \strng{bibnamehash}{a403cc674047e052e549a14d8b541b7b}
+      \strng{authorbibnamehash}{a403cc674047e052e549a14d8b541b7b}
+      \strng{authornamehash}{a403cc674047e052e549a14d8b541b7b}
+      \strng{authorfullhash}{a403cc674047e052e549a14d8b541b7b}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Languages where phonation type and tone are contrastive make use of extremely fine and controlled actions of laryngeal structures; hence, there is little opportunity to variation in either phonation or pitch. Nonetheless, many American Indian languages have contrastive nonmodal phonation, which, moreover, is subject to a great deal of variation. There are a few studies addressing the phonetics of nonmodal phonation in American Indian languages, and little is known about the phonetics/phonology interface of laryngeal features within the sound patterns of these languages. This article aims to contribute to the knowledge of nonmodal phonation through the detailed study of the phenomenon in Yalálag Zapotec (YZ) and American Indian language. A series of spectral and electrophysiological analyses contribute to the description of YZ nonmodal phonation and its variability across gender. It is argued that the temporal patterns in realization of laryngealization are a property of YZ speaker's grammar.}
+      \field{day}{1}
+      \field{issn}{0892-1997}
+      \field{journaltitle}{Journal of Voice}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{3}
+      \field{shortjournal}{Journal of Voice}
+      \field{title}{Acoustic and {{Electroglottographic Analyses}} of {{Nonpathological}}, {{Nonmodal Phonation}}}
+      \field{urlday}{13}
+      \field{urlmonth}{8}
+      \field{urlyear}{2020}
+      \field{volume}{24}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{270\bibrangedash 280}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/j.jvoice.2008.10.002
+      \endverb
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/WQ5T3TMM/avelinoAcousticElectroglottographicAnalyses2010.pdf;/Users/mykelbrinkerhoff/Zotero/storage/PX8C76HB/S0892199708001665.html
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S0892199708001665
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0892199708001665
+      \endverb
+      \keyw{Acoustics,American Indian languages,Creakiness,Electroglottography,Laryngealization,Nonmodal phonation}
+    \endentry
+    \entry{avelinobecerraTopicsYalalagZapotec2004}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=762104840fbc72f481b06cbd9c8cfbd3}{%
+           family={Avelino\bibnamedelima Becerra},
+           familyi={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Heriberto},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {University of California, Los Angeles}%
+      }
+      \list{location}{1}{%
+        {Los Angeles, CA}%
+      }
+      \strng{namehash}{762104840fbc72f481b06cbd9c8cfbd3}
+      \strng{fullhash}{762104840fbc72f481b06cbd9c8cfbd3}
+      \strng{bibnamehash}{762104840fbc72f481b06cbd9c8cfbd3}
+      \strng{authorbibnamehash}{762104840fbc72f481b06cbd9c8cfbd3}
+      \strng{authornamehash}{762104840fbc72f481b06cbd9c8cfbd3}
+      \strng{authorfullhash}{762104840fbc72f481b06cbd9c8cfbd3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This dissertation is primarily intended as a description of the Yalálag Zapotec (YZ) language of Oaxaca, México, with particular reference to its phonetic structures. The first section is an introduction to the Yalálag Zapotec language, its orthography and basic facts of its grammar. Chapter 2 outlines the noun and verb morphology, and Chapter 3 presents a sketch of sentence structure. The second section provides a detailed description of the phonetic structures of the language. Chapter 4 deals with vowels, consonants and tone. The YZ five modal vowels and four laryngealized vowels are described here. The phonetic properties of consonants are also presented, including the phonetic correlates of the fortis-lenis contrast. It is shown that VOT is a reliable parameter for obstruents; the phonetics of obstruent devoicing and consonant clusters are discussed. A description of the three contrastive tones in YZ closes the chapter. YZ data supports the typology of contour tone restrictions based on the weight of the rime: more sonorous and longer rimes are capable of bearing Falling tone; however, Falling tone can occur in non-sonorous rimes. Chapter 5 offers an analysis of vowel phonation, describing in detail the acoustic properties of modal and laryngealized vowels. The analysis shows that the time course of phonation in YZ is restricted to the edges of the vowel. This pattern suggests that the timing of nonmodal phonation is organized to guarantee the production and perception of multiple phonemic features that could otherwise contradict each other in actual implementation. Chapter 6 presents a palatographic and acoustic study of YZ coronals, denti-alveolars, postalveolars and alveo-palatals. The compression of coronal consonants in a narrow articulatory space allows us to observe the degree of variability in their production. The third section is composed of two chapters devoted to an investigation of the perception of tone in YZ. Chapter 7 investigates whether the perception of tone in YZ is categorical. Chapter 8 presents a dichotic listening experiment concerning the perception of linguistic and non-linguistic pitch in YZ. The results do not support a categorical perception of tone and show a consistent right ear advantage for lexical tone.}
+      \field{langid}{english}
+      \field{pagetotal}{315}
+      \field{title}{Topics in {{Yalálag Zapotec}}, with Particular Reference to Its Phonetic Structures}
+      \field{type}{phdthesis}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/LZNDU4JF/avelinobecerraTopicsYalalagZapotec2004.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://search.proquest.com/docview/305216850?accountid=14523
+      \endverb
+      \verb{url}
+      \verb https://search.proquest.com/docview/305216850?accountid=14523
+      \endverb
+      \keyw{Language,Linguistics,literature and linguistics,Mexico,Oaxaca,Phonetic structures,Yalalag Zapotec,Zapotec}
+    \endentry
+    \entry{brunelleTonePhonationSoutheast2016}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=7d6a5b5776037be59870e95574946ce9}{%
+           family={Brunelle},
+           familyi={B\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8267d2d7f8ebfcee04e15da6a4828444}{%
+           family={Kirby},
+           familyi={K\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{abe8d1c4be974891813abe21b15966e1}
+      \strng{fullhash}{abe8d1c4be974891813abe21b15966e1}
+      \strng{bibnamehash}{abe8d1c4be974891813abe21b15966e1}
+      \strng{authorbibnamehash}{abe8d1c4be974891813abe21b15966e1}
+      \strng{authornamehash}{abe8d1c4be974891813abe21b15966e1}
+      \strng{authorfullhash}{abe8d1c4be974891813abe21b15966e1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Southeast Asia is often considered a quintessential Sprachbund where languages from five different language phyla have been converging typologically for millennia. One of the common features shared by many languages of the area is tone: several major national languages of the region have large tone inventories and complex tone contours. In this paper, we suggest a more fine-grained view. We show that in addition to a large number of atonal languages, the tone languages of the region are actually far more diverse than usually assumed, and employ phonation type contrasts at least as often as pitch. Along the same lines, we argue that concepts such as tone and register, while descriptively useful, can obscure important underlying similarities and impede our understanding of the behavior of phonetic properties, typological regularities, and diachrony. We finally draw the reader’s attention to some issues of current interest in the study of tone and phonation in Southeast Asia and describe some technical developments that are likely to allow researchers to address new lines of research in years to come.}
+      \field{issn}{1749818X}
+      \field{journaltitle}{Language and Linguistics Compass}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{4}
+      \field{shortjournal}{Language and Linguistics Compass}
+      \field{shorttitle}{Tone and {{Phonation}} in {{Southeast Asian Languages}}}
+      \field{title}{Tone and {{Phonation}} in {{Southeast Asian Languages}}}
+      \field{urlday}{25}
+      \field{urlmonth}{8}
+      \field{urlyear}{2020}
+      \field{volume}{10}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{191\bibrangedash 207}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1111/lnc3.12182
+      \endverb
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/UHQYWK2B/brunelleTonePhonationSoutheast2016.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.wiley.com/10.1111/lnc3.12182
+      \endverb
+      \verb{url}
+      \verb http://doi.wiley.com/10.1111/lnc3.12182
+      \endverb
+      \keyw{_tablet}
+    \endentry
+    \entry{campbellOtomangueanHistoricalLinguistics2017a}{article}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=a2d495cdd7721bf5e80fd7e1c1df3aa4}{%
+           family={Campbell},
+           familyi={C\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{a2d495cdd7721bf5e80fd7e1c1df3aa4}
+      \strng{fullhash}{a2d495cdd7721bf5e80fd7e1c1df3aa4}
+      \strng{bibnamehash}{a2d495cdd7721bf5e80fd7e1c1df3aa4}
+      \strng{authorbibnamehash}{a2d495cdd7721bf5e80fd7e1c1df3aa4}
+      \strng{authornamehash}{a2d495cdd7721bf5e80fd7e1c1df3aa4}
+      \strng{authorfullhash}{a2d495cdd7721bf5e80fd7e1c1df3aa4}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Language and Linguistics Compass}
+      \field{number}{7}
+      \field{title}{Otomanguean Historical Linguistics: Exploring the Subgroups}
+      \field{volume}{11}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{e12244}
+      \range{pages}{-1}
+      \keyw{\#nosource}
+    \endentry
+    \entry{campbellOtomangueanHistoricalLinguistics2017}{article}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=2d6c103639eb7b80600b569751984c73}{%
+           family={Campbell},
+           familyi={C\bibinitperiod},
+           given={Eric\bibnamedelima W.},
+           giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{2d6c103639eb7b80600b569751984c73}
+      \strng{fullhash}{2d6c103639eb7b80600b569751984c73}
+      \strng{bibnamehash}{2d6c103639eb7b80600b569751984c73}
+      \strng{authorbibnamehash}{2d6c103639eb7b80600b569751984c73}
+      \strng{authornamehash}{2d6c103639eb7b80600b569751984c73}
+      \strng{authorfullhash}{2d6c103639eb7b80600b569751984c73}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{1749818X}
+      \field{journaltitle}{Language and Linguistics Compass}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{4}
+      \field{shortjournal}{Language and Linguistics Compass}
+      \field{shorttitle}{Otomanguean Historical Linguistics}
+      \field{title}{Otomanguean Historical Linguistics: Past, Present, and Prospects for the Future}
+      \field{urlday}{13}
+      \field{urlmonth}{4}
+      \field{urlyear}{2020}
+      \field{volume}{11}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{e12240}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1111/lnc3.12240
+      \endverb
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/JGQ7D4HK/campbellOtomangueanHistoricalLinguistics2017.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.wiley.com/10.1111/lnc3.12240
+      \endverb
+      \verb{url}
+      \verb http://doi.wiley.com/10.1111/lnc3.12240
+      \endverb
+    \endentry
+    \entry{campbellMesoAmericaLinguisticArea1986}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=7436157a43627f8be841123baa6b1f9c}{%
+           family={Campbell},
+           familyi={C\bibinitperiod},
+           given={Lyle},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d80da8871a8cdbf80a55eee61d3ee7f9}{%
+           family={Kaufman},
+           familyi={K\bibinitperiod},
+           given={Terrence},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b33b8c9414272ad3937ee2fdcc4f15b5}{%
+           family={Smith-Stark},
+           familyi={S\bibinithyphendelim S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{6790a40b45363a016e731875406b932d}
+      \strng{fullhash}{6790a40b45363a016e731875406b932d}
+      \strng{bibnamehash}{6790a40b45363a016e731875406b932d}
+      \strng{authorbibnamehash}{6790a40b45363a016e731875406b932d}
+      \strng{authornamehash}{6790a40b45363a016e731875406b932d}
+      \strng{authorfullhash}{6790a40b45363a016e731875406b932d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Language}
+      \field{number}{3}
+      \field{title}{Meso-{{America}} as a Linguistic Area}
+      \field{volume}{62}
+      \field{year}{1986}
+      \field{dateera}{ce}
+      \field{pages}{530\bibrangedash 570}
+      \range{pages}{41}
+      \keyw{\#nosource}
+    \endentry
+    \entry{chavez-peonInteractionMetricalStructure2010}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=884bcfedc7a3d5e7840ff5e15a47ff3b}{%
+           family={Chávez-Peón},
+           familyi={C\bibinithyphendelim P\bibinitperiod},
+           given={Mario\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {University of British Columbia}%
+      }
+      \strng{namehash}{884bcfedc7a3d5e7840ff5e15a47ff3b}
+      \strng{fullhash}{884bcfedc7a3d5e7840ff5e15a47ff3b}
+      \strng{bibnamehash}{884bcfedc7a3d5e7840ff5e15a47ff3b}
+      \strng{authorbibnamehash}{884bcfedc7a3d5e7840ff5e15a47ff3b}
+      \strng{authornamehash}{884bcfedc7a3d5e7840ff5e15a47ff3b}
+      \strng{authorfullhash}{884bcfedc7a3d5e7840ff5e15a47ff3b}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This thesis investigates the interaction between different prosodic patterns in Quiaviní Zapotec (Otomanguean), and accounts for them both at the phonetic and the phonological level. In it, I examine an array of complex patterns along multiple dimensions, including metrical structure, tone, and phonation types; as well as how these patterns interact with the fortis/lenis distinction, and syllable structure. Within the framework of Optimality Theory, my analysis sheds light on the phonetics-phonology interface and emphasizes the need for a theory with moraic structure. 	This dissertation presents the first thorough phonetic documentation of the prosody of Quiaviní Zapotec. It makes a significant empirical contribution by providing descriptive generalizations of vowel and consonant length, a reanalysis of tone as contrastive in Quiaviní Zapotec, and a new approach to the study of the four-way phonation contrast in this language — modal /a/, breathy /a̤/, creaky /a̰/ and interrupted /aʔ/ vowels — (cf. Munro \& Lopez, 1999). 	In addition, this research makes significant contributions to phonological theory, with regards to both segmental and prosodic phenomena. Within an emergent feature approach, I revisit the fortis/lenis distinction, which crosscuts the obstruent-sonorant contrast in Quiaviní Zapotec. I analyze it as a composite of language-specific phonological and phonetic properties, encoded with the feature [+/-fortis]. Adding to the typology of syllable weight, fortis consonants are analyzed as moraic in coda position, but among them, only fortis sonorants may bear tone alongside vowels (i.e. *[-SON][TONE] ‘No tones on obstruents’). 	Furthermore, I show specific timing patterns for the phonetic implementation of tonal and laryngeal features. Quiaviní Zapotec exhibits compatibility of contrasts; compromise of phonological features (e.g. tonal contrasts are cued during modal phonation, followed by breathiness or laryngealization); or complete incompatibility, which translates into phonemic gaps. This distribution is formalized in terms of markedness interaction and grounded constraints (e.g. ‘If [+spread glottis], then Low tone’, accounting for the absence of high tone with breathy vowels). 	Overall, the thesis analyzes the minimal prosodic word in Quiaviní Zapotec (a bimoraic foot) as the domain where the full array of tonal and phonation type contrasts takes place, and illustrates particular mechanisms by which phonetic factors shape phonology.}
+      \field{langid}{english}
+      \field{title}{The Interaction of Metrical Structure, Tone, and Phonation Types in {{Quiaviní Zapotec}}}
+      \field{type}{phdthesis}
+      \field{urlday}{12}
+      \field{urlmonth}{6}
+      \field{urlyear}{2020}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.14288/1.0071253
+      \endverb
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/4XWT53ZY/chavez-peonInteractionMetricalStructure2010.pdf;/Users/mykelbrinkerhoff/Zotero/storage/MU3W5GBZ/1.html
+      \endverb
+      \verb{urlraw}
+      \verb https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0071253
+      \endverb
+      \verb{url}
+      \verb https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0071253
+      \endverb
+      \keyw{_tablet}
+    \endentry
+    \entry{dicanioCoarticulationToneGlottal2012}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0917c0ba6e0812de242399df1505351a}{%
+           family={DiCanio},
+           familyi={D\bibinitperiod},
+           given={Christian\bibnamedelima T.},
+           giveni={C\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0917c0ba6e0812de242399df1505351a}
+      \strng{fullhash}{0917c0ba6e0812de242399df1505351a}
+      \strng{bibnamehash}{0917c0ba6e0812de242399df1505351a}
+      \strng{authorbibnamehash}{0917c0ba6e0812de242399df1505351a}
+      \strng{authornamehash}{0917c0ba6e0812de242399df1505351a}
+      \strng{authorfullhash}{0917c0ba6e0812de242399df1505351a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper investigates the realization of contrastive tone in three non-modal phonation contexts (creaky phonation, glottal closure, and breathy phonation) in Itunyoso Trique, an Oto-Manguean language spoken in Oaxaca, Mexico. The study examines how coarticulatory glottalization (creaky phonation, glottal closure) coincides with coarticulatory pitch perturbations and spectral tilt changes on neighboring vowels. The onset of laryngeally induced F0 perturbation effects and the timing of changes in spectral tilt were examined using acoustic data from six speakers of the language. The results show that in contexts where substantial non-modal phonation spreads onto the adjacent vowel, greater pitch effects are observed. In contexts where abrupt glottal closure occurs, less coarticulatory changes in spectral tilt and pitch are observed on adjacent vowels. In addition, strong tonal effects are observed for certain spectral measures. These findings are discussed in relation to the literature on tonogenesis and coarticulatory pitch effects.}
+      \field{issn}{00954470}
+      \field{journaltitle}{Journal of Phonetics}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{1}
+      \field{shortjournal}{Journal of Phonetics}
+      \field{title}{Coarticulation between Tone and Glottal Consonants in {{Itunyoso Trique}}}
+      \field{urlday}{26}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{volume}{40}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{162\bibrangedash 176}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1016/j.wocn.2011.10.006
+      \endverb
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/TR2NDSFP/dicanioCoarticulationToneGlottal2012.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0095447011000994
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0095447011000994
+      \endverb
+      \keyw{_tablet}
+    \endentry
+    \entry{eslingVoiceQualityLaryngeal2019}{book}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=082cefbe699f8f788561da9b0c5bf06b}{%
+           family={Esling},
+           familyi={E\bibinitperiod},
+           given={John\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9796751a0e358010abfeb9004a1725a}{%
+           family={Moisik},
+           familyi={M\bibinitperiod},
+           given={Scott\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=57eee65b5fce14421b9dd9a9ec5ffee5}{%
+           family={Benner},
+           familyi={B\bibinitperiod},
+           given={Allison},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e037d06ebedc505c9d1f923fbe51522}{%
+           family={Crevier-Buchman},
+           familyi={C\bibinithyphendelim B\bibinitperiod},
+           given={Lise},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{b07f8dd27f03c1058c1c0f1d1dd5d794}
+      \strng{fullhash}{47c56ea3ad084e0f764faf8b3f62bcb8}
+      \strng{bibnamehash}{47c56ea3ad084e0f764faf8b3f62bcb8}
+      \strng{authorbibnamehash}{47c56ea3ad084e0f764faf8b3f62bcb8}
+      \strng{authornamehash}{b07f8dd27f03c1058c1c0f1d1dd5d794}
+      \strng{authorfullhash}{47c56ea3ad084e0f764faf8b3f62bcb8}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The first phonetic description of voice quality production in 40 years, this book provides a new framework for its analysis: The Laryngeal Articulator Model. Informed by instrumental examinations of the laryngeal articulatory mechanism, it revises our understanding of articulatory postures to explain the actions, vibrations and resonances generated in the epilarynx and pharynx. It focuses on the long-term auditory-articulatory component of accent in the languages of the world, explaining how voice quality relates to segmental and syllabic sounds. Phonetic illustrations of phonation types and of laryngeal and oral vocal tract articulatory postures are provided. Extensive video and audio material is available on a companion website. The book presents computational simulations, the laryngeal and voice quality foundations of infant speech acquisition, speech/voice disorders and surgeries that entail compensatory laryngeal articulator adjustment, and an exploration of the role of voice quality in sound change and of the larynx in the evolution of speech.}
+      \field{day}{20}
+      \field{edition}{1}
+      \field{isbn}{978-1-108-69655-5 978-1-108-49842-5 978-1-108-73603-9}
+      \field{month}{6}
+      \field{number}{162}
+      \field{series}{Cambridge {{Studies}} in {{Linguistics}}}
+      \field{shorttitle}{Voice {{Quality}}}
+      \field{title}{Voice {{Quality}}: The {{Laryngeal Articulator Model}}}
+      \field{urlday}{31}
+      \field{urlmonth}{8}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1017/9781108696555
+      \endverb
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/9JGUXEKQ/eslingVoiceQualityLaryngeal2019.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/9781108696555/type/book
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/9781108696555/type/book
+      \endverb
+      \keyw{_tablet_modified}
+    \endentry
+    \entry{garellekPhoneticsWhiteHmong2021}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6261be825a58b093c669ab685b17a0a2}{%
+           family={Garellek},
+           familyi={G\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8302fa658b038a406c26db0f6760e735}{%
+           family={Esposito},
+           familyi={E\bibinitperiod},
+           given={Christina\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7235f16aa872756d424cfb27d2689fa1}
+      \strng{fullhash}{7235f16aa872756d424cfb27d2689fa1}
+      \strng{bibnamehash}{7235f16aa872756d424cfb27d2689fa1}
+      \strng{authorbibnamehash}{7235f16aa872756d424cfb27d2689fa1}
+      \strng{authornamehash}{7235f16aa872756d424cfb27d2689fa1}
+      \strng{authorfullhash}{7235f16aa872756d424cfb27d2689fa1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Hmong languages, particularly White Hmong, are well studied for their complex tone systems that incorporate pitch, phonation, and duration differences. Still, prior work has made use mostly of tones elicited in their citation forms in carrier phrases. In this paper, we provide a detailed description of both the vowel and tone systems of White Hmong from recordings of read speech. We confirm several features of the language, including the presence of nasal vowels (rather than derived nasalized vowels through coarticulation with a coda [ŋ]), the description of certain tone contours, and the systematic presence of breathy and creaky voice on two of the tones. We also find little evidence of additional intonational f0 targets. However, we show that some tones vary greatly by their position in utterance, and propose novel descriptions for several of them. Finally, we show that \$\textbackslash textrm\{H\}1\^\{\textbackslash!*\}\$ –H2 * , a widely used measure of voice quality and phonation in Hmong and across languages, does not adequately distinguish modal from non-modal phonation in this data set, and argue that noise measures like Cepstral Peak Prominence (CPP) are more robust to phonation differences in corpora with more variability.}
+      \field{day}{22}
+      \field{issn}{0025-1003, 1475-3502}
+      \field{journaltitle}{Journal of the International Phonetic Association}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{shortjournal}{Journal of the International Phonetic Association}
+      \field{title}{Phonetics of {{White Hmong}} Vowel and Tonal Contrasts}
+      \field{urlday}{30}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 20}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1017/S0025100321000104
+      \endverb
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/SKPUTNVN/garellekPhoneticsWhiteHmong2021.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/S0025100321000104/type/journal_article
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/S0025100321000104/type/journal_article
+      \endverb
+      \keyw{_tablet}
+    \endentry
+    \entry{hymanHowStudyTone2014}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5779ad2f62eb912c42387d60db3d7c0d}{%
+           family={Hyman},
+           familyi={H\bibinitperiod},
+           given={Larry\bibnamedelima M},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5779ad2f62eb912c42387d60db3d7c0d}
+      \strng{fullhash}{5779ad2f62eb912c42387d60db3d7c0d}
+      \strng{bibnamehash}{5779ad2f62eb912c42387d60db3d7c0d}
+      \strng{authorbibnamehash}{5779ad2f62eb912c42387d60db3d7c0d}
+      \strng{authornamehash}{5779ad2f62eb912c42387d60db3d7c0d}
+      \strng{authorfullhash}{5779ad2f62eb912c42387d60db3d7c0d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Language Documentation}
+      \field{langid}{english}
+      \field{title}{How {{To Study}} a {{Tone Language}}, with Exemplification from {{Oku}} ({{Grassfields Bantu}}, {{Cameroon}})}
+      \field{volume}{8}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{pages}{38}
+      \range{pages}{1}
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/A37JYEA3/hymanHowStudyTone2014.pdf
+      \endverb
+      \keyw{_tablet}
+    \endentry
+    \entry{jaegerInitialConsonantClusters1982}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=53358802cd9f6391814c275804fcfa90}{%
+           family={Jaeger},
+           familyi={J\bibinitperiod},
+           given={Jeri\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56742e386da9d29b6cb1170e6169242e}{%
+           family={Van\bibnamedelima Valin},
+           familyi={V\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={Robert\bibnamedelima D.},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {University of Chicago Press}%
+      }
+      \strng{namehash}{a11b3447307351428c0eefee3e6e1b66}
+      \strng{fullhash}{a11b3447307351428c0eefee3e6e1b66}
+      \strng{bibnamehash}{a11b3447307351428c0eefee3e6e1b66}
+      \strng{authorbibnamehash}{a11b3447307351428c0eefee3e6e1b66}
+      \strng{authornamehash}{a11b3447307351428c0eefee3e6e1b66}
+      \strng{authorfullhash}{a11b3447307351428c0eefee3e6e1b66}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{jstor}
+      \field{issn}{0020-7071}
+      \field{journaltitle}{International Journal of American Linguistics}
+      \field{number}{2}
+      \field{title}{Initial {{Consonant Clusters}} in {{Yateé Zapotec}}}
+      \field{volume}{48}
+      \field{year}{1982}
+      \field{dateera}{ce}
+      \field{pages}{125\bibrangedash 138}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1086/465724
+      \endverb
+      \verb{eprint}
+      \verb 1264677
+      \endverb
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/ZUQBBK66/jaegerInitialConsonantClusters1982.pdf
+      \endverb
+    \endentry
+    \entry{keatingPhonologyphoneticsInterface1996}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4f3a1358ea5a1c6b16b649115d91c701}{%
+           family={Keating},
+           familyi={K\bibinitperiod},
+           given={Patricia\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Berlin}%
+      }
+      \list{publisher}{1}{%
+        {Akademie Verlag}%
+      }
+      \strng{namehash}{4f3a1358ea5a1c6b16b649115d91c701}
+      \strng{fullhash}{4f3a1358ea5a1c6b16b649115d91c701}
+      \strng{bibnamehash}{4f3a1358ea5a1c6b16b649115d91c701}
+      \strng{authorbibnamehash}{4f3a1358ea5a1c6b16b649115d91c701}
+      \strng{authornamehash}{4f3a1358ea5a1c6b16b649115d91c701}
+      \strng{authorfullhash}{4f3a1358ea5a1c6b16b649115d91c701}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{00208}
+      \field{booktitle}{Interfaces in Phonology}
+      \field{title}{The Phonology-Phonetics Interface}
+      \field{year}{1996}
+      \field{dateera}{ce}
+      \field{pages}{262\bibrangedash 278}
+      \range{pages}{17}
+      \keyw{\#nosource}
+    \endentry
+    \entry{kingstonPhoneticsPhonologyInterface2007}{incollection}{useprefix=true}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=030c3fdba7c4c44522bbe83dba5005f9}{%
+           family={Kingston},
+           familyi={K\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=27fbf849c8adde518e1deb2aa4882bf5}{%
+           family={Lacy},
+           familyi={L\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{030c3fdba7c4c44522bbe83dba5005f9}
+      \strng{fullhash}{030c3fdba7c4c44522bbe83dba5005f9}
+      \strng{bibnamehash}{030c3fdba7c4c44522bbe83dba5005f9}
+      \strng{authorbibnamehash}{030c3fdba7c4c44522bbe83dba5005f9}
+      \strng{authornamehash}{030c3fdba7c4c44522bbe83dba5005f9}
+      \strng{authorfullhash}{030c3fdba7c4c44522bbe83dba5005f9}
+      \strng{editorbibnamehash}{27fbf849c8adde518e1deb2aa4882bf5}
+      \strng{editornamehash}{27fbf849c8adde518e1deb2aa4882bf5}
+      \strng{editorfullhash}{27fbf849c8adde518e1deb2aa4882bf5}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The {{Cambridge Handbook}} of {{Phonology}}}
+      \field{isbn}{978-0-511-48637-1}
+      \field{title}{The Phonetics–Phonology Interface}
+      \field{urlday}{21}
+      \field{urlmonth}{10}
+      \field{urlyear}{2021}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{401\bibrangedash 434}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1017/CBO9780511486371.018
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/9780511486371%23c84879-kol-del-con-017/type/book_part
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/9780511486371%23c84879-kol-del-con-017/type/book_part
+      \endverb
+    \endentry
+    \entry{michaudComplexTonesEast2012}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=063a82c18c619a62f0ae039d45b1c177}{%
+           family={Michaud},
+           familyi={M\bibinitperiod},
+           given={Alexis},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{063a82c18c619a62f0ae039d45b1c177}
+      \strng{fullhash}{063a82c18c619a62f0ae039d45b1c177}
+      \strng{bibnamehash}{063a82c18c619a62f0ae039d45b1c177}
+      \strng{authorbibnamehash}{063a82c18c619a62f0ae039d45b1c177}
+      \strng{authornamehash}{063a82c18c619a62f0ae039d45b1c177}
+      \strng{authorfullhash}{063a82c18c619a62f0ae039d45b1c177}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In some of the tone systems of East and Southeast Asian languages, linguistic tone cannot simply be equated with pitch; some tones have phonation-type characteristics as part of their phonological definition; and there is no compelling evidence for analyzing tonal contours into sequences of levels. Salient findings are reviewed, first from a synchronic perspective, then from a diachronic one, to bring out facts that are relevant for tonal typology and for evolutionary approaches to phonology.}
+      \field{langid}{english}
+      \field{title}{The {{Complex Tones}} of {{East}}/{{Southeast Asian Languages}}: Current {{Challenges}} for {{Typology}} and {{Modelling}}}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{pages}{8}
+      \range{pages}{1}
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/7LL9KYZF/michaudComplexTonesEast2012.pdf
+      \endverb
+      \keyw{_tablet,⛔ No DOI found}
+    \endentry
+    \entry{nellisFortisLenisCajonos1980}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f8b5932c9469aec961febc4feb54ac65}{%
+           family={Nellis},
+           familyi={N\bibinitperiod},
+           given={Donald\bibnamedelima G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=137672a1ef71bf1aa5c53e6de8c48616}{%
+           family={Hollenbach},
+           familyi={H\bibinitperiod},
+           given={Barbara\bibnamedelima E.},
+           giveni={B\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{76683c3dd09b8331d8cb53a7708061e9}
+      \strng{fullhash}{76683c3dd09b8331d8cb53a7708061e9}
+      \strng{bibnamehash}{76683c3dd09b8331d8cb53a7708061e9}
+      \strng{authorbibnamehash}{76683c3dd09b8331d8cb53a7708061e9}
+      \strng{authornamehash}{76683c3dd09b8331d8cb53a7708061e9}
+      \strng{authorfullhash}{76683c3dd09b8331d8cb53a7708061e9}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0020-7071, 1545-7001}
+      \field{journaltitle}{International Journal of American Linguistics}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{2}
+      \field{shortjournal}{International Journal of American Linguistics}
+      \field{title}{Fortis versus {{Lenis}} in {{Cajonos Zapotec Phonology}}}
+      \field{urlday}{11}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{volume}{46}
+      \field{year}{1980}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{92\bibrangedash 105}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1086/465639
+      \endverb
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/VXSJF5AW/nellisFortisLenisCajonos1980.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.journals.uchicago.edu/doi/10.1086/465639
+      \endverb
+      \verb{url}
+      \verb https://www.journals.uchicago.edu/doi/10.1086/465639
+      \endverb
+    \endentry
+    \entry{pikeToneLanguagesTechnique1948}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a25af7f2025a3e1a6d41a32d78e7cb59}{%
+           family={Pike},
+           familyi={P\bibinitperiod},
+           given={Kenneth\bibnamedelima L.},
+           giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Ann Arbor, MI}%
+      }
+      \list{publisher}{1}{%
+        {University of Michigan Press}%
+      }
+      \strng{namehash}{a25af7f2025a3e1a6d41a32d78e7cb59}
+      \strng{fullhash}{a25af7f2025a3e1a6d41a32d78e7cb59}
+      \strng{bibnamehash}{a25af7f2025a3e1a6d41a32d78e7cb59}
+      \strng{authorbibnamehash}{a25af7f2025a3e1a6d41a32d78e7cb59}
+      \strng{authornamehash}{a25af7f2025a3e1a6d41a32d78e7cb59}
+      \strng{authorfullhash}{a25af7f2025a3e1a6d41a32d78e7cb59}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tone {{Languages}}: A {{Technique}} for {{Determining}} the {{Number}} and {{Type}} of {{Pitch Contrasts}} in a {{Language}}, with {{Studies}} in {{Tonemic Substitution}} and {{Fusion}}}
+      \field{year}{1948}
+      \field{dateera}{ce}
+      \keyw{\#nosource}
+    \endentry
+    \entry{sichelFeaturalLifeNominals2020}{unpublished}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6427b8f188285363cf651c3c83dcddff}{%
+           family={Sichel},
+           familyi={S\bibinitperiod},
+           given={Ivy},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8a22e2a4c21ee7f72240fab9a029de4c}{%
+           family={Toosarvandani},
+           familyi={T\bibinitperiod},
+           given={Maziar},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dbecae8faf262d5d262ddfada9eb5791}
+      \strng{fullhash}{dbecae8faf262d5d262ddfada9eb5791}
+      \strng{bibnamehash}{dbecae8faf262d5d262ddfada9eb5791}
+      \strng{authorbibnamehash}{dbecae8faf262d5d262ddfada9eb5791}
+      \strng{authornamehash}{dbecae8faf262d5d262ddfada9eb5791}
+      \strng{authorfullhash}{dbecae8faf262d5d262ddfada9eb5791}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We introduce a novel locality violation and its repair in Sierra Zapotec: an object pronoun cannot cliticize when the subject is a lexical DP. This locality effect differs from more familiar ones (e.g., superiority) because the lexical DP does not move. We argue that it is nonetheless able to Agree, consistent with the idea that locality conditions apply to Agree, rather than to a separate movement component. We develop an account in which pronouns and lexical DPs interact with the same probe because they share featural content. In particular, we suggest that the person domain extends to include non-pronominal DPs, so that all nominals are specified for a feature we call δ (to resonate with DP); all and only personal pronouns are specified for π. This account requires a departure from Chomsky’s (2000, 2001) classical system of featural co-variation (Agree). A functional head must be able to participate in overprobing, interacting with a goal even though its requirements would appear to be met. We introduce a probe activation model for Agree, in which, after applying once, the operation can but not need apply again. We also consider two other mechanisms recently proposed to derive overprobing — Deal’s (2015, 2020) “insatiable probes” and Coon \& Keine’s (to appear) “feature gluttony” —though neither is able to account for the locality pattern.}
+      \field{howpublished}{lingbuzz/005523}
+      \field{langid}{english}
+      \field{title}{The Featural Life of Nominals}
+      \field{type}{lingbuzz/005523}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/D5J8S6QV/sichelFeaturalLifeNominals2020_annotated.pdf;/Users/mykelbrinkerhoff/Zotero/storage/M6WYN6MK/sichelFeaturalLifeNominals2020.pdf
+      \endverb
+    \endentry
+    \entry{silvermanLaryngealComplexityOtomanguean1997}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a803334159d0d5978fcffefdd70c8ce1}{%
+           family={Silverman},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{a803334159d0d5978fcffefdd70c8ce1}
+      \strng{fullhash}{a803334159d0d5978fcffefdd70c8ce1}
+      \strng{bibnamehash}{a803334159d0d5978fcffefdd70c8ce1}
+      \strng{authorbibnamehash}{a803334159d0d5978fcffefdd70c8ce1}
+      \strng{authornamehash}{a803334159d0d5978fcffefdd70c8ce1}
+      \strng{authorfullhash}{a803334159d0d5978fcffefdd70c8ce1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Linguistic sound systems necessarily possess contrastive values that are sufficiently distinct from one another that their individual characters may be learned by the listener. In this way, any given value in any given system fulfils its functional role of rendering forms distinct which differ in meaning. Articulatory, aerodynamic, acoustic and auditory constraints serve to mediate between such sound–meaning correspondences in non-trivial ways. Indeed, if it can be shown that the sound patterns of language are in part explainable by these physical systems, then students of linguistic sound systems would do well to study in detail the phonetic base. Consider an example case. Laryngeal gestures and supralaryngeal gestures are by and large articulatorily independent of each other. Thus, for example, a voiceless aspirated stop consists of an oral occlusion, cued by silence, as well as an articulatorily independent laryngeal abduction, cued by broadband noise. Were the phonetic realisation of these two gestures strictly simultaneous, the cues signalling the laryngeal abduction would not be perceived as such by the listener (*[ o t]). A listener can tell that there is no voicing, but cannot recover more specific information regarding the state of the glottis during oral closure. Stated simply, the full closure here reduces the acoustic output to zero. With zero acoustic energy, no source information other than silence is transmitted to the listener. However, upon staggering the two gestures, the otherwise obscured information is rendered salient.}
+      \field{issn}{0952-6757, 1469-8188}
+      \field{journaltitle}{Phonology}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{number}{2}
+      \field{shortjournal}{Phonology}
+      \field{title}{Laryngeal Complexity in {{Otomanguean}} Vowels}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2021}
+      \field{volume}{14}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{235\bibrangedash 261}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1017/S0952675797003412
+      \endverb
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/DFWR3CFB/silvermanLaryngealComplexityOtomanguean1997.pdf
+      \endverb
+      \verb{urlraw}
+      \verb 10.1017/S0952675797003412
+      \endverb
+      \verb{url}
+      \verb 10.1017/S0952675797003412
+      \endverb
+      \keyw{_tablet,\#nosource}
+    \endentry
+    \entry{sniderEstablishingUnderlyingTonal2014}{article}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=d66e7b6ac8b7ff268411948a86b76d6d}{%
+           family={Snider},
+           familyi={S\bibinitperiod},
+           given={Keith},
+           giveni={K\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{d66e7b6ac8b7ff268411948a86b76d6d}
+      \strng{fullhash}{d66e7b6ac8b7ff268411948a86b76d6d}
+      \strng{bibnamehash}{d66e7b6ac8b7ff268411948a86b76d6d}
+      \strng{authorbibnamehash}{d66e7b6ac8b7ff268411948a86b76d6d}
+      \strng{authornamehash}{d66e7b6ac8b7ff268411948a86b76d6d}
+      \strng{authorfullhash}{d66e7b6ac8b7ff268411948a86b76d6d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Language Documentation}
+      \field{langid}{english}
+      \field{title}{On {{Establishing Underlying Tonal Contrast}}}
+      \field{volume}{8}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{pages}{31}
+      \range{pages}{1}
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/RGAJDXBD/sniderEstablishingUnderlyingTonal2014.pdf
+      \endverb
+      \keyw{⛔ No DOI found}
+    \endentry
+    \entry{sniderToneAnalysisField2018}{book}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=2b29d6dfed3f6861661210edfeaa1bcd}{%
+           family={Snider},
+           familyi={S\bibinitperiod},
+           given={Keith\bibnamedelima L.},
+           giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{location}{1}{%
+        {Dallas}%
+      }
+      \list{publisher}{1}{%
+        {SIL International Publications}%
+      }
+      \strng{namehash}{2b29d6dfed3f6861661210edfeaa1bcd}
+      \strng{fullhash}{2b29d6dfed3f6861661210edfeaa1bcd}
+      \strng{bibnamehash}{2b29d6dfed3f6861661210edfeaa1bcd}
+      \strng{authorbibnamehash}{2b29d6dfed3f6861661210edfeaa1bcd}
+      \strng{authornamehash}{2b29d6dfed3f6861661210edfeaa1bcd}
+      \strng{authorfullhash}{2b29d6dfed3f6861661210edfeaa1bcd}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{"Tone, the use of pitch to provide phonological contrast between morphemes, plays an integral role in the structures of many languages. This book teaches linguists a tried-and-proven methodology for analyzing tone in any part of the world. Significant features: - Delivers the most comprehensive and up-to-date introduction to tone analysis for field linguists - Emphasizes the discovery of contrastive tone patterns of morphemes, as opposed to contrastive tones of tone-bearing units - Focuses on keeping constant all factors that can potentially affect tone, so that utterances being compared are truly comparable - Includes a chapter on the phonetic properties of pitch - Presents principles for developing orthographies for tone languages - Includes comprehensive accompanying online exercises* that guide students from beginning to end through a complete analysis of nominal tone in a single language, Chumburung. Assuming little prior knowledge of tone or tone languages, Tone Analysis for Field Linguists is readily accessible to students and field workers alike who have previously taken introductory courses in articulatory phonetics, phonology, and morphology and syntax."--Back cover}
+      \field{annotation}{OCLC: on1013821030}
+      \field{isbn}{978-1-55671-422-1}
+      \field{pagetotal}{183}
+      \field{title}{Tone Analysis for Field Linguists}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \keyw{\#nosource,Linguistic analysis (Linguistics),Linguistics,Tone (Phonetics)}
+    \endentry
+    \entry{sonnenscheinDescriptiveGrammarSan2005}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=afacdc5a7d90ca86c6cffd9df67fe38b}{%
+           family={Sonnenschein},
+           familyi={S\bibinitperiod},
+           given={Aaron\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Munich}%
+      }
+      \list{publisher}{1}{%
+        {Lincom Europa}%
+      }
+      \strng{namehash}{afacdc5a7d90ca86c6cffd9df67fe38b}
+      \strng{fullhash}{afacdc5a7d90ca86c6cffd9df67fe38b}
+      \strng{bibnamehash}{afacdc5a7d90ca86c6cffd9df67fe38b}
+      \strng{authorbibnamehash}{afacdc5a7d90ca86c6cffd9df67fe38b}
+      \strng{authornamehash}{afacdc5a7d90ca86c6cffd9df67fe38b}
+      \strng{authorfullhash}{afacdc5a7d90ca86c6cffd9df67fe38b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{3-89586-803-5}
+      \field{title}{A Descriptive Grammar of {{San Bartolomé Zoogocho Zapotec}}}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \keyw{\#nosource}
+    \endentry
+    \entry{stolzMesoamericaLinguisticArea2001}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c05f559b14a4c1a6058af42f17aaddce}{%
+           family={Stolz},
+           familyi={S\bibinitperiod},
+           given={Christel},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=369e3877d09f8d7addd0fd1d71c83779}{%
+           family={Stolz},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e364c7ed97281b217521ac11ddd1c17c}
+      \strng{fullhash}{e364c7ed97281b217521ac11ddd1c17c}
+      \strng{bibnamehash}{e364c7ed97281b217521ac11ddd1c17c}
+      \strng{authorbibnamehash}{e364c7ed97281b217521ac11ddd1c17c}
+      \strng{authornamehash}{e364c7ed97281b217521ac11ddd1c17c}
+      \strng{authorfullhash}{e364c7ed97281b217521ac11ddd1c17c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Language Typology and Language Universals. An International Handbook}
+      \field{title}{Mesoamerica as a Linguistic Area}
+      \field{volume}{2}
+      \field{year}{2001}
+      \field{dateera}{ce}
+      \field{pages}{1539\bibrangedash 1553}
+      \range{pages}{15}
+      \keyw{\#nosource}
+    \endentry
+    \entry{uchiharaFortisLenisGlides2016}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8aae7a571c4a2a0a35a1f4685c07885b}{%
+           family={Uchihara},
+           familyi={U\bibinitperiod},
+           given={Hiroto},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a3f5131417830bd9b254935c8aa8a5d3}{%
+           family={Pérez\bibnamedelima Báez},
+           familyi={P\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Gabriela},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{509ff8415667b157dce0c3ab35bb5553}
+      \strng{fullhash}{509ff8415667b157dce0c3ab35bb5553}
+      \strng{bibnamehash}{509ff8415667b157dce0c3ab35bb5553}
+      \strng{authorbibnamehash}{509ff8415667b157dce0c3ab35bb5553}
+      \strng{authornamehash}{509ff8415667b157dce0c3ab35bb5553}
+      \strng{authorfullhash}{509ff8415667b157dce0c3ab35bb5553}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{17}
+      \field{issn}{2397-1835}
+      \field{journaltitle}{Glossa: A Journal of General Linguistics}
+      \field{month}{8}
+      \field{number}{1}
+      \field{shortjournal}{Glossa}
+      \field{title}{Fortis/Lenis, Glides and Vowels in {{Quiaviní Zapotec}}}
+      \field{urlday}{2}
+      \field{urlmonth}{4}
+      \field{urlyear}{2020}
+      \field{volume}{1}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{27}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.5334/gjgl.13
+      \endverb
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/7TWMVCTJ/uchiharaFortisLenisGlides2016.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.glossa-journal.org/article/10.5334/gjgl.13/
+      \endverb
+      \verb{url}
+      \verb http://www.glossa-journal.org/article/10.5334/gjgl.13/
+      \endverb
+      \keyw{_tablet}
+    \endentry
+    \entry{yipTone2002}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=42590407e7bd3415cd86df47ed9f605e}{%
+           family={Yip},
+           familyi={Y\bibinitperiod},
+           given={Moira\bibnamedelimb Jean\bibnamedelima Winsland},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cambridge ; New York}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{42590407e7bd3415cd86df47ed9f605e}
+      \strng{fullhash}{42590407e7bd3415cd86df47ed9f605e}
+      \strng{bibnamehash}{42590407e7bd3415cd86df47ed9f605e}
+      \strng{authorbibnamehash}{42590407e7bd3415cd86df47ed9f605e}
+      \strng{authornamehash}{42590407e7bd3415cd86df47ed9f605e}
+      \strng{authorfullhash}{42590407e7bd3415cd86df47ed9f605e}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-521-77314-0 978-0-521-77445-1}
+      \field{pagetotal}{341}
+      \field{series}{Cambridge Textbooks in Linguistics}
+      \field{title}{Tone}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/38DXLAQW/yipTone2002.pdf
+      \endverb
+      \keyw{_tablet,Optimality theory (Linguistics),Tone (Phonetics)}
+    \endentry
+    \entry{zsigaPhonologyPhoneticsInterface2020}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bdb74c32055677549fd6265e868f18ef}{%
+           family={Zsiga},
+           familyi={Z\bibinitperiod},
+           given={Elizabeth\bibnamedelima C.},
+           giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA}%
+      }
+      \list{publisher}{1}{%
+        {The MIT Press}%
+      }
+      \strng{namehash}{bdb74c32055677549fd6265e868f18ef}
+      \strng{fullhash}{bdb74c32055677549fd6265e868f18ef}
+      \strng{bibnamehash}{bdb74c32055677549fd6265e868f18ef}
+      \strng{authorbibnamehash}{bdb74c32055677549fd6265e868f18ef}
+      \strng{authornamehash}{bdb74c32055677549fd6265e868f18ef}
+      \strng{authorfullhash}{bdb74c32055677549fd6265e868f18ef}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{"Is speech in the mouth or in the brain? Do we hear with our ears or our minds? The answer is: both. The sounds of language are both physical objects and cognitive constructs. The physical aspects of speech are the province of phonetics: sound waves that are produced by the movement of articulators and received by the ear. Phonology, by contrast, studies cognitive aspects: systematic patterns in the ways that languages combine sounds to create meaning. Many books look at phonology and phonetics as separate disciplines. This book looks at the interaction between the two. The Phonology/Phonetics Interface examines classic and current linguistic theories--including structuralist, derivational, and post-derivational approaches--to explore how physical and cognitive factors interact in the mind of the speaker and in the language system as a whole. The patterns of phonology are often clearly dependent on the principles of phonetics, yet they can also diverge from them in sometimes complex ways. The book examines the roles of both articulation and perception in creating and maintaining phonological patterns. Chapters are organized thematically around central issues, such as categorization or abstraction, presented roughly in the order in which these issues rose to the forefront of linguistic theorizing, providing historical perspective without adhering to a completely chronological presentation. Each chapter ends with discussion questions and references for further reading. The book is suitable for students in advanced courses and as an overview for professionals and scholars."--Publisher's website}
+      \field{annotation}{OCLC: on1194867692}
+      \field{isbn}{978-0-262-54264-7}
+      \field{pagetotal}{312}
+      \field{title}{The Phonology/Phonetics Interface}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/mykelbrinkerhoff/Zotero/storage/DUW6E4PF/zsigaPhonologyPhoneticsInterface2020.pdf
+      \endverb
+      \keyw{Grammar; Comparative and general,Phonetics,Phonology}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
