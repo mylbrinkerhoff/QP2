@@ -1,0 +1,420 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode		
+
+\documentclass[12pt, letterpaper]{article}
+
+%%BIBLIOGRAPHY- This uses biber/biblatex to generate bibliographies according to the 
+%%Unified Style Sheet for Linguistics
+\usepackage[main=american, german]{babel}% Recommended
+\usepackage{csquotes}% Recommended
+\usepackage[backend=biber,
+		style=unified,
+		maxcitenames=3,
+		maxbibnames=99,
+		natbib,
+		url=false]{biblatex}
+\addbibresource{link_laptop.bib}
+\setcounter{biburlnumpenalty}{100}  % allow URL breaks at numbers
+%\setcounter{biburlucpenalty}{100}   % allow URL breaks at uppercase letters
+%\setcounter{biburllcpenalty}{100}   % allow URL breaks at lowercase letters
+
+%%TYPOLOGY
+\usepackage[svgnames]{xcolor} % Specify colors by their 'svgnames', for a full list of all colors available see here: http://www.latextemplates.com/svgnames-colors
+%\usepackage[compact]{titlesec}
+%\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection.}{.5em}{}[.]
+%\titleformat{\subsection}[runin]{\normalfont\scshape}{\thesubsection}{.5em}{}[.]
+\usepackage[hmargin=1in,vmargin=1in]{geometry}  %Margins          
+\usepackage{graphicx}	%Inserting graphics, pictures, images 		
+\usepackage{stackengine} %Package to allow text above or below other text, Also helpful for HG weights 
+\usepackage{fontspec} %Selection of fonts must be ran in XeLaTeX
+\usepackage{amssymb} %Math symbols
+\usepackage{amsmath} % Mathematical enhancements for LaTeX
+\usepackage{setspace} %Linespacing
+\usepackage{multicol} %Multicolumn text
+\usepackage{enumitem} %Allows for continuous numbering of lists over examples, etc.
+\usepackage{multirow} %Useful for combining cells in tablesbrew 
+\usepackage{booktabs}
+\usepackage{hanging}
+\usepackage{fancyhdr} %Allows for the 
+\pagestyle{fancy}
+\fancyhead[L]{\textit{Phonology II Section}} 
+\fancyhead[R]{\textit{\today}} 
+\fancyfoot[L,R]{} 
+\fancyfoot[C]{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14.5pt} % ...at least 14.49998pt
+% \usepackage{fourier} % This allows for the use of certain wingdings like bombs, frowns, etc.
+% \usepackage{fourier-orns} %More useful symbols like bombs and jolly-roger, mostly for OT
+\usepackage[colorlinks,allcolors={black},urlcolor={blue}]{hyperref} %allows for hyperlinks and pdf bookmarks
+% \usepackage{url} %allows for urls
+% \def\UrlBreaks{\do\/\do-} %allows for urls to be broken up
+\usepackage[normalem]{ulem} %strike out text. Handy for syntax
+\usepackage{tcolorbox}
+\usepackage{datetime2}
+
+
+%%FONTS
+\setmainfont{Libertinus Serif}
+\setsansfont{Libertinus Sans}
+\setmonofont[Scale=MatchLowercase]{Libertinus Mono}
+
+%%PACKAGES FOR LINGUISTICS
+%\usepackage{OTtablx} %Generating tableaux with using TIPA
+% \usepackage[noipa]{OTtablx} % Use this one generating tableaux without using TIPA
+%\usepackage[notipa]{ot-tableau} % Another tableau drawing packing use for posters.
+% \usepackage{linguex} % Linguistic examples
+% \usepackage{langsci-linguex} % Linguistic examples
+\usepackage{langsci-gb4e} % Language Science Press' modification of gb4e
+% \usepackage{langsci-avm} % Language Science Press' AVM package
+\usepackage{tikz} % Drawing Hasse diagrams
+% \usepackage{pst-asr} % Drawing autosegmental features
+% \usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
+% \usepackage{pst-jtree} 	% Syntax tree draawing software
+% \usepackage{tikz-qtree}	% Another syntax tree drawing software. Uses bracket notation.
+\usepackage[linguistics]{forest}	% Another syntax tree drawing software. Uses bracket notation.
+% \usepackage{ling-macros} % Various linguistic macros. Does not work with linguex.
+% \usepackage{covington} % Another linguistic examples package.
+\usepackage{leipzig} %	Offers support for Leipzig Glossing Rules
+
+%%TITLE INFORMATION
+\title{TITLE}
+\author{Mykel Loren Brinkerhoff}
+\date{\today}
+
+%%MACROS
+\newcommand{\sub}[1]{\textsubscript{#1}}
+\newcommand{\supr}[1]{\textsuperscript{#1}}
+\providecommand{\lsptoprule}{\midrule\toprule}
+\providecommand{\lspbottomrule}{\bottomrule\midrule}
+\newcommand{\fittable}[1]{\resizebox{\textwidth}{!}{#1}}
+
+\begin{document}
+
+%%If using linguex, need the following commands to get correct LSA style spacing
+%% these have to be after  \begin{document}
+	% \setlength{\Extopsep}{6pt}
+	% \setlength{\Exlabelsep}{9pt}		%effect of 0.4in indent from left text edge
+%%
+	
+%% Line spacing setting. Comment out the line spacing you do not need. Comment out all if you want single spacing.
+%	\doublespacing
+%	\onehalfspacing
+	
+\begin{center}
+	{\Large \textbf{Santiago Laxopa Zapotec Phonology}}
+	\vspace{6pt}
+
+	Mykel Loren Brinkerhoff
+\end{center}
+%\maketitle
+%\maketitleinst
+\thispagestyle{fancy}
+
+% \tableofcontents
+
+
+% \begin{tcolorbox}
+% \begin{center}
+% % Questions
+% Goals of this talk
+% \end{center}
+
+% \begin{itemize}
+% 	\item Give an overview of where I am in terms of this project. 
+% 	\item I am struggling with framing this theoretically and would appreciate help in pointing me in some directions I could look.
+% \end{itemize}
+% % \begin{itemize}
+% % 	\item How does phonology interact with phonetics?
+% % 	\item How does tone and phonation interact at the phonetics-phonology interface?
+% % 	\item How does tone and phonation interact in Santiago Laxopa Zapotec?
+% % \end{itemize}
+% \end{tcolorbox}
+
+%------------------------------------
+\section{Introduction} \label{sec:Introduction}
+%------------------------------------
+
+\begin{itemize}
+	\item Santiago Laxopa Zapotec (SLZ) is a variety of Sierra Norte Zapotec, an Oto-Manguean language \citep{adlerDerivationVerbInitiality2018,sichelFeaturalLifeNominals2020}.
+
+	\item SLZ is spoken by 800-1200 people in the municipality of Santiago Laxopa, Oaxaca, Mexico with a small number of speakers in Oaxaca City, Mexico and Santa Cruz, CA. 
+
+	\item Similar to other Oto-Manguean languages, SLZ has both tone and phonation \citep{campbellMesoAmericaLinguisticArea1986,stolzMesoamericaLinguisticArea2001,campbellOtomangueanHistoricalLinguistics2017a,campbellOtomangueanHistoricalLinguistics2017}. 
+
+	\item Data is drawn from elicitations conducted 2020-2021 with two native speakers of SLZ that live in the Santa Cruz, CA area.  
+\end{itemize}
+
+% %------------------------------------
+% \section{Phonetics-Phonology Interface} \label{sec:Interface}
+% %------------------------------------
+% \begin{itemize}
+% 	\item \citet{kingstonPhoneticsPhonologyInterface2007} explains that there are three ways in which phonetics can interface with the phonology. 
+% 	\begin{enumerate}
+% 		\item Phonetics \textit{defines} distinctive features
+% 		\item Phonetics \textit{explains} many phonological patterns
+% 		\item Phonetics \textit{implements} phonological representations. 
+% 	\end{enumerate}
+
+% 	\item Using these three ways in which the phonetics interacts with the phonology, we can account for the ways that tone and phonation interact. 
+% 	\item We can \textit{define} what the tones and phonation types are in SLZ.
+% 		\begin{itemize}
+% 		 	\item This can be accomplished through frameworks such as Articulatory Phonology \citep{browmanArticulatoryPhonologyOverview1992} and Auditorism \citep{kingstonPhoneticKnowledge1994,kingstonIntermediatePropertiesPerception1995}. 
+% 		\end{itemize} 
+
+% 	\item We can \textit{explain} what the tones and phonation types are in SLZ. 
+% 		\begin{itemize}
+% 			\item This can be done through discussing the physical, physiological, and/or psychological properties of speaking and listening.
+% 			\item For tones, this means discussing the f0 measures and perceived pitch
+% 			\item For phonation, this means discussing relevant acoustic measurements like spectral tilt and CPP \citep{garellekPhoneticsVoice2019}. 
+% 		\end{itemize}
+
+% 	\item We can \textit{implement} the phonological representations of tone and phonation types in SLZ. 
+% 		\begin{itemize}
+% 			\item This would be accomplished by discussing what the abstract abstract phonological categories are and what factors control how those categories are actually implemented within the phonetics.  
+% 		\end{itemize}
+
+% 	\item This paper will tackle the way \textit{explaining} what the tones and phonation types are and how those phonological representations are \textit{implemented.}
+% 	\begin{itemize}
+% 		\item This will be accomplished by describing the acoustic measurements that correlate with the different phonation types. 
+% 		\item Additionally, I will explain the different f0 measurements and how they correlate to the different tonemes of the language. 
+% 	\end{itemize}
+% \end{itemize}
+
+
+%------------------------------------
+\section{Phonemic Inventory} \label{sec:Inventory}
+%------------------------------------
+\begin{itemize}
+	\item This section lays out what is currently known about the vowel and tone inventories of Santiago Laxopa Zapotec based on fieldwork conducted by myself and other researchers at UCSC. 
+\end{itemize}
+%------------------------------------
+\subsection*{Consonant Inventory} \label{sec:Consonants}
+%------------------------------------
+
+\begin{itemize}
+	\item SLZ has approximately 27 consonants as shown in Table \ref{tab:cons}
+
+	\item Like other Zapotecan languages consonants are divided between fortis and lenis \citep{nellisFortisLenisCajonos1980,jaegerInitialConsonantClusters1982,uchiharaFortisLenisGlides2016}.
+
+	\item Following \citet{jaegerInitialConsonantClusters1982} there are four reasons that we use fortis/lenis instead of voiceless/voiced in Zapotecan languages.
+	\begin{enumerate}
+		\item Fortis obstruents are always voiceless, while lenis can be voiced, partially devoiced, or voiceless.
+		\item Fortis stops and affricates aalways retain their stop closure, whereas lenis stops and affricates are often realized as fricatives.
+		\item Fortis obstruents are usually of longer duration than lenis obstruents.
+		\item Fortis and lenis sonorants are primarily distinguished by length, with fortis having a longer duration than lenis. 
+	\end{enumerate}
+	\item The behavior that \citet{jaegerInitialConsonantClusters1982} described is illustrated in Table \ref{tab:yatee}. 
+	\item This same behavior has been observed to some extent in SLZ and in other Sierra Norte varieties \citep{sonnenscheinDescriptiveGrammarSan2005}
+\end{itemize}
+
+\begin{table}[!h]
+\centering
+\caption{SLZ Consonants}
+\label{tab:cons}
+\fittable{
+ \begin{tabular}{llcccccccc}
+  \lsptoprule
+      &  & bilabial & alveolar  & retroflex & alveo- & palatal &velar &labio-  &  uvular \\
+     &&&&& palatal &&&velar& \\
+  \midrule
+	nasal    	& lenis   &	   & n  & & & & & & \\
+				& fortis  &	mː & nː & & & & & & \\
+	stop 		& lenis   & b  & d  & & & & g & gʷ & \\
+  		 		& fortis  & p  & t  & & & & k & kʷ & \\
+	fricative   & lenis   &    & z  & ʐ\textasciitilde ɽ & ʒ & ç & &  & ʁ\textasciitilde χ \\
+  		 		& fortis  &    & s  & ʂ & ʃ & & & & \\
+  	affricate 	& lenis   &    & d͡z & & & & & & \\
+  				& fortis  &    & t͡s & & t͡ʃ & & & & \\
+	lateral  	& lenis   &    & l\textasciitilde ɾ & & & & & & \\
+				& fortis  &    & lː & & & & & & \\
+	trill		& 		  &    & r & & &  & &  & \\ 			
+	approximate & 		  &    & & & & j & & w & \\ 
+  \lspbottomrule
+ \end{tabular}
+ }
+\end{table}
+
+
+\begin{table}[!h]
+\centering
+\caption{Allophones of some fortis and lenis obstruents in Yateé Zapotec}
+\label{tab:yatee}
+ \begin{tabular}{llllllll}
+  \lsptoprule
+ 	&&& Fortis &&& Lenis & \\
+	\midrule
+	/t/ & → & tˑ & initially & /d/ & → & d, d̥, ð, ð̥ & initially \\
+			&		& tː & medially	 &		 &	 & d, ð				& medially \\
+			&		&	tʰ & finally 	 &		 &	 &	ð̥, θ			&	finally \\
+			&&&&&&& \\
+	/t͡ʃ/& → &	t͡ʃˑ & initially & /d͡ʒ/& → & d͡ʒ, d̥͡ʒ̥, ʒ, ʒ̥	& initially \\
+			&		&	t͡ʃː & medially	&		  &	  &	d͡ʒ,	ʒ				& medially \\
+			&		&	t͡ʃʰ	& finally	  &		  &	  &	d̥͡ʒ̥, ʒ̥, ʃ			& finally\\
+  \lspbottomrule
+ \end{tabular}
+\end{table}
+
+%------------------------------------
+\subsection{Vowels}\label{sec:Vowel}
+%------------------------------------
+\begin{itemize}
+	\item SLZ follows the majority of languages in exhibiting a basic five vowel inventory.
+\end{itemize}
+
+\begin{table}[!h]
+\centering
+\caption{SLZ Vowels}
+\label{tab:vow}
+ \begin{tabular}{lccc}
+  \lsptoprule
+            &  front& central  & back \\
+  \midrule
+	high   	&  i  &     &   u \\
+	mid    	&  e  &   	& 	o \\
+	low   	&     &  a 	&	  \\
+  \lspbottomrule
+ \end{tabular}
+\end{table}
+
+\begin{itemize}
+	\item Like other Oto-Manguean langauages, SLZ can manipulate these five vowel categories by making them laryngeally-complex \citep{silvermanLaryngealComplexityOtomanguean1997}.
+
+	\item This is accomplished through the addition of three different laryngeally-complex phonations, which are all contrastive as seen in the the near-minimal triple (\ref{ex:triple})
+		\begin{itemize}
+			\item Breathy: [ a̤ ] <\textit{ah}> 
+			\item Checked: [ aˀ ] <\textit{a'}>
+			\item Laryngealized: [ aˀa ] <\textit{a'a}>\footnote{Previous descriptions of the the vowel system of closely related languages have used various different terms for this vowel including broken, rearticulated, interrupted, and creaky \citep{longDiccionarioZapotecoSan2005,avelinoAcousticElectroglottographicAnalyses2010,avelinobecerraTopicsYalalagZapotec2004,sonnenscheinDescriptiveGrammarSan2005,adlerAcousticsPhonationTypes2016}. In order to avoid confusion, I will use the term laryngealized following \citet{avelinoAcousticElectroglottographicAnalyses2010}.}
+		\end{itemize}
+\end{itemize}
+
+\begin{exe}
+	\ex \label{ex:triple} Near-minimal triple
+	\begin{xlist} 
+		\ex \textit{yah} [ ja̤³ ] `iron; rifle'
+		\ex \textit{yu'} [ çuˀ³ ] `earth'
+		\ex \textit{yu'u} [ juˀu¹³ ] `house' 
+	\end{xlist} 
+\end{exe} 
+
+\begin{itemize}
+	\item Each of these phonation types are associated with different configurations of the larynx \citep{eslingVoiceQualityLaryngeal2019}.
+	\item Breathy phonation is produced with an open supraglottic tube during the production of the vowel
+	\item Checked phonation consists of modal phonation which is abruptly stopped which is associated with a glottal stop.\footnote{There are two ways in which this vowel can be analyzed. One is the traditional way where the glottal stop is considered inseparable from the vowel. The other is to treat this as a consonant which is restricted to only reside in codas (similar to how the sound /ŋ/ is restricted to codas in English). This second approach is the one taken by \citet{avelinobecerraTopicsYalalagZapotec2004}. I will follow the traditional way of analyzing these vowels through this paper.}
+	\item Laryngealized vowels in SLZ and other closely related varieties (Yalálag Zapotec) show a variable pronunciation ranging from a vowel that has a glottal stop interrupting the vowel to the use of creaky voice throughout or a portion of the vowel.  
+	\item Table \ref{tab:laryngeal} shows the variable pronunciation of laryngealized vowels in Yalálag Zapotec, taken from \citet{avelinoAcousticElectroglottographicAnalyses2010}. 
+	\end{itemize}
+
+\begin{table}[!h]
+\centering
+\caption{Layngealized Vowels in Yalálag Zapotec}
+\label{tab:laryngeal}
+ \begin{tabular}{lc}
+  \lsptoprule
+	/VˀV/ &  [VʔV]  \\
+	    	&  [VV̰V]   \\
+	   		&  [VV̰ːV̆]  \\
+	   		&  [VV̰V̰]	\\
+  \lspbottomrule
+ \end{tabular}
+\end{table}
+
+%------------------------------------
+\subsection{Tone} \label{sec:Tone}
+%------------------------------------
+
+\begin{itemize}
+	\item SLZ exhibits five different surface tonal patterns as shown in Table \ref{tab:tones}
+		\begin{itemize}
+			\item Three level tones: H, M, and L (represented using Pike's numbers with 1 being the highest tone)
+			\item Two contours: MH and HL
+		\end{itemize}
+	\item The number of tones were discovered doing a tonal analysis following the methods laid out in \citet{pikeToneLanguagesTechnique1948} and \citet{sniderToneAnalysisField2018} by Maya Wax Cavallaro, Jack Duff, and myself from 2020-2021.
+\end{itemize}
+
+\begin{table}[!h]
+\centering
+\caption{SLZ tones}
+\label{tab:tones}
+ \begin{tabular}{lllll}
+  \lsptoprule
+  				% &	 Diacritic  & Example & Transcription \\
+  High   	&  a¹  &  \textit{xha}   &  [ ʐa¹ ] & `clothing.\textsc{poss}'\\
+	Mid    	&  a²  &  \textit{lhill} 	& [ ɾiʒ² ] & `house.\textsc{poss}' \\
+	Low   	&  a³  &  \textit{yu'} 	&	 [ çuˀ³ ] & `earth'\\
+	Rising	&  a²¹  &  \textit{yu'u} 	&	[ juˀu²¹ ] & `quicklime (sp. cal)' \\
+	Falling &  a¹³  &  \textit{yu'u}  &	[juˀu¹³] &	`house' \\
+  \lspbottomrule
+ \end{tabular}
+\end{table}
+
+\begin{itemize}
+	\item The exact nature of these tones will be one of the focuses of this paper.
+	\item Additionally, I will be focusing on what the tone bearing unit is in SLZ.
+\end{itemize}
+
+%------------------------------------
+\section{Interaction of Tone and phonation} \label{sec:Interaction}
+%------------------------------------
+
+\begin{itemize}
+	\item The interaction of tone and phonation is a well-established fact and has been heavily studied in Asian tonal languages \citep[see references in][]{yipTone2002, duanmuPhonologyStandardChinese2007,michaudComplexTonesEast2012,brunelleTonePhonationSoutheast2016}.
+	\item In these languages it is common for certain phonation types to co-occur with certain tones.
+	\item The interaction between tone and phonation in the languages of the America's has been studied but to a lesser extant than Asian languages \citep{adlerAcousticsPhonationTypes2016,chavez-peonInteractionMetricalStructure2010,dicanioCoarticulationToneGlottal2012}. 
+	\item \citet{chavez-peonInteractionMetricalStructure2010} showed that the similar restrictions in tone and phonation co-occurrence appear in Quiaviní Zapotec but are at the same time much more free, see Table \ref{tab:slqz}.
+\end{itemize}
+
+\begin{table}[!h]
+\centering
+\caption{SLQZ tone and phonation}
+\label{tab:slqz}
+ \begin{tabular}{lcccc}
+  \lsptoprule
+  				&	 High  & Low & Falling & Rising \\
+  	Modal	& ✔︎ & ✔︎ & ✔︎ & ✔︎ \\
+  	Breathy & X & ✔︎ & ✔︎ & X \\
+  	Creaky & ✔︎ & ✔︎ & ✔︎ & X \\
+  	Interrupted & ✔︎ & ✔︎ & ✔︎ & X \\
+  \lspbottomrule
+ \end{tabular}
+\end{table}
+
+\begin{itemize}
+	\item One of the unique aspects found here is the co-occurrance of creaky voice with a H-tone. 
+	
+	\item Creaky voice is frequently a by-product of low pitch but according to \citet{eslingVoiceQualityLaryngeal2019} can also sometimes co-occur with high pitch. 
+\end{itemize}
+
+%------------------------------------
+\section{Data-set} \label{sec:WordSize}
+%------------------------------------
+
+\begin{table}[!h]
+\centering
+\label{tab:slqz}
+ \begin{tabular}{cccccc}
+  \lsptoprule
+  	&&&&&\\
+  	SLZ			&	 Gloss  & SLZ & Gloss & SLZ & Gloss  \\
+  	\\
+  	damː	& `owl' & kua & `masa' & nis & `water' \\
+  	\\
+  	ʐileˀ & `sheep' & jaːg & `tree' & jetʰ & `tortilla' \\
+  	\\
+  	juː & `earth' & yuˀuː & `house' & ʁiːd & `chicken' \\
+  	\\
+  	jit͡ʃʰ	 & `paper' & t͡siːl & `morning' & wiːʒ & `sun' \\
+  \lspbottomrule
+ \end{tabular}
+\end{table}
+
+
+%------------------------------------
+%BIBLIOGRAPHY
+%------------------------------------
+
+%\singlespacing
+%\nocite{*}
+\printbibliography[heading=bibintoc]
+
+
+\end{document} 
