@@ -1,0 +1,200 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8 Unicode		
+
+\documentclass[12pt, letterpaper]{article}
+
+%%BIBLIOGRAPHY- This uses biber/biblatex to generate bibliographies according to the 
+%%Unified Style Sheet for Linguistics
+\usepackage[main=american, german]{babel}% Recommended
+\usepackage{csquotes}% Recommended
+\usepackage[backend=biber,
+		style=unified,
+		maxcitenames=3,
+		maxbibnames=99,
+		natbib,
+		url=false]{biblatex}
+\addbibresource{link_laptop.bib}
+\setcounter{biburlnumpenalty}{100}  % allow URL breaks at numbers
+%\setcounter{biburlucpenalty}{100}   % allow URL breaks at uppercase letters
+%\setcounter{biburllcpenalty}{100}   % allow URL breaks at lowercase letters
+
+%%TYPOLOGY
+\usepackage[svgnames]{xcolor} % Specify colors by their 'svgnames', for a full list of all colors available see here: http://www.latextemplates.com/svgnames-colors
+%\usepackage[compact]{titlesec}
+%\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection.}{.5em}{}[.]
+%\titleformat{\subsection}[runin]{\normalfont\scshape}{\thesubsection}{.5em}{}[.]
+\usepackage[hmargin=1in,vmargin=1in]{geometry}  %Margins          
+\usepackage{graphicx}	%Inserting graphics, pictures, images 		
+\usepackage{stackengine} %Package to allow text above or below other text, Also helpful for HG weights 
+\usepackage{fontspec} %Selection of fonts must be ran in XeLaTeX or LuaLaTeX
+\usepackage{amssymb} %Math symbols
+\usepackage{amsmath} % Mathematical enhancements for LaTeX
+\usepackage{setspace} %Linespacing
+\usepackage{multicol} %Multicolumn text
+\usepackage{enumitem} %Allows for continuous numbering of lists over examples, etc.
+\usepackage{multirow} %Useful for combining cells in tablesbrew 
+\usepackage{booktabs}
+\usepackage{hanging}
+\usepackage{fancyhdr} %Allows for the 
+\pagestyle{fancy}
+\fancyhead[L]{\textit{290 Entrance Paper}} 
+\fancyhead[R]{\textit{\today}} 
+\fancyfoot[L,R]{} 
+\fancyfoot[C]{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14.5pt} % ...at least 14.49998pt
+% \usepackage{fourier} % This allows for the use of certain wingdings like bombs, frowns, etc.
+% \usepackage{fourier-orns} %More useful symbols like bombs and jolly-roger, mostly for OT
+\usepackage[colorlinks,allcolors={black},urlcolor={blue}]{hyperref} %allows for hyperlinks and pdf bookmarks
+% \usepackage{url} %allows for urls
+% \def\UrlBreaks{\do\/\do-} %allows for urls to be broken up
+\usepackage[normalem]{ulem} %strike out text. Handy for syntax
+\usepackage{tcolorbox}
+\usepackage{datetime2}
+
+%%FONTS
+\setmainfont{Libertinus Serif}
+\setsansfont{Libertinus Sans}
+\setmonofont[Scale=MatchLowercase]{Libertinus Mono}
+
+%%PACKAGES FOR LINGUISTICS
+%\usepackage{OTtablx} %Generating tableaux with using TIPA
+% \usepackage[noipa]{OTtablx} % Use this one generating tableaux without using TIPA
+%\usepackage[notipa]{ot-tableau} % Another tableau drawing packing use for posters.
+% \usepackage{linguex} % Linguistic examples
+% \usepackage{langsci-linguex} % Linguistic examples
+\usepackage{langsci-gb4e} % Language Science Press' modification of gb4e
+% \usepackage{langsci-avm} % Language Science Press' AVM package
+\usepackage{tikz} % Drawing Hasse diagrams
+% \usepackage{pst-asr} % Drawing autosegmental features
+% \usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
+% \usepackage{pst-jtree} 	% Syntax tree draawing software
+% \usepackage{tikz-qtree}	% Another syntax tree drawing software. Uses bracket notation.
+\usepackage{forest}	% Another syntax tree drawing software. Uses bracket notation.
+% \usepackage{ling-macros} % Various linguistic macros. Does not work with linguex.
+% \usepackage{covington} % Another linguistic examples package.
+\usepackage{leipzig} %	Offers support for Leipzig Glossing Rules
+
+%%LEIPZIG GLOSSING FOR ZAPOTEC
+\newleipzig{eld}{eld}{elder}				% Elder pronouns
+\newleipzig{hum}{hum}{human}				% Human pronouns
+\newleipzig{ani}{ani}{animate}			% Animate pronouns
+\newleipzig{ina}{ina}{inanimate}			% Inanimate pronouns
+\newleipzig{pot}{pot}{potential}		% Potential Aspect
+\newleipzig{cont}{cont}{continuative}	% Continuative Aspect
+\newleipzig{stat}{stat}{stative}		% Stative Aspect
+\newleipzig{and}{and}{andative}			% Andative Aspect
+\newleipzig{ven}{ven}{venative}			% Venative Aspect
+\newleipzig{rest}{rest}{restitutive}	% Restitutive Aspect
+\newleipzig{rep}{rep}{repetitive}		% Repetitive Aspect
+
+%%TITLE INFORMATION
+\title{TITLE}
+\author{Mykel Loren Brinkerhoff}
+\date{\today}
+
+%%MACROS
+\newcommand{\sub}[1]{\textsubscript{#1}}
+\newcommand{\supr}[1]{\textsuperscript{#1}}
+\providecommand{\lsptoprule}{\midrule\toprule}
+\providecommand{\lspbottomrule}{\bottomrule\midrule}
+\newcommand{\fittable}[1]{\resizebox{\textwidth}{!}{#1}}
+
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}%
+  {\z@}{0ex \@plus 1ex \@minus .2ex}{-1em}%
+  {\normalfont\normalsize\bfseries}%
+}
+\makeatother
+\parindent=10pt
+
+
+\begin{document}
+	
+%%If using linguex, need the following commands to get correct LSA style spacing
+%% these have to be after  \begin{document}
+	% \setlength{\Extopsep}{6pt}
+	% \setlength{\Exlabelsep}{9pt}		%effect of 0.4in indent from left text edge
+%%
+	
+%% Line spacing setting. Comment out the line spacing you do not need. Comment out all if you want single spacing.
+%	\doublespacing
+	\onehalfspacing
+	
+\begin{center}
+	{\Large \textbf{Interaction of tone and phonation in Santiago Laxopa Zapotec}}
+	\vspace{6pt}
+
+	Mykel Loren Brinkerhoff
+\end{center}
+%\maketitle
+%\maketitleinst
+\thispagestyle{fancy}
+
+% \tableofcontents
+
+%------------------------------------
+\section{Introduction} \label{sec:Introduction}
+%------------------------------------
+
+
+
+%------------------------------------
+\section{Tone and Phonation} \label{sec:TonePhonation}
+%------------------------------------
+
+Tone, as a linguistic phenomenon, is very wide spread and is present in many of the world's languages \citep{yipTone2002}. Most of the tonal languages that have received the most attention are languages from Africa and Asia with languages of the America's receiving some attention \citep{pikeToneLanguagesTechnique1948,silvermanLaryngealComplexityOtomanguean1997,campbellOtomangueanHistoricalLinguistics2017a,campbellOtomangueanHistoricalLinguistics2017}. Because of the focus on mostly African and Asian tonal languages certain assumptions are commonly held about what is possible for tonal languages. One of the assumptions that is made is that tone and phonation are heavily dependent on each other \citep{andruskiPhonationTypesProduction2000,yipTone2002,garellekVoiceQualityTone2013,brunelleTonePhonationSoutheast2016,weePhonologicalTone2019,hymanToneSystems2020,garellekPhoneticsWhiteHmong2021}. For example, Mandarin tone three, which is produced as a dipping tone in careful speech and a falling tone in rapid speech, has creakiness throughout the vowel. This creakiness is often the sole clue to differentiate it from a normal falling tone \citep{duanmuPhonologyStandardChinese2007,kuangCovariationVoiceQuality2017}. 
+
+Oto-Manguean languages from Mexico clearly show that the behavior between tone and phonation in Asia is not the only way in which tone and phonation can interact. In fact, Oto-Manguean languages have what \citet{silvermanLaryngealComplexityOtomanguean1997} calls ``laryngeally complex'' vowels. These laryngeally ccomplex vowels are ones where tone and phonation are entirely independent from one another. This means that any tone can co-occur with any phonation type. Some work has been done that adequately shows this such as \citet{avelinobecerraTopicsYalalagZapotec2004,chavez-peonInteractionMetricalStructure2010,dicanioCoarticulationToneGlottal2012,uchiharaToneRegistrogenesisQuiavini2016}. One of the more detailed of these studies is \citet{chavez-peonInteractionMetricalStructure2010} who investigates the phonetic cues to tone, stress, and phonation in San Lucas Quiaviní Zapotec (SLQZ) a Valley Zapotec variety. \citeauthor{chavez-peonInteractionMetricalStructure2010} shows how tone and phonation are mostly independent from each other with a notable exception being the restriction of Rising tone in SLQZ which can only appear with modal phonation. The distribution of tone and phonation type is presented in Table \ref{tab:slqz}.
+
+\begin{table}[!ht]
+\centering
+\caption{SLQZ tone and phonation}
+\label{tab:slqz}
+ \begin{tabular}{lcccc}
+  \lsptoprule
+  				&	 High  & Low & Falling & Rising \\
+  	Modal	& ✔︎ & ✔︎ & ✔︎ & ✔︎ \\
+  	Breathy & X & ✔︎ & ✔︎ & X \\
+  	Creaky & ✔︎ & ✔︎ & ✔︎ & X \\
+  	Interrupted & ✔︎ & ✔︎ & ✔︎ & X \\
+  \lspbottomrule
+ \end{tabular}
+\end{table}
+
+My qualifying paper will add to this lesser studied area of phonetics and phonology by investigating the interaction of tone and phonation in Santiago Laxopa Zapotec.
+
+%------------------------------------
+\section{Overview of Santiago Laxopa Zapotec} \label{sec:SLZ}
+%------------------------------------
+
+Santiago Laxopa Zapotec (SLZ) is a variety of Sierra Norte Zapotec, a member of the Oto-Manguean language family, and spoken by approximately 800 to 1200 people in the municipality of Santiago Laxopa, Oaxaca, Mexico \citep{adlerDerivationVerbInitiality2018,sichelPronounsAttractionSierra2020}. Similar to other Oto-Manguean languages, SLZ exhibits \citeauthor{silvermanLaryngealComplexityOtomanguean1997}'s (\citeyear{silvermanLaryngealComplexityOtomanguean1997}) ``larnygeally complex vowels''. 
+
+%------------------------------------
+\section{Methods and materials} \label{sec:Methods}
+%------------------------------------
+
+
+
+%------------------------------------
+\section{Laryngeal Articulator Model} \label{sec:LAM}
+%------------------------------------
+
+
+
+%------------------------------------
+\section{Conclusion} \label{sec:Conclusion}
+%------------------------------------
+
+
+
+%------------------------------------
+%BIBLIOGRAPHY
+%------------------------------------
+
+%\singlespacing
+%\nocite{*}
+\printbibliography[heading=bibintoc]
+
+\end{document} 
