@@ -13,7 +13,7 @@
 		maxbibnames=99,
 		natbib,
 		url=false]{biblatex}
-\addbibresource{link_desktop.bib}
+\addbibresource{link_laptop.bib}
 \setcounter{biburlnumpenalty}{100}  % allow URL breaks at numbers
 %\setcounter{biburlucpenalty}{100}   % allow URL breaks at uppercase letters
 %\setcounter{biburllcpenalty}{100}   % allow URL breaks at lowercase letters
@@ -66,6 +66,7 @@
 \usepackage{langsci-gb4e} % Language Science Press' modification of gb4e
 % \usepackage{langsci-avm} % Language Science Press' AVM package
 \usepackage{tikz} % Drawing Hasse diagrams
+\usetikzlibrary{positioning}
 % \usepackage{pst-asr} % Drawing autosegmental features
 % \usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
 % \usepackage{pst-jtree} 	% Syntax tree draawing software
@@ -138,13 +139,17 @@
 \section{Introduction} \label{sec:Introduction}
 %------------------------------------
 
+The interaction between tone and phonation is primarily believed to consist of phonation being closely linked with certain tones depending on the language under discussion \citep{yipTone2002,weePhonologicalTone2019}. This has lead to a growing body of literature that assumes this to be a universal fact about tonal languages (\citet{michaudComplexTonesEast2012,brunelleTonePhonationSoutheast2016,hymanToneSystems2020,garellekPhoneticsWhiteHmong2021} among many others). This, however, is not true for languages of the Americas. One of the linguistic areas where tone and phonation do not seem to be closely tied to one another is in Mesoamerica \citep{campbellMesoAmericaLinguisticArea1986,silvermanLaryngealComplexityOtomanguean1997,campbellOtomangueanHistoricalLinguistics2017a,campbellOtomangueanHistoricalLinguistics2017}. \citet{silvermanLaryngealComplexityOtomanguean1997} shows how tone and phonation are truly decoupled and result in a ``laryngeally complex" system. 
 
+One of these languages that shows laryngeal complexity is Santiago Laxopa Zapotec, an Oto-Manguean language spoken in Oaxaca, Mexico. As will be discussed in Section \ref{sec:SLZ}, Santiago Laxopa Zapotec has a system of four phonation types and five tones which allows for a detailed study into how such systems are produced. 
+
+My qualifying paper will explore the interaction of tone and phonation in Santiago Laxopa Zapotec which will add to our understanding of how such laryngeally complex system are produced. This investigation will be based on data that I have collected from two native Santiago Laxopa Zapotec speakers that live in Santa Cruz, CA. Additionally, I will explore how best to represent such systems using the Laryngeal Articulator Model \citep{eslingVoiceQualityLaryngeal2019}. The Laryngeal Articulator Model is a model which takes into account the full complexity of the lower vocal tract by using a series of monovalent states. The Laryngeal Articulator Model is described in more detail in Section~\ref{sec:LAM}.  
 
 %------------------------------------
 \section{Tone and Phonation} \label{sec:TonePhonation}
 %------------------------------------
 
-Tone, as a linguistic phenomenon, is very wide spread and is present in many of the world's languages \citep{yipTone2002}. Most of the tonal languages that have received the most attention are languages from Africa and Asia with languages of the America's receiving some attention \citep{pikeToneLanguagesTechnique1948,silvermanLaryngealComplexityOtomanguean1997,campbellOtomangueanHistoricalLinguistics2017a,campbellOtomangueanHistoricalLinguistics2017}. Because of the focus on mostly African and Asian tonal languages certain assumptions are commonly held about what is possible for tonal languages. One of the assumptions that is made is that tone and phonation are heavily dependent on each other \citep{andruskiPhonationTypesProduction2000,yipTone2002,garellekVoiceQualityTone2013,brunelleTonePhonationSoutheast2016,weePhonologicalTone2019,hymanToneSystems2020,garellekPhoneticsWhiteHmong2021}. For example, Mandarin tone three, which is produced as a dipping tone in careful speech and a falling tone in rapid speech, has creakiness throughout the vowel. This creakiness is often the sole clue to differentiate it from a normal falling tone \citep{duanmuPhonologyStandardChinese2007,kuangCovariationVoiceQuality2017}. 
+Tone, as a linguistic phenomenon, is very wide spread and is present in many of the world's languages \citep{yipTone2002}. Most of the tonal languages that have received the most attention are languages from Africa and Asia with languages of the Americas receiving some attention \citep{pikeToneLanguagesTechnique1948,silvermanLaryngealComplexityOtomanguean1997,campbellOtomangueanHistoricalLinguistics2017a,campbellOtomangueanHistoricalLinguistics2017}. Because of the focus on mostly African and Asian tonal languages certain assumptions are commonly held about what is possible for tonal languages. One of the assumptions that is made is that tone and phonation are heavily dependent on each other \citep{andruskiPhonationTypesProduction2000,yipTone2002,garellekVoiceQualityTone2013,brunelleTonePhonationSoutheast2016,weePhonologicalTone2019,hymanToneSystems2020,garellekPhoneticsWhiteHmong2021}. For example, Mandarin tone three, which is produced as a dipping tone in careful speech and a falling tone in rapid speech, has creakiness throughout the vowel. This creakiness is often the sole clue to differentiate it from a normal falling tone \citep{duanmuPhonologyStandardChinese2007,kuangCovariationVoiceQuality2017}. 
 
 Oto-Manguean languages from Mexico clearly show that the behavior between tone and phonation in Asia is not the only way in which tone and phonation can interact. In fact, Oto-Manguean languages have what \citet{silvermanLaryngealComplexityOtomanguean1997} calls ``laryngeally complex'' vowels. These laryngeally ccomplex vowels are ones where tone and phonation are entirely independent from one another. This means that any tone can co-occur with any phonation type. Some work has been done that adequately shows this such as \citet{avelinobecerraTopicsYalalagZapotec2004,chavez-peonInteractionMetricalStructure2010,dicanioCoarticulationToneGlottal2012,uchiharaToneRegistrogenesisQuiavini2016}. One of the more detailed of these studies is \citet{chavez-peonInteractionMetricalStructure2010} who investigates the phonetic cues to tone, stress, and phonation in San Lucas Quiaviní Zapotec (SLQZ) a Valley Zapotec variety. \citeauthor{chavez-peonInteractionMetricalStructure2010} shows how tone and phonation are mostly independent from each other with a notable exception being the restriction of Rising tone in SLQZ which can only appear with modal phonation. The distribution of tone and phonation type is presented in Table \ref{tab:slqz}.
 
@@ -175,15 +180,13 @@ Santiago Laxopa Zapotec (SLZ) is a variety of Sierra Norte Zapotec, a member of 
 	Checked: [ aˀ ] <\textit{a'}> \\
 	Laryngealized: [ aˀa ] <\textit{a'a}> \\
 \z
-There are many words that are differentiated by only by phonation in SLZ. For example, the words for \emph{snake} and \emph{fish} are only distinguished by the presence of breathy phonation, (\ref{ex:SnakeFish}) and Figure \ref{key}. 
+There are many words that are differentiated by only by phonation in SLZ. For example, the words for \emph{snake} and \emph{fish} are only distinguished by the presence of breathy phonation, (\ref{ex:SnakeFish}). 
 
 \ea \label{ex:SnakeFish}
 	\ea \textit{behl} [ bɛ̤lː¹³ ] `snake'
 	\ex \textit{bel} [ bɛlː¹³ ]`fish'
 	\z  
 \z 
-	
-<INSERT FIGURES of behl and bel>  
 
 In addition to phonation, SLZ, along with all of the Oto-Manguean languages, is a tonal language \citep{brinkerhoffDownstepSantiagoLaxopaMFM}. SLZ has three level tones of high, mid, and low, which are represented in the transcriptions with Pike's numbers, where x¹ is the highest tone and x³ is the lowest \citep{pikeToneLanguagesTechnique1948,weePhonologicalTone2019}. In addition to these three level tones, SLZ has two contour tones, a rising (x²¹) and a falling tone (x¹³). The number of tones were discovered by myself and two other researchers following the methods for tonal analysis in \citet{pikeToneLanguagesTechnique1948,sniderToneAnalysisField2018}. An overview of the different tonal patterns are seen in Table \ref{tab:tones}.
 
@@ -217,19 +220,54 @@ In order to investigate what is occurring with SLZ tone and phonation, two SLZ s
 \trans `I say \rule{10mm}{1pt} three times'	
 \z 
 
-Once the recordings were made, the audio files were initially segmented using ELAN \citep{wittenburgELANProfessionalFramework2006} and then passed to PRAAT \citep{boersmaPraatDoingPhonetics2021} for segmenting the vowels and extracting them for analysis in VOICESAUCE \citep{shueVOICESAUCEProgramVoice2009}.
+Once the recordings were made, the audio files were initially segmented using ELAN \citep{wittenburgELANProfessionalFramework2006} and then passed to PRAAT \citep{boersmaPraatDoingPhonetics2021} for segmenting the vowels and extracting them for analysis in VOICESAUCE \citep{shueVOICESAUCEProgramVoice2009}.I am currently segmenting the vowels out of the audio files in PRAAT and will shortly be analyzing the extracted vowels in VOICESAUCE. 
 
 %------------------------------------
 \section{Laryngeal Articulator Model} \label{sec:LAM}
 %------------------------------------
 
-One way that the interaction between phonation and 
+One way that the interaction between phonation and tone could be understood is with \citeauthor{eslingVoiceQualityLaryngeal2019}'s (\citeyear{eslingVoiceQualityLaryngeal2019}) Laryngeal Articulator Model. The Laryngeal Articulator Model takes as a basic assumption that laryngeal articulations are more complex than what most phonological feature systems represent. For example the feature system in \citet{hayesIntroductoryPhonology2009} assumes that only three features ([± voice], [± constricted glottis], and [± spread glottis]) are able to capture the full range of laryngeal complexity. This, however, is a gross simplification of the articulation in the larynx. For breathy voice because the larynx is open, the airflow is less turbulent and less impeded allowing for more linear airflow through the pharyngeal space \citep[56]{eslingVoiceQualityLaryngeal2019}. Creaky voice on the other hand is produced with thick, short vocal folds. Additionally, a loose aspect is required which is thyroarytenoid muscles from the borders of the arytenoids to the front of the epilaryngeal tube \citet[63]{eslingVoiceQualityLaryngeal2019}. However, the ventricular folds can couple with the vocal folds during creaky phonation. This coupling has four effects: (i) it increases the overall effective vibrating mass, lowering frequency; (ii) it adds damping, making vibration more likely to cease; (iii) it adds increased degrees of freedom to the system, encouraging irregular vibration; and, most importantly, (iv) it perturbs the transmission of the mucosal wave by preventing its traversal across the surface of the vocal folds, causing the wave energy to be reflected back towards the midline earlier than what would occur for modal phonation \citep[63]{eslingVoiceQualityLaryngeal2019}. 
+
+Based on these complexities in the lower vocal tract that accompany laryngeal and pharyngeal, \citeauthor{eslingVoiceQualityLaryngeal2019} propose their Laryngeal Articulator Model which attempts to capture the `articulatory' realization of the larynx following \citet{ohalaPhoneticExplanationsSound2005,ohalaAccommodationAerodynamicVoicing2011}. In accounting for the physiological states that the lower vocal tract is in during speech production, \citeauthor{eslingVoiceQualityLaryngeal2019} propose the addition of a network of synergistic and anti-synergistic physiological relations that are represented in the Figure~\ref{fig:LAMNetwork}.
+
+\begin{figure}[!ht]
+\caption{Network of synergistic and anti-synergistic physiological relations among vocal tract states}
+\label{fig:LAMNetwork}
+\centering
+\includegraphics[width=0.9\textwidth]{LAMNetwork.png}
+\end{figure}
+
+\begin{table}[!ht]
+\centering
+\caption{Physiological states of the lower vocal tract}
+\label{tab:States}
+ \begin{tabular}{ll}
+  \lsptoprule
+  States	&	 Physiological description \\
+  \hline
+  vfo   	&  vocal folds open (abducted) \\
+	vfc    	&  vocal folds closed (adducted/prephonation)\\
+	epc   	&  epilaryngeal constriction\\
+	epv			&  epilaryngeal vibration \\
+	tfr 		&  tongue fronting \\
+	tre 		&  tongue retraction \\
+	tra 		&  tongue raising \\
+	tdb 		&	 tongue double bunching\\
+	↑lx     &  raised larynx\\
+	↓lx			&  lowered larynx\\
+	Hf0			&  increased vocal fold tension, less vibrating mass (high f0)\\
+	Lf0			&  decreased vocal fold tension, more vibrating mass (lower f0)\\
+  \lspbottomrule
+ \end{tabular}
+\end{table}
+
+Using these networks, one can more accurately describe what is occurring in the larynx during phonation. I plan on using these networks to describe and account for the the interaction between tone and phonation in SLZ. 
 
 %------------------------------------
 \section{Conclusion} \label{sec:Conclusion}
 %------------------------------------
 
-
+This paper has laid out our current understanding of the interaction of tone and phonation and what is possible. Additionally, our current understanding of the tone and phonation in SLZ was described. I also provided a description of the methods that I am employing to investigate this interaction. One potential way of explaining the complex interactions of tone and phonation could potentially be found in the Laryngeal Articulator Model was also introduced. 
 
 %------------------------------------
 %BIBLIOGRAPHY
