@@ -1,0 +1,211 @@
+---
+title: 'Zapotec Statistics: Praatsauce and Voicesauce'
+author: "Mykel Loren Brinkerhoff"
+date: "8/18/2021"
+output: 
+  pdf_document:
+    latex_engine: xelatex
+mainfont: Libertinus Serif
+sansfont: Libertinus Sans
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r, include=FALSE}
+install.packages("tidyverse", repos = "http://cran.us.r-project.org")
+install.packages("lme4", repos = "http://cran.us.r-project.org")
+library(tidyverse)
+library(lme4)
+```
+## Introduction
+
+- This is a presentation of the statistics that I ran with my SIP interns over the summer based on Praatsauce. 
+- These results are compared with the same statistics ran on data that was generated using Voicesauce
+
+
+```{r data, echo=FALSE}
+zapotecPS <- read.csv(file = "20210805_spectral_measures.txt")
+zapotecVS <- read.table("20210816_VSOutput.txt", header = T, sep = "\t")
+
+# Adding columns to both data frames for phonation and tone
+# Adding phonation and Praatsauce output
+zapotecPS$phonation <- factor(ifelse(grepl("modal", zapotecPS$Label, ignore.case = T), "Modal",
+                            ifelse(grepl("breathy", zapotecPS$Label, ignore.case = T), "Breathy",
+                                   ifelse(grepl("checked", zapotecPS$Label, ignore.case = T), "Checked", "Rearticulated"
+                                          )
+                                   )
+                            ), levels = c("Modal", "Breathy", "Checked", "Rearticulated"))
+
+zapotecPS$tone <- ifelse(grepl("_H$", zapotecPS$Label, ignore.case = F), "H",
+                       ifelse(grepl("_M$", zapotecPS$Label, ignore.case = F), "M",
+                              ifelse(grepl("_L$", zapotecPS$Label, ignore.case = F), "L",
+                                     ifelse(grepl("_HL$", zapotecPS$Label, ignore.case = F), "HL", "MH"
+                                            )
+                                    )
+                              )
+                      )
+
+# Adding phonation and tone to Voicesauce output 
+zapotecVS$phonation <- factor(ifelse(grepl("modal", zapotecVS$Filename, ignore.case = T), "Modal",
+                            ifelse(grepl("breathy", zapotecVS$Filename, ignore.case = T), "Breathy",
+                                   ifelse(grepl("checked", zapotecVS$Filename, ignore.case = T), "Checked", "Rearticulated"
+                                          )
+                                   )
+                            ), levels = c("Modal", "Breathy", "Checked", "Rearticulated"))
+
+zapotecVS$tone <- ifelse(grepl("_H$", zapotecVS$Filename, ignore.case = F), "H",
+                       ifelse(grepl("_M$", zapotecVS$Filename, ignore.case = F), "M",
+                              ifelse(grepl("_L$", zapotecVS$Filename, ignore.case = F), "L",
+                                     ifelse(grepl("_HL$", zapotecVS$Filename, ignore.case = F), "HL", "MH"
+                                            )
+                                    )
+                              )
+                      )
+
+
+```
+
+## Praatsauce statistics
+
+### H1-H2
+- I first plotted the results of the uncorrected and corrected values for H1-H2 by the phonation type.
+
+```{r h1plot, echo=FALSE, fig.cap="H1-H2 uncorrected", fig.height=4, fig.width=5}
+boxplot(H1H2u ~ phonation, data = zapotecPS)
+```
+
+```{r h1h2c, echo=FALSE, fig.cap="H1-H2 corrected", fig.height=4, fig.width=5}
+boxplot(H1H2c ~ phonation, data = zapotecPS)
+
+```
+
+- Based on the above plots it does seem that there might be a difference between modal and non-modal phonation. 
+
+- In order to test this I ran a linear regression on the uncorrected and then on the corrected. 
+
+```{r h1h2lm, echo = FALSE}
+h1u <- lm(formula = H1H2u ~ phonation,
+                data = zapotecPS)
+summary(h1u)
+```
+
+- Based on these results it appears as if only Breathy and Rearticulated phonation types are able to be distinguished using H1-H2.
+
+- However the results show something different when we compare the corrected values. 
+
+```{r h1h2clm, echo=FALSE}
+h1c <- lm(formula = H1H2c ~ phonation,
+                data = zapotecPS)
+summary(h1c)
+```
+
+- These results show that all values can be distinguished from modal phonation using H1 - H2
+
+- Next I ran a linear mixed effects regression with tone being a random variable. 
+
+```{r h1h2ulmer, echo=FALSE}
+uncorrected_lmer <- lmer(H1H2u ~ phonation + (1 | tone), 
+               data = zapotecPS )
+summary(uncorrected_lmer)
+```
+
+- Based on the t value ≥ |2| in the Fixed effects only Breathy and Rearticulated phonations are able to be distinguished from modal using this model. 
+
+- These results differ when they are evaluated using the corrected values. We now observe that all the phonation types reach significance. 
+
+```{r h1h2c_lmer, echo=FALSE}
+corrected_lmer <- lmer(formula = H1H2c ~ phonation + (1 | tone),
+                data = zapotecPS)
+summary(corrected_lmer)
+```
+### CPP
+
+- In turning to CPP by phonation type we see similar differences.
+
+```{r cpp_plots, fig.cap="CPP by phonation types", fig.height=4, fig.width=5}
+boxplot(CPP ~ phonation, data = zapotecPS)
+```
+
+- Looking at the results of the linear regression we see that phonation types can be differentiated using CPP. 
+
+```{r cpp_lr}
+cpp_linear <- lm(formula = CPP ~ phonation,
+          data = zapotecPS)
+summary(cpp_linear)
+```
+
+- These results carry over when we do a linear mixed effects regression
+
+```{r cpp_lmer}
+cpp_lmer <- lmer(CPP ~ phonation + (1 | tone), 
+               data = zapotecPS )
+summary(cpp_lmer)
+```
+
+
+## Voicesauce statistics
+
+### H1-H2
+- When we consider the results from Voicesauce the picture is somewhat different. 
+
+```{r VS_H1Plot, fig.cap="Voicesauce H1-H2 (corrected) by phonation types", fig.height=4, fig.width=5}
+boxplot(H1H2c_mean ~ phonation, data = zapotecVS)
+```
+
+```{r VS_H1PlotUn, fig.cap="Voicesauce H1-H2 (uncorrected) by phonation types", fig.height=4, fig.width=5}
+boxplot(H1H2u_mean ~ phonation, data = zapotecVS)
+```
+
+- When we run the stats using a linear regression we see that checked and rearticulated phonation types are significant using H1-H2 (corrected) and only breathy is significant using H1-H2 (uncorrected).  
+
+```{r }
+h1h2_VScorrected <- lm(formula = H1H2c_mean ~ phonation,
+                data = zapotecVS)
+summary(h1h2_VScorrected)
+
+h1h2_VSuncorrected <- lm(formula = H1H2u_mean ~ phonation,
+                data = zapotecVS)
+summary(h1h2_VSuncorrected)
+```
+
+- A linear mixed effects regression for H1-H2 (corrected) 
+
+```{r}
+h1h2c_VS <- lmer(formula = H1H2c_mean ~ phonation + (1 | tone),
+                data = zapotecVS)
+summary(h1h2c_VS)
+```
+
+- And H1-H2 (uncorrected)
+
+```{r}
+h1h2u_VS <- lmer(formula = H1H2u_mean ~ phonation + (1 | tone),
+                data = zapotecVS)
+summary(h1h2u_VS)
+```
+
+### CPP
+
+- In turning to CPP by phonation type we do not see any clear differences between the different phonation types.
+
+```{r cppVS_plots, fig.cap="CPP by phonation types (Voicesauce)", fig.height=4, fig.width=5}
+boxplot(CPP_mean ~ phonation, data = zapotecVS)
+```
+
+- Looking at the results of the linear regression we see that phonation types cannot be differentiated using CPP. 
+
+```{r cppVS_lr}
+cppVS_linear <- lm(formula = CPP_mean ~ phonation,
+          data = zapotecVS)
+summary(cppVS_linear)
+```
+
+- These results carry over when we do a linear mixed effects regression
+
+```{r cppVS_lmer}
+cpp_lmer <- lmer(CPP_mean ~ phonation + (1 | tone), 
+               data = zapotecVS )
+summary(cpp_lmer)
+```
