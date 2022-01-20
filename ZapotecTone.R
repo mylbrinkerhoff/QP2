@@ -26,13 +26,18 @@ std.error <- function(x, na.rm = T) {
 range01 <- function(x){(x-min(x))/(max(x)-min(x))}
 
 # custom theme for plotting
-my.theme <- theme(axis.text = element_text(colour="black", size=15),
-                  text = element_text(size=16),
-                  title = element_text(size=19),
+my.theme <- theme(axis.text = element_text(colour="black", size=25),
+                  text = element_text(size=26),
+                  title = element_text(size=29),
                   axis.title.x=  element_text(vjust=-0.45),
                   axis.title.y = element_text(vjust=.2),
                   axis.ticks = element_line(colour="black"),
-                  axis.line = element_line())
+                  axis.line = element_line(),
+                  legend.position = c(.8,.9),
+                  legend.background = element_rect(size=0.25,
+                                                   linetype="solid",
+                                                   color = "black"),
+                  )
 
 # Adding the csv/txt file
 zapotecVS <- read.table("SLZTone.txt", header = T, sep = "\t")
@@ -81,21 +86,41 @@ tone_phonation
 #   ungroup()
 
 # summarize the data in zapotecVS
-zapotecVS_means <- zapotecVS %>% 
-  mutate(normalized_time = round((t_ms-seg_Start)/(seg_End-seg_Start),digits = 2)) %>%
-  left_join(zapotecVS_time) %>%
-  group_by(tone,normalized_time) %>% 
-  summarise(mean_F0 = mean(strF0), se = std.error(strF0)) 
+# zapotecVS_means <- zapotecVS %>% 
+#   mutate(normalized_time = round((t_ms-seg_Start)/(seg_End-seg_Start),digits = 2)) %>%
+#   left_join(zapotecVS_time) %>%
+#   group_by(tone,normalized_time) %>% 
+#   summarise(mean_F0 = mean(strF0), se = std.error(strF0)) 
+
+zapotec_times <- zapotecVS %>% 
+  mutate(normalized_time = round((t_ms-seg_Start)/(seg_End-seg_Start),digits = 2))
 
 # Plotting the tone
 # ggplot of normalized tone (y-axis) over time (x axis)
-ggplot(data = zapotecVS_means, aes(x = normalized_time, y=mean_F0, group=tone, colour=tone)) +
-  # geom_point() + # use points and lines instead of geom_bar()
-  # geom_line() +
-  geom_smooth() +
-  # note: we no longer need to specify position_dodge for the errorbars
-  # geom_errorbar(width = .15, aes(ymin = mean_F0-se, ymax = mean_F0+se)) +
-  my.theme
+tone_plot <- ggplot(data = zapotec_times, 
+       aes(x = normalized_time, 
+          y=strF0, 
+          group=tone, 
+          colour=tone,
+          fill=tone)) +
+    geom_smooth(method = "loess") +
+    labs(title = "FSR's average F0 contours across tonal patterns", 
+       x = "Normalized time (% of vowel duration)",
+       y = "F0 (Hz)",
+       colour = "Tonal Pattern") +
+    theme_bw() +
+    guides(colour = guide_legend("Tonal Pattern", ncol = 5), 
+           fill = guide_legend("Tonal Pattern", ncol = 5) ) +
+    my.theme
+
+print(tone_plot)
+ggsave(filename = "TonePlot.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
 
 # Problems
 Problems <- zapotecVS %>% filter(tone == "N")
