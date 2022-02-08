@@ -1,0 +1,103 @@
+---
+title: "Handout"
+author: "Mykel Loren Brinkerhoff"
+date: "2022 Jan 20"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(scales)
+library(metan)
+
+# custom theme for plotting
+my.theme <- theme(axis.text = element_text(colour="black", size=25),
+                  text = element_text(size=26),
+                  title = element_text(size=29),
+                  axis.title.x=  element_text(vjust=-0.45),
+                  axis.title.y = element_text(vjust=.2),
+                  axis.ticks = element_line(colour="black"),
+                  axis.line = element_line(),
+                  legend.position = c(.8,.9),
+                  legend.background = element_rect(size=0.25,
+                                                   linetype="solid",
+                                                   color = "black"),
+                  )
+
+# Adding the csv/txt file
+zapotecVS <- read.table("~/Documents/1_Projects/QP2/SLZTone.txt", header = T, sep = "\t")
+
+# Extract the phonation and the tone labels into new
+# Phonation Labels
+# Add a column for the different tones  using an ifelse statement that
+# greps for the different phonations
+zapotecVS$phonation <- factor(ifelse(grepl("modal", zapotecVS$Filename, ignore.case = T), "Modal",
+                                     ifelse(grepl("breathy", zapotecVS$Filename, ignore.case = T), "Breathy",
+                                            ifelse(grepl("checked", zapotecVS$Filename, ignore.case = T), "Checked", "Laryngealized"
+                                            )
+                                     )
+), levels = c("Modal", "Breathy", "Checked", "Laryngealized"))
+
+# Tone Labels
+# Add a column for the different tones  using an ifelse statement that
+# greps for the different tones
+# An example of what it is looking like
+# DF$KIND <- ifelse(grepl("gas", DF$GLDESC, ignore.case = T), "Materials", 
+#                   ifelse(grepl("payroll", DF$GLDESC, ignore.case = T), "Payroll", "Other"))
+
+zapotecVS$tone <- ifelse(grepl("_H.mat", zapotecVS$Filename, ignore.case = F), "H",
+                         ifelse(grepl("_M.mat", zapotecVS$Filename, ignore.case = F), "M",
+                                ifelse(grepl("_L.mat", zapotecVS$Filename, ignore.case = F), "L",
+                                       ifelse(grepl("_HL.mat", zapotecVS$Filename, ignore.case = F), "HL", 
+                                              ifelse(grepl("_MH.mat", zapotecVS$Filename, ignore.case = F), "MH", "N"
+                                       )
+                                )
+                         )
+)
+)
+
+```
+
+## Introduction 
+
+- I have some preliminary results for FSRs responses. 
+- I first generated a two-way table that tallies the number of occurances of tone by phonation. 
+- From this we see a gap in the possible combinations of tone and phonation, which bears some stricking similarities to San Lucas Quiaviní Zapotec. 
+
+```{r tone_phonation, echo=FALSE}
+table(zapotecVS$tone, zapotecVS$phonation)
+```
+- This shows that SLZ only allows 
+## Tonal plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+zapotec_times <- zapotecVS %>% 
+  mutate(normalized_time = round((t_ms-seg_Start)/(seg_End-seg_Start),digits = 2))
+
+# Plotting the tone
+# ggplot of normalized tone (y-axis) over time (x axis)
+tone_plot <- ggplot(data = zapotec_times, 
+       aes(x = normalized_time, 
+          y=strF0, 
+          group=tone, 
+          colour=tone,
+          fill=tone)) +
+    geom_smooth(method = "loess") +
+    labs(title = "FSR's average F0 contours across tonal patterns", 
+       x = "Normalized time (% of vowel duration)",
+       y = "F0 (Hz)",
+       colour = "Tonal Pattern") +
+    theme_bw() +
+    guides(colour = guide_legend("Tonal Pattern", ncol = 5), 
+           fill = guide_legend("Tonal Pattern", ncol = 5) ) +
+    my.theme
+
+print(tone_plot)
+```
+
+## Moving forward
+
