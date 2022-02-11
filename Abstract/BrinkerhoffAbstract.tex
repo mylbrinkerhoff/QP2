@@ -58,7 +58,7 @@
 
 %%PACKAGES FOR LINGUISTICS
 %\usepackage{OTtablx} %Generating tableaux with using TIPA
-\usepackage[noipa]{OTtablx} % Use this one generating tableaux without using TIPA
+% \usepackage[noipa]{OTtablx} % Use this one generating tableaux without using TIPA
 %\usepackage[notipa]{ot-tableau} % Another tableau drawing packing use for posters.
 % \usepackage{linguex} % Linguistic examples
 % \usepackage{langsci-linguex} % Linguistic examples
@@ -113,7 +113,7 @@
 %% these have to be after  \begin{document}
 	% \setlength{\Extopsep}{6pt}
 	% \setlength{\Exlabelsep}{9pt}		%effect of 0.4in indent from left text edge
-%%
+
 	
 %% Line spacing setting. Comment out the line spacing you do not need. Comment out all if you want single spacing.
 %	\doublespacing
@@ -130,11 +130,41 @@
 Santiago Laxopa Zapotec (SLZ) is an understudied Oto-Manguean language with lexical tone spoken by roughly 1000 people, mainly in the town of Santiago Laxopa in the Sierra Norte of Oaxaca, Mexico.
 SLZ, like other Oto-Manguean languages, contains a robust systems of both tone and voice quality which are independent from each other \citep{silvermanLaryngealComplexityOtomanguean1997,blankenshipTimingNonmodalPhonation2002,avelinobecerraTopicsYalalagZapotec2004,arellanesSistemaFonologicoPropiedades2009}. 
 
-This paper provides: (i) a description of the tone and voice quality systems of SLZ and their interactions; and (ii) test the validity of the Laryngeal Articulator Model \citep[LAM;][]{moisikMultimodalImagingGlottal2015,eslingVoiceQualityLaryngeal2019} as a theoretical tool to describe the interactions . This model has been used to describe historical sound changes and describe voice quality distributions. However, this model has not 
+This paper provides: (i) a description of the tone and voice quality systems of SLZ and their interactions; and (ii) test the validity of the Laryngeal Articulator Model \citep[LAM;][]{moisikMultimodalImagingGlottal2015,eslingVoiceQualityLaryngeal2019} as a theoretical tool to describe the interactions between tone and voice quality. This model has been used to describe historical sound changes and describe voice quality distributions. However, this model has not been tested in laryngeally complex systems. 
 \paragraph{Description:} 
-SLZ has five tonal patterns that are allowed to surface on syllables: H, M, L, HL, and MH
-\paragraph{Results:}
-\paragraph{Upshot:}
+SLZ has five tonal patterns that are allowed to surface on syllables: H, M, L, HL, and MH and four voice quality distinctions: Modal, Breathy, Checked, and Laryngealized. These different tones and voice qualities are allowed to appear independent of each other, with one notable exception. As seen in Table~\ref{tab:ToneVoiceQuality}, Breathy voice quality is only found on L toned syllables with the exception of one word where it appears on a MH syllable. 
+\vspace{-20pt}
+\begin{table}[!h]
+	\caption{Distribution of tone and voice quality in SLZ on a syllable}
+	\label{tab:ToneVoiceQuality}
+	\centering
+
+	\begin{tabular}{lcccc}
+	\hline
+
+	\hline
+		& \textbf{Modal} & \textbf{Breathy} & \textbf{Checked} & \textbf{Laryngealized} \\
+	\hline
+	H	&	✔ & -- & ✔ & ✔ \\
+	M	& ✔ & -- & ✔ & ✔\\
+	L	& ✔	& -- & ✔ & ✔\\
+	HL	& ✔	& -- & ✔ & ✔\\
+	MH	& ✔	& (✔) & -- & ✔ \\
+	\hline
+
+	\hline
+	\end{tabular}
+\end{table}
+
+Besides the distribution of Breathy voice quality, SLZ also exhibits checked and Laryngealized which are both realized with creaky voice but timed differently \citep{silvermanLaryngealComplexityOtomanguean1997}. It is commonly known that creaky voice is often associated with low tone and typically does not occur in high pitched contexts. In comparing the spectral tilt measurements for these two phonations, we observe a rather stark contrast between them in the second half of the vowel, as seen in Figure~\ref{fig:figure1}.
+\vspace{-6pt}
+\begin{figure}[!h]
+	\centering
+	\resizebox{.5\linewidth}{!}{\includegraphics{../h1h2_CheckedLaryngeal.png}}
+	\caption{Comparison of H1-H2 measurement for checked and laryngealized vowels.}
+	\label{fig:figure1}
+\end{figure}
+\paragraph{Upshot:} 
 
 
 \newpage

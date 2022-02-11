@@ -275,7 +275,7 @@ h1h2_line_M <- ggplot(data = zapotec_times[zapotec_times$tone=="M", ],
                           y=HH2c,
                           group=interaction(phonation, tone),
                           colour=phonation)
-) +
+                    ) +
   geom_smooth(method = "loess") +
   labs(title = "FSR's average H1-H2 values at M", 
        x = "Normalized time (% of vowel duration)",
@@ -337,3 +337,300 @@ ggsave(filename = "h1h2_line_MH.png",
        width=16, 
        height=9, 
        dpi=600)
+
+
+
+
+## Plotting by Phonation type
+## Laryngealized
+
+laryngeal <- zapotec_times %>%
+                filter(phonation == "Laryngealized") %>%
+                select(H2Kc, 
+                       HH2c, 
+                       H2H4c, 
+                       HA1c, 
+                       HA2c, 
+                       HA3c, 
+                       H42Kc, 
+                       H2KH5Kc,
+                       CPP,
+                       Energy,
+                       HNR05,
+                       HNR15,
+                       HNR25,
+                       HNR35,
+                       normalized_time,
+                       phonation,
+                       tone
+                       )
+
+# Line graph of the Laryngealized vowels
+line.laryngealized <- ggplot(data = laryngeal, 
+                        aes(x = normalized_time, 
+                            y=HH2c,
+                            colour=tone)
+                        ) +
+                    geom_smooth(method = "loess") +
+                    labs(title = "H1-H2 values for Laryngealized vowels by tone", 
+                        x = "Normalized time (% of vowel duration)",
+                        y = "H1-H2 (dB)") +
+                    theme_bw() +
+                    guides(colour = guide_legend("Tone") ) +
+                    theme2
+
+
+print(line.laryngealized)
+ggsave(filename = "line_laryngealized.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+## Checked
+checked <- zapotec_times %>%
+    filter(phonation == "Checked") %>%
+    select(H2Kc, 
+           HH2c, 
+           H2H4c, 
+           HA1c, 
+           HA2c, 
+           HA3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+checked.line <- ggplot(data = checked, 
+                        aes(x = normalized_time, 
+                             y=HH2c,
+                             colour=tone)
+                        ) +
+    geom_smooth(method = "loess") +
+    labs(title = "H1-H2 values for checked vowels by tone", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-H2 (dB)") +
+    theme_bw() +
+    guides(colour = guide_legend("Tone") ) +
+    theme2
+
+
+print(checked.line)
+ggsave(filename = "line_checked.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+
+## Breathy
+breathy <- zapotec_times %>%
+    filter(phonation == "Breathy") %>%
+    select(H2Kc, 
+           HH2c, 
+           H2H4c, 
+           HA1c, 
+           HA2c, 
+           HA3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+## plot of laryngealized and checked together
+
+zapotec_CL <- bind_rows(list(laryngeal,checked), .id = "id")
+h1h2_CheckedLaryngeal <- ggplot(data = zapotec_CL,  
+                                aes(x = normalized_time, 
+                                    y=HH2c,
+                                    linetype=phonation,
+                                    colour=tone)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "Laryngeal and Checked H1-H2", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-H2 (dB)") +
+    theme_bw() +
+    guides(colour = guide_legend("Tone"),
+           linetype = guide_legend("Phonation")
+    ) +
+    theme2
+
+print(h1h2_CheckedLaryngeal)
+ggsave(filename = "h1h2_CheckedLaryngeal.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+## Plotting h1-a1
+h1a1_line <- ggplot(data = zapotec_times, 
+                    aes(x = normalized_time, 
+                        y=HA1c,
+                        group=interaction(phonation, tone),
+                        linetype=tone,
+                        colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "FSR H1-A1 values", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-A1 (dB)") +
+    theme_bw() +
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(h1a1_line)
+ggsave(filename = "h1a1_line.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+## HA2
+h1a2_line <- ggplot(data = zapotec_times, 
+                    aes(x = normalized_time, 
+                        y=HA2c,
+                        group=interaction(phonation, tone),
+                        linetype=tone,
+                        colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "FSR H1-A2 values", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-A2 (dB)") +
+    theme_bw() +
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(h1a2_line)
+ggsave(filename = "h1a2_line.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+## HA3c
+h1a3_line <- ggplot(data = zapotec_times, 
+                    aes(x = normalized_time, 
+                        y=HA3c,
+                        group=interaction(phonation, tone),
+                        linetype=tone,
+                        colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "FSR H1-A3 values", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(h1a3_line)
+ggsave(filename = "h1a3_line.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+## H1-H2K
+H2k_line <- ggplot(data = zapotec_times, 
+               aes(x = normalized_time, 
+                       y=H2Kc,
+                       group=interaction(phonation, tone),
+                       linetype=tone,
+                       colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "FSR H1-H2k values", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-H2k (dB)") +
+    theme_bw() +
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(H2k_line)
+ggsave(filename = "h1h2k_line.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+## CPP
+CPP_line <- ggplot(data = zapotec_times, 
+                    aes(x = normalized_time, 
+                        y=CPP,
+                        group=interaction(phonation, tone),
+                        linetype=tone,
+                        colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "FSR CPP values", 
+         x = "Normalized time (% of vowel duration)",
+         y = "CPP") +
+    theme_bw() +
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(CPP_line)
+ggsave(filename = "CPP_line.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+
+
+zapotec_CL <- bind_rows(list(laryngeal,checked), .id = "id")
+HA3_CheckedLaryngeal <- ggplot(data = zapotec_CL,  
+                                aes(x = normalized_time, 
+                                    y=HA3c,
+                                    linetype=phonation,
+                                    colour=tone)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "Laryngeal and Checked H1-A3", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    guides(colour = guide_legend("Tone"),
+           linetype = guide_legend("Phonation")
+    ) +
+    theme2
+
+print(HA3_CheckedLaryngeal)
+ggsave(filename = "HA3_CheckedLaryngeal.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
