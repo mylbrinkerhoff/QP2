@@ -1,13 +1,106 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8 Unicode	
 \documentclass[]{beamer}
-
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
 \usetheme{Frankfurt}
 
+%%BIBLIOGRAPHY- This uses biber/biblatex to generate bibliographies according to the 
+%%Unified Style Sheet for Linguistics
+\usepackage[main=american, german]{babel}% Recommended
+\usepackage{csquotes}% Recommended
+\usepackage[backend=biber,
+		style=unified,
+		maxcitenames=3,
+		maxbibnames=99,
+		natbib,
+		url=false]{biblatex}
+\addbibresource{link.bib}
+\setcounter{biburlnumpenalty}{100}  % allow URL breaks at numbers
+%\setcounter{biburlucpenalty}{100}   % allow URL breaks at uppercase letters
+%\setcounter{biburllcpenalty}{100}   % allow URL breaks at lowercase letters
+
+%%TYPOLOGY
+% \usepackage[svgnames]{xcolor} % Specify colors by their 'svgnames', for a full list of all colors available see here: http://www.latextemplates.com/svgnames-colors
+%\usepackage[compact]{titlesec}
+%\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection.}{.5em}{}[.]
+%\titleformat{\subsection}[runin]{\normalfont\scshape}{\thesubsection}{.5em}{}[.]
+% \usepackage[hmargin=1in,vmargin=1in]{geometry}  %Margins          
+\usepackage{graphicx}	%Inserting graphics, pictures, images 		
+\usepackage{stackengine} %Package to allow text above or below other text, Also helpful for HG weights 
+\usepackage{fontspec} %Selection of fonts must be ran in XeLaTeX or LuaLaTeX
+\usepackage{amssymb} %Math symbols
+\usepackage{amsmath} % Mathematical enhancements for LaTeX
+\usepackage{setspace} %Linespacing
+\usepackage{multicol} %Multicolumn text
+\usepackage{enumitem} %Allows for continuous numbering of lists over examples, etc.
+\usepackage{multirow} %Useful for combining cells in tablesbrew 
+\usepackage{booktabs}
+\usepackage{hanging}
+% \usepackage{fancyhdr} %Allows for the 
+% \pagestyle{fancy}
+% \fancyhead[L]{\textit{290}} 
+% \fancyhead[R]{\textit{\today}} 
+% \fancyfoot[L,R]{} 
+% \fancyfoot[C]{\thepage} 
+% \renewcommand{\headrulewidth}{0.4pt}
+% \setlength{\headheight}{14.5pt} % ...at least 14.49998pt
+% \usepackage{fourier} % This allows for the use of certain wingdings like bombs, frowns, etc.
+% \usepackage{fourier-orns} %More useful symbols like bombs and jolly-roger, mostly for OT
+% \usepackage[colorlinks,allcolors={black},urlcolor={blue}]{hyperref} %allows for hyperlinks and pdf bookmarks
+% \usepackage{url} %allows for urls
+% \def\UrlBreaks{\do\/\do-} %allows for urls to be broken up
+% \usepackage[normalem]{ulem} %strike out text. Handy for syntax
+\usepackage{tcolorbox}
+% \usepackage{datetime2}
+
+%%FONTS
+\setmainfont{Libertinus Serif}
+\setsansfont{Libertinus Sans}
+\setmonofont[Scale=MatchLowercase]{Libertinus Mono}
+
+%%PACKAGES FOR LINGUISTICS
+%\usepackage{OTtablx} %Generating tableaux with using TIPA
+\usepackage[noipa]{OTtablx} % Use this one generating tableaux without using TIPA
+%\usepackage[notipa]{ot-tableau} % Another tableau drawing packing use for posters.
+\usepackage{linguex} % Linguistic examples
+% \usepackage{langsci-linguex} % Linguistic examples
+% \usepackage{langsci-gb4e} % Language Science Press' modification of gb4e
+% \usepackage{langsci-avm} % Language Science Press' AVM package
+\usepackage{tikz} % Drawing Hasse diagrams
+% \usepackage{pst-asr} % Drawing autosegmental features
+\usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
+% \usepackage{pst-jtree} 	% Syntax tree draawing software
+% \usepackage{tikz-qtree}	% Another syntax tree drawing software. Uses bracket notation.
+\usepackage[linguistics]{forest}	% Another syntax tree drawing software. Uses bracket notation.
+% \usepackage{ling-macros} % Various linguistic macros. Does not work with linguex.
+% \usepackage{covington} % Another linguistic examples package.
+\usepackage{leipzig} %	Offers support for Leipzig Glossing Rules
+
+%%LEIPZIG GLOSSING FOR ZAPOTEC
+\newleipzig{el}{el}{elder}	% Elder pronouns
+\newleipzig{hu}{hu}{human}	% Human pronouns
+\newleipzig{an}{an}{animate}	% Animate pronouns
+\newleipzig{in}{in}{inanimate}	% Inanimate pronouns
+\newleipzig{pot}{pot}{potential}	% Potential Aspect
+\newleipzig{cont}{cont}{continuative}	% Continuative Aspect
+% \newleipzig{pot}{pot}{potential}	% Potential Aspect
+\newleipzig{stat}{stat}{stative}	% Potential Aspect
+\newleipzig{and}{and}{andative}	% Andative Aspect
+\newleipzig{ven}{ven}{venative}	% Venative Aspect
+% \newleipzig{res}{res}{restitutive}	% Restitutive Aspect
+\newleipzig{rep}{rep}{repetitive}	% Repetitive Aspect
+
+%%TITLE INFORMATION
 \title{Tone and Phonation in Santiago Laxopa Zapotec}
 \author{Mykel Loren Brinkerhoff}
 \institute{UC Santa Cruz}
 \date{\today}
+
+%%MACROS
+\newcommand{\sub}[1]{\textsubscript{#1}}
+\newcommand{\supr}[1]{\textsuperscript{#1}}
+\providecommand{\lsptoprule}{\midrule\toprule}
+\providecommand{\lspbottomrule}{\bottomrule\midrule}
+\newcommand{\fittable}[1]{\resizebox{\textwidth}{!}{#1}}
 
 \begin{document}
 
