@@ -6,7 +6,7 @@
 # takes the labels for tone and plots the f0 values which have been 
 # z-transformed. 
 # 
-# M. Brinkerhoff * UCSC * 2022-02-17 (Th)
+# M. Brinkerhoff * UCSC * 2022-02-24 (Th)
 # 
 # -----------------------------------------------------------------------------
 
@@ -73,6 +73,7 @@ theme2 <- theme(axis.text = element_text(colour="black", size=25),
 # This is the file that is generated from VoiceSauce. 
 zapotecVS <- read.table("SLZTone.txt", header = T, sep = "\t")
 
+zapotecRD <- read.table("RDZapotec.txt", header = T, sep = "\t")
 
 # Extract the phonation and the tone labels into new columns
 
@@ -106,13 +107,43 @@ zapotecVS$tone <- ifelse(grepl("_H.mat", zapotecVS$Filename, ignore.case = F), "
 )
 )
 
-# Checking for Problems with the greps
-Problems <- zapotecVS %>% filter(tone == "N")
-Problems
 
+# RD 
+zapotecRD$phonation <- factor(ifelse(grepl("modal", zapotecRD$Filename, ignore.case = T), "Modal",
+                                     ifelse(grepl("breathy", zapotecRD$Filename, ignore.case = T), "Breathy",
+                                            ifelse(grepl("checked", zapotecRD$Filename, ignore.case = T), "Checked", "Laryngealized"
+                                            )
+                                     )
+), levels = c("Modal", "Breathy", "Checked", "Laryngealized"))
+
+zapotecRD$tone <- ifelse(grepl("_H.mat", zapotecRD$Filename, ignore.case = F), "H",
+                         ifelse(grepl("_M.mat", zapotecRD$Filename, ignore.case = F), "M",
+                                ifelse(grepl("_L.mat", zapotecRD$Filename, ignore.case = F), "L",
+                                       ifelse(grepl("_HL.mat", zapotecRD$Filename, ignore.case = F), "HL", 
+                                              ifelse(grepl("_MH.mat", zapotecRD$Filename, ignore.case = F), "MH", "N"
+                                              )
+                                       )
+                                )
+                         )
+)
+
+# Checking for Problems with the greps
+# Problems <- zapotecVS %>% filter(tone == "N")
+# Problems
+
+# Joining the two tables into one giant table
+# Add column for FSR and RD
+
+zapotecVS$Speaker <- rep("FSR")
+
+zapotecRD$Speaker <- rep("RD")
 # Two way table for tone and phonation 
-tone_phonation <- table(zapotecVS$tone, zapotecVS$phonation)
-tone_phonation
+FSRtone_phonation <- table(zapotecVS$tone, zapotecVS$phonation)
+FSRtone_phonation
+
+RDtone_phonation <- table(zapotecRD$tone, zapotecRD$phonation)
+RDtone_phonation
+
 
 # Normalize the scores for f0 (Will need this for later I think.)
 # zapotecVS$normalized_tone <- scale(zapotecVS$strF0)
