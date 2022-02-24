@@ -6,17 +6,35 @@
 # takes the labels for tone and plots the f0 values which have been 
 # z-transformed. 
 # 
-# M. Brinkerhoff * UCSC * 2022-01-14 (Tu)
+# M. Brinkerhoff * UCSC * 2022-02-17 (Th)
 # 
 # -----------------------------------------------------------------------------
-
 
 # Install packages
 # install.packages("tidyverse")
 # install.packages("scales")
+install.packages("ggthemes")
+
 library(tidyverse)
 library(scales)
 library(metan)
+library(ggthemes)
+
+
+# colorblind friendly colors
+# The palette with grey:
+cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+# The palette with black:
+
+cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+scale_fill_manual(values=cbbPalette) # To use for fills
+scale_colour_manual(values=cbbPalette)  # To use for line and point colors
+
+# scale_color_discrete <- scale_color_colorblind
+
+
 
 # functions
 std.error <- function(x, na.rm = T) {
@@ -111,6 +129,11 @@ tone_phonation
 zapotec_times <- zapotecVS %>% 
   mutate(normalized_time = round((t_ms-seg_Start)/(seg_End-seg_Start),digits = 2))
 
+zapotec_times2 <- zapotecVS %>% 
+    mutate(normalized_time = round((t_ms-seg_Start)/(seg_End-seg_Start),digits = 2)) %>%
+    filter(tone != 'M' & tone != 'MH' )
+
+
 # Plotting the tone
 # ggplot of normalized tone (y-axis) over time (x axis)
 tone_plot <- ggplot(data = zapotec_times, 
@@ -118,8 +141,11 @@ tone_plot <- ggplot(data = zapotec_times,
           y=strF0, 
           group=tone, 
           colour=tone,
-          fill=tone)) +
+          fill=tone,
+          )) +
     geom_smooth(method = "loess") +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
     labs(title = "FSR's average F0 contours across tonal patterns", 
        x = "Normalized time (% of vowel duration)",
        y = "F0 (Hz)",
@@ -192,15 +218,17 @@ ggsave(filename = "h1h2_box2.png",
 h1h2_line <- ggplot(data = zapotec_times, 
                     aes(x = normalized_time, 
                         y=HH2c,
-                        group=interaction(phonation, tone),
+                        # group=interaction(phonation, tone),
                         linetype=tone,
                         colour=phonation)
                     ) +
   geom_smooth(method = "loess") +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
   labs(title = "FSR's average H1-H2 values across tone and phonation", 
        x = "Phonation",
        y = "H1-H2") +
-  theme_bw() +
+  # theme_bw() +
   guides(linetype = guide_legend("Tonal Pattern"), 
          colour = guide_legend("Phonation") ) +
   theme(axis.text = element_text(colour="black", size=25),
@@ -216,7 +244,7 @@ h1h2_line <- ggplot(data = zapotec_times,
   )
 
 print(h1h2_line)
-ggsave(filename = "h1h2_line.png", 
+ggsave(filename = "h1h2_line_Mless.png", 
        device = "png", 
        units = "in", 
        width=16, 
@@ -224,7 +252,7 @@ ggsave(filename = "h1h2_line.png",
        dpi=600)
 
 ## Line Plot at H
-h1h2_line_H <- ggplot(data = zapotec_times[zapotec_times$tone=="H", ], 
+h1h2_line_H <- ggplot(data = zapotec_times2[zapotec_times2$tone=="H", ], 
                     aes(x = normalized_time, 
                         y=HH2c,
                         group=interaction(phonation, tone),
@@ -235,6 +263,8 @@ h1h2_line_H <- ggplot(data = zapotec_times[zapotec_times$tone=="H", ],
        x = "Normalized time (% of vowel duration)",
        y = "H1-H2 (dB)") +
   theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
   guides(colour = guide_legend("Phonation")) +
   theme2
 
@@ -247,7 +277,7 @@ ggsave(filename = "h1h2_line_H.png",
        dpi=600)
 
 ## Line plot at L
-h1h2_line_L <- ggplot(data = zapotec_times[zapotec_times$tone=="L", ], 
+h1h2_line_L <- ggplot(data = zapotec_times2[zapotec_times2$tone=="L", ], 
                       aes(x = normalized_time, 
                           y=HH2c,
                           group=interaction(phonation, tone),
@@ -258,6 +288,8 @@ h1h2_line_L <- ggplot(data = zapotec_times[zapotec_times$tone=="L", ],
        x = "Normalized time (% of vowel duration)",
        y = "H1-H2 (dB)") +
   theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
   guides(colour = guide_legend("Phonation")) +
   theme2
 
@@ -282,6 +314,8 @@ h1h2_line_M <- ggplot(data = zapotec_times[zapotec_times$tone=="M", ],
        y = "H1-H2 (dB)") +
   theme_bw() +
   guides(colour = guide_legend("Phonation")) +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
   theme2
 
 print(h1h2_line_M)
@@ -293,7 +327,7 @@ ggsave(filename = "h1h2_line_M.png",
        dpi=600)
 
 ## Line Plot at HL
-h1h2_line_HL <- ggplot(data = zapotec_times[zapotec_times$tone=="HL", ], 
+h1h2_line_HL <- ggplot(data = zapotec_times2[zapotec_times2$tone=="HL", ], 
                       aes(x = normalized_time, 
                           y=HH2c,
                           group=interaction(phonation, tone),
@@ -305,6 +339,8 @@ h1h2_line_HL <- ggplot(data = zapotec_times[zapotec_times$tone=="HL", ],
        y = "H1-H2 (dB)") +
   theme_bw() +
   guides(colour = guide_legend("Phonation")) +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
   theme2
 
 print(h1h2_line_HL)
@@ -328,6 +364,8 @@ h1h2_line_MH <- ggplot(data = zapotec_times[zapotec_times$tone=="MH", ],
        y = "H1-H2 (dB)") +
   theme_bw() +
   guides(colour = guide_legend("Phonation")) +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
   theme2
 
 print(h1h2_line_MH)
@@ -345,7 +383,7 @@ ggsave(filename = "h1h2_line_MH.png",
 ## Laryngealized
 
 laryngeal <- zapotec_times %>%
-                filter(phonation == "Laryngealized") %>%
+                filter(phonation == "Laryngealized" & tone != 'M' & tone != 'MH') %>%
                 select(H2Kc, 
                        HH2c, 
                        H2H4c, 
@@ -377,6 +415,8 @@ line.laryngealized <- ggplot(data = laryngeal,
                         y = "H1-H2 (dB)") +
                     theme_bw() +
                     guides(colour = guide_legend("Tone") ) +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
                     theme2
 
 
@@ -390,7 +430,7 @@ ggsave(filename = "line_laryngealized.png",
 
 ## Checked
 checked <- zapotec_times %>%
-    filter(phonation == "Checked") %>%
+    filter(phonation == "Checked" & tone != 'M' & tone != 'MH') %>%
     select(H2Kc, 
            HH2c, 
            H2H4c, 
@@ -421,6 +461,8 @@ checked.line <- ggplot(data = checked,
          y = "H1-H2 (dB)") +
     theme_bw() +
     guides(colour = guide_legend("Tone") ) +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
     theme2
 
 
@@ -435,7 +477,7 @@ ggsave(filename = "line_checked.png",
 
 ## Breathy
 breathy <- zapotec_times %>%
-    filter(phonation == "Breathy") %>%
+    filter(phonation == "Breathy" & tone != 'M' & tone != 'MH') %>%
     select(H2Kc, 
            HH2c, 
            H2H4c, 
@@ -455,6 +497,77 @@ breathy <- zapotec_times %>%
            tone
     )
 
+breathy.line <- ggplot(data = breathy, 
+                       aes(x = normalized_time, 
+                           y=HH2c,
+                           colour=tone)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "H1-H2 values for breathy vowels by tone", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-H2 (dB)") +
+    theme_bw() +
+    guides(colour = guide_legend("Tone") ) +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    theme2
+
+
+print(breathy.line)
+ggsave(filename = "line_breathy.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+## Modal
+modal <- zapotec_times %>%
+    filter(phonation == "Modal" & tone != 'M' & tone != 'MH') %>%
+    select(H2Kc, 
+           HH2c, 
+           H2H4c, 
+           HA1c, 
+           HA2c, 
+           HA3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+modal.line <- ggplot(data = modal, 
+                       aes(x = normalized_time, 
+                           y=HH2c,
+                           colour=tone)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "H1-H2 values for modal vowels by tone", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-H2 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Tone") ) +
+    theme2
+
+
+print(modal.line)
+ggsave(filename = "line_modal.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+
 ## plot of laryngealized and checked together
 
 zapotec_CL <- bind_rows(list(laryngeal,checked), .id = "id")
@@ -469,6 +582,8 @@ h1h2_CheckedLaryngeal <- ggplot(data = zapotec_CL,
          x = "Normalized time (% of vowel duration)",
          y = "H1-H2 (dB)") +
     theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
     guides(colour = guide_legend("Tone"),
            linetype = guide_legend("Phonation")
     ) +
@@ -481,6 +596,39 @@ ggsave(filename = "h1h2_CheckedLaryngeal.png",
        width=16, 
        height=9, 
        dpi=600)
+
+## Laryngeal and modal
+zapotec_MCL <- bind_rows(list(laryngeal,checked,modal), .id = "id")
+h1h2_MCL <- ggplot(data = zapotec_MCL,  
+                                aes(x = normalized_time, 
+                                    y=HH2c,
+                                    linetype=phonation,
+                                    colour=tone)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "H1-H2 values for Modal, Laryngealized, and Checked", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-H2 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Tone"),
+           linetype = guide_legend("Phonation")
+    ) +
+    theme2
+
+print(h1h2_MCL)
+ggsave(filename = "h1h2_MCL.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+
+
+
+
 
 ## Plotting h1-a1
 h1a1_line <- ggplot(data = zapotec_times, 
@@ -495,6 +643,8 @@ h1a1_line <- ggplot(data = zapotec_times,
          x = "Normalized time (% of vowel duration)",
          y = "H1-A1 (dB)") +
     theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
     guides(linetype = guide_legend("Tone"), 
            colour = guide_legend("Phonation") ) +
     theme2
@@ -520,6 +670,8 @@ h1a2_line <- ggplot(data = zapotec_times,
          x = "Normalized time (% of vowel duration)",
          y = "H1-A2 (dB)") +
     theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
     guides(linetype = guide_legend("Tone"), 
            colour = guide_legend("Phonation") ) +
     theme2
@@ -545,6 +697,8 @@ h1a3_line <- ggplot(data = zapotec_times,
          x = "Normalized time (% of vowel duration)",
          y = "H1-A3 (dB)") +
     theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
     guides(linetype = guide_legend("Tone"), 
            colour = guide_legend("Phonation") ) +
     theme2
@@ -570,6 +724,8 @@ H2k_line <- ggplot(data = zapotec_times,
          x = "Normalized time (% of vowel duration)",
          y = "H1-H2k (dB)") +
     theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
     guides(linetype = guide_legend("Tone"), 
            colour = guide_legend("Phonation") ) +
     theme2
@@ -583,7 +739,7 @@ ggsave(filename = "h1h2k_line.png",
        dpi=600)
 
 ## CPP
-CPP_line <- ggplot(data = zapotec_times, 
+CPP_line <- ggplot(data = zapotec_times2, 
                     aes(x = normalized_time, 
                         y=CPP,
                         group=interaction(phonation, tone),
@@ -591,7 +747,9 @@ CPP_line <- ggplot(data = zapotec_times,
                         colour=phonation)
 ) +
     geom_smooth(method = "loess") +
-    labs(title = "FSR CPP values", 
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    labs(title = "FSR's CPP values", 
          x = "Normalized time (% of vowel duration)",
          y = "CPP") +
     theme_bw() +
@@ -621,6 +779,8 @@ HA3_CheckedLaryngeal <- ggplot(data = zapotec_CL,
          x = "Normalized time (% of vowel duration)",
          y = "H1-A3 (dB)") +
     theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
     guides(colour = guide_legend("Tone"),
            linetype = guide_legend("Phonation")
     ) +
