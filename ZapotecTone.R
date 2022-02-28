@@ -478,11 +478,11 @@ ggsave(filename = "h1h2_line_MH.png",
 laryngeal <- zapotec_times %>%
                 filter(phonation == "Laryngealized" & tone != 'M' & tone != 'MH') %>%
                 select(H2Kc, 
-                       H1H2c, 
+                       HH2c, 
                        H2H4c, 
-                       H1A1c, 
-                       H1A2c, 
-                       H1A3c, 
+                       HA1c, 
+                       HA2c, 
+                       HA3c, 
                        H42Kc, 
                        H2KH5Kc,
                        CPP,
@@ -525,11 +525,11 @@ ggsave(filename = "line_laryngealized.png",
 checked <- zapotec_times %>%
     filter(phonation == "Checked" & tone != 'M' & tone != 'MH') %>%
     select(H2Kc, 
-           H1H2c, 
+           HH2c, 
            H2H4c, 
-           H1A1c, 
-           H1A2c, 
-           H1A3c, 
+           HA1c, 
+           HA2c, 
+           HA3c, 
            H42Kc, 
            H2KH5Kc,
            CPP,
@@ -666,12 +666,12 @@ ggsave(filename = "line_modal.png",
 zapotec_CL <- bind_rows(list(laryngeal,checked), .id = "id")
 h1h2_CheckedLaryngeal <- ggplot(data = zapotec_CL,  
                                 aes(x = normalized_time, 
-                                    y=H1H2c,
+                                    y=HH2c,
                                     linetype=phonation,
                                     colour=tone)
 ) +
     geom_smooth(method = "loess") +
-    labs(title = "Laryngeal and Checked H1-H2", 
+    labs(title = "FSR's Laryngeal and Checked H1-H2", 
          x = "Normalized time (% of vowel duration)",
          y = "H1-H2 (dB)") +
     theme_bw() +
@@ -1425,6 +1425,272 @@ RDCPP_line <- ggplot(data = zapotec_timesRD,
 
 print(RDCPP_line)
 ggsave(filename = "RDCPP_line.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+# RD's CPP at M
+RDCPP_lineM <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="M", ], 
+                     aes(x = normalized_time, 
+                         y=CPP,
+                         group=interaction(phonation, tone),
+                         linetype=tone,
+                         colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    labs(title = "RD's CPP values at M", 
+         x = "Normalized time (% of vowel duration)",
+         y = "CPP") +
+    theme_bw() +
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(RDCPP_lineM)
+ggsave(filename = "RDCPP_lineM.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+# RD's CPP at H
+RDCPP_lineM <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="H", ], 
+                      aes(x = normalized_time, 
+                          y=CPP,
+                          group=interaction(phonation, tone),
+                          linetype=tone,
+                          colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    labs(title = "RD's CPP values at H", 
+         x = "Normalized time (% of vowel duration)",
+         y = "CPP") +
+    theme_bw() +
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(RDCPP_lineH)
+ggsave(filename = "RDCPP_lineH.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+# RD's CPP at L
+RDCPP_lineL <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="L", ], 
+                      aes(x = normalized_time, 
+                          y=CPP,
+                          group=interaction(phonation, tone),
+                          linetype=tone,
+                          colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    labs(title = "RD's CPP values at L", 
+         x = "Normalized time (% of vowel duration)",
+         y = "CPP") +
+    theme_bw() +
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(RDCPP_lineL)
+ggsave(filename = "RDCPP_lineL.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+# RD's CPP at MH
+RDCPP_lineM <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="MH", ], 
+                      aes(x = normalized_time, 
+                          y=CPP,
+                          group=interaction(phonation, tone),
+                          linetype=tone,
+                          colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    labs(title = "RD's CPP values at MH", 
+         x = "Normalized time (% of vowel duration)",
+         y = "CPP") +
+    theme_bw() +
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(RDCPP_lineMH)
+ggsave(filename = "RDCPP_lineMH.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+# RD's CPP at HL
+RDCPP_lineM <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="HL", ], 
+                      aes(x = normalized_time, 
+                          y=CPP,
+                          group=interaction(phonation, tone),
+                          linetype=tone,
+                          colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    labs(title = "RD's CPP values at HL", 
+         x = "Normalized time (% of vowel duration)",
+         y = "CPP") +
+    theme_bw() +
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(RDCPP_lineHL)
+ggsave(filename = "RDCPP_lineHL.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+# RD H1A3 stuff
+RDH1A3_H <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone == "H", ], 
+                   aes(x = normalized_time, 
+                       y=H1A3c,
+                       group=interaction(phonation, tone),
+                       linetype=tone,
+                       colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "RD's H1-A3 values at H", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(RDH1A3_H)
+ggsave(filename = "RDH1A3_H.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+RDH1A3_HL <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone == "HL", ], 
+                   aes(x = normalized_time, 
+                       y=H1A3c,
+                       group=interaction(phonation, tone),
+                       linetype=tone,
+                       colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "RD's H1-A3 values at HL", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(RDH1A3_HL)
+ggsave(filename = "RDH1A3_HL.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+    
+RDH1A3_MH <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone == "MH", ], 
+                   aes(x = normalized_time, 
+                       y=H1A3c,
+                       group=interaction(phonation, tone),
+                       linetype=tone,
+                       colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "RD's H1-A3 values at MH", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(RDH1A3_MH)
+ggsave(filename = "RDH1A3_MH.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+RDH1A3_M <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone == "M", ], 
+                   aes(x = normalized_time, 
+                       y=H1A3c,
+                       group=interaction(phonation, tone),
+                       linetype=tone,
+                       colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "RD's H1-A3 values at M", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(RDH1A3_M)
+ggsave(filename = "RDH1A3_M.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+RDH1A3_L <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone == "L", ], 
+                   aes(x = normalized_time, 
+                       y=H1A3c,
+                       group=interaction(phonation, tone),
+                       linetype=tone,
+                       colour=phonation)
+) +
+    geom_smooth(method = "loess") +
+    labs(title = "RD's H1-A3 values at L", 
+         x = "Normalized time (% of vowel duration)",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(linetype = guide_legend("Tone"), 
+           colour = guide_legend("Phonation") ) +
+    theme2
+
+print(RDH1A3_L)
+ggsave(filename = "RDH1A3_L.png", 
        device = "png", 
        units = "in", 
        width=16, 
