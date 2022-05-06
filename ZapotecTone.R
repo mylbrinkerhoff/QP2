@@ -19,6 +19,7 @@ library(tidyverse)
 library(scales)
 library(metan)
 library(ggthemes)
+library(lme4)
 
 
 # colorblind friendly colors
@@ -42,6 +43,27 @@ std.error <- function(x, na.rm = T) {
 }
 
 range01 <- function(x){(x-min(x))/(max(x)-min(x))}
+
+#+++++++++++++++++++++++++
+# Function to calculate the mean and the standard deviation
+# for each group
+#+++++++++++++++++++++++++
+# data : a data frame
+# varname : the name of a column containing the variable
+#to be summariezed
+# groupnames : vector of column names to be used as
+# grouping variables
+data_summary <- function(data, varname, groupnames){
+  require(plyr)
+  summary_func <- function(x, col){
+    c(mean = mean(x[[col]], na.rm=TRUE),
+      sd = sd(x[[col]], na.rm=TRUE))
+  }
+  data_sum<-ddply(data, groupnames, .fun=summary_func,
+                  varname)
+  data_sum <- rename(data_sum, c("mean" = varname))
+  return(data_sum)
+}
 
 # custom theme for plotting
 my.theme <- theme(axis.text = element_text(colour="black", size=25),
@@ -2367,7 +2389,8 @@ JointFirst <- zapotec_timesJoin %>%
            HNR35,
            normalized_time,
            phonation,
-           tone
+           tone,
+           Speaker
     )
 
 ## Second
@@ -2431,7 +2454,8 @@ JointSecond <- zapotec_timesJoin %>%
            HNR35,
            normalized_time,
            phonation,
-           tone
+           tone,
+           Speaker
     )
 
 ## Third
@@ -2496,7 +2520,8 @@ JointThird <- zapotec_timesJoin %>%
            HNR35,
            normalized_time,
            phonation,
-           tone
+           tone,
+           Speaker
     )
 
 ## Fourth
@@ -2561,7 +2586,8 @@ JointFourth <- zapotec_timesJoin %>%
            HNR35,
            normalized_time,
            phonation,
-           tone
+           tone,
+           Speaker
     )
 
 ## Boxplots and Barplots
@@ -2583,6 +2609,13 @@ FSRFirst_h1h2 <- ggplot(data = FSRFirst,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(FSRFirst_h1h2)
+ggsave(filename = "FSR1sth1h2.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
 
 FSRSecond_h1h2 <- ggplot(data = FSRSecond, 
                         aes(x = phonation, 
@@ -2601,6 +2634,12 @@ FSRSecond_h1h2 <- ggplot(data = FSRSecond,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(FSRSecond_h1h2)
+ggsave(filename = "FSR2ndh1h2.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
 FSRThird_h1h2 <- ggplot(data = FSRThird, 
                         aes(x = phonation, 
@@ -2619,6 +2658,12 @@ FSRThird_h1h2 <- ggplot(data = FSRThird,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(FSRThird_h1h2)
+ggsave(filename = "FSR3rdh1h2.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
 FSRFourth_h1h2 <- ggplot(data = FSRFourth, 
                         aes(x = phonation, 
@@ -2637,6 +2682,12 @@ FSRFourth_h1h2 <- ggplot(data = FSRFourth,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(FSRFourth_h1h2)
+ggsave(filename = "FSR4thh1h2.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
 #H1-A3
 FSRFirst_h1a3 <- ggplot(data = FSRFirst, 
@@ -2656,6 +2707,12 @@ FSRFirst_h1a3 <- ggplot(data = FSRFirst,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(FSRFirst_h1a3)
+ggsave(filename = "FSR1sth1a3.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
 FSRSecond_h1a3 <- ggplot(data = FSRSecond, 
                          aes(x = phonation, 
@@ -2674,6 +2731,12 @@ FSRSecond_h1a3 <- ggplot(data = FSRSecond,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(FSRSecond_h1a3)
+ggsave(filename = "FSR2ndh1a3.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
 FSRThird_h1a3 <- ggplot(data = FSRThird, 
                         aes(x = phonation, 
@@ -2692,6 +2755,12 @@ FSRThird_h1a3 <- ggplot(data = FSRThird,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(FSRThird_h1a3)
+ggsave(filename = "FSR3rdh1a3.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
 FSRFourth_h1a3 <- ggplot(data = FSRFourth, 
                          aes(x = phonation, 
@@ -2710,7 +2779,12 @@ FSRFourth_h1a3 <- ggplot(data = FSRFourth,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(FSRFourth_h1a3)
-
+ggsave(filename = "FSR4thh1a3.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
 # RD
 RDFirst_h1h2 <- ggplot(data = RDFirst, 
@@ -2730,6 +2804,12 @@ RDFirst_h1h2 <- ggplot(data = RDFirst,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(RDFirst_h1h2)
+ggsave(filename = "RD1sth1h2.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
 RDSecond_h1h2 <- ggplot(data = RDSecond, 
                          aes(x = phonation, 
@@ -2748,6 +2828,12 @@ RDSecond_h1h2 <- ggplot(data = RDSecond,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(RDSecond_h1h2)
+ggsave(filename = "RD2ndh1h2.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
 RDThird_h1h2 <- ggplot(data = RDThird, 
                         aes(x = phonation, 
@@ -2766,6 +2852,12 @@ RDThird_h1h2 <- ggplot(data = RDThird,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(RDThird_h1h2)
+ggsave(filename = "RD3rdh1h2.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
 RDFourth_h1h2 <- ggplot(data = RDFourth, 
                          aes(x = phonation, 
@@ -2784,6 +2876,12 @@ RDFourth_h1h2 <- ggplot(data = RDFourth,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(RDFourth_h1h2)
+ggsave(filename = "RD4thh1h2.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
 #H1-A3
 RDFirst_h1a3 <- ggplot(data = RDFirst, 
@@ -2803,6 +2901,12 @@ RDFirst_h1a3 <- ggplot(data = RDFirst,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(RDFirst_h1a3)
+ggsave(filename = "RD1sth1a3.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
 RDSecond_h1a3 <- ggplot(data = RDSecond, 
                          aes(x = phonation, 
@@ -2821,6 +2925,12 @@ RDSecond_h1a3 <- ggplot(data = RDSecond,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(RDSecond_h1a3)
+ggsave(filename = "RD2ndh1a3.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
 RDThird_h1a3 <- ggplot(data = RDThird, 
                         aes(x = phonation, 
@@ -2839,6 +2949,12 @@ RDThird_h1a3 <- ggplot(data = RDThird,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(RDThird_h1a3)
+ggsave(filename = "RD3rdh1a3.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
 RDFourth_h1a3 <- ggplot(data = RDFourth, 
                          aes(x = phonation, 
@@ -2857,6 +2973,11 @@ RDFourth_h1a3 <- ggplot(data = RDFourth,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(RDFourth_h1a3)
+ggsave(filename = "RD4thh1a3.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
-
-
+# lmer
