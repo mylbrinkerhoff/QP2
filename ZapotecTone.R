@@ -164,13 +164,13 @@ zapotec.join$normalized_tone <- scale(zapotec.join$strF0)
 # Normalize time
 # takes in the data frame and adds a column for normalized time. 
 zapotec_timesFSR <- zapotecVS %>% 
-  mutate(normalized_time = round((t_ms-seg_Start)/(seg_End-seg_Start),digits = 2))
+  mutate(normalized_time = round((t_ms-seg_Start)/(seg_End-seg_Start),digits = 3))
 
 zapotec_timesRD <- zapotecRD %>% 
-    mutate(normalized_time = round((t_ms-seg_Start)/(seg_End-seg_Start),digits = 2))
+    mutate(normalized_time = round((t_ms-seg_Start)/(seg_End-seg_Start),digits = 3))
 
-times.zapotec.join <- zapotec.join %>%
-    mutate(normalized_time = round((t_ms-seg_Start)/(seg_End-seg_Start),digits = 2))
+zapotec_timesJoin <- zapotec.join %>%
+    mutate(normalized_time = round((t_ms-seg_Start)/(seg_End-seg_Start),digits = 3))
 
 # Plotting the tone
 # ggplot of normalized tone (y-axis) over time (x axis)
@@ -2297,3 +2297,566 @@ ggsave(filename = "JOINHA3_CheckedLaryngeal.png",
        width=16, 
        height=9, 
        dpi=600)
+
+
+# Statistical analysis following Esposito 2010
+
+# First take the plots containing the data for FSR and RD and split the data
+# into fourths and then bar/boxplot each of the fourths to show the h1-h2 and 
+# h1-a3 scores for each of the fourths. After this plotting, a linear 
+# mixed-effects model is performed. 
+
+## First
+FSRFirst <- zapotec_timesFSR %>%
+    filter(normalized_time <= 0.249) %>%
+    select(H2Kc, 
+           H1H2c, 
+           H2H4c, 
+           H1A1c, 
+           H1A2c, 
+           H1A3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+RDFirst <- zapotec_timesRD %>%
+    filter(normalized_time <= 0.249) %>%
+    select(H2Kc, 
+           H1H2c, 
+           H2H4c, 
+           H1A1c, 
+           H1A2c, 
+           H1A3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+JointFirst <- zapotec_timesJoin %>%
+    filter(normalized_time <= 0.249) %>%
+    select(H2Kc, 
+           H1H2c, 
+           H2H4c, 
+           H1A1c, 
+           H1A2c, 
+           H1A3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+## Second
+FSRSecond <- zapotec_timesFSR %>%
+    filter(normalized_time >= 0.25 & normalized_time <= 0.499) %>%
+    select(H2Kc, 
+           H1H2c, 
+           H2H4c, 
+           H1A1c, 
+           H1A2c, 
+           H1A3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+RDSecond <- zapotec_timesRD %>%
+    filter(normalized_time >= 0.25 & normalized_time <= 0.499) %>%
+    select(H2Kc, 
+           H1H2c, 
+           H2H4c, 
+           H1A1c, 
+           H1A2c, 
+           H1A3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+JointSecond <- zapotec_timesJoin %>%
+    filter(normalized_time >= 0.25 & normalized_time <= 0.499) %>%
+    select(H2Kc, 
+           H1H2c, 
+           H2H4c, 
+           H1A1c, 
+           H1A2c, 
+           H1A3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+## Third
+
+FSRThird <- zapotec_timesFSR %>%
+    filter(normalized_time >= 0.500 & normalized_time <= 0.749) %>%
+    select(H2Kc, 
+           H1H2c, 
+           H2H4c, 
+           H1A1c, 
+           H1A2c, 
+           H1A3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+RDThird <- zapotec_timesRD %>%
+    filter(normalized_time >= 0.500 & normalized_time <= 0.749) %>%
+    select(H2Kc, 
+           H1H2c, 
+           H2H4c, 
+           H1A1c, 
+           H1A2c, 
+           H1A3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+JointThird <- zapotec_timesJoin %>%
+    filter(normalized_time >= 0.500 & normalized_time <= 0.749) %>%
+    select(H2Kc, 
+           H1H2c, 
+           H2H4c, 
+           H1A1c, 
+           H1A2c, 
+           H1A3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+## Fourth
+
+FSRFourth <- zapotec_timesFSR %>%
+    filter(normalized_time >= 0.750 & normalized_time <= 1.00) %>%
+    select(H2Kc, 
+           H1H2c, 
+           H2H4c, 
+           H1A1c, 
+           H1A2c, 
+           H1A3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+RDFourth <- zapotec_timesRD %>%
+    filter(normalized_time >= 0.750 & normalized_time <= 1.00) %>%
+    select(H2Kc, 
+           H1H2c, 
+           H2H4c, 
+           H1A1c, 
+           H1A2c, 
+           H1A3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+JointFourth <- zapotec_timesJoin %>%
+    filter(normalized_time >= 0.750 & normalized_time <= 1.00) %>%
+    select(H2Kc, 
+           H1H2c, 
+           H2H4c, 
+           H1A1c, 
+           H1A2c, 
+           H1A3c, 
+           H42Kc, 
+           H2KH5Kc,
+           CPP,
+           Energy,
+           HNR05,
+           HNR15,
+           HNR25,
+           HNR35,
+           normalized_time,
+           phonation,
+           tone
+    )
+
+## Boxplots and Barplots
+# FSR
+FSRFirst_h1h2 <- ggplot(data = FSRFirst, 
+                          aes(x = phonation, 
+                              y=H1H2c,
+                              #group=interaction(tone, phonation),
+                              colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "FSR's average H1-H2 values in first fourth", 
+         x = "Phonation",
+         y = "H1-H2 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(FSRFirst_h1h2)
+
+FSRSecond_h1h2 <- ggplot(data = FSRSecond, 
+                        aes(x = phonation, 
+                            y=H1H2c,
+                            #group=interaction(tone, phonation),
+                            colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "FSR's average H1-H2 values in second fourth", 
+         x = "Phonation",
+         y = "H1-H2 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(FSRSecond_h1h2)
+
+FSRThird_h1h2 <- ggplot(data = FSRThird, 
+                        aes(x = phonation, 
+                            y=H1H2c,
+                            #group=interaction(tone, phonation),
+                            colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "FSR's average H1-H2 values in third fourth", 
+         x = "Phonation",
+         y = "H1-H2 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(FSRThird_h1h2)
+
+FSRFourth_h1h2 <- ggplot(data = FSRFourth, 
+                        aes(x = phonation, 
+                            y=H1H2c,
+                            #group=interaction(tone, phonation),
+                            colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "FSR's average H1-H2 values in last fourth", 
+         x = "Phonation",
+         y = "H1-H2 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(FSRFourth_h1h2)
+
+#H1-A3
+FSRFirst_h1a3 <- ggplot(data = FSRFirst, 
+                        aes(x = phonation, 
+                            y=H1A3c,
+                            #group=interaction(tone, phonation),
+                            colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "FSR's average H1-A3 values in first fourth", 
+         x = "Phonation",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(FSRFirst_h1a3)
+
+FSRSecond_h1a3 <- ggplot(data = FSRSecond, 
+                         aes(x = phonation, 
+                             y=H1A3c,
+                             #group=interaction(tone, phonation),
+                             colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "FSR's average H1-A3 values in second fourth", 
+         x = "Phonation",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(FSRSecond_h1a3)
+
+FSRThird_h1a3 <- ggplot(data = FSRThird, 
+                        aes(x = phonation, 
+                            y=H1A3c,
+                            #group=interaction(tone, phonation),
+                            colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "FSR's average H1-A3 values in third fourth", 
+         x = "Phonation",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(FSRThird_h1a3)
+
+FSRFourth_h1a3 <- ggplot(data = FSRFourth, 
+                         aes(x = phonation, 
+                             y=H1A3c,
+                             #group=interaction(tone, phonation),
+                             colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "FSR's average H1-A3 values in last fourth", 
+         x = "Phonation",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(FSRFourth_h1a3)
+
+
+# RD
+RDFirst_h1h2 <- ggplot(data = RDFirst, 
+                        aes(x = phonation, 
+                            y=H1H2c,
+                            #group=interaction(tone, phonation),
+                            colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "RD's average H1-H2 values in first fourth", 
+         x = "Phonation",
+         y = "H1-H2 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(RDFirst_h1h2)
+
+RDSecond_h1h2 <- ggplot(data = RDSecond, 
+                         aes(x = phonation, 
+                             y=H1H2c,
+                             #group=interaction(tone, phonation),
+                             colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "RD's average H1-H2 values in second fourth", 
+         x = "Phonation",
+         y = "H1-H2 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(RDSecond_h1h2)
+
+RDThird_h1h2 <- ggplot(data = RDThird, 
+                        aes(x = phonation, 
+                            y=H1H2c,
+                            #group=interaction(tone, phonation),
+                            colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "RD's average H1-H2 values in third fourth", 
+         x = "Phonation",
+         y = "H1-H2 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(RDThird_h1h2)
+
+RDFourth_h1h2 <- ggplot(data = RDFourth, 
+                         aes(x = phonation, 
+                             y=H1H2c,
+                             #group=interaction(tone, phonation),
+                             colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "RD's average H1-H2 values in last fourth", 
+         x = "Phonation",
+         y = "H1-H2 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(RDFourth_h1h2)
+
+#H1-A3
+RDFirst_h1a3 <- ggplot(data = RDFirst, 
+                        aes(x = phonation, 
+                            y=H1A3c,
+                            #group=interaction(tone, phonation),
+                            colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "RD's average H1-A3 values in first fourth", 
+         x = "Phonation",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(RDFirst_h1a3)
+
+RDSecond_h1a3 <- ggplot(data = RDSecond, 
+                         aes(x = phonation, 
+                             y=H1A3c,
+                             #group=interaction(tone, phonation),
+                             colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "RD's average H1-A3 values in second fourth", 
+         x = "Phonation",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(RDSecond_h1a3)
+
+RDThird_h1a3 <- ggplot(data = RDThird, 
+                        aes(x = phonation, 
+                            y=H1A3c,
+                            #group=interaction(tone, phonation),
+                            colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "RD's average H1-A3 values in third fourth", 
+         x = "Phonation",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(RDThird_h1a3)
+
+RDFourth_h1a3 <- ggplot(data = RDFourth, 
+                         aes(x = phonation, 
+                             y=H1A3c,
+                             #group=interaction(tone, phonation),
+                             colour=phonation)
+) +
+    geom_boxplot() +
+    labs(title = "RD's average H1-A3 values in last fourth", 
+         x = "Phonation",
+         y = "H1-A3 (dB)") +
+    theme_bw() +
+    scale_fill_manual(values=cbbPalette) + # To use for fills
+    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+    guides(colour = guide_legend("Phonation", ncol = 4), 
+           fill = guide_legend("Phonation", ncol = 4) ) +
+    my.theme
+print(RDFourth_h1a3)
+
+
+
