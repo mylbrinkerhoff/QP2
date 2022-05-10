@@ -20,7 +20,7 @@ library(scales)
 library(metan)
 library(ggthemes)
 library(lme4)
-
+library(lmerTest)
 
 # colorblind friendly colors
 # The palette with grey:
@@ -2981,3 +2981,86 @@ ggsave(filename = "RD4thh1a3.png",
        dpi=600)
 
 # lmer
+str(zapotec_timesJoin)
+tone_results <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Speaker) ,zapotec_timesJoin)
+summary(tone_results)
+
+Joint_1 <- zapotec_timesJoin %>%
+  filter(normalized_time >= 0 & normalized_time <= .329) %>%
+  select(H2Kc, 
+         H1H2c, 
+         H2H4c, 
+         H1A1c, 
+         H1A2c, 
+         H1A3c, 
+         H42Kc, 
+         H2KH5Kc,
+         CPP,
+         Energy,
+         HNR05,
+         HNR15,
+         HNR25,
+         HNR35,
+         strF0,
+         normalized_time,
+         phonation,
+         tone,
+         Speaker
+  )
+
+Joint_2 <- zapotec_timesJoin %>%
+  filter(normalized_time >= 0.33 & normalized_time <= 0.659) %>%
+  select(H2Kc, 
+         H1H2c, 
+         H2H4c, 
+         H1A1c, 
+         H1A2c, 
+         H1A3c, 
+         H42Kc, 
+         H2KH5Kc,
+         CPP,
+         Energy,
+         HNR05,
+         HNR15,
+         HNR25,
+         HNR35,
+         strF0,
+         normalized_time,
+         phonation,
+         tone,
+         Speaker
+  )
+
+Joint_3 <- zapotec_timesJoin %>%
+  filter(normalized_time >= 0.66 & normalized_time <= 1.00) %>%
+  select(H2Kc, 
+         H1H2c, 
+         H2H4c, 
+         H1A1c, 
+         H1A2c, 
+         H1A3c, 
+         H42Kc, 
+         H2KH5Kc,
+         CPP,
+         Energy,
+         HNR05,
+         HNR15,
+         HNR25,
+         HNR35,
+         strF0,
+         normalized_time,
+         phonation,
+         tone,
+         Speaker
+  )
+
+
+tone_results_1st <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Speaker) ,Joint_1)
+summary(tone_results_1st)
+
+tone_results_2nd <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Speaker) ,Joint_2)
+summary(tone_results_2nd)
+
+tone_results_3rd <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Speaker) ,Joint_3)
+summary(tone_results_3rd)
+
