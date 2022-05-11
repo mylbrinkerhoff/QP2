@@ -266,8 +266,8 @@ Breathy phonation on vowels is characterized by a raspy quality throughout the w
 	\centering
 	% [INSERT YAH SPECTROGRAM AND WAVEFORM]
 	\includegraphics[width=0.9\textwidth]{../yah.png}
-	\label{fig:BreathyVowel}
 	\caption{Breathy vowel in the word \textit{yah} `metal/rifle'}
+	\label{fig:BreathyVowel}
 \end{figure}
 
 Checked vowels on the other hand are characterized by an abrupt glottal closure which cuts the vowel short. This phonation is sometimes only realized as a very short period of creakiness at the end of the vowel, see Figure~\ref{fig:CheckedVowel}.  
@@ -276,8 +276,8 @@ Checked vowels on the other hand are characterized by an abrupt glottal closure 
 	\centering
 	[INSERT YA' SPECTROGRAM AND WAVEFORM]
 	% \includegraphics[width=0.9\textwidth]{../RDCPP_line.png}
-	\label{fig:CheckedVowel}
 	\caption{Breathy vowel in the word \textit{ya'} `pound'}
+	\label{fig:CheckedVowel}
 \end{figure}
 
 Laryngealized vowels are quite common in Zapotecan languages and have received a wide number of different names. Previous descriptions have used terms such as broken, rearticulated, interrupted, and creaky \citep{longDiccionarioZapotecoSan2005,avelinobecerraTopicsYalalagZapotec2004,avelinoAcousticElectroglottographicAnalyses2010,sonnenscheinDescriptiveGrammarSan2005,adlerAcousticsPhonationTypes2016}. In order to avoid confusion, I will use the term laryngealized following \citet{avelinoAcousticElectroglottographicAnalyses2010}. In addition to a wide number of different names these vowels also exhibit a wide range of allophones. 
@@ -420,32 +420,26 @@ One of the primary ways to measure and investigate phonation is using spectral m
 
 When conducting spectral measurements, there are two types of measurements that can be made: corrected and uncorrected. The status of corrected or uncorrected refers to whether or not the influence of formants are taken into account (\cite{garellekPhoneticsVoice2019} provides a good overview of the differences). Most previous studies have not used corrected measure but have been focused on a single vowel /a/ because it minimizes the effects of the first formant \citep{espositoVariationContrastivePhonation2010}. Corrected measures take the formants into account during calculation and minimizes their influences. Fortunately, most software that is used for calculating the acoustic measurements such as VoiceSauce \citep{shueVOICESAUCEProgramVoice2009} and PraatSauce \citep{kirbyPraatSauce2022} produces both corrected and uncorrected values. 
 
+In determining whether or not a given measure corresponds to a given phonation several patterns have been described and validated by many authors. A summary of these findings are given in \citet{garellekPhoneticsVoice2019} where it is noted that when the values of the spectral-tilt measurement are higher than that of the modal's spectral-tilt measurement and the CPP value is lower than the modal's CPP value this more than likely indicates a vowel with breathy phonation. If, however, the spectral-tilt measurements are lower than the modal's spectral-tilt measurements and the CPP value is lower than the modal's CPP value this more than likely indicates a vowel with creaky phonation. This means that if the acoustic measurements for the SLZ phonation types match these findings we can be fairly confident that we are dealing with breathy and creaky phonation. 
+
 The rest of this section will describe the methods, results, and discussion of an acoustic analysis into SLZ's phonation. 
 
 %------------------------------------
 \subsection{Methods} \label{sec:Methods}
 %------------------------------------
 
-Due to the impact of COVID-19, only two native language speakers of SLZ were able to take part in this study (one male; one female). Both speakers live in Santa Cruz, CA and data collection was done remotely using Zencastr\footnote{\href{https://zencastr.com/}{https://zencastr.com/}}, a professional podcasting website, or in-person outside in a well ventilated location, using a Zoom H4n handheld recorder (44.1kHz, 16-bit). Participates were recorded saying approximately 100 words in the carrier sentence \textit{shnia' X chone las} `I say X three times'. This phrase was repeated three times. 
+Due to the impact of the COVID-19 pandemic, only two native language speakers of SLZ were able to take part in this study (one male; one female). Both speakers live in Santa Cruz, CA and data collection was done remotely using Zencastr\footnote{\href{https://zencastr.com/}{https://zencastr.com/}}, a professional podcasting website, or in-person outside in a well ventilated location, using a Zoom H4n handheld recorder (44.1kHz, 16-bit). Participates were recorded saying approximately 100 words in the carrier sentence \textit{shnia' X chone las} `I say X three times'. This phrase was repeated three times. 
 
-After the elicitation were completed the audio was uploaded into ELAN \citep{wittenburgELANProfessionalFramework2006} for initial segmentation into sentences. This was then followed by segmenting of the vowel portion in Praat \citep{boersmaPraatDoingPhonetics2021}. These segments were then inputted to VoiceSauce \citep{shueVOICESAUCEProgramVoice2009} were each vowel was resampled at 16kHZ for acoustic measurement. The acoustic measurements of VoiceSauce were then analyzed in R \citep{rcoreteamLanguageEnvironmentStatistical2021}. 
+After the elicitation were completed the audio was uploaded into ELAN \citep{wittenburgELANProfessionalFramework2006} for initial segmentation into sentences. This was then followed by segmenting of the vowel portion in Praat \citep{boersmaPraatDoingPhonetics2021}. These segments were then inputted to VoiceSauce \citep{shueVOICESAUCEProgramVoice2009} were each vowel was resampled at 16kHZ for acoustic measurement. The acoustic measurements of VoiceSauce were then analyzed in R \citep{rcoreteamLanguageEnvironmentStatistical2021}. In order to investigate the differences in timing, each vowel was normalized for time.
 
 %------------------------------------
 \subsection{Results} \label{sec:Results}
 %------------------------------------
 
+The results of the spectral-tilt measurements were for the most part accurate. As noted by \citet{espositoVariationContrastivePhonation2010} for a Central Valley Zapotec, there is a difference in which acoustic measurements were most informative for the speakers based on their sex. Similar to \citeauthor{espositoVariationContrastivePhonation2010}, the female speaker was best characterized with the H1-H2 measurements and the male speaker was best characterized with H1-A3. For the female speaker this was true for all phonation types except for breathy voice which c
 
-\begin{itemize}
-	\item Describe how acoustic measurements are taken using \citet{garellekPhoneticsVoice2019} as a basis for how the measurements are taken. 
-	\begin{itemize}
-		\item maybe use SoE as well?
-		\item Additionally, describe the patterns that we expect to see. 
-	\end{itemize}
-	\item Following \citet{espositoVariationContrastivePhonation2010}, I use H1-H2 and H1-A3. 
-	\item Additionally, CPP is a useful measurement for modal versus a modal phonation \citep{garellekPhoneticsWhiteHmong2021}.
-	\item Figure out what which charts are useful. Might be useful to follow \citet{espositoVariationContrastivePhonation2010} in taking measurements from a certain portion of the vowels. 
-\end{itemize}
 
+As mentioned previously, one of our speakers would regularly produce the laryngealized vowels with rearticulation, meaning that they produced the vowel with glottalization, with either creakiness or a full glottal closure, in the middle of the vowel. This is in contrast with the checked vowels which have a short period of creakiness or a full glottal closure at the end of the vowel. This means that our spectral-tilt measurements should reflect a difference in time with creaky voice appearing earlier in the laryngealized vowels than checked vowels. When we compare the spectral-tilt measurements for this speaker, see Figure~\ref{fig:FSRh1h2checked}. 
 \begin{figure}[!ht]
 	\includegraphics[width=0.9\textwidth]{../h1h2_CheckedLaryngeal.png}
 	\caption{FSR's H1-h2 values for checked and laryngealized.}
