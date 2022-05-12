@@ -433,48 +433,41 @@ Due to the impact of the COVID-19 pandemic, only two native language speakers of
 After the elicitation were completed the audio was uploaded into ELAN \citep{wittenburgELANProfessionalFramework2006} for initial segmentation into sentences. This was then followed by segmenting of the vowel portion in Praat \citep{boersmaPraatDoingPhonetics2021}. These segments were then inputted to VoiceSauce \citep{shueVOICESAUCEProgramVoice2009} were each vowel was resampled at 16kHZ for acoustic measurement. The acoustic measurements of VoiceSauce were then analyzed in R \citep{rcoreteamLanguageEnvironmentStatistical2021}. In order to investigate the differences in timing, each vowel was normalized for time.
 
 %------------------------------------
-\subsection{Results} \label{sec:Results}
+\subsection{Spectral-tilt results} \label{sec:Results}
 %------------------------------------
 
-The results of the spectral-tilt measurements were for the most part accurate. As noted by \citet{espositoVariationContrastivePhonation2010} for a Central Valley Zapotec, there is a difference in which acoustic measurements were most informative for the speakers based on their sex. Similar to \citeauthor{espositoVariationContrastivePhonation2010}, the female speaker was best characterized with the H1-H2 measurements and the male speaker was best characterized with H1-A3. For the female speaker this was true for all phonation types except for breathy voice which c
+The results of the spectral-tilt measurements were for the most part accurate. As noted by \citet{espositoVariationContrastivePhonation2010} for a Central Valley Zapotec, there is a difference in which acoustic measurements were most informative for the speakers based on their sex. Similar to \citeauthor{espositoVariationContrastivePhonation2010}, the female speaker was best characterized with the H1-H2 measurements and the male speaker was best characterized with H1-A3. For the female speaker this was true for all phonation types except for breathy voice which measured similarly to the other non-modal vowels. This is not too unsurprising considering the fact that the female speaker would more often produce a full glottal fricative in these environments than a breathy vowel. This can be seen in Figure~\ref{fig:FSRh1h2} where the modal vowel is represented by the solid black line. All other lines which represent breathy, checked, and laryngealized are all lower than that of the modal. 
+\begin{figure}[!ht]
+	\includegraphics[width=0.9\textwidth]{../h1h2_line_L.png}
+	\caption{FSR's H1-h2 values.}
+	\label{fig:FSRh1h2} 
+\end{figure}
 
-
-As mentioned previously, one of our speakers would regularly produce the laryngealized vowels with rearticulation, meaning that they produced the vowel with glottalization, with either creakiness or a full glottal closure, in the middle of the vowel. This is in contrast with the checked vowels which have a short period of creakiness or a full glottal closure at the end of the vowel. This means that our spectral-tilt measurements should reflect a difference in time with creaky voice appearing earlier in the laryngealized vowels than checked vowels. When we compare the spectral-tilt measurements for this speaker, see Figure~\ref{fig:FSRh1h2checked}. 
+As mentioned previously, one of our speakers would regularly produce the laryngealized vowels with rearticulation, meaning that they produced the vowel with glottalization, with either creakiness or a full glottal closure, in the middle of the vowel. This is in contrast with the checked vowels which have a short period of creakiness or a full glottal closure at the end of the vowel. This means that our spectral-tilt measurements should reflect a difference in time with creaky voice appearing earlier in the laryngealized vowels than checked vowels. In Figure~\ref{fig:FSRh1h2checked}, the spectral-tilt values for laryngealized and checked vowels are plotted along a time normalized scale. The important thing to be aware of is the difference in where the lowest part of the plot is located. For checked vowels, represented by the solid lines, the lowest part of the spectral-tilt measurement is located in the last quarter of the vowel. This dip, however, occurs earlier in the vowel for the laryngealized vowels closer halfway to 75\% of the vowel. 
 \begin{figure}[!ht]
 	\includegraphics[width=0.9\textwidth]{../h1h2_CheckedLaryngeal.png}
 	\caption{FSR's H1-h2 values for checked and laryngealized.}
 	\label{fig:FSRh1h2checked} 
 \end{figure}
 
-
+As mentioned mentioned previously, the results of the spectral analysis for the male SLZ speaker were inconclusive in terms of H1-H2. As seen in Figure~\ref{fig:RDh1h2} all of the different phonation types are essentially identical with less than 1 dB difference between the different phonation types. 
 \begin{figure}[!ht]
 	\includegraphics[width=0.9\textwidth]{../RDh1h2_line_HL.png}
 	\caption{RD's H1-H2 values in HL toned syllables.}
 	\label{fig:RDh1h2} 
 \end{figure}
-
-
+The H1-A3 spectral measures, however, show the expect patterns, as seen in Figure~\ref{fig:RDh1a3}. 
 \begin{figure}[!ht]
 	\includegraphics[width=0.9\textwidth]{../RDH1A3_HL.png}
 	\caption{RD's total H1-A3 values in HL toned syllables. }
 	\label{fig:RDh1a3} 
 \end{figure}
 
-	
-\begin{figure}[!ht]
-	\includegraphics[width=0.9\textwidth]{../RDCPP_lineL.png}
-	\caption{RD's CPP values.}
-	\label{fig:RDCPP} 
-\end{figure}	
+%------------------------------------
+\subsection{Statistical results} \label{sec:Stats}
+%------------------------------------
+In order to determine whether or not the gestures for pitch and phonation are overlapping a mixed-effects linear regression analysis was performed. Following \citet{garellekAcousticConsequencesPhonation2011}, the results for both speaker were combined together and then divided into thirds based on the normalized times. This allows for analysis of each third of the vowel to determine if the phonation and pitch gestures are overlapping. To this effect, the F0 measurements where treated as the dependent variable with speaker treated as random. The results of the analysis showed that the phonation categories, spectral-tilt measurements, and CPP all had an effect in different portions of the vowel. Specifically the portions of the analysis showed that did not show any effects where the first-third of the vowel for CPP and the last third for the laryngealized category.
 
-\begin{itemize}
-	\item Might be useful to validate h1-h2 and h1-a3 measurements as useful diagnostics. 
-	\item What do the measurements show me?
-	\begin{itemize}
-		\item FSR shows a timing difference between checked and rearticulated in h1-h2.
-		\item RD shows the differences we expect to see in h1-a3 but not 
-	\end{itemize}
-\end{itemize}
 
 %------------------------------------
 \subsection{Discussion of the results} \label{sec:Discussion}
@@ -494,69 +487,6 @@ As mentioned previously, one of our speakers would regularly produce the larynge
 	\begin{itemize}
 		\item Could \posscitet{eslingVoiceQualityLaryngeal2019} model of interactions be used to explain what we are seeing?
 	\end{itemize}
-\end{itemize}
-
-
-
-
-%------------------------------------
-\section{Esposito 2010} \label{sec:Esposito}
-%------------------------------------
-
-\begin{itemize}
-	\item Esposito investigates variation in Santa Ana del Valle Zapotec for variation due to gender, F0 and prosodic position.
-	\item Results were inconclusive as to whether or not gender was creakier or breathier though the acoustic measurements (H1-H2 and H1-A3) suggest that there is a difference in \textsc{production}. 
-	\item Strong effects of F0 were observed
-	\item The phonation contrasts were present in all positions but were not always well-defined. 
-	\item There has been a wide number of studies that have observed phonation differences based on gender, F0, and position. For example females are often described as being breathier than males (though this was not true all the time) and prosodic position produced different phonations. Additionally, all of these cases involve allophonic or suprasegmental phonation (i.e., non-phonemic)
-	\item Very little work has investigated languages with phonemic phonation contrasts
-	\item Jalapa Mazatec and San Lucas Quiaviní Zapotec are some of the few that have seen some study.
-	\item In those studies females were breathier than the male speaker. 
-	\item SADVZ is an ideal language to study the variation in phonation because it has relatively free word order and the contrastive phonation that exists. 
-	\item Spectral measurements have been found to be very useful measure of phonation in a wide number of different languages. 
-	\item Most of these have been focused on H1-H2, however, relationships with H1 compared to higher harmonics have also been found to be useful. 
-	\item Most previous studies have not used corrected or normalized measure but have been focused on a single vowel /a/ because it minimizes the effects of the F1
-	\item Esposito focuses on H1-H2 (open quotient) and H1-A3 (speed of vocal fold closure) based on a pilot study she ran in 2003. 
-	\item Vowel measurements were made by splitting the vowel into four equal parts and h1-h2 and h1-h3 measurements were made in the last quarter of each vowel. 
-	\item H1-A3 and H1*-A3* were effective in distinguishing the different phonation types in males. The difference between corrected and uncorrected were not significant. 
-	\item H1-H2 was effective for females speakers. 
-	\item The fact that h1-h2 was effective for females and h1-a3 for males suggests that they are using different laryngeal settings. Female speakers are making more use of open-quotient whereas male speakers are using the speed of vocal fold closure to distinguish the different phonation types. 
-	\item When looking at whether or not there is an effect for prosodic position it was observed that F0 had more of an effect than position. 
-	\item What was found was that all three contrasts were maintained but differed in how clearly they are produced. 
-\end{itemize}
-
-%------------------------------------
-\section{DiCanio 2012} \label{sec:DiCanio}
-%------------------------------------
-
-\begin{itemize}
-	\item \citeauthor{dicanioCoarticulationToneGlottal2012} is concerned with exploring the effects that tone and glottal consonants have on each other.
-	
-	\item Much of the earlier work on coarticulation claimed that the processes of the interaction of tone and phonation/glottal consonants revealed something universal or a set of constraints that applied to all languages.
-
-	\item More recent work actually argues against this notion specifically that there aren’t language-wide or universality but instead is based on language-specific patterns.
-	
-	\item One of these areas has to do with the phasing or co-articulation discussion.
-	
-	\item One area that has received substantially less discussion is on the realm of tone and phonation type contrasts.
-	
-	\item This study serves two main purposes: (i) expand the emperical basis for the analysis of tone-segment coarticulation and (ii) test how changes in relative timing of glottal consonants affect F0 on adjacent vowels.
-	
-	\item One main question I have is that these contrasts that DiCanio is describing seem to be almost more akin to phonation contrasts instead of segmental changes. However, he does seem to have a good amount of information from his dissertation which suggests that these are segmental instead of qualities of the vowel \citep{dicanioPhoneticsPhonologySan2008}.
-	
-	\item There is some discussion about \citet{silvermanLaryngealComplexityOtomanguean1997} where glottal consonants are abruptly phased relative to the vowels.
-	
-	\item According to Silverman there needs to be abrupt phasing so listeners can distinguish the tone and the glottal contrast.
-	
-	\item Trique does a wonderful job to at allowing us to test this claim that there is abrupt phasing. Specifically this paper investigates whether the amount of coarticulatory overlap between glottals and vowels effect the F0 perturbation.
-	
-	\item Trique has prominence and is reflected by a large distribution of contrasts in the final-syllables of words. But these contrasts are neutralized in non-final syllables. Phonetically realized by increased duration
-	
-	\item Spectral tilt was used to measure the magnitude of glottal tension or spreading. H1-H2 is a useful diagnostic for differentiating breathy, modal, and tense/creaky phonation. Additionally, H1-A3 is useful for breathy vs. non-breathy.
-	
-	\item Results were z-transformed and then a linear mixed effects model was run with speaker as random.
-	
-	\item Breathy phonation is described as higher h1-h2 values and lower H1-H2 values with lower F0. Lower F0 is associated with breathy voice.
 \end{itemize}
 
 %------------------------------------
