@@ -466,28 +466,67 @@ The H1-A3 spectral measures, however, show the expect patterns, as seen in Figur
 %------------------------------------
 \subsection{Statistical results} \label{sec:Stats}
 %------------------------------------
-In order to determine whether or not the gestures for pitch and phonation are overlapping a mixed-effects linear regression analysis was performed. Following \citet{garellekAcousticConsequencesPhonation2011}, the results for both speaker were combined together and then divided into thirds based on the normalized times. This allows for analysis of each third of the vowel to determine if the phonation and pitch gestures are overlapping. To this effect, the F0 measurements where treated as the dependent variable with speaker treated as random. The results of the analysis showed that the phonation categories, spectral-tilt measurements, and CPP all had an effect in different portions of the vowel. Specifically the portions of the analysis showed that did not show any effects where the first-third of the vowel for CPP and the last third for the laryngealized category.
+In order to determine whether or not the gestures for pitch and phonation are overlapping a mixed-effects linear regression analysis was performed with a Satterthwaite's method for t-test analysis used to derive the p-values. Following \citet{garellekAcousticConsequencesPhonation2011}, the results for both speaker were combined together and then divided into thirds based on the normalized times. This allows for analysis of each third of the vowel to determine if the phonation and pitch gestures are overlapping. To this effect, the F0 measurements where treated as the dependent variable with speaker treated as random. The results of the analysis showed that the phonation categories, spectral-tilt measurements, and CPP all had an effect on F0 in different portions of the vowel. Specifically the portions of the analysis showed that did not show any effects where the first third of the vowel for CPP and the last third for the laryngealized category. The spectral-tilt measurements of H1-H2 and H1-A3 had an effect on F0 in all portions of the vowel. 
 
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the first third of the vowel. }
+	\label{tab:tones}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		&  -23.41  	&  0.8128	& 23710 & -28.799 	& <0.001\\
+		Checked    		&  -9.123  	&  0.6933	& 23710 & -13.159 	& <0.001 \\
+		Laryngealized	& 9.712		& 0.6733	& 23710	& 14.424 	& <0.001 \\
+		H1-H2			& 2.163		& 0.06640	& 23710	& 32.572 	& <0.001\\
+		H1-A3			& -0.6678 	& 0.03436	& 23710	& -19.434	& <0.001\\
+		CPP				& 0.04144	& 0.03289	& 23710	& 1.260		& 0.208\\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the second third of the vowel. }
+	\label{tab:tones}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		&  -9.634 	& 0.7874	& 23540 & -12.235 & <0.001\\
+		Checked    		&  -3.509	& 0.6564	& 23540 & -5.346 & <0.001 \\
+		Laryngealized	& -2.261	& 0.6437	& 23540	& -3.513 & <0.001 \\
+		H1-H2			& 3.371		& 0.04283	& 23540	 & 78.707 & <0.001\\
+		H1-A3			& -0.4599	& 0.02592	& 23540	& -17.741	& <0.001\\
+		CPP				& -0.9082	& 0.04806	& 23540	& -18.897	& <0.001\\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the last third of the vowel. }
+	\label{tab:tones}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		& -5.247  	& 0.8224	&  24490	& -6.380	& <0.001\\
+		Checked    		& -4.494  	& 0.6898	&  24490	& -6.514	& <0.001 \\
+		Laryngealized	& 1.013		& 0.6670	&  24490	& 1.519		& 0.129 \\
+		H1-H2			& 3.079		& 0.04900	&  24490	& 62.845	& <0.001\\
+		H1-A3			& -0.6611 	& 0.02372	&  24490	& -27.867	& <0.001\\
+		CPP				& 0.5377	& 0.02958	&  24490	& 18.176	& 0.208\\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
 
 %------------------------------------
-\subsection{Discussion of the results} \label{sec:Discussion}
+\section{Discussion of the results} \label{sec:Discussion}
 %------------------------------------
 
-%------------------------------------
-\section{Challenges to theories} \label{sec:Challenges}
-%------------------------------------
+Based on the results of the statistical analysis, SLZ appears to have a large degree of overlap in the tonal and phonation gestures in contrast to the strict ordering that is predicted to occur according to the LCH. 
 
-\begin{itemize}
-	\item How does this support or detract from \posscitet{silvermanLaryngealComplexityOtomanguean1997} claims?
-	\begin{itemize}
-		\item Do we see the gestural timing that \citet{silvermanLaryngealComplexityOtomanguean1997} claims to exist?
-	\end{itemize}
-	\item Issues with breathy not present with H. 
-	\item Additionally there is this question about why we are seeing laryngealized vowels in H tone
-	\begin{itemize}
-		\item Could \posscitet{eslingVoiceQualityLaryngeal2019} model of interactions be used to explain what we are seeing?
-	\end{itemize}
-\end{itemize}
+However, the other interesting aspect of the analysis was the difference between which spectral-tilt measurement was most effect. For the female speaker the spectral-tilt measurement of 
+
 
 %------------------------------------
 \section{Conclusion} \label{sec:Conclusion}
