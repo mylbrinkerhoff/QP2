@@ -121,7 +121,7 @@
 	
 %% Line spacing setting. Comment out the line spacing you do not need. Comment out all if you want single spacing.
 %	\doublespacing
-	% \onehalfspacing
+	\onehalfspacing
 	
 \begin{center}
 	{\Large \textbf{Investigating the timing of tone and phonation in Santiago Laxopa Zapotec}}\footnote{I am grateful to Fe Silva-Robles and  Raúl Díaz Robles for sharing their time and language expertise. I am also grateful to Grant McGuire,  Jaye Padgett, Rachel Walker, Maziar Toosarvandani, Ben Eischens, Kim Tan, and Zach Horton for their help and discussions during all stages of this project. This project branched off from a collaboration with  Jack Duff and Maya Wax Cavallaro. Various parts of this project were previously shared in joint presentations with Jack Duff and Maya Wax Cavallaro.
@@ -525,16 +525,16 @@ In order to determine whether or not the gestures for pitch and phonation are ov
 
 Based on the results of the statistical analysis, SLZ appears to have a large degree of overlap in the tonal and phonation gestures in contrast to the strict ordering that is predicted to occur according to the LCH. The LCH predicts that languages that have contrastive tone and phonation should not have any overlap between tone and phonation. The rational for this comes from the one-dimensional nature of the larynx proposed by \citet{ladefogedPreliminariesLinguisticPhonetics1971}. As previously mentioned, this model assumes that the vocal folds are the primary force in determining both tone and phonation. The assumption that tone and phonation are controlled by only the vocal folds is actually inaccurate. Recent work, summarized in \citet{eslingVoiceQualityLaryngeal2019}, actually shows that the whole larynx is involved with the production of the different phonation types. For example, based on laryngoscopy, creaky voice shows that in addition to the vocal folds, the thyroarytenoid muscle contract from the borders of the arytenoids to the front of the epilaryngeal tube. In addition, the ventricular folds are often also engaged in creaky voice which has the effect of increasing the vibrating mass in the larynx, adds damping, encourages irregular vibration, and perturbs the mucosal wave from crossing the vocal folds \citep{moisikModelingBiomechanicalInfluence2014}. 
 
-Based on this and other work \citet{eslingVoiceQualityLaryngeal2019} proposes the a new model for accounting for the complex interactions in the larynx. This model termed the \textsc{Laryngeal Articulator Model} assumes that instead of a one-dimensional model you instead have a network of nodes that act in synergistic and anti-synergistic manners to each other. The list of nodes and their abbreviations are given in Table~\ref{tab:States}.
+Based on this and other work \citet{eslingVoiceQualityLaryngeal2019} proposes a new model for accounting for the complex interactions in the larynx. This model termed the \textsc{Laryngeal Articulator Model} assumes that instead of a one-dimensional model you instead have a network of nodes that act in synergistic and anti-synergistic manners to each other. In a sense these nodes either work in a cooperative way strengthing or supplementing the workings of each other or the nodes are antagonistic and do not work together. These different nodes and their abbreviations are given in Table~\ref{tab:States}.
 \begin{table}[!ht]
 	\centering
-	\caption{Physiological states of the lower vocal tract}
+	\caption{A list of the different nodes and their abbreviations in the Laryngeal Articulator Model.}
 	\label{tab:States}
 	 \begin{tabular}{ll}
 	  \lsptoprule
-	  States	&	 Physiological description \\
+	  States/Nodes	&	 Physiological description \\
 	  \hline
-	  vfo   	&  vocal folds open (abducted) \\
+	  	vfo   	&  vocal folds open (abducted) \\
 		vfc    	&  vocal folds closed (adducted/prephonation)\\
 		epc   	&  epilaryngeal constriction\\
 		epv			&  epilaryngeal vibration \\
@@ -550,13 +550,16 @@ Based on this and other work \citet{eslingVoiceQualityLaryngeal2019} proposes th
 	 \end{tabular}
 \end{table}
 
+These twelve nodes not only represent the interactions of the larynx but also represents actual physiological representations. This means that any given node represents what is occurring with a given part of the larynx. For example, the node `epc'  represents any epilaryngeal constriction when activated. Now these nodes are not just independent entities but interact in complex ways with other nodes. These interactions are best captured as a network or web of nodes as seen in Figure~\ref{fig:LAMNetwork}. 
+
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../LAMNetwork.png}
-	\caption{Network of synergistic and anti-synergistic physiological relations among vocal tract states}
+	\caption{Network of synergistic and anti-synergistic nodes in the Laryngeal Articulator Model. Taken from \citet{eslingVoiceQualityLaryngeal2019}.}
 	\label{fig:LAMNetwork}
 \end{figure}
 	
+Figure~\ref{fig:LAMNetwork}, shows which nodes interact in synergistic and anti-synergistic ways. For example, 
 
 
 %------------------------------------
