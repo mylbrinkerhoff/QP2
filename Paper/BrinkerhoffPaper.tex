@@ -471,7 +471,7 @@ In order to determine whether or not the gestures for pitch and phonation are ov
 \begin{table}[!h]
 	\centering
 	\caption{Results of the mixed-effects linear regression analysis on the first third of the vowel. }
-	\label{tab:tones}
+	\label{tab:First}
 	 \begin{tabular}{llllll}
 	  \lsptoprule
 						&  Estimate  & Std. Error & df & t value & p-value \\
@@ -488,7 +488,7 @@ In order to determine whether or not the gestures for pitch and phonation are ov
 \begin{table}[!h]
 	\centering
 	\caption{Results of the mixed-effects linear regression analysis on the second third of the vowel. }
-	\label{tab:tones}
+	\label{tab:Second}
 	 \begin{tabular}{llllll}
 	  \lsptoprule
 						&  Estimate  & Std. Error & df & t value & p-value \\
@@ -505,7 +505,7 @@ In order to determine whether or not the gestures for pitch and phonation are ov
 \begin{table}[!h]
 	\centering
 	\caption{Results of the mixed-effects linear regression analysis on the last third of the vowel. }
-	\label{tab:tones}
+	\label{tab:Third}
 	 \begin{tabular}{llllll}
 	  \lsptoprule
 						&  Estimate  & Std. Error & df & t value & p-value \\
@@ -523,9 +523,40 @@ In order to determine whether or not the gestures for pitch and phonation are ov
 \section{Discussion of the results} \label{sec:Discussion}
 %------------------------------------
 
-Based on the results of the statistical analysis, SLZ appears to have a large degree of overlap in the tonal and phonation gestures in contrast to the strict ordering that is predicted to occur according to the LCH. 
+Based on the results of the statistical analysis, SLZ appears to have a large degree of overlap in the tonal and phonation gestures in contrast to the strict ordering that is predicted to occur according to the LCH. The LCH predicts that languages that have contrastive tone and phonation should not have any overlap between tone and phonation. The rational for this comes from the one-dimensional nature of the larynx proposed by \citet{ladefogedPreliminariesLinguisticPhonetics1971}. As previously mentioned, this model assumes that the vocal folds are the primary force in determining both tone and phonation. The assumption that tone and phonation are controlled by only the vocal folds is actually inaccurate. Recent work, summarized in \citet{eslingVoiceQualityLaryngeal2019}, actually shows that the whole larynx is involved with the production of the different phonation types. For example, based on laryngoscopy, creaky voice shows that in addition to the vocal folds, the thyroarytenoid muscle contract from the borders of the arytenoids to the front of the epilaryngeal tube. In addition, the ventricular folds are often also engaged in creaky voice which has the effect of increasing the vibrating mass in the larynx, adds damping, encourages irregular vibration, and perturbs the mucosal wave from crossing the vocal folds \citep{moisikModelingBiomechanicalInfluence2014}. 
 
-However, the other interesting aspect of the analysis was the difference between which spectral-tilt measurement was most effect. For the female speaker the spectral-tilt measurement of 
+Based on this and other work \citet{eslingVoiceQualityLaryngeal2019} proposes the a new model for accounting for the complex interactions in the larynx. This model termed the \textsc{Laryngeal Articulator Model} assumes that instead of a one-dimensional model you instead have a network of nodes that act in synergistic and anti-synergistic manners to each other. The list of nodes and their abbreviations are given in Table~\ref{tab:States}.
+\begin{table}[!ht]
+	\centering
+	\caption{Physiological states of the lower vocal tract}
+	\label{tab:States}
+	 \begin{tabular}{ll}
+	  \lsptoprule
+	  States	&	 Physiological description \\
+	  \hline
+	  vfo   	&  vocal folds open (abducted) \\
+		vfc    	&  vocal folds closed (adducted/prephonation)\\
+		epc   	&  epilaryngeal constriction\\
+		epv			&  epilaryngeal vibration \\
+		tfr 		&  tongue fronting \\
+		tre 		&  tongue retraction \\
+		tra 		&  tongue raising \\
+		tdb 		&	 tongue double bunching\\
+		↑lx     &  raised larynx\\
+		↓lx			&  lowered larynx\\
+		Hf0			&  increased vocal fold tension, less vibrating mass (high f0)\\
+		Lf0			&  decreased vocal fold tension, more vibrating mass (lower f0)\\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+\begin{figure}[!ht]
+	\caption{Network of synergistic and anti-synergistic physiological relations among vocal tract states}
+	\label{fig:LAMNetwork}
+	\centering
+	\includegraphics[width=0.9\textwidth]{../LAMNetwork.png}
+\end{figure}
+	
 
 
 %------------------------------------
