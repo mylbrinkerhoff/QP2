@@ -51,6 +51,7 @@
 \usepackage[normalem]{ulem} %strike out text. Handy for syntax
 \usepackage{tcolorbox}
 \usepackage{datetime2}
+\usepackage{subcaption}
 
 %%FONTS
 \setmainfont{Libertinus Serif}
@@ -90,7 +91,7 @@
 \newleipzig{rep}{rep}{repetitive}	% Repetitive Aspect
 
 %%TITLE INFORMATION
-\title{TITLE}
+\title{QP2}
 \author{Mykel Loren Brinkerhoff}
 \date{\today}
 
@@ -142,12 +143,9 @@
 \section{Introduction} \label{sec:Introduction}
 %------------------------------------
 
+Most of the work on the interaction of tone and phonation has been based on descriptions of southeast and far east Asian languages, which lead to strong claims being made about what is possible for the interaction between tone and phonation \citep{masicaDefiningLinguisticArea1976,thurgoodVietnameseTonogenesisRevising2002,yipTone2002,enfieldArealLinguisticsMainland2005,michaudComplexTonesEast2012,brunelleTonePhonationSoutheast2016}. The main claim from many of these authors is that tone and phonation are codependent (i.e., certain tones only appear with certain phonations).
 
-% Most work on the interaction of tone and phonation has been based on descriptions of southeast and far east Asian languages.
-% This lead to strong claims on the interaction between tone and phonation \citep{masicaDefiningLinguisticArea1976,thurgoodVietnameseTonogenesisRevising2002,yipTone2002,enfieldArealLinguisticsMainland2005,michaudComplexTonesEast2012,brunelleTonePhonationSoutheast2016}.
-% Main claim from these authors is that tone and phonation are codependent. This is often referred to as a register system.  
-% Meaning that we only observe certain tones with certain phonations. 
-% Mandarin Tone 3 is always associated with creaky voice \citep{duanmuPhonologyStandardChinese2007}.
+An example for this type of co-occurrence between tone and phonation is Mandarin's Tone 3 which is frequently associated with creaky voice \citep{hockettPeipingPhonology1947,}.
 % This claim has also been made in the reverse that certain phonation types are associated with specific tonal patterns. 
 % Breathy voice stereotypically appears with high pitch and creaky voice stereotypically appears with low pitch \citep{eslingVoiceQualityLaryngeal2019}.
 % This is often born out with research into register systems. 
@@ -190,7 +188,9 @@ The LCH assumes that phonation and tone are both produced at the vocal folds anf
 	\caption{Representation taken from \citet{dicanioCoarticulationToneGlottal2012}.}
 \end{figure}
 
-Some work has been done into investigating this in other languages, most notably \posscitet{dicanioCoarticulationToneGlottal2012} investigation into glottals in Itunyoso Trique. \citeauthor{dicanioCoarticulationToneGlottal2012} found that when there is a large degree of overlap in the signal then the acoustic signal for F0 had perturbation. If, however, the degree of overlap was minor then the acoustic signal had no perturbation. In Itunyoso Trique, \citeauthor{dicanioCoarticulationToneGlottal2012} found that there was a statistically significant amount of perturbation throughout the vowel. Another study on Jalapa Mazatec \citep{garellekAcousticConsequencesPhonation2011} also investigated the interaction of tone and phonation. Jalapa Mazatec is a language with both contrastive tone and phonation and \citet{garellekAcousticConsequencesPhonation2011} validated the claims made by the LCH, in that tone and phonation seemed to be ordered with each other when it comes to at least one of the phonation types.
+Some work has been done into investigating this in other languages, most notably \posscitet{dicanioCoarticulationToneGlottal2012} investigation into glottals in Itunyoso Trique. \citeauthor{dicanioCoarticulationToneGlottal2012} found that when there is a large degree of overlap in the signal then the acoustic signal for F0 had perturbation. If, however, the degree of overlap was minor then the acoustic signal had no perturbation. In Itunyoso Trique, \citeauthor{dicanioCoarticulationToneGlottal2012} found that there was a statistically significant amount of perturbation throughout the vowel. 
+
+Another study on Jalapa Mazatec \citep{garellekAcousticConsequencesPhonation2011} also investigated the interaction of tone and phonation. Jalapa Mazatec is a language with both contrastive tone and phonation and \citet{garellekAcousticConsequencesPhonation2011} validated the claims made by the LCH, in that tone and phonation seemed to be ordered with each other when it comes to at least one of the phonation types.
 
 In testing the claims made by the LCH, this paper investigates the interaction of tone and phonation in the Northern Zapotec language of Santiago Laxopa Zapotec. This language is ideal for testing the viability of the LCH because of its use of both contrastive tone and phonation. The rest of the paper will provide a description of the language in Section~\ref{sec:SLZ} with special emphasis on the tone and phonation systems. Following this discussion on Santiago Laxopa Zapotec, this paper discusses an acoustic analysis of phonation modelled on \citet{espositoVariationContrastivePhonation2010,garellekAcousticConsequencesPhonation2011,dicanioCoarticulationToneGlottal2012} in Section~\ref{sec:Acoustics}.
 
@@ -243,20 +243,65 @@ Santiago Laxopa Zapotec (SLZ; Dilla'xhonh Laxup) is a Northern Zapotec language 
 		 \end{tabular}
 		\end{table}
 		
-In addition to the contrasts in both consonants and vowels, SLZ additionally has a phonation and tonal contrast. I will first talk about the phonation contrasts in Section~\ref{sec:Phonation} followed by the tonal contrasts in Section~\ref{sec:Tone}.
+In addition to the contrasts in both consonants and vowels, SLZ additionally has a phonation and tonal contrast. I will first talk about the tonal contrasts in Section~\ref{sec:Tone} followed by the tonal phonation in Section~\ref{sec:Phonation}.
+
+%------------------------------------
+\subsection{Tone in SLZ} \label{sec:Tone}
+%------------------------------------
+
+As is common among Oto-Manguean languages, SLZ is a tonal languages \citep{suarezMesoamericanIndianLanguages1983,campbellMesoAmericaLinguisticArea1986,silvermanLaryngealComplexityOtomanguean1997,campbellOtomangueanHistoricalLinguistics2017a,campbellOtomangueanHistoricalLinguistics2017}. In SLZ there are five surface tones which appear on a syllable. Following other papers on SLZ, I am representing the tone using Pike's numbers \citep[e.g.][]{sichelFeaturalLifeNominals2020}. Pike's numbers are commonly used in describing Mesoamerican tone systems and has its origins in \posscitet{pikeToneLanguagesTechnique1948} work with Mixtec. A good summary of this system and its comparisons to other tone marking systems is given in \citet{weePhonologicalTone2019}. Pike's numbers represent the highest tone with the number 1 and then each subsequent tonal level is represented with the next number until all levels have been assigned. In the case of a language with three distinct levels the number 1 represents the highest tone, the number 2 represents the mid tone, and finally the number 3 represents the lowest tone. Additionally, these different numbers can be combined to represent the different contour tones that exist in the language, for example 21 representing a tone that starts at the mid level and then increases its pitch to high. 
+
+
+\begin{table}[!h]
+	\centering
+	\caption{Examples of the five tonal patterns observed in the Santiago Laxopa Zapotec words.}
+	\label{tab:tones}
+	 \begin{tabular}{lllll}
+	  \lsptoprule
+					  % &	 Diacritic  & Example & Transcription \\
+	  High   	&  a¹  &  \textit{xha}   &  [ ʐa¹ ] & `clothing.\textsc{poss}'\\
+		Mid    	&  a²  &  \textit{lhill} 	& [ ɾiʒ² ] & `house.\textsc{poss}' \\
+		Low   	&  a³  &  \textit{yu'} 	&	 [ juˀ³ ] & `earth'\\
+		Rising	&  a²¹  &  \textit{yu'u} 	&	[ juˀu²¹ ] & `quicklime (Sp. cal)' \\
+		Falling &  a¹³  &  \textit{yu'u}  &	[juˀu¹³] &	`house' \\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../FSRTonePlot.png}
+	\label{fig:FSRTonePlot}
+	\caption{Tonal contrasts for FSR averaged and time normalized. Each line in this graph represents the average of approximately 10 syllables for each tonal pattern. }
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../RDTonePlot.png}
+	\label{fig:RDTonePlot}
+	\caption{Tonal contrasts for RD averaged and time normalized. Each line in this graph represents the average of approximately 10 syllables for each tonal pattern.}
+\end{figure}
+
+Following discussion from \citet{brinkerhoffTonalPatternsTheir2022} these tones appear to be limited in their distribution. It is true that all five patterns can surface on a syllable but there is a restriction in what tonal patterns are allowed to surface on words that are larger than bimoraic. The patterns that we observe on bimoraic nominals are: HL, MH, and LL.
+% \begin{figure}[!ht]
+% 	\centering
+% 	\includegraphics[width=0.9\textwidth]{../JoinTonePlot.png}
+% 	\label{fig:LAMNetwork}
+% 	\caption{Tonal contrasts for FSR and RD normalized for f0 and time.}
+% \end{figure}
 
 %------------------------------------
 \subsection{Phonation in SLZ} \label{sec:Phonation}
 %------------------------------------
 
 Among Zapotecan languages it is quite common for languages to make use of contrastive phonation \citep[e.g.,][]{avelinobecerraTopicsYalalagZapotec2004,longDiccionarioZapotecoSan2005,avelinoAcousticElectroglottographicAnalyses2010,lopeznicolasEstudiosFonologiaGramatica2016,chavez-peonInteractionMetricalStructure2010}. 
-SLZ, in addition to the five vowel qualities, has four contrastive phonation types which are: modal, breathy, checked, and laryngealized. These contrasts are exemplified in the minimal quadruple in (\ref{ex:YA}). 
+SLZ, in addition to the five vowel qualities, has four contrastive phonation types which are: modal, breathy, checked, and laryngealized. These contrasts are exemplified in the minimal quadruple in (\ref{ex:YA}). In representing the checked and laryngealized vowels, I follow the same procedure as other authors (e.g., \citet{avelinoAcousticElectroglottographicAnalyses2010, uchiharaToneRegistrogenesisQuiavini2016}) in representing the `glottal stop' element as a superscripted glottal stop in the IPA transcription (i.e., [aˀ]). This is primarily done as a way of standardizing the variable pronunciation of the glottal element in Zapotec ranging from a full glottal stop (i.e., [aʔ]) to creaky voice on a portion of the vowel (i.e., [aa̰]).  
 
 \ea \label{ex:YA} Four-way minimal phonation contrast
-	\ea \textit{ya} [ja\supr{L}]	`bell'
-	\ex \textit{yah}  [ja̤\supr{L}] `metal/rifle'
-	\ex \textit{ya'}  [jaˀ\supr{L}]  `pound'
-	\ex \textit{ya'a}  [jaˀa\supr{L}]  `market'
+	\ea \textit{ya} [ja³]	`bell'
+	\ex \textit{yah}  [ja̤³] `metal/rifle'
+	\ex \textit{ya'}  [jaˀ³]  `pound'
+	\ex \textit{ya'a}  [jaˀa³]  `market'
 	\z 
 \z 
 
@@ -282,7 +327,7 @@ Checked vowels on the other hand are characterized by an abrupt glottal closure 
 
 Laryngealized vowels are quite common in Zapotecan languages and have received a wide number of different names. Previous descriptions have used terms such as broken, rearticulated, interrupted, and creaky \citep{longDiccionarioZapotecoSan2005,avelinobecerraTopicsYalalagZapotec2004,avelinoAcousticElectroglottographicAnalyses2010,sonnenscheinDescriptiveGrammarSan2005,adlerAcousticsPhonationTypes2016}. In order to avoid confusion, I will use the term laryngealized following \citet{avelinoAcousticElectroglottographicAnalyses2010}. In addition to a wide number of different names these vowels also exhibit a wide range of allophones. 
 
-\citet{avelinoAcousticElectroglottographicAnalyses2010} found in the closely realted Yalálag Zapotec that among his consultants there were at least four different pronunciations as seen in Table~\ref{tab:laryngeal}
+\citet{avelinoAcousticElectroglottographicAnalyses2010} found in the closely realted Yalálag Zapotec that among his consultants there were at least four different pronunciations as seen in Table~\ref{tab:laryngeal}. 
 \begin{table}[!h]
 	\centering
 	\caption{Layngealized Vowels in Yalálag Zapotec}
@@ -296,67 +341,36 @@ Laryngealized vowels are quite common in Zapotecan languages and have received a
 	\lspbottomrule
 	\end{tabular}
 \end{table}
-In SLZ, each of the consulted language experts would produce this vowel differently. One consultant would do rearticulation, where there is a full glottal stop in the middle of the vowel, or creaky voice. This alternation seemed to be in free variation but there was a greater tendency to creak in low toned words, such as \textit{xa'ag} [ʂa̰ːg] `topil'\footnote{A topil is a type of government office in traditional Oaxacan communities somewhat akin to a sherif. }, see Figure~\ref{fig:FSRLaryngeal} for a comparison between this consultant's pronunciation of the laryngealized vowels.
+In SLZ, each of the consulted language experts would produce this vowel differently. One consultant would do rearticulation, where there is a full glottal stop in the middle of the vowel, or creaky voice. This alternation seemed to be in free variation but there was a greater tendency to creak in low toned words, such as \textit{xa'ag} [ʂa̰ːg] `topil'\footnote{A topil is a type of government office in traditional Oaxacan communities somewhat akin to a sheriff. }, see Figure~\ref{fig:FSRLaryngeal} for a comparison between this consultant's pronunciation of the laryngealized vowels.
 
 \begin{figure}[!h]
 	\centering
-	[INSERT SIDE BY SIDE SPECTROGRAMS]
-	\caption{Comparison of FSR's laryngealized vowels in \textit{ya'a} `mountain' and \textit{xa'ag} `topil'}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.4\linewidth]{../za'a.png}
+		\caption{\textit{za'a} `corncob'}
+		\label{fig:za'a}
+	\end{subfigure}	
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.4\linewidth]{../xa'ag.png}
+		\caption{\textit{xa'ag} `topil'}
+		\label{fig:xa'ag}
+	\end{subfigure}	
+	\caption{Comparison of FSR's laryngealized vowels in \textit{za'a} `corncob' and \textit{xa'ag} `topil'}
 	\label{fig:FSRLaryngeal}
 \end{figure}
 
-The other consultant only ever produces creaky voice for these vowels regardless of the tone with the word. During one of the elicitation sessions, we conducted a sanity check that these were in fact the same vowels and both consultants reliably identified the words and would produce the laryngealized vowel according to their own idiosyncrasies. However, a more detailed perception study is beyond the scope of this paper. 
+The other consultant only ever produces creaky voice for these vowels regardless of the tone with the word. During one of the elicitation sessions, we conducted a perceptual check that these were in fact the same vowels and both consultants reliably identified the words and produced laryngealized vowels according to their own idiosyncrasies. However, a more detailed perception study is beyond the scope of this paper. 
 \begin{figure}[!h]
 	\centering
 	[INSERT SIDE BY SIDE SPECTROGRAMS]
-	\caption{Comparison of RD's laryngealized vowels in \textit{ya'a} `mountain' and \textit{xa'ag} `topil'}
+
+	\caption{Comparison of RD's laryngealized vowels in \textit{za'a} `corncob' and \textit{xa'ag} `topil'}
 	\label{fig:RDLaryngeal}
 \end{figure}
 
-%------------------------------------
-\subsection{Tone in SLZ} \label{sec:Tone}
-%------------------------------------
 
-As is common among Oto-Manguean languages, SLZ is a tonal languages \citep{suarezMesoamericanIndianLanguages1983,campbellMesoAmericaLinguisticArea1986,silvermanLaryngealComplexityOtomanguean1997,campbellOtomangueanHistoricalLinguistics2017a,campbellOtomangueanHistoricalLinguistics2017}. In SLZ there are five surface tones which appear on a syllable. 
-
-
-\begin{table}[!h]
-	\centering
-	\caption{SLZ tones}
-	\label{tab:tones}
-	 \begin{tabular}{lllll}
-	  \lsptoprule
-					  % &	 Diacritic  & Example & Transcription \\
-	  High   	&  a\supr{H}  &  \textit{xha}   &  [ ʐa\supr{H} ] & `clothing.\textsc{poss}'\\
-		Mid    	&  a\supr{M}  &  \textit{lhill} 	& [ ɾiʒ\supr{M} ] & `house.\textsc{poss}' \\
-		Low   	&  a\supr{L}  &  \textit{yu'} 	&	 [ juˀ\supr{L} ] & `earth'\\
-		Rising	&  a\supr{MH}  &  \textit{yu'u} 	&	[ juˀu\supr{MH} ] & `quicklime (Sp. cal)' \\
-		Falling &  a\supr{HL}  &  \textit{yu'u}  &	[juˀu\supr{HL}] &	`house' \\
-	  \lspbottomrule
-	 \end{tabular}
-\end{table}
-
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=0.9\textwidth]{../FSRTonePlot.png}
-	\label{fig:FSRTonePlot}
-	\caption{Tonal contrasts for FSR averaged and time normalized.}
-\end{figure}
-
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=0.9\textwidth]{../RDTonePlot.png}
-	\label{fig:RDTonePlot}
-	\caption{Tonal contrasts for RD averaged and time normalized.}
-\end{figure}
-
-Following discussion from \citet{brinkerhoffTonalPatternsTheir2022} these tones appear to be limited in their distribution. It is true that all five patterns can surface on a syllable but there is a restriction in what tonal patterns are allowed to surface on words that are larger than bimoraic. The patterns that we observe on bimoraic nominals are: HL, MH, and LL. This has the appearance of being a prototypical ``word tone" language following \posscitet{pikeToneLanguagesTechnique1948} categorization. However, recent work from \citet{shihAutosegmentalAimsSurfaceOptimizing2019,mcphersonWordToneEpiphenomenalInpress} has argued that the ``word tone" description is epiphenomenal and can be derived via surface constraints on tone. Which is what \citet{brinkerhoffTonalPatternsTheir2022} argues. 
-% \begin{figure}[!ht]
-% 	\centering
-% 	\includegraphics[width=0.9\textwidth]{../JoinTonePlot.png}
-% 	\label{fig:LAMNetwork}
-% 	\caption{Tonal contrasts for FSR and RD normalized for f0 and time.}
-% \end{figure}
 
 %------------------------------------
 \section{Interaction of Tone and Phonation} \label{sec:Interaction}
