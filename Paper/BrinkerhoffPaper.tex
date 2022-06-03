@@ -37,7 +37,7 @@
 \usepackage{hanging}
 \usepackage{fancyhdr} %Allows for the 
 \pagestyle{fancy}
-\fancyhead[L]{\textit{QP Handout}} 
+\fancyhead[L]{\textit{QP draft}} 
 \fancyhead[R]{\textit{\today}} 
 \fancyfoot[L,R]{} 
 \fancyfoot[C]{\thepage} 
@@ -51,6 +51,7 @@
 \usepackage[normalem]{ulem} %strike out text. Handy for syntax
 \usepackage{tcolorbox}
 \usepackage{datetime2}
+\usepackage{caption}
 \usepackage{subcaption}
 
 %%FONTS
@@ -168,7 +169,7 @@ An example for this type of co-occurrence between tone and phonation is Mandarin
 \section{The Laryngeal Complexity Hypothesis} \label{sec:Silverman}
 %------------------------------------
 
-The \textsc{Laryngeal Complexity Hypothesis} (LCH) has it origins in the work from \citet{silvermanLaryngealComplexityOtomanguean1997,blankenshipTimeCourseBreathiness1997,blankenshipTimingNonmodalPhonation2002}. The basic premise of the LCH is that in languages that have both tone and phonation there needs to be an ordering between the laryngeal gestures for tone and phonation for optimal perceptibility. This premise comes from the understanding that the same mechanism that is responsible for tone is also responsible for the production of phonation: the vocal folds and glottis. The rate that vocal folds vibrate is responsible for changing the fundamental frequency, perceived as pitch, which is grammaticalized as tone in lexical tone languages. The faster the vocal folds vibrate the higher the pitch and the slower the vocal folds vibrate the lower the pitch. 
+The \textsc{Laryngeal Complexity Hypothesis} (LCH) has it origins in the work from \citet{silvermanLaryngealComplexityOtomanguean1997,blankenshipTimeCourseBreathiness1997,blankenshipTimingNonmodalPhonation2002}. The basic premise of the LCH is that in languages that have both tone and phonation there needs to be an ordering between the two laryngeal gestures for tone and phonation for optimal perceptibility. This premise comes from the understanding that the same mechanism that is responsible for tone is also responsible for the production of phonation: the vocal folds and glottis. The rate that vocal folds vibrate is responsible for changing the fundamental frequency, perceived as pitch, which is grammaticalized as tone in lexical tone languages. The faster the vocal folds vibrate the higher the pitch and the slower the vocal folds vibrate the lower the pitch. 
 
 The vocal folds are also the primary articulator for phonation. \citet{ladefogedPreliminariesLinguisticPhonetics1971,gordonPhonationTypesCrosslinguistic2001} treated phonation as a by-product of how open or closed the glottis is during vocal fold vibration. This is schematized by Figure~\ref{fig:Phonation}. The more open the glottis is the breathier the sound to the point where the sound becomes the sound [h]. The more closed the glottis is the creakier the sound is to the point where the sound becomes [ʔ]. 
 \begin{figure}[!ht]
@@ -179,16 +180,17 @@ The vocal folds are also the primary articulator for phonation. \citet{ladefoged
 \end{figure}
 \vspace{-2ex}
 
-The LCH assumes that phonation and tone are both produced at the vocal folds anf glottis. Because these same organs are responsible for these two different phenomena there is a mismatch in trying to produce both at the same time. It is assumed by the LCH that because of this issue there needs to be a strict ordering in the glottal gestures. This means that the tonal gesture needs to be produced either before or after the phonation gesture. The reason for this is that if the gestures were overlapped there will be a perturbation of the tone and the listeners will not be able to reliably differentiate what the tone is. The LCH does assume that there is a close link between production and perception. Primarily, this means that it is burden of the speaker to produce both the tone and phonation gestures in a way that is the most perceptually salient. The assumptions of the LCH is schematized in Figure~\ref{fig:GlottalGestures}.
+The LCH assumes that phonation and tone are both produced at the vocal folds and glottis. Because these same organs are responsible for these two different phenomena there is a mismatch in trying to produce both at the same time. It is assumed by the LCH that because of this issue there needs to be a strict ordering in the glottal gestures. This means that the tonal gesture needs to be produced either before or after the phonation gesture. The reason for this is that if the gestures were overlapped there will be a perturbation of the tone and the listeners will not be able to reliably differentiate what the tone is. The LCH assumes that there is a close link between production and perception. This assumption places the responsibility on making sure the acoustic cues are the most perceptually salient on the speaker and the speaker is responsible to produce both tone and phonation in such a way that the listener can clearly differentiate the different acoustic cues for both tone and phonation. These assumptions can best be represented by Figure~\ref{fig:GlottalGestures}. 
 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=.5\textwidth]{../Gestures.png}
-	\label{fig:GlottalGestures}
 	\caption{Representation taken from \citet{dicanioCoarticulationToneGlottal2012}.}
+	\label{fig:GlottalGestures}
 \end{figure}
+In Figure~\ref{fig:GlottalGestures}, which is taken from \citet{dicanioCoarticulationToneGlottal2012}, the cue for tone is represented by the Pitch Target and the Glottal Gesture represents the gestures needed to produce phonation. When the Pitch Target is not co-articulated with the Glottal Gestures, then there is the greatest perceptual recoverability for the listener. This is argued for by the LCH as the tones are the most recoverable on modal vowels. This modal portion is then ordered or phased relative to the non-modal portion. This ordering is then the responsibility of the speaker to accommodate for the listeners perceptibility. If, however, the Pitch Target and the Glottal Gesture were overlapping, as represented by lower half in Figure~\ref{fig:GlottalGestures}, then the cues for pitch and phonation would be overlapping and making it perceptually more difficult for 
 
-Some work has been done into investigating this in other languages, most notably \posscitet{dicanioCoarticulationToneGlottal2012} investigation into glottals in Itunyoso Trique. \citeauthor{dicanioCoarticulationToneGlottal2012} found that when there is a large degree of overlap in the signal then the acoustic signal for F0 had perturbation. If, however, the degree of overlap was minor then the acoustic signal had no perturbation. In Itunyoso Trique, \citeauthor{dicanioCoarticulationToneGlottal2012} found that there was a statistically significant amount of perturbation throughout the vowel. 
+Some work has been done into investigating this in other languages, most notably \posscitet{dicanioCoarticulationToneGlottal2012} investigation into glottals in Itunyoso Trique, which is also an Oto-Manguean language. \citeauthor{dicanioCoarticulationToneGlottal2012} in his study found that when the magnitude of coarticulation for glottal consonants occurs on the vowels there is a strong correlation between the magnitude of overlap and the amount of perturbation in the f0 signal. If, however, the degree of overlap was minor then the acoustic signal had little to no perturbation. These results were found by consulting the spectral tilt of the vowels with the f0 measures and performing a generalized linear mixed effects model with speaker treated as a random effect. 
 
 Another study on Jalapa Mazatec \citep{garellekAcousticConsequencesPhonation2011} also investigated the interaction of tone and phonation. Jalapa Mazatec is a language with both contrastive tone and phonation and \citet{garellekAcousticConsequencesPhonation2011} validated the claims made by the LCH, in that tone and phonation seemed to be ordered with each other when it comes to at least one of the phonation types.
 
@@ -198,7 +200,7 @@ In testing the claims made by the LCH, this paper investigates the interaction o
 \section{Santiago Laxopa Zapotec} \label{sec:SLZ}
 %------------------------------------
 
-Santiago Laxopa Zapotec (SLZ; Dilla'xhonh Laxup) is a Northern Zapotec language spoken by approximately 1000 people in the municipality of Santiago Laxopa, Ixtlán District in the Sierra Norte of Oaxaca, Mexico \citep{adlerAcousticsPhonationTypes2016,adlerDerivationVerbInitiality2018,foleyForbiddenCliticClusters2018,foleyExtendingPersonCaseConstraint2020}. It is closely related to San Bartolomé Zoogocho Zapotec \citep{longDiccionarioZapotecoSan2005,sonnenscheinDescriptiveGrammarSan2005} and is mutually intelligible with this variety according to native speakers.  As is common among Zapotecan languages, SLZ distinguishes between lenis and fortis consonants \citep[e.g.,][]{nellisFortisLenisCajonos1980,jaegerFortisLenisQuestion1983,uchiharaFortisLenisGlides2016} and has a fairly standard five-vowel inventory. These contrasts and inventories can be seen in Table~\ref{tab:SLZcons} and Table~\ref{tab:SLZvowels}.
+Santiago Laxopa Zapotec (SLZ; \textit{Dilla'xhonh Laxup}) is a Northern Zapotec language spoken by approximately 1000 people in the municipality of Santiago Laxopa, Ixtlán District in the Sierra Norte of Oaxaca, Mexico \citep{adlerAcousticsPhonationTypes2016,adlerDerivationVerbInitiality2018,foleyForbiddenCliticClusters2018,foleyExtendingPersonCaseConstraint2020}. It is closely related to San Bartolomé Zoogocho Zapotec \citep{longDiccionarioZapotecoSan2005,sonnenscheinDescriptiveGrammarSan2005} and is mutually intelligible with this variety according to native speakers.  As is common among Zapotecan languages, SLZ distinguishes between lenis and fortis consonants \citep[e.g.,][]{nellisFortisLenisCajonos1980,jaegerFortisLenisQuestion1983,uchiharaFortisLenisGlides2016} and has a fairly standard five-vowel inventory. These contrasts and inventories can be seen in Table~\ref{tab:SLZcons} and Table~\ref{tab:SLZvowels}.
 
 
 \begin{table}[!h]
@@ -347,13 +349,13 @@ In SLZ, each of the consulted language experts would produce this vowel differen
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=0.4\linewidth]{../za'a.png}
+		\includegraphics[width=\linewidth]{../za'a.png}
 		\caption{\textit{za'a} `corncob'}
 		\label{fig:za'a}
-	\end{subfigure}	
+	\end{subfigure}%
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=0.4\linewidth]{../xa'ag.png}
+		\includegraphics[width=\linewidth]{../xa'ag.png}
 		\caption{\textit{xa'ag} `topil'}
 		\label{fig:xa'ag}
 	\end{subfigure}	
@@ -375,6 +377,8 @@ The other consultant only ever produces creaky voice for these vowels regardless
 %------------------------------------
 \section{Interaction of Tone and Phonation} \label{sec:Interaction}
 %------------------------------------
+
+
 
 Most previous work on the interaction of tone has been focused on the languages of East and Southeast Asia 
 \citep[e.g.,][]{masicaDefiningLinguisticArea1976,thurgoodVietnameseTonogenesisRevising2002,yipTone2002,enfieldArealLinguisticsMainland2005,michaudComplexTonesEast2012,brunelleTonePhonationSoutheast2016}. 
@@ -480,7 +484,7 @@ The H1-A3 spectral measures, however, show the expect patterns, as seen in Figur
 %------------------------------------
 \subsection{Statistical results} \label{sec:Stats}
 %------------------------------------
-In order to determine whether or not the gestures for pitch and phonation are overlapping a mixed-effects linear regression analysis was performed with a Satterthwaite's method for t-test analysis used to derive the p-values. Following \citet{garellekAcousticConsequencesPhonation2011}, the results for both speaker were combined together and then divided into thirds based on the normalized times. This allows for analysis of each third of the vowel to determine if the phonation and pitch gestures are overlapping. To this effect, the F0 measurements where treated as the dependent variable with speaker treated as random. The results of the analysis showed that the phonation categories, spectral-tilt measurements, and CPP all had an effect on F0 in different portions of the vowel. Specifically the portions of the analysis showed that did not show any effects where the first third of the vowel for CPP and the last third for the laryngealized category. The spectral-tilt measurements of H1-H2 and H1-A3 had an effect on F0 in all portions of the vowel. 
+In order to determine whether or not the gestures for pitch and phonation are overlapping a mixed-effects linear regression analysis was performed with a Satterthwaite's method for t-test analysis used to derive the p-values. Following \citet{garellekAcousticConsequencesPhonation2011}, the results for both speaker were combined together and then divided into thirds based on the normalized times. This allows for analysis of each third of the vowel to determine if the phonation and pitch gestures are overlapping. To this effect, the f0 measurements where treated as the dependent variable with speaker treated as random. The results of the analysis showed that the phonation categories, spectral-tilt measurements, and CPP all had an effect on f0 in different portions of the vowel. Specifically the portions of the analysis showed that did not show any effects where the first third of the vowel for CPP and the last third for the laryngealized category. The spectral-tilt measurements of H1-H2 and H1-A3 had an effect on f0 in all portions of the vowel. 
 
 \begin{table}[!h]
 	\centering
@@ -573,7 +577,7 @@ These twelve nodes not only represent the interactions of the larynx but also re
 	\label{fig:LAMNetwork}
 \end{figure}
 	
-Figure~\ref{fig:LAMNetwork}, shows which nodes interact in synergistic and anti-synergistic ways. This network is divided into three parts that represent the nodes which are responsible for vowel quality, phonatory quality, and tonal quality. For example, the node `epc' which is one of the nodes responsible for phonatory quality (i.e., responsible for producing phonation) has synergistic relationships with the nodes representing larynx raising (↑lx), vocal fold closure (vfc), tongue bunching(tdb), tongue retraction (tre), and for decreasing the vocal fold mass leading to a lowering of F0 (Lf0). In contrast this same node has anti-synergistic relationships with tongue fronting (tfr), larynx lowering (↓lx), vocal fold opening (vfo), and increasing vocal fold tension which leads to less vibrating mass and an increase to F0 (Hf0). This means that when there is epilaryngeal constriction there is an increased chance for the synergistic relationships to also co-occur. However, this does not mean that the synergistic nodes must co-occur when the node is activated. 
+Figure~\ref{fig:LAMNetwork}, shows which nodes interact in synergistic and anti-synergistic ways. This network is divided into three parts that represent the nodes which are responsible for vowel quality, phonatory quality, and tonal quality. For example, the node `epc' which is one of the nodes responsible for phonatory quality (i.e., responsible for producing phonation) has synergistic relationships with the nodes representing larynx raising (↑lx), vocal fold closure (vfc), tongue bunching(tdb), tongue retraction (tre), and for decreasing the vocal fold mass leading to a lowering of f0 (Lf0). In contrast this same node has anti-synergistic relationships with tongue fronting (tfr), larynx lowering (↓lx), vocal fold opening (vfo), and increasing vocal fold tension which leads to less vibrating mass and an increase to f0 (Hf0). This means that when there is epilaryngeal constriction there is an increased chance for the synergistic relationships to also co-occur. However, this does not mean that the synergistic nodes must co-occur when the node is activated. 
 
 %------------------------------------
 \section{Conclusion} \label{sec:Conclusion}
