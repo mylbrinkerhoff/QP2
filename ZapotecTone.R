@@ -2331,7 +2331,8 @@ ggsave(filename = "JOINHA3_CheckedLaryngeal.png",
 ## First
 FSRFirst <- zapotec_timesFSR %>%
     filter(normalized_time <= 0.329) %>%
-    select(H2Kc, 
+    select(Label,
+           H2Kc, 
            H1H2c, 
            H2H4c, 
            H1A1c, 
@@ -2345,14 +2346,17 @@ FSRFirst <- zapotec_timesFSR %>%
            HNR15,
            HNR25,
            HNR35,
+           strF0,
            normalized_time,
            phonation,
-           tone
+           tone,
+           Speaker
     )
 
 RDFirst <- zapotec_timesRD %>%
     filter(normalized_time <= 0.329) %>%
-    select(H2Kc, 
+    select(Label,
+           H2Kc, 
            H1H2c, 
            H2H4c, 
            H1A1c, 
@@ -2366,14 +2370,17 @@ RDFirst <- zapotec_timesRD %>%
            HNR15,
            HNR25,
            HNR35,
+           strF0,
            normalized_time,
            phonation,
-           tone
+           tone,
+           Speaker
     )
 
 JointFirst <- zapotec_timesJoin %>%
     filter(normalized_time <= 0.329) %>%
-    select(H2Kc, 
+    select(Label,
+           H2Kc, 
            H1H2c, 
            H2H4c, 
            H1A1c, 
@@ -2387,6 +2394,7 @@ JointFirst <- zapotec_timesJoin %>%
            HNR15,
            HNR25,
            HNR35,
+           strF0,
            normalized_time,
            phonation,
            tone,
@@ -2396,7 +2404,8 @@ JointFirst <- zapotec_timesJoin %>%
 ## Second
 FSRSecond <- zapotec_timesFSR %>%
     filter(normalized_time >= 0.33 & normalized_time <= 0.659) %>%
-    select(H2Kc, 
+    select(Label,
+           H2Kc, 
            H1H2c, 
            H2H4c, 
            H1A1c, 
@@ -2410,14 +2419,17 @@ FSRSecond <- zapotec_timesFSR %>%
            HNR15,
            HNR25,
            HNR35,
+           strF0,
            normalized_time,
            phonation,
-           tone
+           tone,
+           Speaker
     )
 
 RDSecond <- zapotec_timesRD %>%
     filter(normalized_time >= 0.33 & normalized_time <= 0.659) %>%
-    select(H2Kc, 
+    select(Label,
+           H2Kc, 
            H1H2c, 
            H2H4c, 
            H1A1c, 
@@ -2431,14 +2443,17 @@ RDSecond <- zapotec_timesRD %>%
            HNR15,
            HNR25,
            HNR35,
+           strF0,
            normalized_time,
            phonation,
-           tone
+           tone,
+           Speaker
     )
 
 JointSecond <- zapotec_timesJoin %>%
     filter(normalized_time >= 0.33 & normalized_time <= 0.659) %>%
-    select(H2Kc, 
+    select(Label,
+           H2Kc, 
            H1H2c, 
            H2H4c, 
            H1A1c, 
@@ -2452,6 +2467,7 @@ JointSecond <- zapotec_timesJoin %>%
            HNR15,
            HNR25,
            HNR35,
+           strF0,
            normalized_time,
            phonation,
            tone,
@@ -2462,7 +2478,8 @@ JointSecond <- zapotec_timesJoin %>%
 
 FSRThird <- zapotec_timesFSR %>%
     filter(normalized_time >= 0.66 & normalized_time <= 1) %>%
-    select(H2Kc, 
+    select(Label, 
+           H2Kc, 
            H1H2c, 
            H2H4c, 
            H1A1c, 
@@ -2476,14 +2493,17 @@ FSRThird <- zapotec_timesFSR %>%
            HNR15,
            HNR25,
            HNR35,
+           strF0,
            normalized_time,
            phonation,
-           tone
+           tone,
+           Speaker
     )
 
 RDThird <- zapotec_timesRD %>%
     filter(normalized_time >= 0.66 & normalized_time <= 1) %>%
-    select(H2Kc, 
+    select(Label,
+           H2Kc, 
            H1H2c, 
            H2H4c, 
            H1A1c, 
@@ -2497,14 +2517,17 @@ RDThird <- zapotec_timesRD %>%
            HNR15,
            HNR25,
            HNR35,
+           strF0,
            normalized_time,
            phonation,
-           tone
+           tone,
+           Speaker
     )
 
 JointThird <- zapotec_timesJoin %>%
     filter(normalized_time >= 0.66 & normalized_time <= 1) %>%
-    select(H2Kc, 
+    select(Label, 
+           H2Kc, 
            H1H2c, 
            H2H4c, 
            H1A1c, 
@@ -2518,6 +2541,7 @@ JointThird <- zapotec_timesJoin %>%
            HNR15,
            HNR25,
            HNR35,
+           strF0,
            normalized_time,
            phonation,
            tone,
@@ -2829,7 +2853,8 @@ summary(tone_results)
 
 Joint_1 <- zapotec_timesJoin %>%
   filter(normalized_time >= 0 & normalized_time <= .329) %>%
-  select(H2Kc, 
+  select(Label, 
+         H2Kc, 
          H1H2c, 
          H2H4c, 
          H1A1c, 
@@ -2852,7 +2877,8 @@ Joint_1 <- zapotec_timesJoin %>%
 
 Joint_2 <- zapotec_timesJoin %>%
   filter(normalized_time >= 0.33 & normalized_time <= 0.659) %>%
-  select(H2Kc, 
+  select(Label,
+         H2Kc, 
          H1H2c, 
          H2H4c, 
          H1A1c, 
@@ -2875,7 +2901,8 @@ Joint_2 <- zapotec_timesJoin %>%
 
 Joint_3 <- zapotec_timesJoin %>%
   filter(normalized_time >= 0.66 & normalized_time <= 1.00) %>%
-  select(H2Kc, 
+  select(Label, 
+         H2Kc, 
          H1H2c, 
          H2H4c, 
          H1A1c, 
@@ -2906,4 +2933,36 @@ summary(tone_results_2nd)
 tone_results_3rd <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Speaker) ,Joint_3)
 summary(tone_results_3rd)
 
-#
+
+# With word as random too
+
+tone_results_1.1 <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Speaker) + (1|Label) ,Joint_1)
+summary(tone_results_1.1)
+
+tone_results_2.1 <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Speaker) + (1|Label) ,Joint_2)
+summary(tone_results_2.1)
+
+tone_results_3.1 <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Speaker) + (1|Label) ,Joint_3)
+summary(tone_results_3.1)
+
+
+# Individual measurements
+#RD
+lmer_RD_first <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Label) ,RDFirst)
+summary(lmer_RD_first)
+
+lmer_RD_second <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Label) ,RDSecond)
+summary(lmer_RD_second)
+
+lmer_RD_third <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Label) ,RDThird)
+summary(lmer_RD_third)
+
+#FSR
+lmer_FSR_first <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Label) ,FSRFirst)
+summary(lmer_FSR_first)
+
+lmer_FSR_second <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Label) ,FSRSecond)
+summary(lmer_FSR_second)
+
+lmer_FSR_third <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Label) ,RDThird)
+summary(lmer_FSR_third)
