@@ -2330,7 +2330,7 @@ ggsave(filename = "JOINHA3_CheckedLaryngeal.png",
 
 ## First
 FSRFirst <- zapotec_timesFSR %>%
-    filter(normalized_time <= 0.249) %>%
+    filter(normalized_time <= 0.329) %>%
     select(H2Kc, 
            H1H2c, 
            H2H4c, 
@@ -2351,7 +2351,7 @@ FSRFirst <- zapotec_timesFSR %>%
     )
 
 RDFirst <- zapotec_timesRD %>%
-    filter(normalized_time <= 0.249) %>%
+    filter(normalized_time <= 0.329) %>%
     select(H2Kc, 
            H1H2c, 
            H2H4c, 
@@ -2372,7 +2372,7 @@ RDFirst <- zapotec_timesRD %>%
     )
 
 JointFirst <- zapotec_timesJoin %>%
-    filter(normalized_time <= 0.249) %>%
+    filter(normalized_time <= 0.329) %>%
     select(H2Kc, 
            H1H2c, 
            H2H4c, 
@@ -2395,7 +2395,7 @@ JointFirst <- zapotec_timesJoin %>%
 
 ## Second
 FSRSecond <- zapotec_timesFSR %>%
-    filter(normalized_time >= 0.25 & normalized_time <= 0.499) %>%
+    filter(normalized_time >= 0.33 & normalized_time <= 0.659) %>%
     select(H2Kc, 
            H1H2c, 
            H2H4c, 
@@ -2416,7 +2416,7 @@ FSRSecond <- zapotec_timesFSR %>%
     )
 
 RDSecond <- zapotec_timesRD %>%
-    filter(normalized_time >= 0.25 & normalized_time <= 0.499) %>%
+    filter(normalized_time >= 0.33 & normalized_time <= 0.659) %>%
     select(H2Kc, 
            H1H2c, 
            H2H4c, 
@@ -2437,7 +2437,7 @@ RDSecond <- zapotec_timesRD %>%
     )
 
 JointSecond <- zapotec_timesJoin %>%
-    filter(normalized_time >= 0.25 & normalized_time <= 0.499) %>%
+    filter(normalized_time >= 0.33 & normalized_time <= 0.659) %>%
     select(H2Kc, 
            H1H2c, 
            H2H4c, 
@@ -2461,7 +2461,7 @@ JointSecond <- zapotec_timesJoin %>%
 ## Third
 
 FSRThird <- zapotec_timesFSR %>%
-    filter(normalized_time >= 0.500 & normalized_time <= 0.749) %>%
+    filter(normalized_time >= 0.66 & normalized_time <= 1) %>%
     select(H2Kc, 
            H1H2c, 
            H2H4c, 
@@ -2482,7 +2482,7 @@ FSRThird <- zapotec_timesFSR %>%
     )
 
 RDThird <- zapotec_timesRD %>%
-    filter(normalized_time >= 0.500 & normalized_time <= 0.749) %>%
+    filter(normalized_time >= 0.66 & normalized_time <= 1) %>%
     select(H2Kc, 
            H1H2c, 
            H2H4c, 
@@ -2503,7 +2503,7 @@ RDThird <- zapotec_timesRD %>%
     )
 
 JointThird <- zapotec_timesJoin %>%
-    filter(normalized_time >= 0.500 & normalized_time <= 0.749) %>%
+    filter(normalized_time >= 0.66 & normalized_time <= 1) %>%
     select(H2Kc, 
            H1H2c, 
            H2H4c, 
@@ -2524,71 +2524,6 @@ JointThird <- zapotec_timesJoin %>%
            Speaker
     )
 
-## Fourth
-
-FSRFourth <- zapotec_timesFSR %>%
-    filter(normalized_time >= 0.750 & normalized_time <= 1.00) %>%
-    select(H2Kc, 
-           H1H2c, 
-           H2H4c, 
-           H1A1c, 
-           H1A2c, 
-           H1A3c, 
-           H42Kc, 
-           H2KH5Kc,
-           CPP,
-           Energy,
-           HNR05,
-           HNR15,
-           HNR25,
-           HNR35,
-           normalized_time,
-           phonation,
-           tone
-    )
-
-RDFourth <- zapotec_timesRD %>%
-    filter(normalized_time >= 0.750 & normalized_time <= 1.00) %>%
-    select(H2Kc, 
-           H1H2c, 
-           H2H4c, 
-           H1A1c, 
-           H1A2c, 
-           H1A3c, 
-           H42Kc, 
-           H2KH5Kc,
-           CPP,
-           Energy,
-           HNR05,
-           HNR15,
-           HNR25,
-           HNR35,
-           normalized_time,
-           phonation,
-           tone
-    )
-
-JointFourth <- zapotec_timesJoin %>%
-    filter(normalized_time >= 0.750 & normalized_time <= 1.00) %>%
-    select(H2Kc, 
-           H1H2c, 
-           H2H4c, 
-           H1A1c, 
-           H1A2c, 
-           H1A3c, 
-           H42Kc, 
-           H2KH5Kc,
-           CPP,
-           Energy,
-           HNR05,
-           HNR15,
-           HNR25,
-           HNR35,
-           normalized_time,
-           phonation,
-           tone,
-           Speaker
-    )
 
 ## Boxplots and Barplots
 # FSR
@@ -2599,7 +2534,7 @@ FSRFirst_h1h2 <- ggplot(data = FSRFirst,
                               colour=phonation)
 ) +
     geom_boxplot() +
-    labs(title = "FSR's average H1-H2 values in first fourth", 
+    labs(title = "Boxplot of FSR's H1-H2 values in the first third", 
          x = "Phonation",
          y = "H1-H2 (dB)") +
     theme_bw() +
@@ -2609,7 +2544,7 @@ FSRFirst_h1h2 <- ggplot(data = FSRFirst,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(FSRFirst_h1h2)
-ggsave(filename = "FSR1sth1h2.png", 
+ggsave(filename = "FSR_h1h2_1st.png", 
        device = "png", 
        units = "in", 
        width=16, 
@@ -2624,7 +2559,7 @@ FSRSecond_h1h2 <- ggplot(data = FSRSecond,
                             colour=phonation)
 ) +
     geom_boxplot() +
-    labs(title = "FSR's average H1-H2 values in second fourth", 
+    labs(title = "Boxplot of FSR's H1-H2 values in second third", 
          x = "Phonation",
          y = "H1-H2 (dB)") +
     theme_bw() +
@@ -2634,7 +2569,7 @@ FSRSecond_h1h2 <- ggplot(data = FSRSecond,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(FSRSecond_h1h2)
-ggsave(filename = "FSR2ndh1h2.png", 
+ggsave(filename = "FSR_h1h2_2nd.png", 
        device = "png", 
        units = "in", 
        width=16, 
@@ -2648,7 +2583,7 @@ FSRThird_h1h2 <- ggplot(data = FSRThird,
                             colour=phonation)
 ) +
     geom_boxplot() +
-    labs(title = "FSR's average H1-H2 values in third fourth", 
+    labs(title = "Boxplot of FSR's H1-H2 values in final third", 
          x = "Phonation",
          y = "H1-H2 (dB)") +
     theme_bw() +
@@ -2658,31 +2593,7 @@ FSRThird_h1h2 <- ggplot(data = FSRThird,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(FSRThird_h1h2)
-ggsave(filename = "FSR3rdh1h2.png", 
-       device = "png", 
-       units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
-
-FSRFourth_h1h2 <- ggplot(data = FSRFourth, 
-                        aes(x = phonation, 
-                            y=H1H2c,
-                            #group=interaction(tone, phonation),
-                            colour=phonation)
-) +
-    geom_boxplot() +
-    labs(title = "FSR's average H1-H2 values in last fourth", 
-         x = "Phonation",
-         y = "H1-H2 (dB)") +
-    theme_bw() +
-    scale_fill_manual(values=cbbPalette) + # To use for fills
-    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
-print(FSRFourth_h1h2)
-ggsave(filename = "FSR4thh1h2.png", 
+ggsave(filename = "FSR_h1h2_3rd.png", 
        device = "png", 
        units = "in", 
        width=16, 
@@ -2697,7 +2608,7 @@ FSRFirst_h1a3 <- ggplot(data = FSRFirst,
                             colour=phonation)
 ) +
     geom_boxplot() +
-    labs(title = "FSR's average H1-A3 values in first fourth", 
+    labs(title = "Boxplot of FSR's H1-A3 values in the first third", 
          x = "Phonation",
          y = "H1-A3 (dB)") +
     theme_bw() +
@@ -2707,7 +2618,7 @@ FSRFirst_h1a3 <- ggplot(data = FSRFirst,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(FSRFirst_h1a3)
-ggsave(filename = "FSR1sth1a3.png", 
+ggsave(filename = "FSR_h1a3_First.png", 
        device = "png", 
        units = "in", 
        width=16, 
@@ -2721,7 +2632,7 @@ FSRSecond_h1a3 <- ggplot(data = FSRSecond,
                              colour=phonation)
 ) +
     geom_boxplot() +
-    labs(title = "FSR's average H1-A3 values in second fourth", 
+    labs(title = "Boxplot for FSR's H1-A3 values in the second third", 
          x = "Phonation",
          y = "H1-A3 (dB)") +
     theme_bw() +
@@ -2731,7 +2642,7 @@ FSRSecond_h1a3 <- ggplot(data = FSRSecond,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(FSRSecond_h1a3)
-ggsave(filename = "FSR2ndh1a3.png", 
+ggsave(filename = "FSR_h1a3_Second.png", 
        device = "png", 
        units = "in", 
        width=16, 
@@ -2745,7 +2656,7 @@ FSRThird_h1a3 <- ggplot(data = FSRThird,
                             colour=phonation)
 ) +
     geom_boxplot() +
-    labs(title = "FSR's average H1-A3 values in third fourth", 
+    labs(title = "Boxplot for FSR's H1-A3 values in the final third", 
          x = "Phonation",
          y = "H1-A3 (dB)") +
     theme_bw() +
@@ -2755,36 +2666,13 @@ FSRThird_h1a3 <- ggplot(data = FSRThird,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(FSRThird_h1a3)
-ggsave(filename = "FSR3rdh1a3.png", 
+ggsave(filename = "FSR_h1a3_third.png", 
        device = "png", 
        units = "in", 
        width=16, 
        height=9, 
        dpi=600)
 
-FSRFourth_h1a3 <- ggplot(data = FSRFourth, 
-                         aes(x = phonation, 
-                             y=H1A3c,
-                             #group=interaction(tone, phonation),
-                             colour=phonation)
-) +
-    geom_boxplot() +
-    labs(title = "FSR's average H1-A3 values in last fourth", 
-         x = "Phonation",
-         y = "H1-A3 (dB)") +
-    theme_bw() +
-    scale_fill_manual(values=cbbPalette) + # To use for fills
-    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
-print(FSRFourth_h1a3)
-ggsave(filename = "FSR4thh1a3.png", 
-       device = "png", 
-       units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
 
 # RD
 RDFirst_h1h2 <- ggplot(data = RDFirst, 
@@ -2794,7 +2682,7 @@ RDFirst_h1h2 <- ggplot(data = RDFirst,
                             colour=phonation)
 ) +
     geom_boxplot() +
-    labs(title = "RD's average H1-H2 values in first fourth", 
+    labs(title = "Boxbplot of RD's H1-H2 values in the first third", 
          x = "Phonation",
          y = "H1-H2 (dB)") +
     theme_bw() +
@@ -2804,7 +2692,7 @@ RDFirst_h1h2 <- ggplot(data = RDFirst,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(RDFirst_h1h2)
-ggsave(filename = "RD1sth1h2.png", 
+ggsave(filename = "RD_h1h2_first.png", 
        device = "png", 
        units = "in", 
        width=16, 
@@ -2818,7 +2706,7 @@ RDSecond_h1h2 <- ggplot(data = RDSecond,
                              colour=phonation)
 ) +
     geom_boxplot() +
-    labs(title = "RD's average H1-H2 values in second fourth", 
+    labs(title = "Boxplot of RD's H1-H2 values in the second third", 
          x = "Phonation",
          y = "H1-H2 (dB)") +
     theme_bw() +
@@ -2828,7 +2716,7 @@ RDSecond_h1h2 <- ggplot(data = RDSecond,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(RDSecond_h1h2)
-ggsave(filename = "RD2ndh1h2.png", 
+ggsave(filename = "RD_h1h2_second.png", 
        device = "png", 
        units = "in", 
        width=16, 
@@ -2842,7 +2730,7 @@ RDThird_h1h2 <- ggplot(data = RDThird,
                             colour=phonation)
 ) +
     geom_boxplot() +
-    labs(title = "RD's average H1-H2 values in third fourth", 
+    labs(title = "Boxplot of RD's H1-H2 values in the final third", 
          x = "Phonation",
          y = "H1-H2 (dB)") +
     theme_bw() +
@@ -2852,36 +2740,13 @@ RDThird_h1h2 <- ggplot(data = RDThird,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(RDThird_h1h2)
-ggsave(filename = "RD3rdh1h2.png", 
+ggsave(filename = "RD_h1h2_third.png", 
        device = "png", 
        units = "in", 
        width=16, 
        height=9, 
        dpi=600)
 
-RDFourth_h1h2 <- ggplot(data = RDFourth, 
-                         aes(x = phonation, 
-                             y=H1H2c,
-                             #group=interaction(tone, phonation),
-                             colour=phonation)
-) +
-    geom_boxplot() +
-    labs(title = "RD's average H1-H2 values in last fourth", 
-         x = "Phonation",
-         y = "H1-H2 (dB)") +
-    theme_bw() +
-    scale_fill_manual(values=cbbPalette) + # To use for fills
-    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
-print(RDFourth_h1h2)
-ggsave(filename = "RD4thh1h2.png", 
-       device = "png", 
-       units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
 
 #H1-A3
 RDFirst_h1a3 <- ggplot(data = RDFirst, 
@@ -2891,7 +2756,7 @@ RDFirst_h1a3 <- ggplot(data = RDFirst,
                             colour=phonation)
 ) +
     geom_boxplot() +
-    labs(title = "RD's average H1-A3 values in first fourth", 
+    labs(title = "Boxplot of RD's H1-A3 values in the first third", 
          x = "Phonation",
          y = "H1-A3 (dB)") +
     theme_bw() +
@@ -2901,7 +2766,7 @@ RDFirst_h1a3 <- ggplot(data = RDFirst,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(RDFirst_h1a3)
-ggsave(filename = "RD1sth1a3.png", 
+ggsave(filename = "RD_h1a3_first.png", 
        device = "png", 
        units = "in", 
        width=16, 
@@ -2915,7 +2780,7 @@ RDSecond_h1a3 <- ggplot(data = RDSecond,
                              colour=phonation)
 ) +
     geom_boxplot() +
-    labs(title = "RD's average H1-A3 values in second fourth", 
+    labs(title = "Boxplot of RD's H1-A3 values in the second third", 
          x = "Phonation",
          y = "H1-A3 (dB)") +
     theme_bw() +
@@ -2925,7 +2790,7 @@ RDSecond_h1a3 <- ggplot(data = RDSecond,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(RDSecond_h1a3)
-ggsave(filename = "RD2ndh1a3.png", 
+ggsave(filename = "RD_h1a3_second.png", 
        device = "png", 
        units = "in", 
        width=16, 
@@ -2939,7 +2804,7 @@ RDThird_h1a3 <- ggplot(data = RDThird,
                             colour=phonation)
 ) +
     geom_boxplot() +
-    labs(title = "RD's average H1-A3 values in third fourth", 
+    labs(title = "Boxplot for RD's H1-A3 values in the final third", 
          x = "Phonation",
          y = "H1-A3 (dB)") +
     theme_bw() +
@@ -2949,36 +2814,13 @@ RDThird_h1a3 <- ggplot(data = RDThird,
            fill = guide_legend("Phonation", ncol = 4) ) +
     my.theme
 print(RDThird_h1a3)
-ggsave(filename = "RD3rdh1a3.png", 
+ggsave(filename = "RD_h1a3_third.png", 
        device = "png", 
        units = "in", 
        width=16, 
        height=9, 
        dpi=600)
 
-RDFourth_h1a3 <- ggplot(data = RDFourth, 
-                         aes(x = phonation, 
-                             y=H1A3c,
-                             #group=interaction(tone, phonation),
-                             colour=phonation)
-) +
-    geom_boxplot() +
-    labs(title = "RD's average H1-A3 values in last fourth", 
-         x = "Phonation",
-         y = "H1-A3 (dB)") +
-    theme_bw() +
-    scale_fill_manual(values=cbbPalette) + # To use for fills
-    scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
-print(RDFourth_h1a3)
-ggsave(filename = "RD4thh1a3.png", 
-       device = "png", 
-       units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
 
 # lmer
 str(zapotec_timesJoin)
@@ -3064,3 +2906,4 @@ summary(tone_results_2nd)
 tone_results_3rd <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Speaker) ,Joint_3)
 summary(tone_results_3rd)
 
+#
