@@ -1,0 +1,360 @@
+> tone_results_1.1 <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Speaker) + (1|Label) ,Joint_1)
+> summary(tone_results_1.1)
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: strF0 ~ phonation + H1H2c + H1A3c + CPP + (1 | Speaker) + (1 |  
+    Label)
+   Data: Joint_1
+
+REML criterion at convergence: 206370.6
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-7.5142 -0.3654 -0.0041  0.4081  9.7966 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Label    (Intercept) 1176     34.29   
+ Speaker  (Intercept) 2121     46.06   
+ Residual              326     18.06   
+Number of obs: 23716, groups:  Label, 340; Speaker, 2
+
+Fixed effects:
+                         Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)             1.837e+02  3.266e+01  1.009e+00   5.625 0.110517    
+phonationBreathy       -2.468e+01  6.728e+00  3.352e+02  -3.668 0.000284 ***
+phonationChecked       -1.671e+01  4.939e+00  3.363e+02  -3.382 0.000803 ***
+phonationLaryngealized  5.679e+00  5.623e+00  3.360e+02   1.010 0.313209    
+H1H2c                   2.965e-01  3.963e-02  2.346e+04   7.482 7.58e-14 ***
+H1A3c                  -2.773e-02  1.983e-02  2.344e+04  -1.398 0.162084    
+CPP                    -4.965e-01  1.734e-02  2.341e+04 -28.635  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) phntnB phntnC phntnL H1H2c  H1A3c 
+phontnBrthy -0.027                                   
+phontnChckd -0.037  0.178                            
+phntnLryngl -0.032  0.156  0.213                     
+H1H2c        0.000  0.005  0.005  0.004              
+H1A3c        0.000 -0.008 -0.006  0.001 -0.298       
+CPP         -0.002 -0.003  0.004 -0.004  0.013 -0.546
+> tone_results_2.1 <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Speaker) + (1|Label) ,Joint_2)
+> summary(tone_results_2.1)
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: strF0 ~ phonation + H1H2c + H1A3c + CPP + (1 | Speaker) + (1 |  
+    Label)
+   Data: Joint_2
+
+REML criterion at convergence: 211643.7
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-5.6114 -0.3253  0.0043  0.3044 10.6533 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Label    (Intercept) 1098.7   33.15   
+ Speaker  (Intercept) 1207.4   34.75   
+ Residual              436.4   20.89   
+Number of obs: 23546, groups:  Label, 340; Speaker, 2
+
+Fixed effects:
+                         Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)             1.755e+02  2.469e+01  1.021e+00   7.106  0.08580 .  
+phonationBreathy       -1.912e+01  6.513e+00  3.341e+02  -2.936  0.00355 ** 
+phonationChecked       -5.475e+00  4.781e+00  3.352e+02  -1.145  0.25300    
+phonationLaryngealized -4.582e+00  5.442e+00  3.347e+02  -0.842  0.40042    
+H1H2c                   2.359e+00  4.088e-02  2.352e+04  57.707  < 2e-16 ***
+H1A3c                  -3.825e-01  2.519e-02  2.352e+04 -15.183  < 2e-16 ***
+CPP                    -3.985e-01  3.905e-02  2.352e+04 -10.204  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) phntnB phntnC phntnL H1H2c  H1A3c 
+phontnBrthy -0.034                                   
+phontnChckd -0.047  0.179                            
+phntnLryngl -0.042  0.156  0.213                     
+H1H2c       -0.004  0.025  0.017  0.004              
+H1A3c       -0.008 -0.026 -0.020  0.008 -0.224       
+CPP         -0.028 -0.013 -0.003  0.014  0.091 -0.052
+> tone_results_3.1 <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Speaker) + (1|Label) ,Joint_3)
+> summary(tone_results_3.1)
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: strF0 ~ phonation + H1H2c + H1A3c + CPP + (1 | Speaker) + (1 |  
+    Label)
+   Data: Joint_3
+
+REML criterion at convergence: 203604.5
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-6.7452 -0.3875 -0.0031  0.3778 11.7912 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Label    (Intercept) 1622.5   40.28   
+ Speaker  (Intercept)  918.0   30.30   
+ Residual              219.2   14.81   
+Number of obs: 24493, groups:  Label, 340; Speaker, 2
+
+Fixed effects:
+                         Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)             1.535e+02  2.161e+01  1.035e+00   7.101   0.0838 .  
+phonationBreathy       -2.009e+01  7.895e+00  3.352e+02  -2.544   0.0114 *  
+phonationChecked       -6.867e+00  5.793e+00  3.356e+02  -1.185   0.2367    
+phonationLaryngealized -1.697e+00  6.595e+00  3.355e+02  -0.257   0.7970    
+H1H2c                   8.754e-01  2.775e-02  2.425e+04  31.540  < 2e-16 ***
+H1A3c                  -7.052e-02  1.234e-02  2.422e+04  -5.713 1.12e-08 ***
+CPP                     3.003e-01  1.235e-02  2.417e+04  24.314  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) phntnB phntnC phntnL H1H2c  H1A3c 
+phontnBrthy -0.048                                   
+phontnChckd -0.065  0.178                            
+phntnLryngl -0.057  0.156  0.213                     
+H1H2c       -0.001  0.011  0.007  0.004              
+H1A3c       -0.002 -0.013 -0.004 -0.003 -0.356       
+CPP         -0.005  0.003  0.004  0.002  0.204 -0.438
+> # Individual measurements
+> #RD
+> lmer_RD_first <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Label) ,RDFirst)
+> summary(lmer_RD_first)
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: strF0 ~ phonation + H1H2c + H1A3c + CPP + (1 | Label)
+   Data: RDFirst
+
+REML criterion at convergence: 56007.4
+
+Scaled residuals: 
+     Min       1Q   Median       3Q      Max 
+-11.4198  -0.4804   0.0011   0.4422  26.4790 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Label    (Intercept) 309.84   17.602  
+ Residual              16.95    4.117  
+Number of obs: 9640, groups:  Label, 205
+
+Fixed effects:
+                         Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)             1.469e+02  1.636e+00  2.011e+02  89.814   <2e-16 ***
+phonationBreathy       -9.837e+00  4.462e+00  2.009e+02  -2.205   0.0286 *  
+phonationChecked       -7.238e+00  3.230e+00  2.010e+02  -2.241   0.0261 *  
+phonationLaryngealized  3.221e+00  3.561e+00  2.010e+02   0.904   0.3669    
+H1H2c                   5.244e-01  2.747e-02  9.444e+03  19.091   <2e-16 ***
+H1A3c                  -2.468e-01  8.831e-03  9.440e+03 -27.940   <2e-16 ***
+CPP                    -1.252e-01  7.710e-03  9.436e+03 -16.239   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) phntnB phntnC phntnL H1H2c  H1A3c 
+phontnBrthy -0.366                                   
+phontnChckd -0.506  0.186                            
+phntnLryngl -0.459  0.168  0.233                     
+H1H2c       -0.003  0.002  0.002  0.000              
+H1A3c       -0.004 -0.003 -0.002  0.000 -0.581       
+CPP         -0.003  0.000  0.002 -0.001 -0.097 -0.557
+> lmer_RD_second <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Label) ,RDSecond)
+> summary(lmer_RD_second)
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: strF0 ~ phonation + H1H2c + H1A3c + CPP + (1 | Label)
+   Data: RDSecond
+
+REML criterion at convergence: 62390.4
+
+Scaled residuals: 
+     Min       1Q   Median       3Q      Max 
+-11.7115  -0.3395   0.0045   0.3424   8.5753 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Label    (Intercept) 257.75   16.054  
+ Residual              35.54    5.961  
+Number of obs: 9553, groups:  Label, 205
+
+Fixed effects:
+                         Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)             138.12611    1.53209  222.08115  90.155   <2e-16 ***
+phonationBreathy        -10.09780    4.07469  200.66342  -2.478   0.0140 *  
+phonationChecked         -4.26460    2.95041  200.98105  -1.445   0.1499    
+phonationLaryngealized    1.02307    3.25287  200.86905   0.315   0.7535    
+H1H2c                     1.63963    0.04461 9532.28914  36.756   <2e-16 ***
+H1A3c                    -0.32362    0.01712 9500.46370 -18.905   <2e-16 ***
+CPP                      -0.03205    0.01639 9452.98026  -1.955   0.0506 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) phntnB phntnC phntnL H1H2c  H1A3c 
+phontnBrthy -0.355                                   
+phontnChckd -0.493  0.186                            
+phntnLryngl -0.452  0.168  0.232                     
+H1H2c       -0.038  0.025  0.023  0.012              
+H1A3c       -0.111 -0.015 -0.017  0.014 -0.312       
+CPP         -0.123 -0.012  0.006  0.005 -0.053 -0.296
+> lmer_RD_third <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Label) ,RDThird)
+> summary(lmer_RD_third)
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: strF0 ~ phonation + H1H2c + H1A3c + CPP + (1 | Label)
+   Data: RDThird
+
+REML criterion at convergence: 66905.8
+
+Scaled residuals: 
+     Min       1Q   Median       3Q      Max 
+-10.0952  -0.3853  -0.0111   0.3749  23.1284 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Label    (Intercept) 349.25   18.688  
+ Residual              43.18    6.571  
+Number of obs: 9950, groups:  Label, 205
+
+Fixed effects:
+                         Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)             123.22682    1.74084  202.21492  70.786  < 2e-16 ***
+phonationBreathy        -10.23787    4.74045  200.62796  -2.160   0.0320 *  
+phonationChecked         -6.96963    3.43242  200.93224  -2.031   0.0436 *  
+phonationLaryngealized    0.92940    3.78461  200.88470   0.246   0.8063    
+H1H2c                     0.20289    0.03192 9812.09457   6.355 2.17e-10 ***
+H1A3c                     0.09030    0.01007 9790.13405   8.970  < 2e-16 ***
+CPP                       0.26097    0.00891 9758.13831  29.289  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) phntnB phntnC phntnL H1H2c  H1A3c 
+phontnBrthy -0.366                                   
+phontnChckd -0.506  0.186                            
+phntnLryngl -0.459  0.168  0.233                     
+H1H2c       -0.017  0.012  0.007  0.008              
+H1A3c       -0.021 -0.009 -0.005  0.001 -0.593       
+CPP         -0.014  0.001  0.005 -0.001  0.167 -0.564
+> #FSR
+> lmer_FSR_first <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Label) ,FSRFirst)
+> summary(lmer_FSR_first)
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: strF0 ~ phonation + H1H2c + H1A3c + CPP + (1 | Label)
+   Data: FSRFirst
+
+REML criterion at convergence: 119143.8
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-8.6418 -0.3948 -0.0128  0.4122 11.3028 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Label    (Intercept) 2153.0   46.40   
+ Residual              251.3   15.85   
+Number of obs: 14076, groups:  Label, 230
+
+Fixed effects:
+                         Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)             2.181e+02  4.000e+00  2.264e+02  54.531  < 2e-16 ***
+phonationBreathy       -3.538e+01  1.165e+01  2.256e+02  -3.036  0.00268 ** 
+phonationChecked       -2.435e+01  8.065e+00  2.260e+02  -3.019  0.00283 ** 
+phonationLaryngealized  9.842e+00  9.019e+00  2.257e+02   1.091  0.27635    
+H1H2c                  -1.680e-02  4.107e-02  1.388e+04  -0.409  0.68260    
+H1A3c                   1.042e-01  2.544e-02  1.388e+04   4.098 4.19e-05 ***
+CPP                    -7.382e-01  1.848e-02  1.386e+04 -39.935  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) phntnB phntnC phntnL H1H2c  H1A3c 
+phontnBrthy -0.343                                   
+phontnChckd -0.496  0.170                            
+phntnLryngl -0.443  0.152  0.220                     
+H1H2c       -0.003  0.004  0.003  0.004              
+H1A3c        0.002 -0.009 -0.003  0.002 -0.090       
+CPP         -0.024 -0.003  0.003 -0.005  0.053 -0.423
+> lmer_FSR_second <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Label) ,FSRSecond)
+> summary(lmer_FSR_second)
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: strF0 ~ phonation + H1H2c + H1A3c + CPP + (1 | Label)
+   Data: FSRSecond
+
+REML criterion at convergence: 125375
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-6.3625 -0.3112  0.0049  0.2764 10.9112 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Label    (Intercept) 2057.5   45.36   
+ Residual              416.2   20.40   
+Number of obs: 13993, groups:  Label, 230
+
+Fixed effects:
+                         Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)             2.239e+02  4.150e+00  2.845e+02  53.947   <2e-16 ***
+phonationBreathy       -2.799e+01  1.141e+01  2.252e+02  -2.454   0.0149 *  
+phonationChecked       -1.410e+01  7.893e+00  2.254e+02  -1.786   0.0754 .  
+phonationLaryngealized -1.099e+01  8.825e+00  2.250e+02  -1.245   0.2145    
+H1H2c                   1.873e+00  5.600e-02  1.397e+04  33.441   <2e-16 ***
+H1A3c                  -3.861e-01  4.224e-02  1.399e+04  -9.143   <2e-16 ***
+CPP                    -1.399e+00  7.391e-02  1.392e+04 -18.930   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) phntnB phntnC phntnL H1H2c  H1A3c 
+phontnBrthy -0.320                                   
+phontnChckd -0.468  0.171                            
+phntnLryngl -0.425  0.152  0.220                     
+H1H2c       -0.048  0.029  0.015  0.004              
+H1A3c       -0.033 -0.035 -0.009  0.003 -0.280       
+CPP         -0.331 -0.005  0.003  0.020  0.174 -0.017
+> lmer_FSR_third <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Label) ,RDThird)
+> summary(lmer_FSR_third)
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: strF0 ~ phonation + H1H2c + H1A3c + CPP + (1 | Label)
+   Data: RDThird
+
+REML criterion at convergence: 66905.8
+
+Scaled residuals: 
+     Min       1Q   Median       3Q      Max 
+-10.0952  -0.3853  -0.0111   0.3749  23.1284 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Label    (Intercept) 349.25   18.688  
+ Residual              43.18    6.571  
+Number of obs: 9950, groups:  Label, 205
+
+Fixed effects:
+                         Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)             123.22682    1.74084  202.21492  70.786  < 2e-16 ***
+phonationBreathy        -10.23787    4.74045  200.62796  -2.160   0.0320 *  
+phonationChecked         -6.96963    3.43242  200.93224  -2.031   0.0436 *  
+phonationLaryngealized    0.92940    3.78461  200.88470   0.246   0.8063    
+H1H2c                     0.20289    0.03192 9812.09457   6.355 2.17e-10 ***
+H1A3c                     0.09030    0.01007 9790.13405   8.970  < 2e-16 ***
+CPP                       0.26097    0.00891 9758.13831  29.289  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) phntnB phntnC phntnL H1H2c  H1A3c 
+phontnBrthy -0.366                                   
+phontnChckd -0.506  0.186                            
+phntnLryngl -0.459  0.168  0.233                     
+H1H2c       -0.017  0.012  0.007  0.008              
+H1A3c       -0.021 -0.009 -0.005  0.001 -0.593       
+CPP         -0.014  0.001  0.005 -0.001  0.167 -0.564
