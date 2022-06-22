@@ -93,9 +93,9 @@ theme2 <- theme(axis.text = element_text(colour="black", size=25),
 
 # Adding the csv/txt file.
 # This is the file that is generated from VoiceSauce. 
-zapotecVS <- read.table("SLZTone.txt", header = T, sep = "\t")
+zapotecVS <- read.table("SLZTone.txt", header = T, sep = ",")
 
-zapotecRD <- read.table("RDZapotec.txt", header = T, sep = "\t")
+zapotecRD <- read.table("RDZapotec.txt", header = T, sep = ",")
 
 # Extract the phonation and the tone labels into new columns
 
@@ -2966,3 +2966,388 @@ summary(lmer_FSR_second)
 
 lmer_FSR_third <- lmer(strF0 ~ phonation + H1H2c + H1A3c + CPP + (1|Label) ,RDThird)
 summary(lmer_FSR_third)
+
+
+
+#Averaging the data
+
+write_csv(FSRFirst, file = 'FSRFirst.txt')
+write_csv(FSRSecond, file = "FSRSecond.txt")
+write_csv(FSRThird, file = "FSRThird.txt")
+
+write_csv(RDFirst, file = 'RDFirst.txt')
+write_csv(RDSecond, file = "RDSecond.txt")
+write_csv(RDThird, file = "RDThird.txt")
+
+write_csv(Joint_1, file = 'JointFirst.txt')
+write_csv(Joint_2, file = "JointSecond.txt")
+write_csv(Joint_3, file = "JointThird.txt")
+
+# mean.FSRFirst <- aggregate(. ~ Label, FSRFirst, mean)
+mean.FSRFirst <- FSRFirst %>% 
+  group_by(Label,phonation,tone) %>% 
+  summarise(across(where(is.numeric), list(mean = mean)))
+mean.FSRFirst
+
+mean.FSRSecond <- FSRSecond %>% 
+  group_by(Label,phonation,tone) %>% 
+  summarise(across(where(is.numeric), list(mean = mean)))
+mean.FSRSecond
+
+mean.FSRThird <- FSRThird %>% 
+  group_by(Label,phonation,tone) %>% 
+  summarise(across(where(is.numeric), list(mean = mean)))
+mean.FSRThird
+
+
+mean.RDFirst <- RDFirst %>% 
+  group_by(Label,phonation,tone) %>% 
+  summarise(across(where(is.numeric), list(mean = mean)))
+mean.RDFirst
+
+mean.RDSecond <- RDSecond %>% 
+  group_by(Label,phonation,tone) %>% 
+  summarise(across(where(is.numeric), list(mean = mean)))
+mean.RDSecond
+
+mean.RDThird <- RDThird %>% 
+  group_by(Label,phonation,tone) %>% 
+  summarise(across(where(is.numeric), list(mean = mean)))
+mean.RDThird
+
+mean.JointFirst <- Joint_1 %>% 
+  group_by(Label,phonation,tone,Speaker) %>% 
+  summarise(across(where(is.numeric), list(mean = mean)))
+mean.JointFirst
+
+mean.JointSecond <- Joint_2 %>% 
+  group_by(Label,phonation,tone,Speaker) %>% 
+  summarise(across(where(is.numeric), list(mean = mean)))
+mean.JointSecond
+
+mean.JointThird <- Joint_3 %>% 
+  group_by(Label,phonation,tone,Speaker) %>% 
+  summarise(across(where(is.numeric), list(mean = mean)))
+mean.JointThird
+
+# FSR
+mean.FSRFirst_h1h2 <- ggplot(data = mean.FSRFirst, 
+                        aes(x = phonation, 
+                            y=H1H2c_mean,
+                            #group=interaction(tone, phonation),
+                            colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot of FSR's H1-H2 values in the first third", 
+       x = "Phonation",
+       y = "H1-H2 (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.FSRFirst_h1h2)
+ggsave(filename = "mean_FSR_h1h2_1st.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+
+mean.FSRSecond_h1h2 <- ggplot(data = mean.FSRSecond, 
+                         aes(x = phonation, 
+                             y=H1H2c_mean,
+                             #group=interaction(tone, phonation),
+                             colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot of FSR's H1-H2 values in second third", 
+       x = "Phonation",
+       y = "H1-H2 (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.FSRSecond_h1h2)
+ggsave(filename = "mean_FSR_h1h2_2nd.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+mean.FSRThird_h1h2 <- ggplot(data = mean.FSRThird, 
+                        aes(x = phonation, 
+                            y=H1H2c_mean,
+                            #group=interaction(tone, phonation),
+                            colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot of FSR's H1-H2 values in final third", 
+       x = "Phonation",
+       y = "H1-H2 (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.FSRThird_h1h2)
+ggsave(filename = "mean.FSR_h1h2_3rd.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+#H1-A3
+mean.FSRFirst_h1a3 <- ggplot(data = mean.FSRFirst, 
+                        aes(x = phonation, 
+                            y=H1A3c_mean,
+                            #group=interaction(tone, phonation),
+                            colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot of FSR's H1-A3 values in the first third", 
+       x = "Phonation",
+       y = "H1-A3 (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.FSRFirst_h1a3)
+ggsave(filename = "mean_FSR_h1a3_First.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+mean.FSRSecond_h1a3 <- ggplot(data = mean.FSRSecond, 
+                         aes(x = phonation, 
+                             y=H1A3c_mean,
+                             #group=interaction(tone, phonation),
+                             colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot for FSR's H1-A3 values in the second third", 
+       x = "Phonation",
+       y = "H1-A3 (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.FSRSecond_h1a3)
+ggsave(filename = "mean_FSR_h1a3_Second.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+mean.FSRThird_h1a3 <- ggplot(data = mean.FSRThird, 
+                        aes(x = phonation, 
+                            y=H1A3c_mean,
+                            #group=interaction(tone, phonation),
+                            colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot for FSR's H1-A3 values in the final third", 
+       x = "Phonation",
+       y = "H1-A3 (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.FSRThird_h1a3)
+ggsave(filename = "mean_FSR_h1a3_third.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+lmer_mean.FSRFirst <- lmer(strF0_mean ~ phonation + H1H2c_mean + H1A3c_mean + CPP_mean + (1|Label) ,mean.FSRFirst)
+summary(lmer_mean.FSRFirst)
+
+lmer_mean.FSRSecond <- lmer(strF0_mean ~ phonation + H1H2c_mean + H1A3c_mean + CPP_mean + (1|Label) ,mean.FSRSecond)
+summary(lmer_mean.FSRSecond)
+
+lmer_mean.FSRThird <- lmer(strF0_mean ~ phonation + H1H2c_mean + H1A3c_mean + CPP_mean + (1|Label) ,mean.FSRThird)
+summary(lmer_mean.FSRThird)
+
+# RD
+mean.RDFirst_h1h2 <- ggplot(data = mean.RDFirst, 
+                            aes(x = phonation, 
+                                y=H1H2c_mean,
+                                #group=interaction(tone, phonation),
+                                colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot of RD's H1-H2 values in the first third", 
+       x = "Phonation",
+       y = "H1-H2 (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.RDFirst_h1h2)
+ggsave(filename = "mean_RD_h1h2_1st.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+
+mean.RDSecond_h1h2 <- ggplot(data = mean.RDSecond, 
+                             aes(x = phonation, 
+                                 y=H1H2c_mean,
+                                 #group=interaction(tone, phonation),
+                                 colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot of RD's H1-H2 values in second third", 
+       x = "Phonation",
+       y = "H1-H2 (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.RDSecond_h1h2)
+ggsave(filename = "mean_RD_h1h2_2nd.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+mean.RDThird_h1h2 <- ggplot(data = mean.RDThird, 
+                            aes(x = phonation, 
+                                y=H1H2c_mean,
+                                #group=interaction(tone, phonation),
+                                colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot of RD's H1-H2 values in final third", 
+       x = "Phonation",
+       y = "H1-H2 (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.RDThird_h1h2)
+ggsave(filename = "mean_RD_h1h2_3rd.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+#H1-A3
+mean.RDFirst_h1a3 <- ggplot(data = mean.RDFirst, 
+                            aes(x = phonation, 
+                                y=H1A3c_mean,
+                                #group=interaction(tone, phonation),
+                                colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot of RD's H1-A3 values in the first third", 
+       x = "Phonation",
+       y = "H1-A3 (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.RDFirst_h1a3)
+ggsave(filename = "mean_RD_h1a3_First.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+mean.RDSecond_h1a3 <- ggplot(data = mean.RDSecond, 
+                             aes(x = phonation, 
+                                 y=H1A3c_mean,
+                                 #group=interaction(tone, phonation),
+                                 colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot for RD's H1-A3 values in the second third", 
+       x = "Phonation",
+       y = "H1-A3 (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.RDSecond_h1a3)
+ggsave(filename = "mean_RD_h1a3_Second.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+mean.RDThird_h1a3 <- ggplot(data = mean.RDThird, 
+                            aes(x = phonation, 
+                                y=H1A3c_mean,
+                                #group=interaction(tone, phonation),
+                                colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot for RD's H1-A3 values in the final third", 
+       x = "Phonation",
+       y = "H1-A3 (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.RDThird_h1a3)
+ggsave(filename = "mean_RD_h1a3_third.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+lmer_mean.RDFirst <- lmer(strF0_mean ~ phonation + H1H2c_mean + H1A3c_mean + CPP_mean + (1|Label) ,mean.RDFirst)
+summary(lmer_mean.RDFirst)
+
+lmer_mean.RDSecond <- lmer(strF0_mean ~ phonation + H1H2c_mean + H1A3c_mean + CPP_mean + (1|Label) ,mean.RDSecond)
+summary(lmer_mean.RDSecond)
+
+lmer_mean.RDThird <- lmer(strF0_mean ~ phonation + H1H2c_mean + H1A3c_mean + CPP_mean + (1|Label) ,mean.RDThird)
+summary(lmer_mean.RDThird)
+
+# Joint
+lmer_mean.JointFirst <- lmer(strF0_mean ~ phonation + H1H2c_mean + H1A3c_mean + CPP_mean + (1|Label) + (1|Speaker) ,mean.JointFirst)
+summary(lmer_mean.JointFirst)
+
+lmer_mean.JointSecond <- lmer(strF0_mean ~ phonation + H1H2c_mean + H1A3c_mean + CPP_mean + (1|Label) + (1|Speaker) ,mean.JointSecond)
+summary(lmer_mean.JointSecond)
+
+lmer_mean.JointThird <- lmer(strF0_mean ~ phonation + H1H2c_mean + H1A3c_mean + CPP_mean + (1|Label) + (1|Speaker) ,mean.JointThird)
+summary(lmer_mean.JointThird)
