@@ -447,91 +447,273 @@ The rest of this section will describe the methods, results, and discussion of a
 
 Due to the impact of the COVID-19 pandemic, only two native language speakers of SLZ were able to take part in this study (one male; one female). Both speakers live in Santa Cruz, CA and data collection was done remotely using Zencastr\footnote{\href{https://zencastr.com/}{https://zencastr.com/}}, a professional podcasting website, (44.1kHz, 16-bit) or in-person outside in a well ventilated location, using a Zoom H4n handheld recorder (44.1kHz, 16-bit). Participates were recorded saying approximately 100 words in the carrier sentence \textit{shnia' X chone las} `I say X three times'. This phrase was repeated three times. 
 
-After the elicitations were completed the audio was uploaded into ELAN \citep{wittenburgELANProfessionalFramework2006} for initial segmentation into sentences. This was then followed by segmenting of the vowel portion in Praat \citep{boersmaPraatDoingPhonetics2021}. These segments were then inputted to VoiceSauce \citep{shueVOICESAUCEProgramVoice2009} were each vowel was resampled at 16kHZ for acoustic measurement. The acoustic measurements of VoiceSauce were then analyzed in R \citep{rcoreteamLanguageEnvironmentStatistical2021}. In order to investigate the differences in timing, each vowel was normalized for time.
+After the elicitations were completed the audio was uploaded into ELAN \citep{wittenburgELANProfessionalFramework2006} for initial segmentation into sentences. This was then followed by segmenting of the vowel portion in Praat \citep{boersmaPraatDoingPhonetics2021}. These segments were then inputted to VoiceSauce \citep{shueVOICESAUCEProgramVoice2009} were each vowel was resampled at 16kHZ for acoustic measurement. The acoustic measurements of VoiceSauce were then analyzed in R \citep{rcoreteamLanguageEnvironmentStatistical2021}. In order to investigate the differences in timing, each vowel was normalized for time and following \citet{garellekAcousticConsequencesPhonation2011}, the resulting measurements were averaged for each third of the vowel. 
 
 %------------------------------------
 \subsection{Spectral-tilt results} \label{sec:Results}
 %------------------------------------
 
-The results of the spectral-tilt measurements were for the most part comparable to the findings by \citet{espositoVariationContrastivePhonation2010} for Central Valley Zapotec. As noted by \citet{espositoVariationContrastivePhonation2010} there is a difference in which acoustic measurements were most informative for the speakers based on their sex. Similar to \citeauthor{espositoVariationContrastivePhonation2010}, the female speaker was best characterized with the H1-H2 measurements and the male speaker was best characterized with H1-A3. For the female speaker this was true for all phonation types except for breathy voice which measured similarly to the other non-modal vowels. This is not too unsurprising considering the fact that the female speaker would more often produce a full glottal fricative in these environments than a breathy vowel. This can be seen in Figure~\ref{fig:FSRh1h2} where the modal vowel is represented by the solid black line. All other lines which represent breathy, checked, and laryngealized are all lower than that of the modal. 
+In plotting the spectral-tilt measurements, we find that the results follow some of the established patterns and deviates in others. This section will first discuss the results of the H1-H2 measurements for the both FSR and RD followed by the H1-A3 measurements for FSR and RD. 
+
+%------------------------------------
+\subsubsection{H1-H2 results} \label{sec:H1H2}
+%------------------------------------
+
 \begin{figure}[!ht]
-	\includegraphics[width=0.9\textwidth]{../h1h2_line_L.png}
-	\caption{FSR's H1-h2 values.}
-	\label{fig:FSRh1h2} 
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_FSR_h1h2_1st.png}
+		\caption{FSR's H1-H2 values.}
+		\label{fig:FSRh1h2first} 
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_RD_h1h2_1st.png}
+		\caption{RD's H1-H2 values.}
+		\label{fig:RDh1h2first} 
+	\end{subfigure}
+	\caption{Mean H1-H2 values for the first third of the vowel according to each phonation type. }
+	\label{fig:h1h2first}
 \end{figure}
 
-As mentioned previously, one of our speakers would regularly produce the laryngealized vowels with rearticulation, meaning that they produced the vowel with glottalization, with either creakiness or a full glottal closure, in the middle of the vowel. This is in contrast with the checked vowels which have a short period of creakiness or a full glottal closure at the end of the vowel. This means that our spectral-tilt measurements should reflect a difference in time with creaky voice appearing earlier in the laryngealized vowels than checked vowels. In Figure~\ref{fig:FSRh1h2checked}, the spectral-tilt values for laryngealized and checked vowels are plotted along a time normalized scale. The important thing to be aware of is the difference in where the lowest part of the plot is located. For checked vowels, represented by the solid lines, the lowest part of the spectral-tilt measurement is located in the last quarter of the vowel. This dip, however, occurs earlier in the vowel for the laryngealized vowels closer halfway to 75\% of the vowel. 
+
 \begin{figure}[!ht]
-	\includegraphics[width=0.9\textwidth]{../h1h2_CheckedLaryngeal.png}
-	\caption{FSR's H1-h2 values for checked and laryngealized.}
-	\label{fig:FSRh1h2checked} 
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_FSR_h1h2_2nd.png}
+		\caption{FSR's H1-H2 values.}
+		\label{fig:FSRh1h2second} 
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_RD_h1h2_2nd.png}
+		\caption{RD's H1-H2 values.}
+		\label{fig:RDh1h2second} 
+	\end{subfigure}
+	\caption{Mean H1-H2 values for the second third of the vowel according to each phonation type.}
+	\label{fig:h1h2second}
 \end{figure}
 
-As mentioned mentioned previously, the results of the spectral analysis for the male SLZ speaker were inconclusive in terms of H1-H2. As seen in Figure~\ref{fig:RDh1h2} all of the different phonation types are essentially identical with less than 1 dB difference between the different phonation types. 
+
 \begin{figure}[!ht]
-	\includegraphics[width=0.9\textwidth]{../RDh1h2_line_HL.png}
-	\caption{RD's H1-H2 values in HL toned syllables.}
-	\label{fig:RDh1h2} 
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_FSR_h1h2_3rd.png}
+		\caption{FSR's H1-H2 values.}
+		\label{fig:FSRh1h2third} 
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_RD_h1h2_3rd.png}
+		\caption{RD's H1-H2 values.}
+		\label{fig:RDh1h2third} 
+	\end{subfigure}
+	\caption{Mean H1-H2 values for the final third of the vowel according to each phonation type. }
+	\label{fig:h1h2third}
 \end{figure}
-The H1-A3 spectral measures, however, show the expect patterns, as seen in Figure~\ref{fig:RDh1a3}. 
+
+%------------------------------------
+\subsubsection{H1-A3 results} \label{sec:H1A3}
+%------------------------------------
+
+
 \begin{figure}[!ht]
-	\includegraphics[width=0.9\textwidth]{../RDH1A3_HL.png}
-	\caption{RD's total H1-A3 values in HL toned syllables. }
-	\label{fig:RDh1a3} 
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_FSR_h1a3_First.png}
+		\caption{FSR's H1-A3 values.}
+		\label{fig:FSRh1a3first} 
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_RD_h1a3_First.png}
+		\caption{RD's H1-A3 values.}
+		\label{fig:RDh1a3first} 
+	\end{subfigure}
+	\caption{H1-A3 values for FSR (a) and RD (b) for the first third of the vowel. }
+	\label{fig:h1a3first}
 \end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_FSR_h1a3_Second.png}
+		\caption{FSR's H1-A3 values.}
+		\label{fig:FSRh1a3second} 
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_RD_h1a3_Second.png}
+		\caption{RD's H1-A3' values.}
+		\label{fig:RDh1a3second} 
+	\end{subfigure}
+	\caption{H1-A3 values for FSR (a) and RD (b) for the second third of the vowel. }
+	\label{fig:h1a3second}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_FSR_h1a3_third.png}
+		\caption{FSR's H1-A3 values.}
+		\label{fig:FSRh1a3third} 
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_RD_h1a3_third.png}
+		\caption{RD's H1-A3 values.}
+		\label{fig:RDh1a3third} 
+	\end{subfigure}
+	\caption{H1-A3 values for FSR (a) and RD (b) for the final third of the vowel. }
+	\label{fig:h1a3third}
+\end{figure}
+
+
+% The results of the spectral-tilt measurements were for the most part comparable to the findings by \citet{espositoVariationContrastivePhonation2010} for Central Valley Zapotec. As noted by \citet{espositoVariationContrastivePhonation2010} there is a difference in which acoustic measurements were most informative for the speakers based on their sex. Similar to \citeauthor{espositoVariationContrastivePhonation2010}, the female speaker was best characterized with the H1-H2 measurements and the male speaker was best characterized with H1-A3. For the female speaker this was true for all phonation types except for breathy voice which measured similarly to the other non-modal vowels. This is not too unsurprising considering the fact that the female speaker would more often produce a full glottal fricative in these environments than a breathy vowel. This can be seen in Figure~\ref{fig:FSRh1h2} where the modal vowel is represented by the solid black line. All other lines which represent breathy, checked, and laryngealized are all lower than that of the modal. 
+% \begin{figure}[!ht]
+% 	\includegraphics[width=0.9\textwidth]{../h1h2_line_L.png}
+% 	\caption{FSR's H1-h2 values.}
+% 	\label{fig:FSRh1h2} 
+% \end{figure}
+
+% As mentioned previously, one of our speakers would regularly produce the laryngealized vowels with rearticulation, meaning that they produced the vowel with glottalization, with either creakiness or a full glottal closure, in the middle of the vowel. This is in contrast with the checked vowels which have a short period of creakiness or a full glottal closure at the end of the vowel. This means that our spectral-tilt measurements should reflect a difference in time with creaky voice appearing earlier in the laryngealized vowels than checked vowels. In Figure~\ref{fig:FSRh1h2checked}, the spectral-tilt values for laryngealized and checked vowels are plotted along a time normalized scale. The important thing to be aware of is the difference in where the lowest part of the plot is located. For checked vowels, represented by the solid lines, the lowest part of the spectral-tilt measurement is located in the last quarter of the vowel. This dip, however, occurs earlier in the vowel for the laryngealized vowels closer halfway to 75\% of the vowel. 
+% \begin{figure}[!ht]
+% 	\includegraphics[width=0.9\textwidth]{../h1h2_CheckedLaryngeal.png}
+% 	\caption{FSR's H1-h2 values for checked and laryngealized.}
+% 	\label{fig:FSRh1h2checked} 
+% \end{figure}
+
+% As mentioned mentioned previously, the results of the spectral analysis for the male SLZ speaker were inconclusive in terms of H1-H2. As seen in Figure~\ref{fig:RDh1h2} all of the different phonation types are essentially identical with less than 1 dB difference between the different phonation types. 
+% \begin{figure}[!ht]
+% 	\includegraphics[width=0.9\textwidth]{../RDh1h2_line_HL.png}
+% 	\caption{RD's H1-H2 values in HL toned syllables.}
+% 	\label{fig:RDh1h2} 
+% \end{figure}
+% The H1-A3 spectral measures, however, show the expect patterns, as seen in Figure~\ref{fig:RDh1a3}. 
+% \begin{figure}[!ht]
+% 	\includegraphics[width=0.9\textwidth]{../RDH1A3_HL.png}
+% 	\caption{RD's total H1-A3 values in HL toned syllables. }
+% 	\label{fig:RDh1a3} 
+% \end{figure}
+
+%------------------------------------
+\subsubsection{CPP results} \label{sec:CPP}
+%------------------------------------
 
 %------------------------------------
 \subsection{Statistical results} \label{sec:Stats}
 %------------------------------------
-In order to determine whether or not the gestures for pitch and phonation are overlapping a mixed-effects linear regression analysis was performed with a Satterthwaite's method for t-test analysis used to derive the p-values. Following \citet{garellekAcousticConsequencesPhonation2011}, the results for both speaker were combined together and then divided into thirds based on the normalized times. This allows for analysis of each third of the vowel to determine if the phonation and pitch gestures are overlapping. To this effect, the f0 measurements where treated as the dependent variable with speaker treated as random. The results of the analysis showed that the phonation categories, spectral-tilt measurements, and CPP all had an effect on f0 in different portions of the vowel. Specifically the portions of the analysis showed that did not show any effects where the first third of the vowel for CPP and the last third for the laryngealized category. The spectral-tilt measurements of H1-H2 and H1-A3 had an effect on f0 in all portions of the vowel. 
+
+In order to determine whether or not the gestures for pitch and phonation are overlapping a mixed-effects linear regression analysis was performed with a Satterthwaite's method for t-test analysis used to derive the p-values. The f0 measurements where treated as the dependent variable with word treated as random. The mixed-effects linear regression was ran on each participate separately, unlike in \citet{garellekAcousticConsequencesPhonation2011,dicanioCoarticulationToneGlottal2012} which ran their results on a dataset that combined all of their participants together. One of the factors that led to this decision was the difference between FSR's and RD's productions of laryngealized phonation.
+
+Overall, the results of the linear regression analysis does not show any effect of phonation type on the f0 measurements for the two speakers for any portion of the vowels. Additionally, the results of the analysis show that there is an effect from H1-H2 for all portions of the vowel and for both speakers. In the final third of the vowel for FSR and for RD only the analysis shows that there is an effect for H1-A3 and CPP on f0.
 
 \begin{table}[!h]
 	\centering
-	\caption{Results of the mixed-effects linear regression analysis on the first third of the vowel. }
+	\caption{Results of the mixed-effects linear regression analysis on the first third of the vowel for FSR. }
 	\label{tab:First}
 	 \begin{tabular}{llllll}
 	  \lsptoprule
 						&  Estimate  & Std. Error & df & t value & p-value \\
-	  	Breathy   		&  -23.41  	&  0.8128	& 23710 & -28.799 	& <0.001\\
-		Checked    		&  -9.123  	&  0.6933	& 23710 & -13.159 	& <0.001 \\
-		Laryngealized	& 9.712		& 0.6733	& 23710	& 14.424 	& <0.001 \\
-		H1-H2			& 2.163		& 0.06640	& 23710	& 32.572 	& <0.001\\
-		H1-A3			& -0.6678 	& 0.03436	& 23710	& -19.434	& <0.001\\
-		CPP				& 0.04144	& 0.03289	& 23710	& 1.260		& 0.208\\
+	  	Breathy   		&  -34  	&  19.346	& 73 	& -1.757 	& 0.08304 \\
+		Checked    		&  -19.221 	&  11.818	& 73 	& -1.626 	& 0.10817 \\
+		Laryngealized	& 6.275		&  14.381	& 73	& 0.436 	& 0.66386 \\
+		H1-H2			& 5.871		&  2.113	& 73	& 2.779 	& 0.00693 \\
+		H1-A3			& -1.922 	&  1.301	& 73	& -1.477	& 0.14407 \\
+		CPP				& 2.172		&  1.343	& 73	& 1.617		& 0.11021 \\
 	  \lspbottomrule
 	 \end{tabular}
 \end{table}
 
 \begin{table}[!h]
 	\centering
-	\caption{Results of the mixed-effects linear regression analysis on the second third of the vowel. }
+	\caption{Results of the mixed-effects linear regression analysis on the second third of the vowel for FSR. }
 	\label{tab:Second}
 	 \begin{tabular}{llllll}
 	  \lsptoprule
 						&  Estimate  & Std. Error & df & t value & p-value \\
-	  	Breathy   		&  -9.634 	& 0.7874	& 23540 & -12.235 & <0.001\\
-		Checked    		&  -3.509	& 0.6564	& 23540 & -5.346 & <0.001 \\
-		Laryngealized	& -2.261	& 0.6437	& 23540	& -3.513 & <0.001 \\
-		H1-H2			& 3.371		& 0.04283	& 23540	 & 78.707 & <0.001\\
-		H1-A3			& -0.4599	& 0.02592	& 23540	& -17.741	& <0.001\\
-		CPP				& -0.9082	& 0.04806	& 23540	& -18.897	& <0.001\\
+	  	Breathy   		& -15.8469 	& 17.0862	& 72.9872 	& -0.927 	& 0.3567\\
+		Checked    		& -12.6235	& 10.2839	& 58.4709	& -1.228 	& 0.2246 \\
+		Laryngealized	& -15.2031	& 12.5907	& 65.8131	& -1.207	& 0.2316 \\
+		H1-H2			& 4.1224	& 0.8339	& 72.9915	& 4.944		& <0.001\\
+		H1-A3			& -0.5992	& 0.5759	& 68.4517	& -1.041	& 0.3017\\
+		CPP				& -3.0378	& 1.5275	& 69.2885	& -1.989	& 0.0507\\
 	  \lspbottomrule
 	 \end{tabular}
 \end{table}
 
 \begin{table}[!h]
 	\centering
-	\caption{Results of the mixed-effects linear regression analysis on the last third of the vowel. }
+	\caption{Results of the mixed-effects linear regression analysis on the last third of the vowel for FSR. }
 	\label{tab:Third}
 	 \begin{tabular}{llllll}
 	  \lsptoprule
 						&  Estimate  & Std. Error & df & t value & p-value \\
-	  	Breathy   		& -5.247  	& 0.8224	&  24490	& -6.380	& <0.001\\
-		Checked    		& -4.494  	& 0.6898	&  24490	& -6.514	& <0.001 \\
-		Laryngealized	& 1.013		& 0.6670	&  24490	& 1.519		& 0.129 \\
-		H1-H2			& 3.079		& 0.04900	&  24490	& 62.845	& <0.001\\
-		H1-A3			& -0.6611 	& 0.02372	&  24490	& -27.867	& <0.001\\
-		CPP				& 0.5377	& 0.02958	&  24490	& 18.176	& 0.208\\
+	  	Breathy   		& 11.5334	&	21.0215	&	72.8338	&	0.549	&	0.584925    \\
+		Checked    		& -24.9712	&	12.9289	&	55.9320	&	-1.931	&	0.058504  \\
+		Laryngealized	& 19.3827	&	14.4598	&	59.3210	&	1.340	&	0.185208 \\
+		H1-H2			& 5.2474	&	1.3865	&	73.5567	&	3.785	&	0.000312 \\
+		H1-A3			& -1.9562	&	0.8326	&	57.1747	&	-2.350	&	0.022272 \\
+		CPP				& -6.7957	&	2.2457	&	72.4947	&	-3.026	&	0.003428 \\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+
+%----------------------------------------------------------------
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the first third of the vowel for RD. }
+	\label{tab:RDFirst}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		&  -9.1403 &    6.4902 & 64.0000 & -1.408  & 0.1639\\    
+		Checked        &-4.8954   &  4.4826  &64.0000 & -1.092  & 0.2789    \\
+		Laryngealized   &1.8633   &  4.8763  &64.0000  & 0.382 &  0.7036    \\
+		H1-H2          &9.7878    & 1.6869  &64.0000  & 5.802 & <0.001\\
+		H1-A3         &-1.4097    & 0.7887 & 64.0000 & -1.787 &  0.0786 \\
+		CPP              &  -0.4755  &   0.8973 & 64.0000 & -0.530  & 0.5980 \\  
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the second third of the vowel for RD. }
+	\label{tab:RDSecond}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		& -5.9347  &   6.7027 & 64.0000  &-0.885   & 0.379\\
+		Checked    		& -2.3918   &  4.7231 & 64.0000  &-0.506  &  0.614 \\
+		Laryngealized	& 1.5355    & 5.2254 & 64.0000   &0.294  &  0.770  \\
+		H1-H2			&  3.2700   &  0.6607 & 64.0000  & 4.949	& <0.001\\
+		H1-A3			& -0.3942   &  0.3577 & 64.0000  &-1.102   & 0.275 \\
+		CPP				& -0.3629   &  0.3702 & 64.0000  &-0.980  &  0.331 \\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the last third of the vowel for RD. }
+	\label{tab:RDThird}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		& -2.5294   &  7.2170 & 64.0000 & -0.350 & 0.72713    \\
+		Checked    		& -5.0933   &  5.0358 & 64.0000 & -1.011 & 0.31563  \\
+		Laryngealized	& -0.7534   &  5.7945 & 64.0000 & -0.130 & 0.89696 \\
+		H1-H2			& 2.3555    & 0.8993  &64.0000  & 2.619 & 0.01099 \\
+		H1-A3			& -1.1533   &  0.4188 & 64.0000 & -2.754 & 0.00766 \\
+		CPP				& 0.6400    & 0.5700 & 64.0000  & 1.123 & 0.26570 \\
 	  \lspbottomrule
 	 \end{tabular}
 \end{table}
