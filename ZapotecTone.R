@@ -3212,7 +3212,80 @@ ggsave(filename = "mean_FSR_h1a3_third.png",
        width=16, 
        height=9, 
        dpi=600)
+#CPP
+mean.FSRFirst_cpp <- ggplot(data = mean.FSRFirst, 
+                           aes(x = phonation, 
+                               y=CPP_mean,
+                               #group=interaction(tone, phonation),
+                               colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot of FSR's CPP values in the first third", 
+       x = "Phonation",
+       y = "CPP (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.FSRFirst_cpp)
+ggsave(filename = "mean_FSR_CPP_First.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
 
+mean.FSRSecond_cpp <- ggplot(data = mean.FSRSecond, 
+                            aes(x = phonation, 
+                                y=CPP_mean,
+                                #group=interaction(tone, phonation),
+                                colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot for FSR's CPP values in the second third", 
+       x = "Phonation",
+       y = "CPP (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.FSRSecond_cpp)
+ggsave(filename = "mean_FSR_cpp_Second.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+mean.FSRThird_cpp <- ggplot(data = mean.FSRThird, 
+                           aes(x = phonation, 
+                               y=CPP_mean,
+                               #group=interaction(tone, phonation),
+                               colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot for FSR's CPP values in the final third", 
+       x = "Phonation",
+       y = "CPP (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.FSRThird_cpp)
+ggsave(filename = "mean_FSR_cpp_Third.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+#lmer
 lmer_mean.FSRFirst <- lmer(strF0_mean ~ phonation + H1H2c_mean + H1A3c_mean + CPP_mean + (1|Label) ,mean.FSRFirst)
 summary(lmer_mean.FSRFirst)
 
@@ -3296,6 +3369,79 @@ ggsave(filename = "mean_RD_h1h2_3rd.png",
        height=9, 
        dpi=600)
 
+#CPP
+mean.RDFirst_cpp <- ggplot(data = mean.RDFirst, 
+                            aes(x = phonation, 
+                                y=CPP_mean,
+                                #group=interaction(tone, phonation),
+                                colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot of RD's CPP values in the first third", 
+       x = "Phonation",
+       y = "CPP (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.RDFirst_cpp)
+ggsave(filename = "mean_RD_CPP_First.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+mean.RDSecond_cpp <- ggplot(data = mean.RDSecond, 
+                             aes(x = phonation, 
+                                 y=CPP_mean,
+                                 #group=interaction(tone, phonation),
+                                 colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot for RD's CPP values in the second third", 
+       x = "Phonation",
+       y = "CPP (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.RDSecond_cpp)
+ggsave(filename = "mean_RD_cpp_Second.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
+mean.RDThird_cpp <- ggplot(data = mean.RDThird, 
+                            aes(x = phonation, 
+                                y=CPP_mean,
+                                #group=interaction(tone, phonation),
+                                colour=phonation)
+) +
+  geom_boxplot() +
+  labs(title = "Boxplot for RD's CPP values in the final third", 
+       x = "Phonation",
+       y = "CPP (dB)") +
+  theme_bw() +
+  scale_fill_manual(values=cbbPalette) + # To use for fills
+  scale_colour_manual(values=cbbPalette) + # To use for line and point colors
+  guides(colour = guide_legend("Phonation", ncol = 4), 
+         fill = guide_legend("Phonation", ncol = 4) ) +
+  my.theme
+print(mean.RDThird_cpp)
+ggsave(filename = "mean_RD_cpp_Third.png", 
+       device = "png", 
+       units = "in", 
+       width=16, 
+       height=9, 
+       dpi=600)
+
 #H1-A3
 mean.RDFirst_h1a3 <- ggplot(data = mean.RDFirst, 
                             aes(x = phonation, 
@@ -3369,6 +3515,9 @@ ggsave(filename = "mean_RD_h1a3_third.png",
        height=9, 
        dpi=600)
 
+
+#lmer results
+
 lmer_mean.RDFirst <- lmer(strF0_mean ~ phonation + H1H2c_mean + H1A3c_mean + CPP_mean + (1|Label) ,mean.RDFirst)
 summary(lmer_mean.RDFirst)
 
@@ -3388,6 +3537,6 @@ summary(lmer_mean.JointSecond)
 lmer_mean.JointThird <- lmer(strF0_mean ~ phonation + H1H2c_mean + H1A3c_mean + CPP_mean + (1|Label) + (1|Speaker) ,mean.JointThird)
 summary(lmer_mean.JointThird)
 
-# Making a nice plot
+
 
 
