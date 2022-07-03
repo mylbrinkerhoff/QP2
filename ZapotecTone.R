@@ -3387,7 +3387,7 @@ mean.RDFirst_cpp <- ggplot(data = mean.RDFirst,
          fill = guide_legend("Phonation", ncol = 4) ) +
   my.theme
 print(mean.RDFirst_cpp)
-ggsave(filename = "mean_RD_CPP_First.png", 
+ggsave(filename = "mean_RD_cpp_First.png", 
        device = "png", 
        units = "in", 
        width=16, 
