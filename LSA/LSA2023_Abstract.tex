@@ -23,7 +23,7 @@
 %\usepackage[compact]{titlesec}
 %\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection.}{.5em}{}[.]
 %\titleformat{\subsection}[runin]{\normalfont\scshape}{\thesubsection}{.5em}{}[.]
-\usepackage[hmargin=1in,vmargin=1in]{geometry}  %Margins          
+\usepackage[hmargin=.5in,vmargin=.5in]{geometry}  %Margins          
 \usepackage{graphicx}	%Inserting graphics, pictures, images 		
 \usepackage{stackengine} %Package to allow text above or below other text, Also helpful for HG weights 
 \usepackage{fontspec} %Selection of fonts must be ran in XeLaTeX
@@ -89,9 +89,9 @@
 \newleipzig{rep}{rep}{repetitive}	% Repetitive Aspect
 
 %%TITLE INFORMATION
-\title{TITLE}
-\author{Mykel Loren Brinkerhoff}
-\date{\today}
+% \title{TITLE}
+% \author{Mykel Loren Brinkerhoff}
+% \date{\today}
 
 %%MACROS
 \newcommand{\sub}[1]{\textsubscript{#1}}
@@ -120,7 +120,7 @@
 %	\onehalfspacing
 	
 \begin{center}
-	\textbf{Tone and phonation in Santiago Laxopa Zapotec}
+	\textbf{Testing the Laryngeal Complexity Hypothesis: Evidence from Santiago Laxopa Zapotec}
 \end{center}
 %\maketitle
 %\maketitleinst
@@ -128,29 +128,48 @@
 \thispagestyle{empty}
 
 \paragraph{Introduction:}
-Most descriptions about the interaction between tone and phonation are based on SE and E Asian languages \citep[e.g.,][]{masicaDefiningLinguisticArea1976,thurgoodVietnameseTonogenesisRevising2002,michaudComplexTonesEast2012,brunelleTonePhonationSoutheast2016,kuangCovariationVoiceQuality2017}.
-These descriptions have lead to widespread claims about what is possible in languages with tone and phonation, specifically that tone and phonation are dependent. 
+Most descriptions about the interaction between tone and phonation are based on South East and East Asian languages \citep[e.g.,][]{masicaDefiningLinguisticArea1976,thurgoodVietnameseTonogenesisRevising2002,michaudComplexTonesEast2012,brunelleTonePhonationSoutheast2016,kuangCovariationVoiceQuality2017}.
+These descriptions have lead to widespread claims about what is possible in languages with tone and phonation, specifically that tone and phonation are co-dependent. 
 This means that certain tones will bear specific phonations or that certain phonation types only appear with certain tones. 
 For example, Mandarin's tone 3 is associated with creaky voice \citep{hockettPeipingPhonology1947} and Vietnamese's low falling tone is associated with breathy voice \citep{thurgoodVietnameseTonogenesisRevising2002}.
 This, however, is not the true for Oto-Manguean languages where tone and phonation are independent from one another \citep{silvermanLaryngealComplexityOtomanguean1997}.
 
-This paper investigates the interaction of tone and phonation in Santiago Laxopa Zapotec (SLZ), an understudied Oto-Manguean language spoken by roughly 1000 people in the municipality of Santiago Laxopa in the Sierra Norte of Oaxaca, Mexico.
-SLZ, like other Oto-Manguean languages, contains a robust systems of both tone and phonation which are independent from each other.
+\paragraph{The Laryngeal Complexity Hypothesis:} Despite being independent from one another, tone and phonation need to interact in a way that is perceptually salient. This need for perceptual saliency led to the proposing of the \textsc{Laryngeal Complexity Hypothesis} \citep[LCH;][]{silvermanLaryngealComplexityOtomanguean1997,blankenshipTimeCourseBreathiness1997,blankenshipTimingNonmodalPhonation2002}. The LHC's basic premise is that for tone and phonation to be best perceived there needs to be an ordering or phasing between the gestures for tone and phonation. If there was no strict ordering of the gestures for tone and phonation then the cues for tone and/or phonation will have interference, see Figure~\ref{fig:GlottalGestures} for a graphical illustration. \posscitet{dicanioCoarticulationToneGlottal2012} study exploring the LCH in Itunyoso Trique found exactly this interference. \citeauthor{dicanioCoarticulationToneGlottal2012} showed that when there is a large overlap between the gestures for tone and phonation that the f0 signal is perturbed by the glottal gestures for phonation. 
 
+This paper investigates the LCH's role in Santiago Laxopa Zapotec (SLZ), an understudied Oto-Manguean language spoken by approximately 1000 people in the municipality of Santiago Laxopa in the Sierra Norte of Oaxaca, Mexico. 
 
-\paragraph{Description:} 
-SLZ has five surface tonal patterns on syllables: three level tones H(igh), M(id), L(ow) and two contour tones HL and MH.
-SLZ also has four phonation types: Modal, Breathy, Checked, and Laryngealized. 
+\paragraph{Description of SLZ tone :} 
+SLZ, like other Oto-Manguean languages, contains a robust systems of both tone and phonation which are independent from each other. SLZ has five surface tonal patterns on syllables: three level tones H(igh), M(id), L(ow) and two contour tones HL and MH. Vowels in SLZ, additionally have four phonations types: Modal, Breathy, Checked, and Laryngealized. 
 These different tones and voice qualities are allowed to appear essentially independent from one other in the nominal domain, as seen in Table~\ref{tab:ToneVoiceQuality}.
-\vspace{-20pt}
+
+\paragraph{Methodology:} 
+Data was collected from 18 native SLZ consultants living in Santa Cruz, CA in person and in Santiago Laxopa, Ixtlán, Oaxaca, Mexico (11 female).  
+Consultants were recorded repeating three times the phrase \textit{shnia' WORD chone las.} `I say WORD three times' with each of the 77 target words.
+Vowels were extracted from the resulting audio files and spectral-tilt measurements were generated for each third of the vowel using VoiceSauce \citep{shueVOICESAUCEProgramVoice2009} following \citet{garellekAcousticConsequencesPhonation2011}. The results were then analyzed in R \citep{rcoreteamLanguageEnvironmentStatistical2021} using lmer with speaker and word being random variables. 
+
+\paragraph{Upshot:}
+
+
+
+
+\newpage
+\begin{center}
+	\textbf{Figures and Tables}
+\end{center}
+\thispagestyle{empty}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=.5\textwidth]{../Gestures.png}
+	\caption{Representation taken from \citet{dicanioCoarticulationToneGlottal2012}.}
+	\label{fig:GlottalGestures}
+\end{figure}
+
 \begin{table}[!h]
 	\caption{Distribution of tone and phonation in SLZ}
 	\label{tab:ToneVoiceQuality}
 	\centering
-
 	\begin{tabular}{lcccc}
 	\hline
-
 	\hline
 		& \textbf{Modal} & \textbf{Breathy} & \textbf{Checked} & \textbf{Laryngealized} \\
 	\hline
@@ -160,23 +179,17 @@ These different tones and voice qualities are allowed to appear essentially inde
 	HL	& ✔	& ✔ & ✔ & ✔\\
 	MH	& ✔	& ✔ & -- & ✔ \\
 	\hline
-
 	\hline
 	\end{tabular}
 \end{table}
 
-\paragraph{Methodology:} 
-Data was collected from two native SLZ language consultants living in Santa Cruz, CA in person, when conditions were safe, and via Zoom. 
-Consultants were recorded repeating three times the phrase \textit{shnia' WORD chone las.} `I say WORD three times'.
-Vowels were extracted from the resulting audio files and processed using VoiceSauce \citep{shueVOICESAUCEProgramVoice2009}.
-
-\paragraph{Upshot:}
-Much of the work into Oto-Manguean tone and phonation has been devoted to issues about timing of tone relative to phonation and the relative timing of phonation in the vowel \citep{silvermanLaryngealComplexityOtomanguean1997,blankenshipTimingNonmodalPhonation2002}. This paper provides provides a description of the tonal and phonation systems of SLZ and determines to what extent gestural timing plays an effect in the production of tone and phonaiton in SLZ. I show that timing of tone and phonation does play a role to some extent but to a lesser extent than argued for by \citet{silvermanLaryngealComplexityOtomanguean1997}. 
-
-
-
 \newpage
+\begin{center}
+	\textbf{COVID Impact}
+\end{center}
 \thispagestyle{empty}
-\printbibliography[heading=bibintoc]
+Due to COVID, the pueblo of Santiago Laxopa closed itself to the outside world until a few months ago. Fortunately, I was able to elicit preliminary data from two SLZ speakers that were living in California. However, this was insufficient data to adequately assess the interaction between tone and phonation, but provided me with some preliminary results, which were presented in this abstract. I am currently, at the time of submitting this abstract, in Santiago Laxopa finishing eliciting data from additional SLZ speakers (6 male; 10 female) to verify the validity of the results of the two SLZ speakers form California. 
+
+% \printbibliography[heading=bibintoc]
 
 \end{document} 
