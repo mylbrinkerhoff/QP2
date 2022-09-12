@@ -1,7 +1,7 @@
 % !TEX TS-program = lualatex
 % !TEX encoding = UTF-8 Unicode		
 
-\documentclass[12pt, letterpaper]{article}
+\documentclass[11pt, letterpaper]{article}
 
 %%BIBLIOGRAPHY- This uses biber/biblatex to generate bibliographies according to the 
 %%Unified Style Sheet for Linguistics
@@ -50,6 +50,8 @@
 \usepackage[normalem]{ulem} %strike out text. Handy for syntax
 \usepackage{tcolorbox}
 \usepackage{datetime2}
+\usepackage{caption}
+\usepackage{subcaption}
 
 %%FONTS
 \setmainfont{Libertinus Serif}
@@ -138,17 +140,22 @@ This, however, is not the true for Oto-Manguean languages where tone and phonati
 
 This paper investigates the LCH's role in Santiago Laxopa Zapotec (SLZ), an understudied Oto-Manguean language spoken by approximately 1000 people in the municipality of Santiago Laxopa in the Sierra Norte of Oaxaca, Mexico. 
 
-\paragraph{Description of SLZ tone :} 
+\paragraph{Description of SLZ tone and phonation:} 
 SLZ, like other Oto-Manguean languages, contains a robust systems of both tone and phonation which are independent from each other. SLZ has five surface tonal patterns on syllables: three level tones H(igh), M(id), L(ow) and two contour tones HL and MH. Vowels in SLZ, additionally have four phonations types: Modal, Breathy, Checked, and Laryngealized. 
-These different tones and voice qualities are allowed to appear essentially independent from one other in the nominal domain, as seen in Table~\ref{tab:ToneVoiceQuality}.
+These different tones and voice qualities are allowed to appear essentially independent from one other in the nominal domain with the only exceptions being H with breathy phonation and MH with checked tone.
 
 \paragraph{Methodology:} 
 Data was collected from 18 native SLZ consultants living in Santa Cruz, CA in person and in Santiago Laxopa, Ixtlán, Oaxaca, Mexico (11 female).  
 Consultants were recorded repeating three times the phrase \textit{shnia' WORD chone las.} `I say WORD three times' with each of the 77 target words.
-Vowels were extracted from the resulting audio files and spectral-tilt measurements were generated for each third of the vowel using VoiceSauce \citep{shueVOICESAUCEProgramVoice2009} following \citet{garellekAcousticConsequencesPhonation2011}. The results were then analyzed in R \citep{rcoreteamLanguageEnvironmentStatistical2021} using lmer with speaker and word being random variables. 
+Vowels were extracted from the resulting audio files and spectral-tilt measurements were generated for each third of the vowel using VoiceSauce \citep{shueVOICESAUCEProgramVoice2009} following \citet{garellekAcousticConsequencesPhonation2011}. The results were then analyzed in R \citep{rcoreteamLanguageEnvironmentStatistical2021} using a mixed-effects linear regression with f0 as fixed variable and speaker and word being random variables to determine to what extent f0 is affected by phonation similar to \citet{dicanioCoarticulationToneGlottal2012}.  
+
+\paragraph{Results:}
+The spectral-tilt analysis shows that for both of the male and female speakers from California that H1-A3 is the best measurement for breathy phonation contrary to \posscitet{espositoVariationContrastivePhonation2010} observations that female speakers of Zapotec are best characterized by H1-H2. It is true that H1-H2 best characterized the checked and laryngealized vowels, both associated with creakiness, in the female. The male's phonation types were best represented by H1-A3 confirming \posscitet{espositoVariationContrastivePhonation2010}'s observation that male Zapotec speakers are best characterized by this spectral-tilt measurement. Box graphs showing the spectral-tilt measurement for the final third of the vowel for FSR (female) and RD (male) are presented in Figure~\ref{fig:h1h2third} for H1-H2 and Figure~\ref{fig:h1a3third} for H1-A3.
+
+Preliminary results of the mixed-effects linear regression drawn from the two speakers living in California show that there was no effect of phonation on f0 in any portion of the vowel. However, further data is being collected in Santiago Laxopa to verify the results.
 
 \paragraph{Upshot:}
-
+This paper has provided a brief introduction to the tonal and phonation systems of Santiago Laxopa Zapotec, an understudied variety of Sierra Norte Zapotec. This system is important for studying the interaction of tone and phonation because of the complex interactions between tone and phonation that are found in this language. Because any phonation type can co-occur with any tone this presented a unique opportunity to see how the language compensates for using larynx for both tone and phonation. This paper has shown, by using language data elicitation data from SLZ, that the LCH \citep{silvermanLaryngealComplexityOtomanguean1997,blankenshipTimeCourseBreathiness1997, blankenshipTimingNonmodalPhonation2002} appears to be the best model of accounting for how tone and phonation interact. 
 
 
 
@@ -159,29 +166,46 @@ Vowels were extracted from the resulting audio files and spectral-tilt measureme
 \thispagestyle{empty}
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=.5\textwidth]{../Gestures.png}
+	\includegraphics[width=.4\textwidth]{../Gestures.png}
 	\caption{Representation taken from \citet{dicanioCoarticulationToneGlottal2012}.}
 	\label{fig:GlottalGestures}
 \end{figure}
 
-\begin{table}[!h]
-	\caption{Distribution of tone and phonation in SLZ}
-	\label{tab:ToneVoiceQuality}
+\begin{figure}[!ht]
 	\centering
-	\begin{tabular}{lcccc}
-	\hline
-	\hline
-		& \textbf{Modal} & \textbf{Breathy} & \textbf{Checked} & \textbf{Laryngealized} \\
-	\hline
-	H	& ✔ & -- & ✔ & ✔ \\
-	M	& ✔ & ✔ & ✔ & ✔\\
-	L	& ✔	& ✔ & ✔ & ✔\\
-	HL	& ✔	& ✔ & ✔ & ✔\\
-	MH	& ✔	& ✔ & -- & ✔ \\
-	\hline
-	\hline
-	\end{tabular}
-\end{table}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_FSR_h1h2_3rd.png}
+		\caption{FSR's H1-H2 values.}
+		\label{fig:FSRh1h2third} 
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_RD_h1h2_3rd.png}
+		\caption{RD's H1-H2 values.}
+		\label{fig:RDh1h2third} 
+	\end{subfigure}
+	\caption{Mean H1-H2 values for the final third of the vowel according to each phonation type. }
+	\label{fig:h1h2third}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_FSR_h1a3_third.png}
+		\caption{FSR's H1-A3 values.}
+		\label{fig:FSRh1a3third} 
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{../mean_RD_h1a3_third.png}
+		\caption{RD's H1-A3 values.}
+		\label{fig:RDh1a3third} 
+	\end{subfigure}
+	\caption{H1-A3 values for FSR (a) and RD (b) for the final third of the vowel. }
+	\label{fig:h1a3third}
+\end{figure}
 
 \newpage
 \begin{center}

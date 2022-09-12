@@ -209,6 +209,16 @@ RDtone_phonation
 join.TP <- table(zapotec.join$tone, zapotec.join$phonation)
 join.TP
 
+
+count.FSR.TP <- table(mean.FSRFirst$tone, mean.FSRFirst$phonation)
+count.FSR.TP
+
+count.RD.TP <- table(mean.RDFirst$tone, mean.RDFirst$phonation)
+count.RD.TP
+  
+count.join.TP <- table(mean.JointFirst$tone, mean.JointFirst$phonation)
+count.join.TP
+
 # Normalize the scores for f0 in zapotec.join
 zapotec.join$normalized_tone <- scale(zapotec.join$strF0)
 
@@ -3538,5 +3548,342 @@ lmer_mean.JointThird <- lmer(strF0_mean ~ phonation + H1H2c_mean + H1A3c_mean + 
 summary(lmer_mean.JointThird)
 
 
+# Analyzing how good the different measurements are for 
+# predicting the different phonation types
 
+# H1H2
+lmer_mean.H1H2.First <- lmer(H1H2c_mean ~ phonation + (1|Label) + (1|Speaker) ,mean.JointFirst)
+summary(lmer_mean.H1H2.First)
+
+lmer_mean.H1H2.Second <- lmer(H1H2c_mean ~ phonation + (1|Label) + (1|Speaker) ,mean.JointSecond)
+summary(lmer_mean.H1H2.Second)
+
+lmer_mean.H1H2.Third <- lmer(H1H2c_mean ~ phonation + (1|Label) + (1|Speaker) ,mean.JointThird)
+summary(lmer_mean.H1H2.Third)
+
+# H1A3
+lmer_mean.H1A3.First <- lmer(H1A3c_mean ~ phonation + (1|Label) + (1|Speaker) ,mean.JointFirst)
+summary(lmer_mean.H1A3.First)
+
+lmer_mean.H1A3.Second <- lmer(H1A3c_mean ~ phonation + (1|Label) + (1|Speaker) ,mean.JointSecond)
+summary(lmer_mean.H1A3.Second)
+
+lmer_mean.H1A3.Third <- lmer(H1A3c_mean ~ phonation + (1|Label) + (1|Speaker) ,mean.JointThird)
+summary(lmer_mean.H1A3.Third)
+
+# CPP
+lmer_mean.CPP.First <- lmer(CPP_mean ~ phonation + (1|Label) + (1|Speaker) ,mean.JointFirst)
+summary(lmer_mean.CPP.First)
+
+lmer_mean.CPP.Second <- lmer(CPP_mean ~ phonation + (1|Label) + (1|Speaker) ,mean.JointSecond)
+summary(lmer_mean.CPP.Second)
+
+lmer_mean.CPP.Third <- lmer(CPP_mean ~ phonation + (1|Label) + (1|Speaker) ,mean.JointThird)
+summary(lmer_mean.CPP.Third)
+
+
+# Looking at just low tone
+low.first <- mean.JointFirst %>%
+  filter(tone == "L" ) %>%
+  select(Label, 
+         H2Kc_mean, 
+         H1H2c_mean, 
+         H2H4c_mean, 
+         H1A1c_mean, 
+         H1A2c_mean, 
+         H1A3c_mean, 
+         H42Kc_mean, 
+         H2KH5Kc_mean,
+         CPP_mean,
+         Energy_mean,
+         HNR05_mean,
+         HNR15_mean,
+         HNR25_mean,
+         HNR35_mean,
+         strF0_mean,
+         normalized_time_mean,
+         phonation,
+         tone,
+         Speaker
+  )
+
+low.second <- mean.JointSecond %>%
+  filter(tone == "L" ) %>%
+  select(Label, 
+         H2Kc_mean, 
+         H1H2c_mean, 
+         H2H4c_mean, 
+         H1A1c_mean, 
+         H1A2c_mean, 
+         H1A3c_mean, 
+         H42Kc_mean, 
+         H2KH5Kc_mean,
+         CPP_mean,
+         Energy_mean,
+         HNR05_mean,
+         HNR15_mean,
+         HNR25_mean,
+         HNR35_mean,
+         strF0_mean,
+         normalized_time_mean,
+         phonation,
+         tone,
+         Speaker
+  )
+
+low.Third <- mean.JointThird %>%
+  filter(tone == "L" ) %>%
+  select(Label, 
+         H2Kc_mean, 
+         H1H2c_mean, 
+         H2H4c_mean, 
+         H1A1c_mean, 
+         H1A2c_mean, 
+         H1A3c_mean, 
+         H42Kc_mean, 
+         H2KH5Kc_mean,
+         CPP_mean,
+         Energy_mean,
+         HNR05_mean,
+         HNR15_mean,
+         HNR25_mean,
+         HNR35_mean,
+         strF0_mean,
+         normalized_time_mean,
+         phonation,
+         tone,
+         Speaker
+  )
+
+# H1H2
+lmer_low.H1H2.First <- lmer(H1H2c_mean ~ phonation + (1|Label) + (1|Speaker) ,low.first)
+summary(lmer_low.H1H2.First)
+
+lmer_low.H1H2.Second <- lmer(H1H2c_mean ~ phonation + (1|Label) + (1|Speaker) ,low.second)
+summary(lmer_mean.H1H2.Second)
+
+lmer_low.H1H2.Third <- lmer(H1H2c_mean ~ phonation + (1|Label) + (1|Speaker) ,low.Third)
+summary(lmer_mean.H1H2.Third)
+
+# H1A3
+lmer_low.H1A3.First <- lmer(H1A3c_mean ~ phonation + (1|Label) + (1|Speaker) ,low.first)
+summary(lmer_mean.H1A3.First)
+
+lmer_low.H1A3.Second <- lmer(H1A3c_mean ~ phonation + (1|Label) + (1|Speaker) ,low.second)
+summary(lmer_mean.H1A3.Second)
+
+lmer_low.H1A3.Third <- lmer(H1A3c_mean ~ phonation + (1|Label) + (1|Speaker) ,low.Third)
+summary(lmer_mean.H1A3.Third)
+
+# CPP
+lmer_low.CPP.First <- lmer(CPP_mean ~ phonation + (1|Label) + (1|Speaker) ,low.first)
+summary(lmer_mean.CPP.First)
+
+lmer_low.CPP.Second <- lmer(CPP_mean ~ phonation + (1|Label) + (1|Speaker) ,low.second)
+summary(lmer_mean.CPP.Second)
+
+lmer_low.CPP.Third <- lmer(CPP_mean ~ phonation + (1|Label) + (1|Speaker) ,low.Third)
+summary(lmer_mean.CPP.Third)
+
+# Looking at just low for FSR
+low.FSR.First <- mean.FSRFirst %>%
+  filter(tone == "L" ) %>%
+  select(Label, 
+         H2Kc_mean, 
+         H1H2c_mean, 
+         H2H4c_mean, 
+         H1A1c_mean, 
+         H1A2c_mean, 
+         H1A3c_mean, 
+         H42Kc_mean, 
+         H2KH5Kc_mean,
+         CPP_mean,
+         Energy_mean,
+         HNR05_mean,
+         HNR15_mean,
+         HNR25_mean,
+         HNR35_mean,
+         strF0_mean,
+         normalized_time_mean,
+         phonation,
+         tone
+  )
+
+low.FSR.Second <- mean.FSRSecond %>%
+  filter(tone == "L" ) %>%
+  select(Label, 
+         H2Kc_mean, 
+         H1H2c_mean, 
+         H2H4c_mean, 
+         H1A1c_mean, 
+         H1A2c_mean, 
+         H1A3c_mean, 
+         H42Kc_mean, 
+         H2KH5Kc_mean,
+         CPP_mean,
+         Energy_mean,
+         HNR05_mean,
+         HNR15_mean,
+         HNR25_mean,
+         HNR35_mean,
+         strF0_mean,
+         normalized_time_mean,
+         phonation,
+         tone
+  )
+
+low.FSR.Third <- mean.FSRThird %>%
+  filter(tone == "L" ) %>%
+  select(Label, 
+         H2Kc_mean, 
+         H1H2c_mean, 
+         H2H4c_mean, 
+         H1A1c_mean, 
+         H1A2c_mean, 
+         H1A3c_mean, 
+         H42Kc_mean, 
+         H2KH5Kc_mean,
+         CPP_mean,
+         Energy_mean,
+         HNR05_mean,
+         HNR15_mean,
+         HNR25_mean,
+         HNR35_mean,
+         strF0_mean,
+         normalized_time_mean,
+         phonation,
+         tone
+  )
+
+# Looking at just low for RD
+low.RD.First <- mean.RDFirst %>%
+  filter(tone == "L" ) %>%
+  select(Label, 
+         H2Kc_mean, 
+         H1H2c_mean, 
+         H2H4c_mean, 
+         H1A1c_mean, 
+         H1A2c_mean, 
+         H1A3c_mean, 
+         H42Kc_mean, 
+         H2KH5Kc_mean,
+         CPP_mean,
+         Energy_mean,
+         HNR05_mean,
+         HNR15_mean,
+         HNR25_mean,
+         HNR35_mean,
+         strF0_mean,
+         normalized_time_mean,
+         phonation,
+         tone
+  )
+
+low.RD.Second <- mean.RDSecond %>%
+  filter(tone == "L" ) %>%
+  select(Label, 
+         H2Kc_mean, 
+         H1H2c_mean, 
+         H2H4c_mean, 
+         H1A1c_mean, 
+         H1A2c_mean, 
+         H1A3c_mean, 
+         H42Kc_mean, 
+         H2KH5Kc_mean,
+         CPP_mean,
+         Energy_mean,
+         HNR05_mean,
+         HNR15_mean,
+         HNR25_mean,
+         HNR35_mean,
+         strF0_mean,
+         normalized_time_mean,
+         phonation,
+         tone
+  )
+
+low.RD.Third <- mean.RDThird %>%
+  filter(tone == "L" ) %>%
+  select(Label, 
+         H2Kc_mean, 
+         H1H2c_mean, 
+         H2H4c_mean, 
+         H1A1c_mean, 
+         H1A2c_mean, 
+         H1A3c_mean, 
+         H42Kc_mean, 
+         H2KH5Kc_mean,
+         CPP_mean,
+         Energy_mean,
+         HNR05_mean,
+         HNR15_mean,
+         HNR25_mean,
+         HNR35_mean,
+         strF0_mean,
+         normalized_time_mean,
+         phonation,
+         tone
+  )
+
+#FSR
+# H1H2
+lmer_low.FSR.H1H2.First <- lmer(H1H2c_mean ~ phonation + (1|Label) ,low.FSR.First)
+summary(lmer_low.FSR.H1H2.First)
+
+lmer_low.FSR.H1H2.Second <- lmer(H1H2c_mean ~ phonation + (1|Label) ,low.FSR.Second)
+summary(lmer_low.FSR.H1H2.Second)
+
+lmer_low.FSR.H1H2.Third <- lmer(H1H2c_mean ~ phonation + (1|Label) ,low.FSR.Third)
+summary(lmer_low.FSR.H1H2.Third)
+
+# H1A3
+lmer_low.FSR.H1A3.First <- lmer(H1A3c_mean ~ phonation + (1|Label)  ,low.FSR.First)
+summary(lmer_low.FSR.H1A3.First)
+
+lmer_low.FSR.H1A3.Second <- lmer(H1A3c_mean ~ phonation + (1|Label) ,low.FSR.Second)
+summary(lmer_low.FSR.H1A3.Second)
+
+lmer_low.FSR.H1A3.Third <- lmer(H1A3c_mean ~ phonation + (1|Label) ,low.FSR.Third)
+summary(lmer_low.FSR.H1A3.Third)
+
+# CPP
+lmer_low.FSR.CPP.First <- lmer(CPP_mean ~ phonation + (1|Label) ,low.FSR.First)
+summary(lmer_low.FSR.CPP.First)
+
+lmer_low.FSR.CPP.Second <- lmer(CPP_mean ~ phonation + (1|Label) ,low.FSR.Second)
+summary(lmer_low.FSR.CPP.Second)
+
+lmer_low.FSR.CPP.Third <- lmer(CPP_mean ~ phonation + (1|Label) ,low.FSR.Third)
+summary(lmer_low.FSR.CPP.Third)
+
+#RD
+# H1H2
+lmer_low.RD.H1H2.First <- lmer(H1H2c_mean ~ phonation + (1|Label) ,low.RD.First)
+summary(lmer_low.RD.H1H2.First)
+
+lmer_low.RD.H1H2.Second <- lmer(H1H2c_mean ~ phonation + (1|Label) ,low.RD.Second)
+summary(lmer_low.RD.H1H2.Second)
+
+lmer_low.RD.H1H2.Third <- lmer(H1H2c_mean ~ phonation + (1|Label) ,low.RD.Third)
+summary(lmer_low.RD.H1H2.Third)
+
+# H1A3
+lmer_low.RD.H1A3.First <- lmer(H1A3c_mean ~ phonation + (1|Label)  ,low.RD.First)
+summary(lmer_low.RD.H1A3.First)
+
+lmer_low.RD.H1A3.Second <- lmer(H1A3c_mean ~ phonation + (1|Label) ,low.RD.Second)
+summary(lmer_low.RD.H1A3.Second)
+
+lmer_low.RD.H1A3.Third <- lmer(H1A3c_mean ~ phonation + (1|Label) ,low.RD.Third)
+summary(lmer_low.RD.H1A3.Third)
+
+# CPP
+lmer_low.RD.CPP.First <- lmer(CPP_mean ~ phonation + (1|Label) ,low.RD.First)
+summary(lmer_low.RD.CPP.First)
+
+lmer_low.RD.CPP.Second <- lmer(CPP_mean ~ phonation + (1|Label) ,low.RD.Second)
+summary(lmer_low.RD.CPP.Second)
+
+lmer_low.RD.CPP.Third <- lmer(CPP_mean ~ phonation + (1|Label) ,low.RD.Third)
+summary(lmer_low.RD.CPP.Third)
 
