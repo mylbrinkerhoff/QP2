@@ -675,113 +675,114 @@ Laryngealized vowels show a different pattern. For FSR, the laryngealized vowel'
 \subsection{Statistical results} \label{sec:Stats}
 %------------------------------------
 
-In order to determine whether or not the gestures for pitch and phonation are overlapping a mixed-effects linear regression analysis was performed with a Satterthwaite's method for t-test analysis used to derive the p-values. The f0 measurements where treated as the dependent variable with word treated as random. The mixed-effects linear regression was ran on each participate separately, unlike in \citet{garellekAcousticConsequencesPhonation2011,dicanioCoarticulationToneGlottal2012} which ran their results on a dataset that combined all of their participants together. One of the factors that led to this decision was the difference between FSR's and RD's productions of laryngealized phonation.
+In order to determine whether or not the different acoustic measurements were effective at capturing the different phonation types, a mixed-effects linear regression analysis was performed with a Satterthwaite's method for t-test analysis used to derive the p-values. Each of different measurements were treated as the dependent variable with word and speaker treated as random.
 
-Overall, the results of the linear regression analysis does not show any effect of phonation type on the f0 measurements for the two speakers for any portion of the vowels. Additionally, the results of the analysis show that there is an effect from H1-H2 for all portions of the vowel and for both speakers. In the final third of the vowel for FSR and for RD only the analysis shows that there is an effect for H1-A3 and CPP on f0.
+Overall, the results of the linear regression shows some interesting facts when we 
+% Overall, the results of the linear regression analysis does not show any effect of phonation type on the f0 measurements for the two speakers for any portion of the vowels. Additionally, the results of the analysis show that there is an effect from H1-H2 for all portions of the vowel and for both speakers. In the final third of the vowel for FSR and for RD only the analysis shows that there is an effect for H1-A3 and CPP on f0.
 
-\begin{table}[!h]
-	\centering
-	\caption{Results of the mixed-effects linear regression analysis on the first third of the vowel for FSR. }
-	\label{tab:First}
-	 \begin{tabular}{llllll}
-	  \lsptoprule
-						&  Estimate  & Std. Error & df & t value & p-value \\
-	  	Breathy   		&  -34  	&  19.346	& 73 	& -1.757 	& 0.08304 \\
-		Checked    		&  -19.221 	&  11.818	& 73 	& -1.626 	& 0.10817 \\
-		Laryngealized	& 6.275		&  14.381	& 73	& 0.436 	& 0.66386 \\
-		H1-H2			& 5.871		&  2.113	& 73	& 2.779 	& 0.00693 \\
-		H1-A3			& -1.922 	&  1.301	& 73	& -1.477	& 0.14407 \\
-		CPP				& 2.172		&  1.343	& 73	& 1.617		& 0.11021 \\
-	  \lspbottomrule
-	 \end{tabular}
-\end{table}
+% \begin{table}[!h]
+% 	\centering
+% 	\caption{Results of the mixed-effects linear regression analysis on the first third of the vowel for FSR. }
+% 	\label{tab:First}
+% 	 \begin{tabular}{llllll}
+% 	  \lsptoprule
+% 						&  Estimate  & Std. Error & df & t value & p-value \\
+% 	  	Breathy   		&  -34  	&  19.346	& 73 	& -1.757 	& 0.08304 \\
+% 		Checked    		&  -19.221 	&  11.818	& 73 	& -1.626 	& 0.10817 \\
+% 		Laryngealized	& 6.275		&  14.381	& 73	& 0.436 	& 0.66386 \\
+% 		H1-H2			& 5.871		&  2.113	& 73	& 2.779 	& 0.00693 \\
+% 		H1-A3			& -1.922 	&  1.301	& 73	& -1.477	& 0.14407 \\
+% 		CPP				& 2.172		&  1.343	& 73	& 1.617		& 0.11021 \\
+% 	  \lspbottomrule
+% 	 \end{tabular}
+% \end{table}
 
-\begin{table}[!h]
-	\centering
-	\caption{Results of the mixed-effects linear regression analysis on the second third of the vowel for FSR. }
-	\label{tab:Second}
-	 \begin{tabular}{llllll}
-	  \lsptoprule
-						&  Estimate  & Std. Error & df & t value & p-value \\
-	  	Breathy   		& -15.8469 	& 17.0862	& 72.9872 	& -0.927 	& 0.3567\\
-		Checked    		& -12.6235	& 10.2839	& 58.4709	& -1.228 	& 0.2246 \\
-		Laryngealized	& -15.2031	& 12.5907	& 65.8131	& -1.207	& 0.2316 \\
-		H1-H2			& 4.1224	& 0.8339	& 72.9915	& 4.944		& <0.001\\
-		H1-A3			& -0.5992	& 0.5759	& 68.4517	& -1.041	& 0.3017\\
-		CPP				& -3.0378	& 1.5275	& 69.2885	& -1.989	& 0.0507\\
-	  \lspbottomrule
-	 \end{tabular}
-\end{table}
+% \begin{table}[!h]
+% 	\centering
+% 	\caption{Results of the mixed-effects linear regression analysis on the second third of the vowel for FSR. }
+% 	\label{tab:Second}
+% 	 \begin{tabular}{llllll}
+% 	  \lsptoprule
+% 						&  Estimate  & Std. Error & df & t value & p-value \\
+% 	  	Breathy   		& -15.8469 	& 17.0862	& 72.9872 	& -0.927 	& 0.3567\\
+% 		Checked    		& -12.6235	& 10.2839	& 58.4709	& -1.228 	& 0.2246 \\
+% 		Laryngealized	& -15.2031	& 12.5907	& 65.8131	& -1.207	& 0.2316 \\
+% 		H1-H2			& 4.1224	& 0.8339	& 72.9915	& 4.944		& <0.001\\
+% 		H1-A3			& -0.5992	& 0.5759	& 68.4517	& -1.041	& 0.3017\\
+% 		CPP				& -3.0378	& 1.5275	& 69.2885	& -1.989	& 0.0507\\
+% 	  \lspbottomrule
+% 	 \end{tabular}
+% \end{table}
 
-\begin{table}[!h]
-	\centering
-	\caption{Results of the mixed-effects linear regression analysis on the last third of the vowel for FSR. }
-	\label{tab:Third}
-	 \begin{tabular}{llllll}
-	  \lsptoprule
-						&  Estimate  & Std. Error & df & t value & p-value \\
-	  	Breathy   		& 11.5334	&	21.0215	&	72.8338	&	0.549	&	0.584925    \\
-		Checked    		& -24.9712	&	12.9289	&	55.9320	&	-1.931	&	0.058504  \\
-		Laryngealized	& 19.3827	&	14.4598	&	59.3210	&	1.340	&	0.185208 \\
-		H1-H2			& 5.2474	&	1.3865	&	73.5567	&	3.785	&	0.000312 \\
-		H1-A3			& -1.9562	&	0.8326	&	57.1747	&	-2.350	&	0.022272 \\
-		CPP				& -6.7957	&	2.2457	&	72.4947	&	-3.026	&	0.003428 \\
-	  \lspbottomrule
-	 \end{tabular}
-\end{table}
+% \begin{table}[!h]
+% 	\centering
+% 	\caption{Results of the mixed-effects linear regression analysis on the last third of the vowel for FSR. }
+% 	\label{tab:Third}
+% 	 \begin{tabular}{llllll}
+% 	  \lsptoprule
+% 						&  Estimate  & Std. Error & df & t value & p-value \\
+% 	  	Breathy   		& 11.5334	&	21.0215	&	72.8338	&	0.549	&	0.584925    \\
+% 		Checked    		& -24.9712	&	12.9289	&	55.9320	&	-1.931	&	0.058504  \\
+% 		Laryngealized	& 19.3827	&	14.4598	&	59.3210	&	1.340	&	0.185208 \\
+% 		H1-H2			& 5.2474	&	1.3865	&	73.5567	&	3.785	&	0.000312 \\
+% 		H1-A3			& -1.9562	&	0.8326	&	57.1747	&	-2.350	&	0.022272 \\
+% 		CPP				& -6.7957	&	2.2457	&	72.4947	&	-3.026	&	0.003428 \\
+% 	  \lspbottomrule
+% 	 \end{tabular}
+% \end{table}
 
 
-%----------------------------------------------------------------
-\begin{table}[!h]
-	\centering
-	\caption{Results of the mixed-effects linear regression analysis on the first third of the vowel for RD. }
-	\label{tab:RDFirst}
-	 \begin{tabular}{llllll}
-	  \lsptoprule
-						&  Estimate  & Std. Error & df & t value & p-value \\
-	  	Breathy   		&  -9.1403 &    6.4902 & 64.0000 & -1.408  & 0.1639\\    
-		Checked        &-4.8954   &  4.4826  &64.0000 & -1.092  & 0.2789    \\
-		Laryngealized   &1.8633   &  4.8763  &64.0000  & 0.382 &  0.7036    \\
-		H1-H2          &9.7878    & 1.6869  &64.0000  & 5.802 & <0.001\\
-		H1-A3         &-1.4097    & 0.7887 & 64.0000 & -1.787 &  0.0786 \\
-		CPP              &  -0.4755  &   0.8973 & 64.0000 & -0.530  & 0.5980 \\  
-	  \lspbottomrule
-	 \end{tabular}
-\end{table}
+% %----------------------------------------------------------------
+% \begin{table}[!h]
+% 	\centering
+% 	\caption{Results of the mixed-effects linear regression analysis on the first third of the vowel for RD. }
+% 	\label{tab:RDFirst}
+% 	 \begin{tabular}{llllll}
+% 	  \lsptoprule
+% 						&  Estimate  & Std. Error & df & t value & p-value \\
+% 	  	Breathy   		&  -9.1403 &    6.4902 & 64.0000 & -1.408  & 0.1639\\    
+% 		Checked        &-4.8954   &  4.4826  &64.0000 & -1.092  & 0.2789    \\
+% 		Laryngealized   &1.8633   &  4.8763  &64.0000  & 0.382 &  0.7036    \\
+% 		H1-H2          &9.7878    & 1.6869  &64.0000  & 5.802 & <0.001\\
+% 		H1-A3         &-1.4097    & 0.7887 & 64.0000 & -1.787 &  0.0786 \\
+% 		CPP              &  -0.4755  &   0.8973 & 64.0000 & -0.530  & 0.5980 \\  
+% 	  \lspbottomrule
+% 	 \end{tabular}
+% \end{table}
 
-\begin{table}[!h]
-	\centering
-	\caption{Results of the mixed-effects linear regression analysis on the second third of the vowel for RD. }
-	\label{tab:RDSecond}
-	 \begin{tabular}{llllll}
-	  \lsptoprule
-						&  Estimate  & Std. Error & df & t value & p-value \\
-	  	Breathy   		& -5.9347  &   6.7027 & 64.0000  &-0.885   & 0.379\\
-		Checked    		& -2.3918   &  4.7231 & 64.0000  &-0.506  &  0.614 \\
-		Laryngealized	& 1.5355    & 5.2254 & 64.0000   &0.294  &  0.770  \\
-		H1-H2			&  3.2700   &  0.6607 & 64.0000  & 4.949	& <0.001\\
-		H1-A3			& -0.3942   &  0.3577 & 64.0000  &-1.102   & 0.275 \\
-		CPP				& -0.3629   &  0.3702 & 64.0000  &-0.980  &  0.331 \\
-	  \lspbottomrule
-	 \end{tabular}
-\end{table}
+% \begin{table}[!h]
+% 	\centering
+% 	\caption{Results of the mixed-effects linear regression analysis on the second third of the vowel for RD. }
+% 	\label{tab:RDSecond}
+% 	 \begin{tabular}{llllll}
+% 	  \lsptoprule
+% 						&  Estimate  & Std. Error & df & t value & p-value \\
+% 	  	Breathy   		& -5.9347  &   6.7027 & 64.0000  &-0.885   & 0.379\\
+% 		Checked    		& -2.3918   &  4.7231 & 64.0000  &-0.506  &  0.614 \\
+% 		Laryngealized	& 1.5355    & 5.2254 & 64.0000   &0.294  &  0.770  \\
+% 		H1-H2			&  3.2700   &  0.6607 & 64.0000  & 4.949	& <0.001\\
+% 		H1-A3			& -0.3942   &  0.3577 & 64.0000  &-1.102   & 0.275 \\
+% 		CPP				& -0.3629   &  0.3702 & 64.0000  &-0.980  &  0.331 \\
+% 	  \lspbottomrule
+% 	 \end{tabular}
+% \end{table}
 
-\begin{table}[!h]
-	\centering
-	\caption{Results of the mixed-effects linear regression analysis on the last third of the vowel for RD. }
-	\label{tab:RDThird}
-	 \begin{tabular}{llllll}
-	  \lsptoprule
-						&  Estimate  & Std. Error & df & t value & p-value \\
-	  	Breathy   		& -2.5294   &  7.2170 & 64.0000 & -0.350 & 0.72713    \\
-		Checked    		& -5.0933   &  5.0358 & 64.0000 & -1.011 & 0.31563  \\
-		Laryngealized	& -0.7534   &  5.7945 & 64.0000 & -0.130 & 0.89696 \\
-		H1-H2			& 2.3555    & 0.8993  &64.0000  & 2.619 & 0.01099 \\
-		H1-A3			& -1.1533   &  0.4188 & 64.0000 & -2.754 & 0.00766 \\
-		CPP				& 0.6400    & 0.5700 & 64.0000  & 1.123 & 0.26570 \\
-	  \lspbottomrule
-	 \end{tabular}
-\end{table}
+% \begin{table}[!h]
+% 	\centering
+% 	\caption{Results of the mixed-effects linear regression analysis on the last third of the vowel for RD. }
+% 	\label{tab:RDThird}
+% 	 \begin{tabular}{llllll}
+% 	  \lsptoprule
+% 						&  Estimate  & Std. Error & df & t value & p-value \\
+% 	  	Breathy   		& -2.5294   &  7.2170 & 64.0000 & -0.350 & 0.72713    \\
+% 		Checked    		& -5.0933   &  5.0358 & 64.0000 & -1.011 & 0.31563  \\
+% 		Laryngealized	& -0.7534   &  5.7945 & 64.0000 & -0.130 & 0.89696 \\
+% 		H1-H2			& 2.3555    & 0.8993  &64.0000  & 2.619 & 0.01099 \\
+% 		H1-A3			& -1.1533   &  0.4188 & 64.0000 & -2.754 & 0.00766 \\
+% 		CPP				& 0.6400    & 0.5700 & 64.0000  & 1.123 & 0.26570 \\
+% 	  \lspbottomrule
+% 	 \end{tabular}
+% \end{table}
 
 %------------------------------------
 \section{Discussion of the results} \label{sec:Discussion}
