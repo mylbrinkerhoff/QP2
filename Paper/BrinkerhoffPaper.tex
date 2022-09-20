@@ -466,7 +466,7 @@ Due to the impact of the COVID-19 pandemic, only two native language speakers of
 \end{table}
 
 
-After the elicitations were completed the audio was uploaded into ELAN \citep{wittenburgELANProfessionalFramework2006} for initial segmentation into sentences. This was then followed by segmenting of the vowel portion in Praat \citep{boersmaPraatDoingPhonetics2021}. These segments were then inputted to VoiceSauce \citep{shueVOICESAUCEProgramVoice2009} were each vowel was resampled at 16kHZ for acoustic measurement. The acoustic measurements of VoiceSauce were then analyzed in R \citep{rcoreteamLanguageEnvironmentStatistical2021}. In order to investigate the differences in timing, each vowel was normalized for time and following \citet{garellekAcousticConsequencesPhonation2011}, the resulting measurements were averaged for each third of the vowel. 
+After the elicitations were completed the audio was uploaded into ELAN \citep{wittenburgELANProfessionalFramework2006} for initial segmentation into sentences. This was then followed by segmenting of the vowel portion in Praat \citep{boersmaPraatDoingPhonetics2021}. These segments were then fed into VoiceSauce \citep{shueVOICESAUCEProgramVoice2009} were each vowel was resampled at 16kHZ for acoustic measurement. The acoustic measurements of VoiceSauce were then analyzed in R \citep{rcoreteamLanguageEnvironmentStatistical2021}. In order to investigate the differences in timing, each vowel was normalized for time and following \citet{garellekAcousticConsequencesPhonation2011}, the resulting measurements were averaged for each third of the vowel. 
 
 %------------------------------------
 \subsection{Spectral-tilt results} \label{sec:Results}
@@ -478,7 +478,7 @@ In plotting the spectral-tilt measurements, we find that the results follow some
 \subsubsection{H1-H2 results} \label{sec:H1H2}
 %------------------------------------
 
-The clearest result that was able to be gleaned from the H1-H2 measurements show that the breathy voice is much lower than the measurement for modal vowels throughout much of the vowel. This can be seen in Figures~\ref{fig:FSRh1h2first}, \ref{fig:h1h2second}, and \ref{fig:h1h2third}.
+The clearest result that was gleaned from the H1-H2 measurements show that the breathy voice is much lower than the measurement for modal vowels throughout much of the vowel. This can be seen in Figures~\ref{fig:FSRh1h2first}, \ref{fig:h1h2second}, and \ref{fig:h1h2third}. This behavior, however, is at odds with the observed patterns that breathy voice should have a higher H1-H2 value than the model's value. This suggests that instead of breathy voice is actually creaky. However, the correct behavior for breathy voice is observed in H1-A3, see Section~\ref{sec:H1A3}
 
 \begin{figure}[!ht]
 	\centering
@@ -675,9 +675,147 @@ Laryngealized vowels show a different pattern. For FSR, the laryngealized vowel'
 \subsection{Statistical results} \label{sec:Stats}
 %------------------------------------
 
-In order to determine whether or not the different acoustic measurements were effective at capturing the different phonation types, a mixed-effects linear regression analysis was performed with a Satterthwaite's method for t-test analysis used to derive the p-values. Each of different measurements were treated as the dependent variable with word and speaker treated as random.
+In order to determine whether or not the different acoustic measurements were effective at capturing the different phonation types, a mixed-effects linear regression analysis was performed with a Satterthwaite's method for t-test analysis used to derive the p-values. Each of different measurements were treated as the dependent variable with word and speaker treated as random. In presenting the results of the statistical analysis, I will first present the results of the H1-H2 analysis, followed by H1-A3 and CPP. 
 
-Overall, the results of the linear regression shows some interesting facts when we 
+The first statistical analysis took H1-H2 as the fixed effect with speaker and word as random. This analysis was repeated three times for each third of the vowels. The analysis for the first third of the vowels, results for which are presented in Table~\ref{tab:H1H2_First}. This shows that there is no effect for the different phonation types.
+
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the first third of the vowel for H1-H2. }
+	\label{tab:H1H2_First}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		&  -0.3049  &   0.5795 & 116.4255 &  -0.526  &  0.600 \\
+		Checked    		&  -0.4731  &   0.4029 & 145.6184 &  -1.174  &  0.242 \\
+		Laryngealized	&  -0.2938  &   0.4675 & 101.9977 &  -0.629  &  0.531 \\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+As can be recalled from Section~\ref{sec:H1H2}, both FSR and RD show a lower value for H1-H2 for breathy vowels in the last two-thirds of the vowels when compared to the model vowel's H1-H2 values. The results of the statistical analysis for the last two-thirds of the vowel, presented in Table~\ref{tab:H1H2_Second} and Table~\ref{tab:H1H2_Third}, show that this behavior is significant.
+
+At no point do the other phonation types reach significance with respect to H1-H2. 
+
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the second third of the vowel for H1-H2. }
+	\label{tab:H1H2_Second}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		&  -3.4158  &   1.3400 & 126.9590 &  -2.549  &  0.0120 \\
+		Checked    		&  -1.7466  &   0.9197 & 146.9995 &  -1.899  &  0.0595 \\
+		Laryngealized	&  -0.7405  &   1.0852 & 117.0669 &  -0.682  &  0.4963 \\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the final third of the vowel for H1-H2. }
+	\label{tab:H1H2_Third}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		&  -2.2131  &   1.0291 & 125.2092 &  -2.151  &  0.0334 \\
+		Checked    		&  -1.3487  &   0.6952 & 146.2461 &  -1.940  &  0.0543 \\
+		Laryngealized	&  -0.8676  &   0.8202 & 116.8963 &  -1.058  &  0.2923 \\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+The second statistical analysis for the H1-A3 measurement shows some very clear behavior for breathy voice. As can be recalled from Section~\ref{sec:H1A3}, we observe that breathy voice is clearly identified in all portions of the vowel with an elevated H1-A3 value when compared to the model vowels' values. We see that at all portions of the vowel, as seen in Tables~\ref{tab:H1A3_First}, \ref{tab:H1A3_Second}, \ref{tab:H1A3_Third} show significance.  
+
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the first third of the vowel for H1-A3. }
+	\label{tab:H1A3_First}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		&  4.29036  &  1.31288 & 137.12067 &  3.268  &  0.00137\\
+		Checked    		&  0.15001  &  0.84476 & 134.62215 &  0.178  &  0.85932 \\
+		Laryngealized	& -0.05694  &  1.07130 & 137.16596 & -0.053  &  0.95769\\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the second third of the vowel for H1-A3. }
+	\label{tab:H1A3_Second}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		&  4.398    &  2.027 & 147.003 &  2.169 &  0.0317 \\
+		Checked    		&  1.195    &  1.426 & 147.000 &  0.838 &  0.4033  \\
+		Laryngealized	& -2.694    &  1.627 & 147.001 & -1.656 &  0.0998 \\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the final third of the vowel for H1-A3. }
+	\label{tab:H1A3_Third}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		&  5.2928   &  1.7966 & 127.0400 &  2.946 & 0.00383 \\
+		Checked    		& -0.7825   &  1.2487 & 147.1011 & -0.627 & 0.53189 \\
+		Laryngealized	& 0.2669    &  1.4224 & 117.4917 &  0.188 & 0.85151 \\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+However, the other phonations failed to reach significance when evaluated against H1-A3.
+
+
+% Based on the results of the statistical analysis, CPP is informative for differentiating checked from laryngealized voice. Laryngealized voice shows a statistically significance in the second-third of the vowel. This is consistent with the observed behavior approximately in the center of the vowel. Despite the differences in how the the laryngealized vowels are produced between the speakers, there is a difference in the CPP value in the middle of the vowel it 
+
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the first third of the vowel for CPP. }
+	\label{tab:CPP_First}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		&  3.4470   &  1.1743 & 145.9760 &  2.935 & 0.00387 \\
+		Checked    		& -1.4190   &  0.7088 & 120.5020 & -2.002 & 0.04754 \\
+		Laryngealized	&  0.8240   &  0.9530 & 147.0083 &  0.865 & 0.38868 \\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the second third of the vowel for CPP. }
+	\label{tab:CPP_Second}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		&  1.5044   &  1.4073 & 128.0083 &  1.069 & 0.287094 \\
+		Checked    		& -0.5804   &  0.9789 & 146.0792 & -0.593 & 0.554154 \\
+		Laryngealized	& -2.2898   &  1.1354 & 117.6213 & -2.017 & 0.046006 \\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{Results of the mixed-effects linear regression analysis on the final third of the vowel for CPP. }
+	\label{tab:CPP_Third}
+	 \begin{tabular}{llllll}
+	  \lsptoprule
+						&  Estimate  & Std. Error & df & t value & p-value \\
+	  	Breathy   		&  1.6391   &  1.0173  & 139.8563 &  1.611 & 0.10939 \\
+		Checked    		& -2.1386   &  0.6449  & 129.1392 & -3.316 & 0.00119 \\
+		Laryngealized	& -1.1158   &  0.8142  & 140.5570 & -1.370 & 0.17274\\
+	  \lspbottomrule
+	 \end{tabular}
+\end{table}
+
 % Overall, the results of the linear regression analysis does not show any effect of phonation type on the f0 measurements for the two speakers for any portion of the vowels. Additionally, the results of the analysis show that there is an effect from H1-H2 for all portions of the vowel and for both speakers. In the final third of the vowel for FSR and for RD only the analysis shows that there is an effect for H1-A3 and CPP on f0.
 
 % \begin{table}[!h]
