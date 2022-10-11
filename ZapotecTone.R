@@ -265,9 +265,9 @@ print(FSRtone_plot)
 ggsave(filename = "FSRTonePlot.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 RDtone_plot <- ggplot(data = zapotec_timesRD, 
                       aes(x = normalized_time, 
@@ -292,9 +292,9 @@ print(RDtone_plot)
 ggsave(filename = "RDTonePlot.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 Join.tone_plot <- ggplot(data = times.zapotec.join, 
                          aes(x = normalized_time, 
@@ -320,9 +320,9 @@ print(Join.tone_plot)
 ggsave(filename = "JoinTonePlot.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 # Phonation for FSR
 # Evaluate the spectral tilt measurements according to different tones
@@ -347,9 +347,9 @@ print(FSRh1h2_plot)
 ggsave(filename = "FSRh1h2_box.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 # boxplot by tone
 h1h2_boxplot2 <- ggplot(data = zapotec_timesFSR, 
@@ -370,9 +370,9 @@ print(h1h2_boxplot2)
 ggsave(filename = "h1h2_box2.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 # Line plot
@@ -408,9 +408,9 @@ print(h1h2_line)
 ggsave(filename = "h1h2_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line Plot at H
 h1h2_line_H <- ggplot(data = zapotec_times2[zapotec_times2$tone=="H", ], 
@@ -433,9 +433,9 @@ print(h1h2_line_H)
 ggsave(filename = "h1h2_line_H.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line plot at L
 h1h2_line_L <- ggplot(data = zapotec_times2[zapotec_times2$tone=="L", ], 
@@ -458,9 +458,9 @@ print(h1h2_line_L)
 ggsave(filename = "h1h2_line_L.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line Plot at M
 h1h2_line_M <- ggplot(data = zapotec_times[zapotec_times$tone=="M", ], 
@@ -483,9 +483,9 @@ print(h1h2_line_M)
 ggsave(filename = "h1h2_line_M.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line Plot at HL
 h1h2_line_HL <- ggplot(data = zapotec_times2[zapotec_times2$tone=="HL", ], 
@@ -508,9 +508,9 @@ print(h1h2_line_HL)
 ggsave(filename = "h1h2_line_HL.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line Plot at MH
 h1h2_line_MH <- ggplot(data = zapotec_times[zapotec_times$tone=="MH", ], 
@@ -533,9 +533,9 @@ print(h1h2_line_MH)
 ggsave(filename = "h1h2_line_MH.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 
@@ -585,9 +585,9 @@ print(line.laryngealized)
 ggsave(filename = "line_laryngealized.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Checked
 checked <- zapotec_times %>%
@@ -631,9 +631,9 @@ print(checked.line)
 ggsave(filename = "line_checked.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 ## Breathy
@@ -678,9 +678,9 @@ print(breathy.line)
 ggsave(filename = "line_breathy.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Modal
 modal <- zapotec_times %>%
@@ -724,9 +724,9 @@ print(modal.line)
 ggsave(filename = "line_modal.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 ## plot of laryngealized and checked together
@@ -754,9 +754,9 @@ print(h1h2_CheckedLaryngeal)
 ggsave(filename = "h1h2_CheckedLaryngeal.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Laryngeal and modal
 zapotec_MCL <- bind_rows(list(laryngeal,checked,modal), .id = "id")
@@ -782,9 +782,9 @@ print(h1h2_MCL)
 ggsave(filename = "h1h2_MCL.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 ## Plotting h1-a1
@@ -810,9 +810,9 @@ print(h1a1_line)
 ggsave(filename = "h1a1_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## HA2
 h1a2_line <- ggplot(data = zapotec_times, 
@@ -837,9 +837,9 @@ print(h1a2_line)
 ggsave(filename = "h1a2_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## H1A3c
 h1a3_line <- ggplot(data = zapotec_times, 
@@ -864,9 +864,9 @@ print(h1a3_line)
 ggsave(filename = "h1a3_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## H1-H2K
 H2k_line <- ggplot(data = zapotec_times, 
@@ -891,9 +891,9 @@ print(H2k_line)
 ggsave(filename = "h1h2k_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## CPP
 CPP_line <- ggplot(data = zapotec_times2, 
@@ -918,9 +918,9 @@ print(CPP_line)
 ggsave(filename = "CPP_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 
@@ -947,9 +947,9 @@ print(HA3_CheckedLaryngeal)
 ggsave(filename = "HA3_CheckedLaryngeal.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 # Phonation for RD
 # Evaluate the spectral tilt measurements according to different tones
@@ -986,9 +986,9 @@ print(RDh1h2_line)
 ggsave(filename = "RDh1h2_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line Plot at H
 RDh1h2_line_H <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="H", ], 
@@ -1011,9 +1011,9 @@ print(RDh1h2_line_H)
 ggsave(filename = "RDh1h2_line_H.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line plot at L
 RDh1h2_line_L <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="L", ], 
@@ -1036,9 +1036,9 @@ print(RDh1h2_line_L)
 ggsave(filename = "RDh1h2_line_L.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line Plot at M
 RDh1h2_line_M <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="M", ], 
@@ -1061,9 +1061,9 @@ print(RDh1h2_line_M)
 ggsave(filename = "RDh1h2_line_M.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line Plot at HL
 RDh1h2_line_HL <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="HL", ], 
@@ -1086,9 +1086,9 @@ print(RDh1h2_line_HL)
 ggsave(filename = "RDh1h2_line_HL.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line Plot at MH
 RDh1h2_line_MH <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="MH", ], 
@@ -1111,9 +1111,9 @@ print(RDh1h2_line_MH)
 ggsave(filename = "RDh1h2_line_MH.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 
@@ -1163,9 +1163,9 @@ print(RD.line.laryngealized)
 ggsave(filename = "RDline_laryngealized.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Checked
 RDchecked <- zapotec_timesRD %>%
@@ -1209,9 +1209,9 @@ print(RD.checked.line)
 ggsave(filename = "RDline_checked.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 ## Breathy
@@ -1256,9 +1256,9 @@ print(RDbreathy.line)
 ggsave(filename = "RDline_breathy.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Modal
 RDmodal <- zapotec_timesRD %>%
@@ -1302,9 +1302,9 @@ print(RDmodal.line)
 ggsave(filename = "RDline_modal.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 ## plot of laryngealized and checked together
@@ -1332,9 +1332,9 @@ print(RDh1h2_CL)
 ggsave(filename = "RDh1h2_CL.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Laryngeal and modal
 RDzapotec_MCL <- bind_rows(list(RDlaryngeal,RDchecked,RDmodal), .id = "id")
@@ -1360,9 +1360,9 @@ print(RDh1h2_MCL)
 ggsave(filename = "RDh1h2_MCL.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Plotting h1-a1
 RDh1a1_line <- ggplot(data = zapotec_timesRD, 
@@ -1387,9 +1387,9 @@ print(RDh1a1_line)
 ggsave(filename = "RDh1a1_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## HA2
 RDh1a2_line <- ggplot(data = zapotec_timesRD, 
@@ -1414,9 +1414,9 @@ print(RDh1a2_line)
 ggsave(filename = "RDh1a2_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## H1A3c
 RDh1a3_line <- ggplot(data = zapotec_timesRD, 
@@ -1441,9 +1441,9 @@ print(RDh1a3_line)
 ggsave(filename = "RDh1a3_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## H1-H2K
 H2k_line <- ggplot(data = zapotec_times, 
@@ -1468,9 +1468,9 @@ print(H2k_line)
 ggsave(filename = "h1h2k_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## CPP
 RDCPP_line <- ggplot(data = zapotec_timesRD, 
@@ -1495,9 +1495,9 @@ print(RDCPP_line)
 ggsave(filename = "RDCPP_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 # RD's CPP at M
 RDCPP_lineM <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="M", ], 
@@ -1522,9 +1522,9 @@ print(RDCPP_lineM)
 ggsave(filename = "RDCPP_lineM.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 # RD's CPP at H
 RDCPP_lineM <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="H", ], 
@@ -1549,9 +1549,9 @@ print(RDCPP_lineH)
 ggsave(filename = "RDCPP_lineH.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 # RD's CPP at L
 RDCPP_lineL <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="L", ], 
@@ -1576,9 +1576,9 @@ print(RDCPP_lineL)
 ggsave(filename = "RDCPP_lineL.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 # RD's CPP at MH
 RDCPP_lineM <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="MH", ], 
@@ -1603,9 +1603,9 @@ print(RDCPP_lineMH)
 ggsave(filename = "RDCPP_lineMH.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 # RD's CPP at HL
 RDCPP_lineM <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone=="HL", ], 
@@ -1630,9 +1630,9 @@ print(RDCPP_lineHL)
 ggsave(filename = "RDCPP_lineHL.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 # RD H1A3 stuff
 RDH1A3_H <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone == "H", ], 
@@ -1657,9 +1657,9 @@ print(RDH1A3_H)
 ggsave(filename = "RDH1A3_H.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 RDH1A3_HL <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone == "HL", ], 
                    aes(x = normalized_time, 
@@ -1683,9 +1683,9 @@ print(RDH1A3_HL)
 ggsave(filename = "RDH1A3_HL.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
     
 RDH1A3_MH <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone == "MH", ], 
                    aes(x = normalized_time, 
@@ -1709,9 +1709,9 @@ print(RDH1A3_MH)
 ggsave(filename = "RDH1A3_MH.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 RDH1A3_M <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone == "M", ], 
                    aes(x = normalized_time, 
@@ -1735,9 +1735,9 @@ print(RDH1A3_M)
 ggsave(filename = "RDH1A3_M.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 RDH1A3_L <- ggplot(data = zapotec_timesRD[zapotec_timesRD$tone == "L", ], 
                    aes(x = normalized_time, 
@@ -1761,9 +1761,9 @@ print(RDH1A3_L)
 ggsave(filename = "RDH1A3_L.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 RDH1A3_CheckedLaryngeal <- ggplot(data = RDzapotec_CL,  
                                aes(x = normalized_time, 
@@ -1787,9 +1787,9 @@ print(RDH1A3_CheckedLaryngeal)
 ggsave(filename = "RDHA3_CheckedLaryngeal.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 # Phonation for joint
 # Line plot
@@ -1825,9 +1825,9 @@ print(JOINh1h2_line)
 ggsave(filename = "JOINh1h2_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line Plot at H
 JOINh1h2_line_H <- ggplot(data = times.zapotec.join[times.zapotec.join$tone=="H", ], 
@@ -1850,9 +1850,9 @@ print(JOINh1h2_line_H)
 ggsave(filename = "JOINh1h2_line_H.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line plot at L
 JOINh1h2_line_L <- ggplot(data = times.zapotec.join[times.zapotec.join$tone=="L", ], 
@@ -1875,9 +1875,9 @@ print(JOINh1h2_line_L)
 ggsave(filename = "JOINh1h2_line_L.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line Plot at M
 JOINh1h2_line_M <- ggplot(data = times.zapotec.join[times.zapotec.join$tone=="M", ], 
@@ -1900,9 +1900,9 @@ print(JOINh1h2_line_M)
 ggsave(filename = "JOINh1h2_line_M.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line Plot at HL
 JOINh1h2_line_HL <- ggplot(data = times.zapotec.join[times.zapotec.join$tone=="HL", ], 
@@ -1925,9 +1925,9 @@ print(JOINh1h2_line_HL)
 ggsave(filename = "JOINh1h2_line_HL.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Line Plot at MH
 JOINh1h2_line_MH <- ggplot(data = times.zapotec.join[times.zapotec.join$tone=="MH", ], 
@@ -1950,9 +1950,9 @@ print(JOINh1h2_line_MH)
 ggsave(filename = "JOINh1h2_line_MH.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 
@@ -2002,9 +2002,9 @@ print(JOINline.laryngealized)
 ggsave(filename = "JOINline_laryngealized.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Checked
 JOINchecked <- times.zapotec.join %>%
@@ -2048,9 +2048,9 @@ print(JOINchecked.line)
 ggsave(filename = "JOINline_checked.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 ## Breathy
@@ -2095,9 +2095,9 @@ print(JOINbreathy.line)
 ggsave(filename = "JOINline_breathy.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Modal
 JOINmodal <- times.zapotec.join %>%
@@ -2141,9 +2141,9 @@ print(JOINmodal.line)
 ggsave(filename = "JOINline_modal.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 ## plot of laryngealized and checked together
@@ -2171,9 +2171,9 @@ print(JOINh1h2_CheckedLaryngeal)
 ggsave(filename = "JOINh1h2_CheckedLaryngeal.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Laryngeal and modal
 JOINzapotec_MCL <- bind_rows(list(JOINlaryngeal,JOINchecked,JOINmodal), .id = "id")
@@ -2199,9 +2199,9 @@ print(JOINh1h2_MCL)
 ggsave(filename = "JOINh1h2_MCL.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## Plotting h1-a1
 JOINh1a1_line <- ggplot(data = times.zapotec.join, 
@@ -2226,9 +2226,9 @@ print(JOINh1a1_line)
 ggsave(filename = "JOINh1a1_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## HA2
 JOINh1a2_line <- ggplot(data = times.zapotec.join, 
@@ -2253,9 +2253,9 @@ print(JOINh1a2_line)
 ggsave(filename = "JOINh1a2_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## H1A3c
 JOINh1a3_line <- ggplot(data = times.zapotec.join, 
@@ -2280,9 +2280,9 @@ print(JOINh1a3_line)
 ggsave(filename = "JOINh1a3_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## H1-H2K
 H2k_line <- ggplot(data = times.zapotec.join, 
@@ -2307,9 +2307,9 @@ print(H2k_line)
 ggsave(filename = "h1h2k_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 ## CPP
 JOINCPP_line <- ggplot(data = times.zapotec.join, 
@@ -2334,9 +2334,9 @@ print(JOINCPP_line)
 ggsave(filename = "JOINCPP_line.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 
@@ -2362,9 +2362,9 @@ print(JOINHA3_CheckedLaryngeal)
 ggsave(filename = "JOINHA3_CheckedLaryngeal.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 # Statistical analysis following Esposito 2010
@@ -2617,9 +2617,9 @@ print(FSRFirst_h1h2)
 ggsave(filename = "FSR_h1h2_1st.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 FSRSecond_h1h2 <- ggplot(data = FSRSecond, 
@@ -2642,9 +2642,9 @@ print(FSRSecond_h1h2)
 ggsave(filename = "FSR_h1h2_2nd.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 FSRThird_h1h2 <- ggplot(data = FSRThird, 
                         aes(x = phonation, 
@@ -2666,9 +2666,9 @@ print(FSRThird_h1h2)
 ggsave(filename = "FSR_h1h2_3rd.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 #H1-A3
 FSRFirst_h1a3 <- ggplot(data = FSRFirst, 
@@ -2691,9 +2691,9 @@ print(FSRFirst_h1a3)
 ggsave(filename = "FSR_h1a3_First.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 FSRSecond_h1a3 <- ggplot(data = FSRSecond, 
                          aes(x = phonation, 
@@ -2715,9 +2715,9 @@ print(FSRSecond_h1a3)
 ggsave(filename = "FSR_h1a3_Second.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 FSRThird_h1a3 <- ggplot(data = FSRThird, 
                         aes(x = phonation, 
@@ -2739,9 +2739,9 @@ print(FSRThird_h1a3)
 ggsave(filename = "FSR_h1a3_third.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 # RD
@@ -2765,9 +2765,9 @@ print(RDFirst_h1h2)
 ggsave(filename = "RD_h1h2_first.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 RDSecond_h1h2 <- ggplot(data = RDSecond, 
                          aes(x = phonation, 
@@ -2789,9 +2789,9 @@ print(RDSecond_h1h2)
 ggsave(filename = "RD_h1h2_second.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 RDThird_h1h2 <- ggplot(data = RDThird, 
                         aes(x = phonation, 
@@ -2813,9 +2813,9 @@ print(RDThird_h1h2)
 ggsave(filename = "RD_h1h2_third.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 #H1-A3
@@ -2839,9 +2839,9 @@ print(RDFirst_h1a3)
 ggsave(filename = "RD_h1a3_first.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 RDSecond_h1a3 <- ggplot(data = RDSecond, 
                          aes(x = phonation, 
@@ -2863,9 +2863,9 @@ print(RDSecond_h1a3)
 ggsave(filename = "RD_h1a3_second.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 RDThird_h1a3 <- ggplot(data = RDThird, 
                         aes(x = phonation, 
@@ -2887,9 +2887,9 @@ print(RDThird_h1a3)
 ggsave(filename = "RD_h1a3_third.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 # lmer
@@ -3097,9 +3097,9 @@ print(mean.FSRFirst_h1h2)
 ggsave(filename = "mean_FSR_h1h2_1st.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 mean.FSRSecond_h1h2 <- ggplot(data = mean.FSRSecond, 
@@ -3122,9 +3122,9 @@ print(mean.FSRSecond_h1h2)
 ggsave(filename = "mean_FSR_h1h2_2nd.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 mean.FSRThird_h1h2 <- ggplot(data = mean.FSRThird, 
                         aes(x = phonation, 
@@ -3146,9 +3146,9 @@ print(mean.FSRThird_h1h2)
 ggsave(filename = "mean.FSR_h1h2_3rd.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 #H1-A3
 mean.FSRFirst_h1a3 <- ggplot(data = mean.FSRFirst, 
@@ -3171,9 +3171,9 @@ print(mean.FSRFirst_h1a3)
 ggsave(filename = "mean_FSR_h1a3_First.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 mean.FSRSecond_h1a3 <- ggplot(data = mean.FSRSecond, 
                          aes(x = phonation, 
@@ -3195,9 +3195,9 @@ print(mean.FSRSecond_h1a3)
 ggsave(filename = "mean_FSR_h1a3_Second.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 mean.FSRThird_h1a3 <- ggplot(data = mean.FSRThird, 
                         aes(x = phonation, 
@@ -3219,9 +3219,9 @@ print(mean.FSRThird_h1a3)
 ggsave(filename = "mean_FSR_h1a3_third.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 #CPP
 mean.FSRFirst_cpp <- ggplot(data = mean.FSRFirst, 
                            aes(x = phonation, 
@@ -3243,9 +3243,9 @@ print(mean.FSRFirst_cpp)
 ggsave(filename = "mean_FSR_CPP_First.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 mean.FSRSecond_cpp <- ggplot(data = mean.FSRSecond, 
                             aes(x = phonation, 
@@ -3267,9 +3267,9 @@ print(mean.FSRSecond_cpp)
 ggsave(filename = "mean_FSR_cpp_Second.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 mean.FSRThird_cpp <- ggplot(data = mean.FSRThird, 
                            aes(x = phonation, 
@@ -3291,9 +3291,9 @@ print(mean.FSRThird_cpp)
 ggsave(filename = "mean_FSR_cpp_Third.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 #lmer
 lmer_mean.FSRFirst <- lmer(strF0_mean ~ phonation + H1H2c_mean + H1A3c_mean + CPP_mean + (1|Label) ,mean.FSRFirst)
@@ -3326,9 +3326,9 @@ print(mean.RDFirst_h1h2)
 ggsave(filename = "mean_RD_h1h2_1st.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 mean.RDSecond_h1h2 <- ggplot(data = mean.RDSecond, 
@@ -3351,9 +3351,9 @@ print(mean.RDSecond_h1h2)
 ggsave(filename = "mean_RD_h1h2_2nd.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 mean.RDThird_h1h2 <- ggplot(data = mean.RDThird, 
                             aes(x = phonation, 
@@ -3375,9 +3375,9 @@ print(mean.RDThird_h1h2)
 ggsave(filename = "mean_RD_h1h2_3rd.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 #CPP
 mean.RDFirst_cpp <- ggplot(data = mean.RDFirst, 
@@ -3400,9 +3400,9 @@ print(mean.RDFirst_cpp)
 ggsave(filename = "mean_RD_cpp_First.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 mean.RDSecond_cpp <- ggplot(data = mean.RDSecond, 
                              aes(x = phonation, 
@@ -3424,9 +3424,9 @@ print(mean.RDSecond_cpp)
 ggsave(filename = "mean_RD_cpp_Second.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 mean.RDThird_cpp <- ggplot(data = mean.RDThird, 
                             aes(x = phonation, 
@@ -3448,9 +3448,9 @@ print(mean.RDThird_cpp)
 ggsave(filename = "mean_RD_cpp_Third.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 #H1-A3
 mean.RDFirst_h1a3 <- ggplot(data = mean.RDFirst, 
@@ -3580,6 +3580,7 @@ summary(lmer_mean.CPP.Second)
 
 lmer_mean.CPP.Third <- lmer(CPP_mean ~ phonation + (1|Label) + (1|Speaker) ,mean.JointThird)
 summary(lmer_mean.CPP.Third)
+
 
 
 # Looking at just low tone
