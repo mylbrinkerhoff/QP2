@@ -257,9 +257,8 @@ FSRtone_plot <- ggplot(data = zapotec_timesFSR,
        y = "F0 (Hz)",
        colour = "Tonal Pattern") +
     theme_bw() +
-    guides(colour = guide_legend("Tonal Pattern", ncol = 5), 
-           fill = guide_legend("Tonal Pattern", ncol = 5) ) +
-    my.theme
+    guides(colour = guide_legend("Tonal Pattern", ncol = 1), 
+           fill = guide_legend("Tonal Pattern", ncol = 1) )
 
 print(FSRtone_plot)
 ggsave(filename = "FSRTonePlot.png", 
@@ -284,9 +283,8 @@ RDtone_plot <- ggplot(data = zapotec_timesRD,
          y = "F0 (Hz)",
          colour = "Tonal Pattern") +
     theme_bw() +
-    guides(colour = guide_legend("Tonal Pattern", ncol = 5), 
-           fill = guide_legend("Tonal Pattern", ncol = 5) ) +
-    my.theme
+    guides(colour = guide_legend("Tonal Pattern", ncol = 1), 
+           fill = guide_legend("Tonal Pattern", ncol = 1) )
 
 print(RDtone_plot)
 ggsave(filename = "RDTonePlot.png", 
@@ -311,9 +309,8 @@ Join.tone_plot <- ggplot(data = times.zapotec.join,
          y = "Normalized F0 (z-score)",
          colour = "Tonal Pattern") +
     theme_bw() +
-    guides(colour = guide_legend("Tonal Pattern", ncol = 5), 
-           fill = guide_legend("Tonal Pattern", ncol = 5) ) +
-    my.theme
+    guides(colour = guide_legend("Tonal Pattern", ncol = 1), 
+           fill = guide_legend("Tonal Pattern", ncol = 1) )
 
 
 print(Join.tone_plot)
@@ -2610,9 +2607,8 @@ FSRFirst_h1h2 <- ggplot(data = FSRFirst,
     theme_bw() +
     scale_fill_manual(values=cbbPalette) + # To use for fills
     scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
+    guides(colour = guide_legend("Phonation", ncol = 1), 
+           fill = guide_legend("Phonation", ncol = 1) )
 print(FSRFirst_h1h2)
 ggsave(filename = "FSR_h1h2_1st.png", 
        device = "png", 
@@ -2635,9 +2631,8 @@ FSRSecond_h1h2 <- ggplot(data = FSRSecond,
     theme_bw() +
     scale_fill_manual(values=cbbPalette) + # To use for fills
     scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
+    guides(colour = guide_legend("Phonation", ncol = 1), 
+           fill = guide_legend("Phonation", ncol = 1) )
 print(FSRSecond_h1h2)
 ggsave(filename = "FSR_h1h2_2nd.png", 
        device = "png", 
@@ -2659,9 +2654,8 @@ FSRThird_h1h2 <- ggplot(data = FSRThird,
     theme_bw() +
     scale_fill_manual(values=cbbPalette) + # To use for fills
     scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
+    guides(colour = guide_legend("Phonation", ncol = 1), 
+           fill = guide_legend("Phonation", ncol = 1) )
 print(FSRThird_h1h2)
 ggsave(filename = "FSR_h1h2_3rd.png", 
        device = "png", 
@@ -2684,9 +2678,8 @@ FSRFirst_h1a3 <- ggplot(data = FSRFirst,
     theme_bw() +
     scale_fill_manual(values=cbbPalette) + # To use for fills
     scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
+    guides(colour = guide_legend("Phonation", ncol = 1), 
+           fill = guide_legend("Phonation", ncol = 1) ) 
 print(FSRFirst_h1a3)
 ggsave(filename = "FSR_h1a3_First.png", 
        device = "png", 
@@ -2708,9 +2701,9 @@ FSRSecond_h1a3 <- ggplot(data = FSRSecond,
     theme_bw() +
     scale_fill_manual(values=cbbPalette) + # To use for fills
     scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
+    guides(colour = guide_legend("Phonation", ncol = 1), 
+           fill = guide_legend("Phonation", ncol = 1) ) 
+    
 print(FSRSecond_h1a3)
 ggsave(filename = "FSR_h1a3_Second.png", 
        device = "png", 
@@ -2732,9 +2725,9 @@ FSRThird_h1a3 <- ggplot(data = FSRThird,
     theme_bw() +
     scale_fill_manual(values=cbbPalette) + # To use for fills
     scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
+    guides(colour = guide_legend("Phonation", ncol = 1), 
+           fill = guide_legend("Phonation", ncol = 1) ) 
+    
 print(FSRThird_h1a3)
 ggsave(filename = "FSR_h1a3_third.png", 
        device = "png", 
@@ -2758,9 +2751,9 @@ RDFirst_h1h2 <- ggplot(data = RDFirst,
     theme_bw() +
     scale_fill_manual(values=cbbPalette) + # To use for fills
     scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
+    guides(colour = guide_legend("Phonation", ncol = 1), 
+           fill = guide_legend("Phonation", ncol = 1) ) 
+    
 print(RDFirst_h1h2)
 ggsave(filename = "RD_h1h2_first.png", 
        device = "png", 
@@ -2782,9 +2775,9 @@ RDSecond_h1h2 <- ggplot(data = RDSecond,
     theme_bw() +
     scale_fill_manual(values=cbbPalette) + # To use for fills
     scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
+    guides(colour = guide_legend("Phonation", ncol = 1), 
+           fill = guide_legend("Phonation", ncol = 1) ) 
+    
 print(RDSecond_h1h2)
 ggsave(filename = "RD_h1h2_second.png", 
        device = "png", 
@@ -2806,9 +2799,9 @@ RDThird_h1h2 <- ggplot(data = RDThird,
     theme_bw() +
     scale_fill_manual(values=cbbPalette) + # To use for fills
     scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
+    guides(colour = guide_legend("Phonation", ncol = 1), 
+           fill = guide_legend("Phonation", ncol = 1) ) 
+    
 print(RDThird_h1h2)
 ggsave(filename = "RD_h1h2_third.png", 
        device = "png", 
@@ -2832,9 +2825,9 @@ RDFirst_h1a3 <- ggplot(data = RDFirst,
     theme_bw() +
     scale_fill_manual(values=cbbPalette) + # To use for fills
     scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
+    guides(colour = guide_legend("Phonation", ncol = 1), 
+           fill = guide_legend("Phonation", ncol = 1) ) 
+    
 print(RDFirst_h1a3)
 ggsave(filename = "RD_h1a3_first.png", 
        device = "png", 
@@ -2856,9 +2849,9 @@ RDSecond_h1a3 <- ggplot(data = RDSecond,
     theme_bw() +
     scale_fill_manual(values=cbbPalette) + # To use for fills
     scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
+    guides(colour = guide_legend("Phonation", ncol = 1), 
+           fill = guide_legend("Phonation", ncol = 1) )
+    
 print(RDSecond_h1a3)
 ggsave(filename = "RD_h1a3_second.png", 
        device = "png", 
@@ -2880,9 +2873,9 @@ RDThird_h1a3 <- ggplot(data = RDThird,
     theme_bw() +
     scale_fill_manual(values=cbbPalette) + # To use for fills
     scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-    guides(colour = guide_legend("Phonation", ncol = 4), 
-           fill = guide_legend("Phonation", ncol = 4) ) +
-    my.theme
+    guides(colour = guide_legend("Phonation", ncol = 1), 
+           fill = guide_legend("Phonation", ncol = 1) ) 
+    
 print(RDThird_h1a3)
 ggsave(filename = "RD_h1a3_third.png", 
        device = "png", 
@@ -3090,9 +3083,8 @@ mean.FSRFirst_h1h2 <- ggplot(data = mean.FSRFirst,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) ) 
 print(mean.FSRFirst_h1h2)
 ggsave(filename = "mean_FSR_h1h2_1st.png", 
        device = "png", 
@@ -3115,9 +3107,8 @@ mean.FSRSecond_h1h2 <- ggplot(data = mean.FSRSecond,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) ) 
 print(mean.FSRSecond_h1h2)
 ggsave(filename = "mean_FSR_h1h2_2nd.png", 
        device = "png", 
@@ -3139,9 +3130,8 @@ mean.FSRThird_h1h2 <- ggplot(data = mean.FSRThird,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.FSRThird_h1h2)
 ggsave(filename = "mean.FSR_h1h2_3rd.png", 
        device = "png", 
@@ -3164,9 +3154,8 @@ mean.FSRFirst_h1a3 <- ggplot(data = mean.FSRFirst,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.FSRFirst_h1a3)
 ggsave(filename = "mean_FSR_h1a3_First.png", 
        device = "png", 
@@ -3188,9 +3177,9 @@ mean.FSRSecond_h1a3 <- ggplot(data = mean.FSRSecond,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
+  
 print(mean.FSRSecond_h1a3)
 ggsave(filename = "mean_FSR_h1a3_Second.png", 
        device = "png", 
@@ -3212,9 +3201,8 @@ mean.FSRThird_h1a3 <- ggplot(data = mean.FSRThird,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.FSRThird_h1a3)
 ggsave(filename = "mean_FSR_h1a3_third.png", 
        device = "png", 
@@ -3222,6 +3210,7 @@ ggsave(filename = "mean_FSR_h1a3_third.png",
        width=8, 
        height=4.5, 
        dpi=300)
+
 #CPP
 mean.FSRFirst_cpp <- ggplot(data = mean.FSRFirst, 
                            aes(x = phonation, 
@@ -3236,9 +3225,8 @@ mean.FSRFirst_cpp <- ggplot(data = mean.FSRFirst,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.FSRFirst_cpp)
 ggsave(filename = "mean_FSR_CPP_First.png", 
        device = "png", 
@@ -3260,9 +3248,8 @@ mean.FSRSecond_cpp <- ggplot(data = mean.FSRSecond,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.FSRSecond_cpp)
 ggsave(filename = "mean_FSR_cpp_Second.png", 
        device = "png", 
@@ -3284,9 +3271,8 @@ mean.FSRThird_cpp <- ggplot(data = mean.FSRThird,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.FSRThird_cpp)
 ggsave(filename = "mean_FSR_cpp_Third.png", 
        device = "png", 
@@ -3319,9 +3305,8 @@ mean.RDFirst_h1h2 <- ggplot(data = mean.RDFirst,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.RDFirst_h1h2)
 ggsave(filename = "mean_RD_h1h2_1st.png", 
        device = "png", 
@@ -3344,9 +3329,8 @@ mean.RDSecond_h1h2 <- ggplot(data = mean.RDSecond,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.RDSecond_h1h2)
 ggsave(filename = "mean_RD_h1h2_2nd.png", 
        device = "png", 
@@ -3368,9 +3352,8 @@ mean.RDThird_h1h2 <- ggplot(data = mean.RDThird,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.RDThird_h1h2)
 ggsave(filename = "mean_RD_h1h2_3rd.png", 
        device = "png", 
@@ -3393,9 +3376,8 @@ mean.RDFirst_cpp <- ggplot(data = mean.RDFirst,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.RDFirst_cpp)
 ggsave(filename = "mean_RD_cpp_First.png", 
        device = "png", 
@@ -3417,9 +3399,8 @@ mean.RDSecond_cpp <- ggplot(data = mean.RDSecond,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.RDSecond_cpp)
 ggsave(filename = "mean_RD_cpp_Second.png", 
        device = "png", 
@@ -3441,9 +3422,8 @@ mean.RDThird_cpp <- ggplot(data = mean.RDThird,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.RDThird_cpp)
 ggsave(filename = "mean_RD_cpp_Third.png", 
        device = "png", 
@@ -3466,16 +3446,15 @@ mean.RDFirst_h1a3 <- ggplot(data = mean.RDFirst,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.RDFirst_h1a3)
 ggsave(filename = "mean_RD_h1a3_First.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 mean.RDSecond_h1a3 <- ggplot(data = mean.RDSecond, 
                              aes(x = phonation, 
@@ -3490,16 +3469,15 @@ mean.RDSecond_h1a3 <- ggplot(data = mean.RDSecond,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.RDSecond_h1a3)
 ggsave(filename = "mean_RD_h1a3_Second.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 mean.RDThird_h1a3 <- ggplot(data = mean.RDThird, 
                             aes(x = phonation, 
@@ -3514,16 +3492,15 @@ mean.RDThird_h1a3 <- ggplot(data = mean.RDThird,
   theme_bw() +
   scale_fill_manual(values=cbbPalette) + # To use for fills
   scale_colour_manual(values=cbbPalette) + # To use for line and point colors
-  guides(colour = guide_legend("Phonation", ncol = 4), 
-         fill = guide_legend("Phonation", ncol = 4) ) +
-  my.theme
+  guides(colour = guide_legend("Phonation", ncol = 1), 
+         fill = guide_legend("Phonation", ncol = 1) )
 print(mean.RDThird_h1a3)
 ggsave(filename = "mean_RD_h1a3_third.png", 
        device = "png", 
        units = "in", 
-       width=16, 
-       height=9, 
-       dpi=600)
+       width=8, 
+       height=4.5, 
+       dpi=300)
 
 
 #lmer results
