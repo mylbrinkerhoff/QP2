@@ -51,6 +51,8 @@
 \usepackage[normalem]{ulem} %strike out text. Handy for syntax
 \usepackage{tcolorbox}
 \usepackage{datetime2}
+\usepackage{caption}
+\usepackage{subcaption}
 
 %%FONTS
 \setmainfont{Libertinus Serif}
@@ -139,6 +141,9 @@
 \section{Introduction} \label{sec:Introduction}
 %------------------------------------
 
+\begin{itemize}
+    \item 
+\end{itemize}
 
 %------------------------------------
 \section{Background} \label{sec:Background}
@@ -149,6 +154,136 @@
 \section{Santiago Laxopa Zapotec} \label{sec:SLZ}
 %------------------------------------
 
+\begin{itemize}
+    \item Santiago Laxopa Zapotec (SLZ), endonym \textit{Dille'xhunh Laxup}, is a a Northern Zapotec language spoken by approximately 1000 people in the municipality of Santiago Laxopa, Ixtlán, Oaxaca, Mexico and in diaspora communities in Mexico and the United States \citep{adlerAcousticsPhonationTypes2016,adlerDerivationVerbInitiality2018,foleyForbiddenCliticClusters2018,foleyExtendingPersonCaseConstraint2020}.
+    \item Closely related to San Bartolomé Zoogocho Zapotec \citep{longDiccionarioZapotecoSan2005,sonnenscheinDescriptiveGrammarSan2005} and shares a high level of mutual intelligibility with it.
+    \item SLZ is similar to other Zapotecan languages in distinguishing lenis and fortis consonants \citep[e.g.,][]{nellisFortisLenisCajonos1980,jaegerFortisLenisQuestion1983,uchiharaFortisLenisGlides2016}.
+\end{itemize}
+
+\begin{table}[!h]
+	\centering
+	\caption{Consonant inventory for Santiago Laxopa Zapotec}
+	\label{tab:SLZcons}
+	\fittable{
+	\begin{tabular}{llcccccccc}
+	\lsptoprule
+		  &  & bilabial & alveolar  & post- & retroflex & palatal &velar &labio-  &  uvular \\
+		 &&&&alveolar&  &&&velar& \\
+	\midrule
+	stop 		& lenis   & b  & d  & & & & g & gʷ & \\
+				& fortis  & p  & t  & & & & k & kʷ & \\
+	fricative   & lenis   &    & z  & ʒ & ʐ &  & &  & ʁ \\
+		        & fortis  &    & s  & ʃ & ʂ & ç & & & \\
+	affricate 	& lenis   &    & d͡z & & & & & & \\
+				& fortis  &    & t͡s & & t͡ʃ & & & & \\
+    nasal    	& lenis   &	   & n  & & & & & & \\
+				& fortis  &	mː & nː & & & & & & \\
+	lateral  	& lenis   &    & l & & & & & & \\
+				& fortis  &    & lː & & & & & & \\
+	trill		& 		  &    & r & & &  & &  & \\ 			
+	approximate & 		  &    & & & & & & w & \\ 
+	\lspbottomrule
+	\end{tabular}
+	}
+\end{table}
+
+\begin{itemize}
+    \item SLZ has a standard five vowel inventory. 
+\end{itemize}
+
+\begin{table}[!h]
+	\centering
+	\caption{Vowel qualities in Santiago Laxopa Zapotec.}
+    \label{tab:SLZvowels}
+	\begin{tabular}{lccc}
+	\lsptoprule
+	&  front& central  & back \\
+	\midrule
+	high   	&  i  &     &   u \\
+	mid    	&  e  &   	& 	o \\
+	low   	&     &  a 	&	  \\
+	\lspbottomrule
+	\end{tabular}
+\end{table}
+
+\begin{itemize}
+	\item These five vowels, additionally, appear with one of four different phonation types which will be discussed in greater detail in Section~\ref{sec:Phonation}.
+\end{itemize}
+
+%------------------------------------
+\subsection{Tone in Santiago Laxopa Zapotec} \label{sec:Tone}
+%------------------------------------
+
+\begin{itemize}
+    \item Similar to other Otomanguean languages, SLZ is tonal\citep{suarezMesoamericanIndianLanguages1983,campbellMesoAmericaLinguisticArea1986,silvermanLaryngealComplexityOtomanguean1997,campbellOtomangueanHistoricalLinguistics2017a,campbellOtomangueanHistoricalLinguistics2017}.
+    \item SLZ has five distinct tonal patterns that appear on the syllables of nouns, see Table~\ref{tab:tones}. 
+\end{itemize}
+
+\begin{table}[!h]
+	\centering
+	\caption{Examples of the five tonal patterns observed in the Santiago Laxopa Zapotec words.}
+	\label{tab:tones}
+	\begin{tabular}{lllll}
+	\lsptoprule
+	High   	&  a\supr{H}  &  \textit{xha}   &  [ ʐa\supr{H} ] & `clothing.\textsc{poss}'\\
+	Mid    	&  a\supr{M}  &  \textit{lhill} 	& [ liʒ\supr{M} ] & `house.\textsc{poss}' \\
+	Low   	&  a\supr{L}  &  \textit{yu'} 	&	 [ çuˀ\supr{L} ] & `earth'\\
+	Rising	&  a\supr{MH}  &  \textit{yu'u} 	&	[ çuˀu\supr{MH} ] & `quicklime (Sp. cal)' \\
+	Falling &  a\supr{HL}  &  \textit{yu'u}  &	[çuˀu\supr{HL}] &	`house' \\
+	\lspbottomrule
+	\end{tabular}
+\end{table}
+
+\begin{itemize}
+	\item These five tonal patterns are illustrated in Figures~\ref{fig:FSRTonePlot} and \ref{fig:RDTonePlot} for two different SLZ speakers. 
+	\item Figures~\ref{fig:FSRTonePlot} and \ref{fig:RDTonePlot} shows the five tonal contrasts averaged for each tonal contrast from the onset to ending of the vowel. 
+	\item We can ignore the first 20-25\% of the measure due to the influence of transitions out of the consonantal onsets. 
+\end{itemize}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../FSRTonePlot.png}
+	\label{fig:FSRTonePlot}
+	\caption{Tonal contrasts for FSR averaged and time normalized. Each line in this graph represents the average of approximately 10 syllables for each tonal pattern. }
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../RDTonePlot.png}
+	\label{fig:RDTonePlot}
+	\caption{Tonal contrasts for RD averaged and time normalized. Each line in this graph represents the average of approximately 10 syllables for each tonal pattern.}
+\end{figure}
+%------------------------------------
+\subsection{Phonation in Santiago Laxopa Zapotec} \label{sec:Phonation}
+%------------------------------------
+
+\begin{itemize}
+	\item Zapotecan languages commonly make use of contrastive phonation on vowels \citep[e.g.,][]{avelinobecerraTopicsYalalagZapotec2004,longDiccionarioZapotecoSan2005,avelinoAcousticElectroglottographicAnalyses2010,lopeznicolasEstudiosFonologiaGramatica2016,chavez-peonInteractionMetricalStructure2010}.
+	\item SLZ is no different and has four contrastive phonation types: modal /a/, breathy /a̤/, checked /aˀ/, and laryngealized /aˀa/. 
+	\item 
+\end{itemize}
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../za'a.png}
+		\caption{\textit{za'a} `corncob'}
+		\label{fig:za'a}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../xa'ag.png}
+		\caption{\textit{xa'ag} `topil'}
+		\label{fig:xa'ag}
+	\end{subfigure}	
+	\caption{Comparison of FSR's laryngealized vowels in \textit{za'a} `corncob' and \textit{xa'ag} `topil'}
+	\label{fig:FSRLaryngeal}
+\end{figure}
+
+%------------------------------------
+\subsection{Interaction of tone and phonation in Santiago Laxopa Zapotec} \label{sec:TonePhonation}
+%------------------------------------
 
 %------------------------------------
 \section{Methodology} \label{sec:Methods}
@@ -160,15 +295,15 @@
 %------------------------------------
 
 %------------------------------------
-\subsection{} \label{}
+\subsection{H1-H2 spectral-tilt} \label{}
 %------------------------------------
 
 %------------------------------------
-\subsection{} \label{}
+\subsection{H1-A3 spectral-tilt} \label{}
 %------------------------------------
 
 %------------------------------------
-\subsection{} \label{}
+\subsection{Cepstral Peak Prominence} \label{}
 %------------------------------------
 
 %------------------------------------
