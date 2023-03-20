@@ -126,7 +126,9 @@
 %\onehalfspacing
 
 \begin{center}
-    {\Large \textbf{The acoustics of phonation in Santiago Laxopa Zapotec}}
+    {\Large \textbf{The acoustics of phonation in Santiago Laxopa Zapotec}}\footnote{I am grateful to Fe Silva-Robles and  Raúl Díaz Robles for sharing their time and language expertise. I am also grateful to Grant McGuire,  Jaye Padgett, Rachel Walker, Maziar Toosarvandani, Ben Eischens, Kim Tan, and Zach Horton for their help and discussions during all stages of this project. This project branched off of a collaboration with Jack Duff and Maya Wax Cavallaro. Various parts of this project were previously shared in joint presentations with Jack Duff and Maya Wax Cavallaro.
+	
+	This work was supported in part by the National Science Foundation under Grant No. 2019804, the Humanities Institute at UC Santa Cruz, and the Jacobs Research Funds.}
     \vspace{6pt}
 
     Mykel Loren Brinkerhoff
@@ -135,7 +137,7 @@
 %\maketitleinst
 \thispagestyle{fancy}
 
-\tableofcontents
+% \tableofcontents
 
 %------------------------------------
 \section{Introduction} \label{sec:Introduction}
@@ -145,11 +147,15 @@
     \item Phonation is a process where the larynx is used to alter the way different sounds are produced. 
 	\item This use of the larynx produces sounds which vary from being more breathy or creaky.
 	\begin{itemize}
-		\item Although other types of phonation also exist (see \cite{eslingVoiceQualityLaryngeal2019} for a detailed discussion on the different phonation types that exist and how the larynx produces them).
+		\item Other types of phonation also exist (see \cite{eslingVoiceQualityLaryngeal2019} for a detailed discussion on the different phonation types that exist and how the larynx produces them).
 	\end{itemize} 
 	\item In some languages these alterations are described as being pathological, with some speakers just being more breathy or creaky than others (e.g., \cite{klattAnalysisSynthesisPerception1990}). 
-    \item In other languages these phonation Sometimes these different phonation contrasts are used phonemically.
-    \item This paper explores these 
+    \item In other languages these phonation types are used phonemically like in Gujarati, where vowels can be breathy or modal \citep{fischer-jorgensenPhoneticAnalysisBreathy1968}. 
+    \item This phonemic use of phonation is particularly common in the Otomanguean language family from southern Mexico (e.g., \cite{suarezMesoamericanIndianLanguages1983,campbellMesoAmericaLinguisticArea1986,silvermanLaryngealComplexityOtomanguean1997,campbellOtomangueanHistoricalLinguistics2017a,campbellOtomangueanHistoricalLinguistics2017}).
+    \item One of the common problems facing linguists who study phonation is determining what the acoustic correlates are for these different phonation types. 
+    \item This paper is a preliminary investigation into the acoustic correlates of the different phonation types in Santiago Laxopa Zapotec, an Otomanguean language spoken by approximately 1200 people.
+    \item I show that that H1-H2 is not a very good indicator of phonation in Santiago Laxopa Zapotec, but like other Zapotecs H1-A3 is a good indicator of phonation. 
+    \item Additionally, Cepstral Peak Prominence is shown to be useful in distinguishing checked and laryngealized vowels apart for one of the speakers.
 \end{itemize}
 
 %------------------------------------
@@ -157,15 +163,31 @@
 %------------------------------------
 
 \begin{itemize}
-	\item Since 
-	\item \citet{ladefogedPreliminariesLinguisticPhonetics1971,gordonPhonationTypesCrosslinguistic2001}
+	\item It is commonly assumed that the vocal folds, which account for differences in pitch and voicing, are also responsible for differences in phonation. 
+	\item \citet{ladefogedPreliminariesLinguisticPhonetics1971,gordonPhonationTypesCrosslinguistic2001} argued that phonation exists on a single dimension ranging from opened vocal folds to closed vocal folds. 
+	\item The variation in how open or closed the vocal folds are correspond to whether or not the sound produced is breathy or creaky. 
+	\item \citet{ladefogedPreliminariesLinguisticPhonetics1971,gordonPhonationTypesCrosslinguistic2001} summarized this assumption in the diagram found in Figure~\ref{fig:Phonation}.
 \end{itemize}
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=.6\textwidth]{../Phonation.png}
 	\caption{Simplified one-deminsional model for phonation. Based on \citet{ladefogedPreliminariesLinguisticPhonetics1971,gordonPhonationTypesCrosslinguistic2001}}.
 	\label{fig:Phonation}
+\end{figure}
+
+\begin{itemize}
+	\item In addition to this degree of openness, linguists have found that there are other acoustic measurements that correlate to different types of phonation. 
+	\item Commonly, these acoustic measurements are spectral-tilt measurements. 
+	\item Spectral-tilt measurements are when you take the relative amplitude of different harmonics and subtract them from each other. 
+	\item \cite{fischer-jorgensenPhoneticAnalysisBreathy1968} showed that the difference between the amplitude of the first harmonic and second harmonic can account for the differences between breathy and modal vowels. 
+\end{itemize}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../Harmonics.png}
+	\caption{Spectral slice with LPC smoothed line overlaid for the vowel [e]. The harmonics in the spectral slice are represented by each of the dark peaks. The leftmost black solid line peak is the first harmonic (H1) and each subsequent peak represents the next highest harmonic (H2 through H\textit{n}). The red dotted line represents an LPC smoothed line which identifies the formants by the peaks. Each of the harmonics that are closest to the formant peak is identified as A1 through A\textit{n}.}
+	\label{fig:Harmonics}
 \end{figure}
 %------------------------------------
 \section{Santiago Laxopa Zapotec} \label{sec:SLZ}
@@ -232,7 +254,7 @@
 %------------------------------------
 
 \begin{itemize}
-    \item Similar to other Otomanguean languages, SLZ is tonal\citep{suarezMesoamericanIndianLanguages1983,campbellMesoAmericaLinguisticArea1986,silvermanLaryngealComplexityOtomanguean1997,campbellOtomangueanHistoricalLinguistics2017a,campbellOtomangueanHistoricalLinguistics2017}.
+    \item Similar to other Otomanguean languages, SLZ is tonal \citep{suarezMesoamericanIndianLanguages1983,campbellMesoAmericaLinguisticArea1986,silvermanLaryngealComplexityOtomanguean1997,campbellOtomangueanHistoricalLinguistics2017a,campbellOtomangueanHistoricalLinguistics2017}.
     \item SLZ has five distinct tonal patterns that appear on the syllables of nouns, see Table~\ref{tab:tones}. 
 \end{itemize}
 
@@ -246,7 +268,7 @@
 	Mid    	&  a\supr{M}  &  \textit{lhill} 	& [ liʒ\supr{M} ] & `house.\textsc{poss}' \\
 	Low   	&  a\supr{L}  &  \textit{yu'} 	&	 [ çuˀ\supr{L} ] & `earth'\\
 	Rising	&  a\supr{MH}  &  \textit{yu'u} 	&	[ çuˀu\supr{MH} ] & `quicklime (Sp. cal)' \\
-	Falling &  a\supr{HL}  &  \textit{yu'u}  &	[çuˀu\supr{HL}] &	`house' \\
+	Falling &  a\supr{HL}  &  \textit{yu'u}  &	[ çuˀu\supr{HL} ] &	`house' \\
 	\lspbottomrule
 	\end{tabular}
 \end{table}
@@ -254,7 +276,7 @@
 \begin{itemize}
 	\item These five tonal patterns are illustrated in Figures~\ref{fig:FSRTonePlot} and \ref{fig:RDTonePlot} for two different SLZ speakers. 
 	\item Figures~\ref{fig:FSRTonePlot} and \ref{fig:RDTonePlot} shows the five tonal contrasts averaged for each tonal contrast from the onset to ending of the vowel. 
-	\item We can ignore the first 20-25\% of the measure due to the influence of transitions out of the consonantal onsets. 
+	\item The first 20-25\% of Figures~\ref{fig:FSRTonePlot} and \ref{fig:RDTonePlot} can be ignored due to the influence of consonantal transitions. 
 \end{itemize}
 
 \begin{figure}[!ht]
@@ -270,14 +292,20 @@
 	\caption{Tonal contrasts for RD averaged and time normalized. Each line in this graph represents the average of approximately 10 syllables for each tonal pattern.}
 	\label{fig:RDTonePlot}
 \end{figure}
+
+\begin{itemize}
+	\item Evidence from \citet{brinkerhoffDownstepSantiagoLaxopaMFM,brinkerhoffTonalPatternsTheir2022}, however, suggests that the five tonal patterns are epiphenomenal in SLZ.
+	\begin{itemize}
+		\item Similar to what \citet{mcphersonWordToneEpiphenomenal2022} found for Poko (Skou, PNG).
+	\end{itemize}
+\end{itemize}
 %------------------------------------
 \subsection{Phonation in Santiago Laxopa Zapotec} \label{sec:Phonation}
 %------------------------------------
 
 \begin{itemize}
-	\item Zapotecan languages commonly make use of contrastive phonation on vowels \citep[e.g.,][]{avelinobecerraTopicsYalalagZapotec2004,longDiccionarioZapotecoSan2005,avelinoAcousticElectroglottographicAnalyses2010,lopeznicolasEstudiosFonologiaGramatica2016,chavez-peonInteractionMetricalStructure2010}.
-	\item SLZ is no different and has four contrastive phonation types: modal /a/, breathy /a̤/, checked /aˀ/, and laryngealized /aˀa/. 
-	\item 
+	\item Zapotecan languages commonly make use of contrastive phonation on vowels \citep[e.g.,][]{avelinobecerraTopicsYalalagZapotec2004,longDiccionarioZapotecoSan2005,avelinoAcousticElectroglottographicAnalyses2010,lopeznicolasEstudiosFonologiaGramatica2016,chavez-peonInteractionMetricalStructure2010,ariza-garciaPhonationTypesTones2018}.
+	\item SLZ has four contrastive phonation types: modal /a/, breathy /a̤/, checked /aˀ/, and laryngealized /aˀa/.
 \end{itemize}
 
 \ea \label{ex:YA} Four-way near minimal phonation contrast
@@ -288,12 +316,20 @@
 	\z 
 \z 
 
+\begin{itemize}
+	\item Breathy phonation on vowels is characterized by a raspy quality throughout the whole vowel or a portion toward the end of the vowel, see Figure~\ref{fig:BreathyVowel}. 
+\end{itemize}
+
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../yah.png}
 	\caption{FSR's breathy vowel in the word \textit{yah} `metal; rifle'}
 	\label{fig:BreathyVowel}
 \end{figure}
+
+\begin{itemize}
+	\item Checked vowels on the other hand are characterized by an abrupt glottal closure which cuts the vowel short. This phonation is sometimes only realized as a very short period of creakiness at the end of the vowel, see Figure~\ref{fig:CheckedVowel}.  
+\end{itemize}
 
 \begin{figure}[!h]
 	\centering
@@ -302,6 +338,13 @@
 	\caption{RD's checked vowel in the word \textit{yu'} `earth'}
 	\label{fig:CheckedVowel}
 \end{figure}
+
+\begin{itemize}
+	\item Laryngealized vowels are quite common in Zapotecan languages and have received a wide number of different names. 
+	\item Previous descriptions have used terms such as broken, rearticulated, interrupted, and creaky \citep{longDiccionarioZapotecoSan2005,avelinobecerraTopicsYalalagZapotec2004,avelinoAcousticElectroglottographicAnalyses2010,sonnenscheinDescriptiveGrammarSan2005,adlerAcousticsPhonationTypes2016,ariza-garciaPhonationTypesTones2018}.  
+	\item In addition to a wide number of different names these vowels also exhibit a wide range of allophones.
+	\item \citet{avelinoAcousticElectroglottographicAnalyses2010} found in the closely realted Yalálag Zapotec that among his consultants there were at least four different pronunciations as seen in Table~\ref{tab:laryngeal}. 
+\end{itemize}
 
 \begin{table}[!h]
 	\centering
@@ -316,6 +359,12 @@
 	\lspbottomrule
 	\end{tabular}
 \end{table}
+
+\begin{itemize}
+	\item In SLZ, this vowel is also highly variable.
+	\item One consultant does rearticulation, where there is a full glottal stop in the middle of the vowel, or creaky voice. 
+	\item This alternation seemed to be in free variation but there was a greater tendency to creak in words with a L tone, such as \textit{xa'ag} [ʂa̰ːx] `topil'\footnote{A topil is a type of government office in traditional Oaxacan communities somewhat akin to a sheriff. }, see Figure~\ref{fig:FSRLaryngeal} for a comparison between this consultant's pronunciation of the laryngealized vowels.
+\end{itemize}
 
 \begin{figure}[!h]
 	\centering
@@ -334,6 +383,10 @@
 	\caption{Comparison of FSR's laryngealized vowels in \textit{za'a} `corncob' and \textit{xa'ag} `topil'}
 	\label{fig:FSRLaryngeal}
 \end{figure}
+
+\begin{itemize}
+	\item Another consultant only ever produces creaky voice for these vowels regardless of the tone with the word.
+\end{itemize}
 
 \begin{figure}[!h]
 	\centering
@@ -381,11 +434,11 @@
 	\lsptoprule
 		& \textbf{Modal} & \textbf{Breathy} & \textbf{Checked} & \textbf{Laryngealized} \\
 	\hline
-	High		& 12 & -- & 5	& 3 \\
-	Mid			& 7 & 1  & 2	& 1 \\
-	Low			& 17 & 5  & 9	& 3 \\
-	High-Low	& 9 & 1  & 2	& 1 \\
-	Mid-High	& 1	 & 1  & --	& 1 \\
+	High		& ✔︎ & -- & ✔︎ & ✔︎ \\
+	Mid			& ✔︎ & ✔︎  & ✔︎ & ✔︎ \\
+	Low			& ✔︎ & ✔︎  & ✔︎ & ✔︎ \\
+	High-Low	& ✔︎ & ✔︎  & ✔︎ & ✔︎ \\
+	Mid-High	& ✔︎ & ✔︎  & --	& ✔︎ \\
 	\lspbottomrule
 	\end{tabular}
 \end{table}
@@ -395,12 +448,11 @@
 \section{Methodology} \label{sec:Methods}
 %------------------------------------
 
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.9\textwidth]{../Harmonics.png}
-	\caption{Spectral slice with LPC smoothed line overlaid for the vowel [e]. The harmonics in the spectral slice are represented by each of the dark peaks. The leftmost black solid line peak is the first harmonic (H1) and each subsequent peak represents the next highest harmonic (H2 through H\textit{n}). The red dotted line represents an LPC smoothed line which identifies the formants by the peaks. Each of the harmonics that are closest to the formant peak is identified as A1 through A\textit{n}.}
-	\label{fig:Harmonics}
-\end{figure}
+\begin{itemize}
+	\item Two native language speakers of SLZ who live in Santa Cruz, CA took part in this study (one male). 
+	\item Because of the COVID-19 pandemic data collection was conducted remotely using Zencastr\footnote{\href{https://zencastr.com/}{https://zencastr.com/}}, a professional podcasting website, (44.1kHz, 16-bit) or in-person outside in a well ventilated location, using a Zoom H4n handheld recorder (44.1kHz, 16-bit).
+	\item The 
+\end{itemize}
 
 %------------------------------------
 \section{Results} \label{sec:Results}
@@ -741,7 +793,40 @@ In considering the final portion of the vowel, Table~\ref{tab:CPP_Third}, the st
 %------------------------------------
 
 \begin{itemize}
-    \item \citet{silvermanLaryngealComplexityOtomanguean1997,blankenshipTimeCourseBreathiness1997,blankenshipTimingNonmodalPhonation2002}
+	\item The Laryngeal Complexity Hypothesis (LCH) has its origin in work from \citet{silvermanLaryngealComplexityOtomanguean1997,blankenshipTimeCourseBreathiness1997,blankenshipTimingNonmodalPhonation2002}.
+	\item The LCH claims that languages that have both tone and phonation need them to be phased/ordered with respect to each other. 
+	\item This is required because it is assumed that the same mechanism for tone is also responsible for phonation. 
+	\begin{itemize}
+		\item Tone is the rate of vocal fold vibration. 
+		\item \citet{ladefogedPreliminariesLinguisticPhonetics1971,gordonPhonationTypesCrosslinguistic2001} argued that phonation exists on a single dimension ranging from opened vocal folds to closed vocal folds. 
+	\end{itemize} 
+	\item The variation in how open or closed the vocal folds are correspond to whether or not the sound produced is breathy or creaky. 
+	\item \citet{ladefogedPreliminariesLinguisticPhonetics1971,gordonPhonationTypesCrosslinguistic2001} summarized this assumption in the diagram found in Figure~\ref{fig:Phonation}.
+\end{itemize}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=.6\textwidth]{../Phonation.png}
+	\caption{Simplified one-deminsional model for phonation. Based on \citet{ladefogedPreliminariesLinguisticPhonetics1971,gordonPhonationTypesCrosslinguistic2001}}.
+	\label{fig:Phonation}
+\end{figure}
+\vspace{-2ex}
+\begin{itemize}
+	\item Because the same organ is responsible for these two different phenomena there is a mismatch in trying to produce both at the same time. 
+	\item The LCH assumes that there needs to be a strict ordering in the glottal gestures. 
+	\item If the gestures were overlapped there will be a perturbation of the tone and the listeners will not be able to reliably differentiate what the tone is.
+	\item The LCH assumes that there is a close link between production and perception. 
+	\item This assumption places the responsibility on making sure the acoustic cues are the most perceptually salient on the speaker. 
+	\item In Figure~\ref{fig:GlottalGestures}, which is taken from \citet{dicanioCoarticulationToneGlottal2012}, the cue for tone is represented by the Pitch Target and the Glottal Gesture represents the gestures needed to produce phonation. 
+\end{itemize}
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=.5\textwidth]{../Gestures.png}
+		\caption{Representation taken from \citet{dicanioCoarticulationToneGlottal2012}.}
+		\label{fig:GlottalGestures}
+	\end{figure}
+\begin{itemize}
+	\item \citet{dicanioCoarticulationToneGlottal2012} found that when the magnitude of coarticulation for glottal consonants occurs on the vowels there is a strong correlation between the magnitude of overlap and the amount of perturbation in the f0 signal. If, however, the degree of overlap was minor then the acoustic signal had little to no perturbation.
+	\item Jalapa Mazatec is a language with both contrastive tone and phonation and \citet{garellekAcousticConsequencesPhonation2011} validated the claims made by the LCH, in that tone and phonation seemed to be ordered with each other when it comes to at least one of the phonation types.
 \end{itemize}
 
 %------------------------------------
