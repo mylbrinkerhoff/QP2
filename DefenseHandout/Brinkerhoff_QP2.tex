@@ -122,8 +122,8 @@
 %%
 
 %% Line spacing setting. Comment out the line spacing you do not need. Comment out all if you want single spacing.
-%\doublespacing
-%\onehalfspacing
+% \doublespacing
+\onehalfspacing
 
 \begin{center}
     {\Large \textbf{The acoustics of phonation in Santiago Laxopa Zapotec}}\footnote{I am grateful to Fe Silva-Robles and  Raúl Díaz Robles for sharing their time and language expertise. I am also grateful to Grant McGuire,  Jaye Padgett, Rachel Walker, Maziar Toosarvandani, Ben Eischens, Kim Tan, and Zach Horton for their help and discussions during all stages of this project. This project branched off of a collaboration with Jack Duff and Maya Wax Cavallaro. Various parts of this project were previously shared in joint presentations with Jack Duff and Maya Wax Cavallaro.
@@ -168,27 +168,49 @@
 	\item The variation in how open or closed the vocal folds are correspond to whether or not the sound produced is breathy or creaky. 
 	\item \citet{ladefogedPreliminariesLinguisticPhonetics1971,gordonPhonationTypesCrosslinguistic2001} summarized this assumption in the diagram found in Figure~\ref{fig:Phonation}.
 \end{itemize}
-
+\vspace{-2ex}
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=.6\textwidth]{../Phonation.png}
 	\caption{Simplified one-deminsional model for phonation. Based on \citet{ladefogedPreliminariesLinguisticPhonetics1971,gordonPhonationTypesCrosslinguistic2001}}.
 	\label{fig:Phonation}
 \end{figure}
-
+\vspace{-2ex}
 \begin{itemize}
 	\item In addition to this degree of openness, linguists have found that there are other acoustic measurements that correlate to different types of phonation. 
 	\item Commonly, these acoustic measurements are spectral-tilt measurements. 
 	\item Spectral-tilt measurements are when you take the relative amplitude of different harmonics and subtract them from each other. 
-	\item \cite{fischer-jorgensenPhoneticAnalysisBreathy1968} showed that the difference between the amplitude of the first harmonic and second harmonic can account for the differences between breathy and modal vowels. 
+	\item \cite{fischer-jorgensenPhoneticAnalysisBreathy1968} showed that the difference between the amplitude of the first harmonic (H1) and second harmonic (H2) can account for the differences between breathy and modal vowels.
+	\item Further research has continued to rely on H1-H2, both corrected and uncorrected, to distinguish different types of phonation \citep[e.g.,][]{huffmanMeasuresPhonationType1987,klattAnalysisSynthesisPerception1990}. 
+	\item Further research into spectral-tilt measurements began looking at other measurements besides H1-H2. These include looking at H1 minus the amplitude of the fourth harmonic (H4) or the amplitude of the harmonic closest to the different formants (A\textit{n}). 
+	\item From these studies several patterns have emerged (see \cite{garellekPhoneticsVoice2019} for an overview). 
+	\begin{itemize}
+		\item Breathy phonation typically has a higher spectral-tilt measurement when compared to modal phonation. 
+		\item Creaky phonation typically has a lower spectral-tilt measurement than modals. 
+	\end{itemize} 
 \end{itemize}
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../Harmonics.png}
-	\caption{Spectral slice with LPC smoothed line overlaid for the vowel [e]. The harmonics in the spectral slice are represented by each of the dark peaks. The leftmost black solid line peak is the first harmonic (H1) and each subsequent peak represents the next highest harmonic (H2 through H\textit{n}). The red dotted line represents an LPC smoothed line which identifies the formants by the peaks. Each of the harmonics that are closest to the formant peak is identified as A1 through A\textit{n}.}
+	\caption{Spectral slice with LPC smoothed line overlaid for the vowel [e]. The harmonics in the spectral slice are represented by each of the dark peaks. The leftmost black solid line peak is the first harmonic (H1) and each subsequent peak represents the next highest harmonic (H2 through H\textit{n}). The red dotted line represents an LPC smoothed line which identifies the formants by the peaks in the line. Each of the harmonics that are closest to the formant peak is identified as A1 through A\textit{n}.}
 	\label{fig:Harmonics}
 \end{figure}
+\vspace{-2ex}
+\begin{itemize}
+	\item The spectral-tilt measurement of H1-A3, the difference in amplitude between the first harmonic and the amplitude of the harmonic closest to the third formant, appears to be another of these measurements that robustly distinguishes different phonation types. 
+	\item \citet{espositoVariationContrastivePhonation2010} found that in Central Valley Zapotecs, phonation contrasts were best captured by different measurements depending on sex. 
+	\item H1-H2 was found to be effective only for female speakers, whereas male speakers were best characterized by H1-A3. 
+	\item This pilot study will focus on these two spectral-tilt measurements.
+	\item In addition to spectral-tilt measurements, measurements of noise frequently accompany investigations into phonation (e.g., \cite{garellekPhoneticsWhiteHmong2021}).
+	\item One of the most commonly used measurements is Cepstral Peak Prominence (CPP; \cite{hillenbrandAcousticCorrelatesBreathy1994,hillenbrandAcousticCorrelatesBreathy1996}). 
+	\item CPP is similar to the harmonics-to-noise ratio measure of \citet{dekromCepstrumBasedTechniqueDetermining1993} but differs in how the ‘prominence’ of the cepstral peak is calculated. 
+	\item Prominence is taken as the difference in amplitude of the cepstral peak and a regression line used to normalize for window size and overall energy.
+	\item A more prominent cepstral peak indicates stronger harmonics above the floor of the spectrum (i.e., greater periodicity in the speech signal).
+	\item CPP was originally used as a diagnostic for breathy or modal voice \citep{blankenshipTimingNonmodalPhonation2002,espositoVariationContrastivePhonation2010} In fact, \citeauthor{espositoEffectsLinguisticExperience2010} showed that CPP was the best of the eight measures she considered for distinguishing modal from breathy phonation types.
+	\item Further research has shown that CPP is also a good measurement for any type of non-modal phonation (e.g., \cite{andruskiPhonationTypesProduction2000,andruskiToneClarityMixed2006,blankenshipTimingNonmodalPhonation2002,waylandAcousticCorrelatesBreathy2003,avelinoAcousticElectroglottographicAnalyses2010}). 
+	\item This will be the third measurement considered for this pilot study. 
+\end{itemize}
 %------------------------------------
 \section{Santiago Laxopa Zapotec} \label{sec:SLZ}
 %------------------------------------
@@ -274,9 +296,8 @@
 \end{table}
 
 \begin{itemize}
-	\item These five tonal patterns are illustrated in Figures~\ref{fig:FSRTonePlot} and \ref{fig:RDTonePlot} for two different SLZ speakers. 
-	\item Figures~\ref{fig:FSRTonePlot} and \ref{fig:RDTonePlot} shows the five tonal contrasts averaged for each tonal contrast from the onset to ending of the vowel. 
-	\item The first 20-25\% of Figures~\ref{fig:FSRTonePlot} and \ref{fig:RDTonePlot} can be ignored due to the influence of consonantal transitions. 
+	\item Figure~\ref{fig:FSRTonePlot} shows the five tonal contrasts averaged for each tonal contrast from the onset to ending of the vowel. 
+	\item The first 20-25\% of Figure~\ref{fig:FSRTonePlot} can be ignored due to the influence of consonantal transitions. 
 \end{itemize}
 
 \begin{figure}[!ht]
@@ -285,27 +306,13 @@
 	\caption{Tonal contrasts for FSR averaged and time normalized. Each line in this graph represents the average of approximately 10 syllables for each tonal pattern. }
 	\label{fig:FSRTonePlot}
 \end{figure}
-
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=0.9\textwidth]{../RDTonePlot.png}
-	\caption{Tonal contrasts for RD averaged and time normalized. Each line in this graph represents the average of approximately 10 syllables for each tonal pattern.}
-	\label{fig:RDTonePlot}
-\end{figure}
-
-\begin{itemize}
-	\item Evidence from \citet{brinkerhoffDownstepSantiagoLaxopaMFM,brinkerhoffTonalPatternsTheir2022}, however, suggests that the five tonal patterns are epiphenomenal in SLZ.
-	\begin{itemize}
-		\item Similar to what \citet{mcphersonWordToneEpiphenomenal2022} found for Poko (Skou, PNG).
-	\end{itemize}
-\end{itemize}
 %------------------------------------
 \subsection{Phonation in Santiago Laxopa Zapotec} \label{sec:Phonation}
 %------------------------------------
 
 \begin{itemize}
-	\item Zapotecan languages commonly make use of contrastive phonation on vowels \citep[e.g.,][]{avelinobecerraTopicsYalalagZapotec2004,longDiccionarioZapotecoSan2005,avelinoAcousticElectroglottographicAnalyses2010,lopeznicolasEstudiosFonologiaGramatica2016,chavez-peonInteractionMetricalStructure2010,ariza-garciaPhonationTypesTones2018}.
-	\item SLZ has four contrastive phonation types: modal /a/, breathy /a̤/, checked /aˀ/, and laryngealized /aˀa/.
+	\item Zapotecan languages commonly make use of contrastive phonation on vowels \citep[e.g.,][]{avelinobecerraTopicsYalalagZapotec2004,avelinoAcousticElectroglottographicAnalyses2010,longDiccionarioZapotecoSan2005,lopeznicolasEstudiosFonologiaGramatica2016,chavez-peonInteractionMetricalStructure2010,ariza-garciaPhonationTypesTones2018}.
+	\item SLZ has four contrastive phonation types, see (\ref{ex:YA})
 \end{itemize}
 
 \ea \label{ex:YA} Four-way near minimal phonation contrast
@@ -319,7 +326,7 @@
 \begin{itemize}
 	\item Breathy phonation on vowels is characterized by a raspy quality throughout the whole vowel or a portion toward the end of the vowel, see Figure~\ref{fig:BreathyVowel}. 
 \end{itemize}
-
+\vspace{-4ex}
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../yah.png}
@@ -330,7 +337,7 @@
 \begin{itemize}
 	\item Checked vowels on the other hand are characterized by an abrupt glottal closure which cuts the vowel short. This phonation is sometimes only realized as a very short period of creakiness at the end of the vowel, see Figure~\ref{fig:CheckedVowel}.  
 \end{itemize}
-
+\vspace{-4ex}
 \begin{figure}[!h]
 	\centering
 	% [INSERT YA SPECTROGRAM AND WAVEFORM]
@@ -362,8 +369,9 @@
 
 \begin{itemize}
 	\item In SLZ, this vowel is also highly variable.
-	\item One consultant does rearticulation, where there is a full glottal stop in the middle of the vowel, or creaky voice. 
-	\item This alternation seemed to be in free variation but there was a greater tendency to creak in words with a L tone, such as \textit{xa'ag} [ʂa̰ːx] `topil'\footnote{A topil is a type of government office in traditional Oaxacan communities somewhat akin to a sheriff. }, see Figure~\ref{fig:FSRLaryngeal} for a comparison between this consultant's pronunciation of the laryngealized vowels.
+	\item One consultant does rearticulation, where there is a full glottal stop in the middle of the vowel, or creaky voice, see Figure~\ref{fig:FSRLaryngeal}. This alternation seems to be in free variation but there was a greater tendency to creak in words with a L tone, such as \textit{xa'ag} [ʂa̰ːx] `topil'\footnote{A topil is a type of government office in traditional Oaxacan communities somewhat akin to a sheriff.}.
+	\item Another consultant only ever produced creaky voice for these vowels regardless of the tone with the word, see Figure~\ref{fig:RDLaryngeal}.
+	\item Further research will show whether these differences are sociolinguistic in nature or whether these differences are individualistic. 
 \end{itemize}
 
 \begin{figure}[!h]
@@ -383,10 +391,6 @@
 	\caption{Comparison of FSR's laryngealized vowels in \textit{za'a} `corncob' and \textit{xa'ag} `topil'}
 	\label{fig:FSRLaryngeal}
 \end{figure}
-
-\begin{itemize}
-	\item Another consultant only ever produces creaky voice for these vowels regardless of the tone with the word.
-\end{itemize}
 
 \begin{figure}[!h]
 	\centering
@@ -410,6 +414,17 @@
 \subsection{Interaction of tone and phonation in Santiago Laxopa Zapotec} \label{sec:TonePhonation}
 %------------------------------------
 
+\begin{itemize}
+	\item Most previous work on the interaction of tone has been focused on the languages of East and Southeast Asia 
+	\citep[e.g.,][]{masicaDefiningLinguisticArea1976,thurgoodVietnameseTonogenesisRevising2002,yipTone2002,enfieldArealLinguisticsMainland2005,michaudComplexTonesEast2012,brunelleTonePhonationSoutheast2016}.
+	\item \citet{smalleyProblemsConsonantsTone1976} and \citet{ratliffMeaningfulToneStudy1992} both describe White Hmong's (Hmong-Mien) \textit{-g} tone as being a mid-low tone with breathy phonation
+	\item Mandarin's (Sino-Tibetan) tone 3 is often associated with creaky phonation \citep{hockettPeipingPhonology1947}. \citet{brunelleTonePerceptionNorthern2009} found that creaky phonation plays an important role in the production of certain tones. 
+	\item Additionally, work on S'gaw Karen (Sino-Tibetan) has found that two tones are only differentiated by the presence of some form of non-modal phonation (Boehm p.c.). 
+	\item In Oto-Manguean languages, there is strong evidence that tone and phonation are independent from each other \citep[e.g.,][]{silvermanLaryngealComplexityOtomanguean1997,avelinobecerraTopicsYalalagZapotec2004,avelinoAcousticElectroglottographicAnalyses2010, chavez-peonInteractionMetricalStructure2010, campbellZenzontepecChatinoAspect2011,garellekAcousticConsequencesPhonation2011,villardPhonologyMorphologyZacatepec2015, lopeznicolasEstudiosFonologiaGramatica2016,ariza-garciaPhonationTypesTones2018}. 
+	\item In San Lucas Quiaviní Zapotec (Valley Zapotec) almost all of the the different tones and phonation types can be combined with each other.
+	\item The rising tone in SLQZ is restricted to only appearing with modal voice. 
+\end{itemize}
+
 \begin{table}[!ht]
 	\centering
 	\caption{SLQZ tone and phonation interactions \citep{chavez-peonInteractionMetricalStructure2010}.}
@@ -425,8 +440,13 @@
 	 \end{tabular}
 \end{table}
 
+\begin{itemize}
+	\item SLZ is similar to SLQZ in allowing almost all combinations of tone and phonation. 
+	\item There are two gaps in the distribution of tone and phonation: Breathy-High and Checked-Falling. 
+\end{itemize}
+
 \begin{table}[!h]
-	\caption{Number of unique syllables for each interaction of tone and phonation in the data.}
+	\caption{Observed combinations of tone and phonation in SLZ.}
 	\label{tab:ToneVoiceQuality}
 	\centering
 
@@ -437,12 +457,16 @@
 	High		& ✔︎ & -- & ✔︎ & ✔︎ \\
 	Mid			& ✔︎ & ✔︎  & ✔︎ & ✔︎ \\
 	Low			& ✔︎ & ✔︎  & ✔︎ & ✔︎ \\
-	High-Low	& ✔︎ & ✔︎  & ✔︎ & ✔︎ \\
-	Mid-High	& ✔︎ & ✔︎  & --	& ✔︎ \\
+	Rising		& ✔︎ & ✔︎  & ✔︎ & ✔︎ \\
+	Falling		& ✔︎ & ✔︎  & --	& ✔︎ \\
 	\lspbottomrule
 	\end{tabular}
 \end{table}
 
+\begin{itemize}
+	\item This gap of breathy phonation and high tone is quite common across the Zapotecan languages (Campbell p.c.). 
+	\item In the case of breathy phonation in SLQZ, \citet{uchiharaToneRegistrogenesisQuiavini2016} offers some convincing evidence that the phonation originated in syllables with low tone and then spread to other tones via analogy.
+\end{itemize}
 
 %------------------------------------
 \section{Methodology} \label{sec:Methods}
@@ -450,8 +474,11 @@
 
 \begin{itemize}
 	\item Two native language speakers of SLZ who live in Santa Cruz, CA took part in this study (one male). 
-	\item Because of the COVID-19 pandemic data collection was conducted remotely using Zencastr\footnote{\href{https://zencastr.com/}{https://zencastr.com/}}, a professional podcasting website, (44.1kHz, 16-bit) or in-person outside in a well ventilated location, using a Zoom H4n handheld recorder (44.1kHz, 16-bit).
-	\item The 
+	\item Because of the COVID-19 pandemic data collection was conducted remotely using Zencastr, a professional podcasting website, (44.1kHz, 16-bit) or in-person outside in a well ventilated location, using a Zoom H4n handheld recorder (44.1kHz, 16-bit).
+	\item The SLZ speakers were recorded saying approximately 100 words in isolation three times and those same words three times in the carrier phrase \textit{shnia' X chonhe lhas} `I say X three times'. 
+	\item The resulting files were first segmented in ELAN \citep{wittenburgELANProfessionalFramework2006} then each individual vowel from the target word was isolated from the carrier sentences using Praat \citep{boersmaPraatDoingPhonetics2021}. 
+	\item After isolating each vowel token the files were fed into VoiceSauce \citep{shueVOICESAUCEProgramVoice2009} for calculating the different spectral-tilt and noise measurements. 
+	\item Each vowel was normalized for time and then the various acoustic measurements were averaged for each third of the vowel following \citet{garellekAcousticConsequencesPhonation2011}.
 \end{itemize}
 
 %------------------------------------
@@ -459,9 +486,14 @@
 %------------------------------------
 
 %------------------------------------
-\subsection{H1-H2 spectral-tilt} \label{sec:H1H2}
+\subsection{H1-H2 spectral-tilt results} \label{sec:H1H2}
 %------------------------------------
 
+\begin{itemize}
+	\item In all three portions of the vowels, H1-H2 was not a very good measure for spectral-tilt in this variety of Zapotec. 
+	\item In all three thirds of the vowel, we see very little differences in the values for H1-H2 between modal, checked, and laryngealized.  
+	\item In the first third of the vowel there are virtually no differences between the four phonation types, see Figure~\ref{fig:h1h2first}.
+\end{itemize}
 
 \begin{figure}[!ht]
 	\centering
@@ -481,7 +513,11 @@
 	\label{fig:h1h2first}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{itemize}
+	\item Beginning in the second third of the vowel and continuing throughout the vowel, the H1-H2 values for breathy voice is lower than the other three phonation types, which is the opposite of what we expect for breathy voice, see Figure~\ref{fig:h1h2second} for the second third and Figure~\ref{fig:h1h2third} for the final third. 
+\end{itemize}
+
+\begin{figure}[!h]
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
@@ -499,7 +535,7 @@
 	\label{fig:h1h2second}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
@@ -517,9 +553,14 @@
 	\label{fig:h1h2third}
 \end{figure}
 %------------------------------------
-\subsection{H1-A3 spectral-tilt} \label{sec:H1A3}
+\subsection{H1-A3 spectral-tilt results} \label{sec:H1A3}
 %------------------------------------
 
+\begin{itemize}
+	\item When we consider H1-A3, the measurement \citet{espositoVariationContrastivePhonation2010} found useful for male Zapotec speakers, several observations become apparent. 
+	\item In all portions of the vowel, breathy voice shows a much higher H1-A3 measurement than modals as observed in Figures~\ref{fig:h1a3first}, \ref{fig:h1a3second}, and \ref{fig:h1a3third}.
+	\item This high H1-A3 value in both speakers is what we expect for breathy vowels \citep{fischer-jorgensenPhoneticAnalysisBreathy1968}. 
+\end{itemize}
 \begin{figure}[!h]
 	\centering
 	\begin{subfigure}{.5\textwidth}
@@ -538,8 +579,12 @@
 	\label{fig:h1a3first}
 \end{figure}
 
-In the first third of the vowel, RD's mean value for H1-A3 is lower than the modal's H1-A3 value. However, there is a large degree of overlap between modals, checked, and laryngealized H1-A3 values, as evidenced by the boxes covering the same regions, see Figure~\ref{fig:h1a3first}. 
-
+\begin{itemize}
+	\item In Figure~\ref{fig:h1a3first}, we see that there is a large degree of overlap between modals, checked, and laryngealized H1-A3 values. This behavior indicates that there is little to no difference in the phonation types for this portion of the vowel. 
+	\item In the second third of the vowel (Figure~\ref{fig:h1a3second}), we see that the checked and laryngealized vowels H1-A3 values for FSR are uninformative because of the large degree of overlap.
+	\item Beginning in the middle of the vowel and continuing throughout the rest of the vowel, RD shows a lower H1-A3 value in the laryngealized vowels than the modals which is consistent with creakier productions of vowels, see Figure~\ref{fig:RDh1a3second} and Figure~\ref{fig:RDh1a3third}.
+	\item In both speakers there is no difference between modal and creaky for the middle third of the vowel. 
+\end{itemize}
 \begin{figure}[!h]
 	\centering
 	\begin{subfigure}{.5\textwidth}
@@ -558,11 +603,12 @@ In the first third of the vowel, RD's mean value for H1-A3 is lower than the mod
 	\label{fig:h1a3second}
 \end{figure}
 
-In the second third of the vowel, Figure~\ref{fig:h1a3second}, the breathy vowel continues to be higher than the modal vowel. The checked and laryngealized vowels H1-A3 values for FSR are uninformative because of the large degree of overlap. For RD, these same measurements show a lower H1-A3 value than the modals which is consistent with creakier productions of vowels. This lower H1-A3 continues throughout the rest of the vowel for laryngealized vowels, see Figure~\ref{fig:RDh1a3third}. This behavior is consistent with the observation that RD performs creaky voice throughout their production of laryngealized vowels. For the checked vowels, the measurements are very similar to those of the modal vowel. 
+\begin{itemize}
+	\item In the final third of the vowel, FSR's production of checked vowels show a lower H1-A3 measurement, which suggests FSR produces a period of creakiness in the last third of these vowels. 
+	\item For RD, however, there are no differences between checked and modal vowels in this last third. 
+\end{itemize}
 
-In looking at the final portion of the vowels, Figure~\ref{fig:h1a3third}, the measurements continue to show similar behavior to the second portion for both FSR and RD. However, one exception is the lower H1-A3 value for FSR's checked vowels, suggesting that FSR produces a period of creakiness in the last portion of the vowel.
-
-\begin{figure}[!ht]
+\begin{figure}[!h]
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
@@ -581,10 +627,17 @@ In looking at the final portion of the vowels, Figure~\ref{fig:h1a3third}, the m
 \end{figure}
 
 %------------------------------------
-\subsection{Cepstral Peak Prominence} \label{sec:CPP}
+\subsection{Cepstral Peak Prominence results} \label{sec:CPP}
 %------------------------------------
 
-\begin{figure}[!ht]
+\begin{itemize}
+	\item In determining if there is any amount of aperiodicity in the signal, we turn to CPP \citep{hillenbrandAcousticCorrelatesBreathy1994,hillenbrandAcousticCorrelatesBreathy1996}.
+	\item A CPP measurement for any vowel with non-modal phonation should be lower than the CPP
+	measurement for modal vowels.
+	\item Throughout the whole vowel, CPP measures for both FSR and RD are consistently higher for breathy vowels than modal vowels. 
+	\item This observation seems to suggest that breathy vowels are in some way more periodic than modal vowels. 
+\end{itemize}
+\begin{figure}[!h]
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
@@ -602,7 +655,11 @@ In looking at the final portion of the vowels, Figure~\ref{fig:h1a3third}, the m
 	\label{fig:cppfirst}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{itemize}
+	\item When we turn to the middle third of the vowel, Figure~\ref{fig:cppsecond}, we observe that FSR's laryngealized vowels show a lower CPP value, indicating that there is aperiodicity in this portion of the vowel. 
+	\item For RD, there are no differences between modal, breathy, or checked in this portion of the vowel. 
+\end{itemize}
+\begin{figure}[!h]
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
@@ -620,7 +677,11 @@ In looking at the final portion of the vowels, Figure~\ref{fig:h1a3third}, the m
 	\label{fig:cppsecond}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{itemize}
+	\item In both FSR and RD, we observe a lower CPP value for checked vowels in the final third of the vowel. 
+	\item This is consistent with a period of aperiodicity at the end of the vowel. 
+\end{itemize}
+\begin{figure}[!h]
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
@@ -641,6 +702,21 @@ In looking at the final portion of the vowels, Figure~\ref{fig:h1a3third}, the m
 %------------------------------------
 \subsection{Statistical results} \label{sec:Stats}
 %------------------------------------
+\begin{itemize}
+	\item In order to determine whether or not the different acoustic measurements were effective at capturing the different phonation types, a mixed-effects linear regression analysis was performed
+	with a Satterthwaite’s method for t-test analysis used to derive the p-values. 
+	\item Each of different measurements were treated as the dependent variable with word and speaker treated as random.
+\end{itemize}
+
+%------------------------------------
+\subsubsection{H1-H2 statistical results} \label{sec:StatsH1H2}
+%------------------------------------
+
+\begin{itemize}
+	\item As can be recalled from Section~\ref{sec:H1H2}, both FSR and RD show a lower value for H1-H2 for breathy vowels in the last two-thirds of the vowels when compared to the model vowel's H1-H2 values. 
+	\item The results of the statistical analysis for the last two-thirds of the vowel, presented in Table~\ref{tab:H1H2_Second} and Table~\ref{tab:H1H2_Third}, show that this behavior is significant.
+	\item At no point do the other phonation types reach significance with respect to H1-H2. 
+\end{itemize}
 
 \begin{table}[!h]
 	\centering
@@ -655,10 +731,6 @@ In looking at the final portion of the vowels, Figure~\ref{fig:h1a3third}, the m
 	  \lspbottomrule
 	 \end{tabular}
 \end{table}
-
-As can be recalled from Section~\ref{sec:H1H2}, both FSR and RD show a lower value for H1-H2 for breathy vowels in the last two-thirds of the vowels when compared to the model vowel's H1-H2 values. The results of the statistical analysis for the last two-thirds of the vowel, presented in Table~\ref{tab:H1H2_Second} and Table~\ref{tab:H1H2_Third}, show that this behavior is significant.
-
-At no point do the other phonation types reach significance with respect to H1-H2. 
 
 \begin{table}[!h]
 	\centering
@@ -688,8 +760,16 @@ At no point do the other phonation types reach significance with respect to H1-H
 	 \end{tabular}
 \end{table}
 
-The second statistical analysis for the H1-A3 measurement shows some very clear behavior for breathy voice. As can be recalled from Section~\ref{sec:H1A3}, we observe that breathy voice is clearly identified in all portions of the vowel with an elevated H1-A3 value when compared to the model vowels' values. We see that at all portions of the vowel, as seen in Tables~\ref{tab:H1A3_First}, \ref{tab:H1A3_Second}, \ref{tab:H1A3_Third} show significance.  
+%------------------------------------
+\subsubsection{H1-A3 statistical results} \label{sec:StatsH1A3}
+%------------------------------------
 
+\begin{itemize}
+	\item The second statistical analysis for the H1-A3 measurement shows some very clear behavior for breathy voice. 
+	\item In Section~\ref{sec:H1A3} we observe that breathy voice is clearly identified in all portions of the vowel with an elevated H1-A3 value when compared to modals. 
+	\item We see that for all portions of the vowel, as seen in Tables~\ref{tab:H1A3_First}, \ref{tab:H1A3_Second}, \ref{tab:H1A3_Third} breathy voice reaches significance.
+\end{itemize}
+  
 \begin{table}[!h]
 	\centering
 	\caption{Results of the mixed-effects linear regression analysis on the first third of the vowel for H1-A3. }
@@ -703,6 +783,10 @@ The second statistical analysis for the H1-A3 measurement shows some very clear 
 	  \lspbottomrule
 	 \end{tabular}
 \end{table}
+
+\begin{itemize}
+	\item When corrected for word and speaker, laryngealized vowels reach significance in the second third of the vowel. 
+\end{itemize}
 
 \begin{table}[!h]
 	\centering
@@ -718,6 +802,10 @@ The second statistical analysis for the H1-A3 measurement shows some very clear 
 	 \end{tabular}
 \end{table}
 
+\begin{itemize}
+	\item In the final third of the vowel, H1-A3 was only significant for breathy voice. 
+\end{itemize}
+
 \begin{table}[!h]
 	\centering
 	\caption{Results of the mixed-effects linear regression analysis on the final third of the vowel for H1-A3. }
@@ -732,11 +820,15 @@ The second statistical analysis for the H1-A3 measurement shows some very clear 
 	 \end{tabular}
 \end{table}
 
-However, the other phonations failed to reach significance when evaluated against H1-A3.
+%------------------------------------
+\subsubsection{CPP statistical results} \label{sec:StatsCPP}
+%------------------------------------
 
-It is important to realize that at this point that H1-H2 and H1-A3 both have failed to account for checked and laryngealized phonations. This is also born out by the observations in Sections~\ref{sec:H1H2} and \ref{sec:H1A3} which did not show any remarkable differences from the model. When we consider CPP we see both checked and laryngealized vowels clearly differentiated. This is born out in the statistical analysis. This analysis took CPP as fixed and speaker and word as random. This analysis showed that the first third of the vowel, Table~\ref{tab:CPP_First} both breathy and checked voice were identifiable with CPP. 
-
-% Based on the results of the statistical analysis, CPP is informative for differentiating checked from laryngealized voice. Laryngealized voice shows a statistically significance in the second-third of the vowel. This is consistent with the observed behavior approximately in the center of the vowel. Despite the differences in how the the laryngealized vowels are produced between the speakers, there is a difference in the CPP value in the middle of the vowel it 
+\begin{itemize}
+	\item When we consider CPP, we see that this measurement was significant for all three of the phonation types but in different portions of the vowel. 
+	\item In Table~\ref{tab:CPP_First}, we see that the high CPP values observed in Section~\ref{sec:CPP} for the first third of the vowel was significant. 
+	\item For checked and laryngealized vowels CPP fails to reach significance in this first third. 
+\end{itemize}
 
 \begin{table}[!h]
 	\centering
@@ -752,7 +844,10 @@ It is important to realize that at this point that H1-H2 and H1-A3 both have fai
 	 \end{tabular}
 \end{table}
 
-When considering the second-third of the vowel, Table~\ref{tab:CPP_Second}, laryngealized vowels become clearly identifiable by CPP which is born out by the significance of laryngealized phonation and the lack of significance with breathy and checked. This is consistent with the observation that somewhere in the middle of the vowel there is either a full glottal stop or a period of creakiness in the two speakers that were evaluated for this study. This observation also bears witness to observations made by \citet{avelinoAcousticElectroglottographicAnalyses2010} about the how each of the different manners that laryngealized vowels are produced in Yalálag Zapotec each have a period of model phonation followed by a aperiodicity or a glottal constriction beginning in the middle of the vowel. 
+\begin{itemize}
+	\item In the middle of the vowel, only laryngealized voice was significant, see Table~\ref{tab:CPP_Second}. 
+\end{itemize}
+
 
 \begin{table}[!h]
 	\centering
@@ -768,7 +863,9 @@ When considering the second-third of the vowel, Table~\ref{tab:CPP_Second}, lary
 	 \end{tabular}
 \end{table}
 
-In considering the final portion of the vowel, Table~\ref{tab:CPP_Third}, the statistical analysis shows that only checked vowels can be reliably determined using CPP. This observations is consistent with the facts that checked phonation consists of a period of creakiness or full glottal closure at the end of the vowel. The other phonation types fail to reach significance.
+\begin{itemize}
+	\item In the final portion of the vowel, Table~\ref{tab:CPP_Third}, only the CPP values for checked phonation reached significance.
+\end{itemize}
 
 \begin{table}[!h]
 	\centering
@@ -789,6 +886,65 @@ In considering the final portion of the vowel, Table~\ref{tab:CPP_Third}, the st
 %------------------------------------
 
 %------------------------------------
+\subsection{Acoustics discussion} \label{sec:Acoustics}
+%------------------------------------
+
+%------------------------------------
+\subsubsection{H1-H2 discussion} \label{sec:DiscH1H2}
+%------------------------------------
+
+\begin{itemize}
+	\item Overall, H1-H2 was uninformative for phonation in SLZ. 
+	\item This is in contrast to \citet{adlerAcousticsPhonationTypes2016} which found for two male speakers of SLZ H1-H2 was informative. 
+	\item This difference could be attributed to a hypothesis put forward by \citet{espositoVariationContrastivePhonation2010} that maybe the speakers are producing the phonation types differently than the speakers in this study. 
+	\item Additionally, \citet{chaiH1H2Acoustic2022} remark that there is a growing body of evidence that H1-H2 is not a reliable measure of phonation.
+	\item \citet{sundbergObjectiveCharacterizationPhonation2022} found that this unreliability is because H2 can be highly influenced by differences in subglottal pressure. 
+	\item More specifically, H2 is more sensitive to the pulse amplitude increase than H1. 
+	\item This sensitivity results in an inverse relationship between H1-H2 and pulse amplitude.
+	\item Furthermore, the results also show that H1-H2 is not a reliable measure in SLZ.
+	\item Another question that this raises is whether more speakers were sampled if the results would be different. 
+\end{itemize}
+%------------------------------------
+\subsubsection{H1-A3 discussion} \label{sec:DiscH1H2}
+%------------------------------------
+
+\begin{itemize}
+	\item H1-A3, however, appears to be a good measure for breathy voice in SLZ for both speakers. 
+	\item This shows that, similar to \citet{espositoVariationContrastivePhonation2010}, H1-A3 is a good measure for capturing some of the phonation contrasts in SLZ.
+	\item However, unlike \citeauthor{espositoVariationContrastivePhonation2010}, this measure was not informative for creaky or laryngealized voice as indicated by the linear regression.
+	\item Similar to H1-A3 it is possible that the results might be different if there was a larger sample pool. 
+\end{itemize}
+
+%------------------------------------
+\subsubsection{CPP discussion} \label{sec:DiscH1H2}
+%------------------------------------
+\begin{itemize}
+	\item The results of CPP were both informative and concerning. 
+	\item Breathy voice, as seen in Section~\ref{sec:CPP} and shown to be significant in Section~\ref{sec:StatsCPP}, the CPP value was much higher for both speakers.
+	\item This is the opposite of what we expect to see for periods of aperiodicity \citep{hillenbrandAcousticCorrelatesBreathy1994,hillenbrandAcousticCorrelatesBreathy1996}.
+	\item This suggests that breathy vowels were more periodic that modal vowels. 
+	\item It is possible that several of the vowels were mislabeled as being modal or breathy when they were actually a different phonation type. 
+	\begin{itemize}
+		\item This is because it is rather difficult to hear breathy voice when listening to the audio produced by Zencastr. 
+		\item It is much easier to hear breathy voice when in person. 
+		\item Additionally, when in Laxopa this summer, Maya and I realized that many words had the wrong phonation type associated with them.
+	\end{itemize}
+	\item With checked and laryngealized voice, we see the drop in CPP we expect to see with aperiodic noise. 
+	\item These drops were significant even when correcting for word and speaker
+	\item This suggests that aperiodic noise might be the main cue to laryngealized and checked voice for these speakers. 
+	\item Additionally, we notice that there is an apparent difference in timing between when this aperiodic noise begins. 
+	\begin{itemize}
+		\item Laryngealized vowels have this aperiodic noise centered in the middle of the vowel. 
+		\item Checked vowel have this aperiodic noise begin in the final third of the vowel. 
+	\end{itemize}
+	\item This difference in timing is important because both phonation types are associated with creakiness in the vowel. 
+	\item This is consistent with the observation that somewhere in the middle of the vowel there is either a full glottal stop or a period of creakiness in the two speakers that were evaluated for this study. 
+	\item This observation also bears witness to observations made by \citet{avelinoAcousticElectroglottographicAnalyses2010} about the how each of the different manners that laryngealized vowels are produced in Yalálag Zapotec.
+	\item This difference in timing is similar to observations made by \citet{silvermanLaryngealComplexityOtomanguean1997,silvermanPhasingRecoverability1997,blankenshipTimeCourseBreathiness1997,blankenshipTimingNonmodalPhonation2002} for nonmodal phonation in the Laryngeal Complexity Hypothesis.
+\end{itemize}
+
+
+%------------------------------------
 \subsection{Laryngeal Complexity Hypothesis} \label{sec:LCH}
 %------------------------------------
 
@@ -801,13 +957,13 @@ In considering the final portion of the vowel, Table~\ref{tab:CPP_Third}, the st
 		\item \citet{ladefogedPreliminariesLinguisticPhonetics1971,gordonPhonationTypesCrosslinguistic2001} argued that phonation exists on a single dimension ranging from opened vocal folds to closed vocal folds. 
 	\end{itemize} 
 	\item The variation in how open or closed the vocal folds are correspond to whether or not the sound produced is breathy or creaky. 
-	\item \citet{ladefogedPreliminariesLinguisticPhonetics1971,gordonPhonationTypesCrosslinguistic2001} summarized this assumption in the diagram found in Figure~\ref{fig:Phonation}.
+	\item \citet{ladefogedPreliminariesLinguisticPhonetics1971,gordonPhonationTypesCrosslinguistic2001} summarized this assumption in the diagram found in Figure~\ref{fig:Phonation}, repeated in Figure~\ref{fig:Phonation2}.
 \end{itemize}
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=.6\textwidth]{../Phonation.png}
 	\caption{Simplified one-deminsional model for phonation. Based on \citet{ladefogedPreliminariesLinguisticPhonetics1971,gordonPhonationTypesCrosslinguistic2001}}.
-	\label{fig:Phonation}
+	\label{fig:Phonation2}
 \end{figure}
 \vspace{-2ex}
 \begin{itemize}
@@ -825,50 +981,29 @@ In considering the final portion of the vowel, Table~\ref{tab:CPP_Third}, the st
 		\label{fig:GlottalGestures}
 	\end{figure}
 \begin{itemize}
-	\item \citet{dicanioCoarticulationToneGlottal2012} found that when the magnitude of coarticulation for glottal consonants occurs on the vowels there is a strong correlation between the magnitude of overlap and the amount of perturbation in the f0 signal. If, however, the degree of overlap was minor then the acoustic signal had little to no perturbation.
+	\item \citet{dicanioCoarticulationToneGlottal2012} found that when the magnitude of coarticulation for glottal consonants occurs on the vowels there is a strong correlation between the magnitude of overlap and the amount of perturbation in the f0 signal. 
+	\item If, however, the degree of overlap was minor then the acoustic signal had little to no perturbation.
 	\item Jalapa Mazatec is a language with both contrastive tone and phonation and \citet{garellekAcousticConsequencesPhonation2011} validated the claims made by the LCH, in that tone and phonation seemed to be ordered with each other when it comes to at least one of the phonation types.
+	\item SLZ could potentially speak to these differences in timing for nonmodal phonation because of the four way phonation contrast that exists for vowels. 
+	\item It already appears from the results of CPP that there is a difference in timing between laryngealized and checked vowels. 
+	\item Additionally, SLZ could speak to the phasing of tone and phonation in the vowels, because tone and phonation is orthogonal to one another. 
+	\item In order to test the LCH in SLZ, a more controlled token list is needed as well as a larger participant pool to determine if the differences we observe between laryngealized and checked vowels are factual. 
 \end{itemize}
-
-%------------------------------------
-\subsection{Laryngeal Articulator Model} \label{sec:LAM}
-%------------------------------------
-
-\begin{table}[!ht]
-	\centering
-	\caption{A list of the different nodes and their abbreviations in the Laryngeal Articulator Model.}
-	\label{tab:States}
-	 \begin{tabular}{ll}
-	  \lsptoprule
-	  States/Nodes	&	 Physiological description \\
-	  \hline
-	  	vfo   	&  vocal folds open (abducted) \\
-		vfc    	&  vocal folds closed (adducted/prephonation)\\
-		epc   	&  epilaryngeal constriction\\
-		epv			&  epilaryngeal vibration \\
-		tfr 		&  tongue fronting \\
-		tre 		&  tongue retraction \\
-		tra 		&  tongue raising \\
-		tdb 		&	 tongue double bunching\\
-		↑lx     &  raised larynx\\
-		↓lx			&  lowered larynx\\
-		Hf0			&  increased vocal fold tension, less vibrating mass (high f0)\\
-		Lf0			&  decreased vocal fold tension, more vibrating mass (lower f0)\\
-	  \lspbottomrule
-	 \end{tabular}
-\end{table}
-
-These twelve nodes not only represent the interactions of the larynx but also represents actual physiological representations. This means that any given node represents what is occurring with a given part of the larynx. For example, the node `epc'  represents any epilaryngeal constriction when activated. Now these nodes are not just independent entities but interact in complex ways with other nodes. These interactions are best captured as a network or web of nodes as seen in Figure~\ref{fig:LAMNetwork}. 
-
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=0.9\textwidth]{../LAMNetwork.png}
-	\caption{Network of synergistic and anti-synergistic nodes in the Laryngeal Articulator Model. Taken from \citet{eslingVoiceQualityLaryngeal2019}.}
-	\label{fig:LAMNetwork}
-\end{figure}
 
 %------------------------------------
 \section{Conclusion} \label{sec:Conclusion}
 %------------------------------------
+
+\begin{itemize}
+	\item This paper has provided a brief introduction to SLZ's phonation and the other aspects of its sound system. 
+	\item This work is important because SLZ is an understudied variety of Northern Zapotec and there is very little about the phonetics or phonology of this language available. 
+	\item Additionally, this paper has shown that H1-H2 was not a very reliable measurement for FSR's or RD's phonation type. 
+	\item In line with \citet{espositoVariationContrastivePhonation2010}, H1-A3 seemed to be the more reliable phonation type measurement, at least for breathy voice. 
+	\item Additionally, CPP was shown to be a very good indicator for checked and laryngealized vowels in SLZ. 
+	\item Additionally, CPP seemed to be primarily different in terms of timing for checked and laryngealized. 
+	\item This study will benefit from further analysis and data collection. 
+	\item Now that the world is in a safer state in regards to COVID-19 it is important to collect data from more speakers to confirm the data and analysis from FSR and RD.
+\end{itemize}
 
 %------------------------------------
 %\subsection{} \label{}
